@@ -1,0 +1,1323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72CB32F40DCA5BBF008F3AA2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72CB32F20DCA5BBF008F3AA2 /* MainMenu.xib */; };
+		8441128C0BA76E9200F37770 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8441128B0BA76E9200F37770 /* Quartz.framework */; };
+		849818240BCF1CE50085CECA /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849818220BCF1CE50085CECA /* AppController.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		CD01B52C12DDB597009A9A66 /* ECNActivityInspectorScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD01B52B12DDB597009A9A66 /* ECNActivityInspectorScrollView.m */; };
+		CD035D5F12BFC1B50053518A /* osc_receiver.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD035D5E12BFC1B50053518A /* osc_receiver.tif */; };
+		CD04EA9C12DDE58A002F1330 /* ECNActivityInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD04EA9B12DDE58A002F1330 /* ECNActivityInspectorViewController.m */; };
+		CD06088F129161F500130D7F /* live_input.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD06088E129161F500130D7F /* live_input.qtz */; };
+		CD128FFA12C74ACE0089DAA2 /* Cross.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CD128FF912C74ACE0089DAA2 /* Cross.tiff */; };
+		CD177B9A127EF92D00369766 /* ECNFoundationExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = CD177B99127EF92D00369766 /* ECNFoundationExtras.m */; };
+		CD177B9D127EF93800369766 /* ECNRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = CD177B9C127EF93800369766 /* ECNRectangle.m */; };
+		CD177F9C127F1F2E00369766 /* camera_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD177F9B127F1F2E00369766 /* camera_icon.gif */; };
+		CD177FBC127F211200369766 /* arrow.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD177FBA127F211200369766 /* arrow.tif */; };
+		CD183AFC126DC9AD00EB3717 /* ElementsView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD183AFB126DC9AD00EB3717 /* ElementsView.m */; };
+		CD1890741324D69E00AE3D4D /* kineto_logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = CD1890731324D69E00AE3D4D /* kineto_logo.icns */; };
+		CD18D09412FFF1590007ACEB /* VVBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD18D09312FFF1590007ACEB /* VVBasics.framework */; };
+		CD18D09612FFF1590007ACEB /* VVMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD18D09512FFF1590007ACEB /* VVMIDI.framework */; };
+		CD18D09812FFF1590007ACEB /* VVOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD18D09712FFF1590007ACEB /* VVOSC.framework */; };
+		CD1B889712F313020067EF4E /* LiveInputSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1B889612F313020067EF4E /* LiveInputSelectorView.m */; };
+		CD1FA54B12EDF8FC00A3D5D7 /* CVImageBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1FA54A12EDF8FC00A3D5D7 /* CVImageBuffer.m */; };
+		CD2E3371131BB565007F7236 /* ECNOSCTargetAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2E3370131BB565007F7236 /* ECNOSCTargetAsset.m */; };
+		CD2E337E131BB763007F7236 /* ECNOSCTxAssetInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2E337D131BB763007F7236 /* ECNOSCTxAssetInstance.m */; };
+		CD2E3380131BBF99007F7236 /* assets_osctx.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD2E337F131BBF99007F7236 /* assets_osctx.tif */; };
+		CD2E3479131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2E3478131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.m */; };
+		CD2E347B131BE006007F7236 /* OSCTxSettingsPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2E347A131BE006007F7236 /* OSCTxSettingsPanel.xib */; };
+		CD2E5EA8130EE52B007D80CE /* maskSrcUsingRedChannel.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD2E5EA7130EE52B007D80CE /* maskSrcUsingRedChannel.cikernel */; };
+		CD2FC6121285B29E003E6BF7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2FC6111285B29E003E6BF7 /* OpenGL.framework */; };
+		CD34110612ABE21C00E6F654 /* ECNOSCManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD34110512ABE21C00E6F654 /* ECNOSCManager.xib */; };
+		CD34110B12ABE50A00E6F654 /* ECNOSCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD34110A12ABE50A00E6F654 /* ECNOSCManager.m */; };
+		CD34119F12ABF10E00E6F654 /* ECNOSCTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = CD34119E12ABF10E00E6F654 /* ECNOSCTarget.m */; };
+		CD35511C1290A289006A6BEA /* motion_mask.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD3551191290A289006A6BEA /* motion_mask.qtz */; };
+		CD376E7F12709BEA00E5ACFB /* ECNProjectDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CD376E7E12709BEA00E5ACFB /* ECNProjectDocument.m */; };
+		CD376FD81270A39E00E5ACFB /* ECNLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD376FD71270A39E00E5ACFB /* ECNLiveView.m */; };
+		CD37708D1270A63400E5ACFB /* LiveViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD37708C1270A63400E5ACFB /* LiveViewer.xib */; };
+		CD3772341270B58600E5ACFB /* DrawingToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3772331270B58600E5ACFB /* DrawingToolbar.xib */; };
+		CD37723C1270B5C400E5ACFB /* ECNDrawingToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = CD37723B1270B5C400E5ACFB /* ECNDrawingToolbar.m */; };
+		CD37738E1270BA1E00E5ACFB /* ECNSceneWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD37738D1270BA1E00E5ACFB /* ECNSceneWindowController.m */; };
+		CD3A10471284AC4C0056ABE3 /* ECNPlaybackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3A10461284AC4C0056ABE3 /* ECNPlaybackController.xib */; };
+		CD3A10521284AEBF0056ABE3 /* ECNPlaybackWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3A10511284AEBF0056ABE3 /* ECNPlaybackWindowController.m */; };
+		CD3A758E12889784009E8E0B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3A758D12889784009E8E0B /* IOKit.framework */; };
+		CD3C9CB812E876DB00599BB0 /* OfflineRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3C9CB712E876DB00599BB0 /* OfflineRenderer.m */; };
+		CD3C9DC912E89F0000599BB0 /* OpenGLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3C9DC812E89F0000599BB0 /* OpenGLTexture.m */; };
+		CD3CA11C12E8FE3800599BB0 /* diff_mask_BW_distanza.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD3CA11B12E8FE3800599BB0 /* diff_mask_BW_distanza.qtz */; };
+		CD3CA13412E9003A00599BB0 /* keystone.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD3CA13312E9003A00599BB0 /* keystone.qtz */; };
+		CD44B13712C4E8910046A616 /* diff_mask_BW.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD44B13612C4E8910046A616 /* diff_mask_BW.qtz */; };
+		CD45E32D12E5C6600033E945 /* QCMaskRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45E32C12E5C6600033E945 /* QCMaskRenderer.m */; };
+		CD468F2F127A244A00B92E4E /* ECNProjectDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD468F2E127A244A00B92E4E /* ECNProjectDocument.xib */; };
+		CD46A9B313070775004A1EBF /* MyExceptionAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD46A9B213070775004A1EBF /* MyExceptionAlertController.m */; };
+		CD46A9B7130707C1004A1EBF /* ExceptionAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD46A9B6130707C1004A1EBF /* ExceptionAlert.xib */; };
+		CD46AA1513070B46004A1EBF /* MyApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = CD46AA1413070B46004A1EBF /* MyApplication.m */; };
+		CD471F9912EB373F00C11B08 /* kineto_masks.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD471F9812EB373F00C11B08 /* kineto_masks.qtz */; };
+		CD471FD112EB467200C11B08 /* solo.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD471FD012EB467200C11B08 /* solo.tif */; };
+		CD471FDB12EB472B00C11B08 /* ColorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD471FDA12EB472B00C11B08 /* ColorCell.m */; };
+		CD4CE36A12CB76AC00A3A314 /* OSCActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4CE36912CB76AC00A3A314 /* OSCActionController.xib */; };
+		CD4CE37012CB76E600A3A314 /* ElementActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4CE36F12CB76E600A3A314 /* ElementActionController.xib */; };
+		CD4CE41412CB823000A3A314 /* ActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4CE41312CB823000A3A314 /* ActionController.xib */; };
+		CD4FE8E812E98E9C005D4608 /* live_viewer.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD4FE8E712E98E9C005D4608 /* live_viewer.qtz */; };
+		CD54F55A12932F08007ABFED /* bg_auto.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD54F55812932F08007ABFED /* bg_auto.qtz */; };
+		CD54F55B12932F08007ABFED /* bg_simple.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD54F55912932F08007ABFED /* bg_simple.qtz */; };
+		CD5BFA1B12F461A0004E7A47 /* OpenGLViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5BFA1A12F461A0004E7A47 /* OpenGLViewKit.m */; };
+		CD5E726E12EF428C009B611C /* CameraControllerInQCMaskRendererView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5E726D12EF428C009B611C /* CameraControllerInQCMaskRendererView.m */; };
+		CD626677130E709800901235 /* ECNSceneAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD626676130E709800901235 /* ECNSceneAction.m */; };
+		CD626924130EBE3700901235 /* MaskSrcUsingChannelFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD626922130EBE3700901235 /* MaskSrcUsingChannelFilter.m */; };
+		CD626959130EBF8300901235 /* MaskSrcUsingChannelFilterKernel.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD626958130EBF8300901235 /* MaskSrcUsingChannelFilterKernel.cikernel */; };
+		CD626963130EBFF100901235 /* MaskSrcUsingChannelFilter.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD626962130EBFF100901235 /* MaskSrcUsingChannelFilter.cikernel */; };
+		CD6565FE128DBF5F002217CF /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6565FD128DBF5F002217CF /* QuickTime.framework */; };
+		CD70AEB1129AE20E0009F0F2 /* null.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD70AEB0129AE20E0009F0F2 /* null.qtz */; };
+		CD730E9612E6E9F100B222B7 /* QTVisualContextKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730E9312E6E9F100B222B7 /* QTVisualContextKit.m */; };
+		CD730EA512E6EF5500B222B7 /* OpenGLQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730EA412E6EF5500B222B7 /* OpenGLQuad.m */; };
+		CD730EB612E6F0CA00B222B7 /* MemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730EB312E6F0CA00B222B7 /* MemObject.m */; };
+		CD730EB712E6F0CA00B222B7 /* Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730EB412E6F0CA00B222B7 /* Memory.m */; };
+		CD730EED12E6F22A00B222B7 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730EE912E6F22A00B222B7 /* Alert.m */; };
+		CD730EEE12E6F22A00B222B7 /* AlertPanelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730EEC12E6F22A00B222B7 /* AlertPanelKit.m */; };
+		CD773FAF12E72BB70066748C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD773FAE12E72BB70066748C /* CoreVideo.framework */; };
+		CD7AA3E412E6023C009E5CCD /* ECNLiveInputSelectorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7AA3E312E6023C009E5CCD /* ECNLiveInputSelectorWindowController.m */; };
+		CD7AA3E612E605A8009E5CCD /* LiveInputSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7AA3E512E605A8009E5CCD /* LiveInputSelector.xib */; };
+		CD7AA3F712E60966009E5CCD /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7AA3F612E60966009E5CCD /* CameraController.m */; };
+		CD7AA43B12E60F99009E5CCD /* UVCCameraControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7AA43A12E60F99009E5CCD /* UVCCameraControl.m */; };
+		CD828B0E12AAA0920018C787 /* LiveInputRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD828B0D12AAA0920018C787 /* LiveInputRenderer.m */; };
+		CD83202A130C38E70063E215 /* ECNElementAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD832029130C38E70063E215 /* ECNElementAction.m */; };
+		CD8462B2130C1C7F00F4A1B3 /* ECNTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8462B1130C1C7F00F4A1B3 /* ECNTrigger.m */; };
+		CD8462B5130C1C9600F4A1B3 /* ECNShapeTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8462B4130C1C9600F4A1B3 /* ECNShapeTrigger.m */; };
+		CD846405130C333900F4A1B3 /* ECNAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD846404130C333900F4A1B3 /* ECNAction.m */; };
+		CD9429E5127F227C00921A57 /* line.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD9429E4127F227C00921A57 /* line.tif */; };
+		CD9429EC127F234600921A57 /* Rectangle.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD9429EB127F234600921A57 /* Rectangle.tif */; };
+		CD9429F5127F24E800921A57 /* timer.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD9429F4127F24E800921A57 /* timer.tif */; };
+		CD9429F8127F26AF00921A57 /* osc.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD9429F7127F26AF00921A57 /* osc.tif */; };
+		CDA805291295A33D00B72116 /* ElementInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA805281295A33D00B72116 /* ElementInspector.xib */; };
+		CDA8054E1295B7CC00B72116 /* ECNElementActivityInspectorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8054D1295B7CC00B72116 /* ECNElementActivityInspectorWindowController.m */; };
+		CDA9363112ABDC9B006015F2 /* ECNOSCReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA9363012ABDC9B006015F2 /* ECNOSCReceiver.m */; };
+		CDADC1F113014135002A0937 /* ECNShape.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADC1F013014135002A0937 /* ECNShape.m */; };
+		CDC2102912F8812900B14E43 /* OSCTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2102812F8812900B14E43 /* OSCTableViewDataSource.m */; };
+		CDC9F4F8129DD1BD0064F103 /* splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F4F7129DD1BD0064F103 /* splash.jpg */; };
+		CDC9F530129DD5200064F103 /* splash_screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F52F129DD5200064F103 /* splash_screen.xib */; };
+		CDD18B0D1326370E0052BC4A /* checkerboard.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD18B0C1326370E0052BC4A /* checkerboard.png */; };
+		CDDB44F812CD246100C4E5AA /* SceneActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDB44F712CD246100C4E5AA /* SceneActionController.xib */; };
+		CDDD0CB51279BE1500759293 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDD0CB41279BE1500759293 /* QTKit.framework */; };
+		CDDD0D2F1279C1F600759293 /* ECNProjectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDD0D2E1279C1F600759293 /* ECNProjectWindowController.m */; };
+		CDDD0E971279CAB300759293 /* ECNSceneWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDD0E961279CAB300759293 /* ECNSceneWindow.xib */; };
+		CDDD0E9C1279CB4900759293 /* ECNElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDD0E9B1279CB4900759293 /* ECNElement.m */; };
+		CDDD0EB01279CC2F00759293 /* ECNScene.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDD0EAF1279CC2F00759293 /* ECNScene.m */; };
+		CDDD408F127E1F53003481BC /* ECNLine.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDD408E127E1F53003481BC /* ECNLine.m */; };
+		CDE94CCB12C8975C004C3152 /* occhio.gif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94CCA12C8975C004C3152 /* occhio.gif */; };
+		CDE94DC312C89DAD004C3152 /* first.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94DC212C89DAD004C3152 /* first.tif */; };
+		CDE94E8912C8A9BC004C3152 /* pause.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94E8512C8A9BC004C3152 /* pause.tif */; };
+		CDE94E8A12C8A9BC004C3152 /* play.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94E8612C8A9BC004C3152 /* play.tif */; };
+		CDE94E8B12C8A9BC004C3152 /* stop.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94E8712C8A9BC004C3152 /* stop.tif */; };
+		CDE94E8C12C8A9BC004C3152 /* test.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94E8812C8A9BC004C3152 /* test.tif */; };
+		CDE97D81126F3FFC00515B57 /* ActivityInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE97D80126F3FFC00515B57 /* ActivityInspector.xib */; };
+		CDE97DCC126F442000515B57 /* ECNLiveViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE97DCB126F442000515B57 /* ECNLiveViewerController.m */; };
+		CDEB98C2130586550065198E /* ECNAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEB98C1130586550065198E /* ECNAsset.m */; };
+		CDEB98C51305877D0065198E /* ECNQCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEB98C41305877D0065198E /* ECNQCAsset.m */; };
+		CDEB9A501305B3EB0065198E /* Object inspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEB9A4F1305B3EB0065198E /* Object inspector.xib */; };
+		CDEF475D1309230300EE0372 /* ElementSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEF475C1309230300EE0372 /* ElementSettings.xib */; };
+		CDEF4805130933C400EE0372 /* ShapeSettingsPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEF4804130933C400EE0372 /* ShapeSettingsPanel.m */; };
+		CDEF485C13093D9300EE0372 /* ECNPort.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEF485B13093D9300EE0372 /* ECNPort.m */; };
+		CDF310BE12DB800A00FC71A3 /* ECNObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF310BD12DB800A00FC71A3 /* ECNObject.m */; };
+		CDF692BC1313D6F100F9F810 /* ECNQCAssetInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF692BB1313D6F100F9F810 /* ECNQCAssetInstance.m */; };
+		CDFA99AC13150077003EC2AD /* ECNAssetInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFA99AB13150077003EC2AD /* ECNAssetInstance.m */; };
+		CDFA9ABE13150E67003EC2AD /* assets_qcpatch.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDFA9ABD13150E67003EC2AD /* assets_qcpatch.tif */; };
+		CDFDEA2813098562001A5F9C /* data_viewer.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CDFDEA2713098562001A5F9C /* data_viewer.qtz */; };
+		CDFDEA2A13098580001A5F9C /* DataViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFDEA2913098580001A5F9C /* DataViewer.xib */; };
+		CDFDEA2F13098613001A5F9C /* DataViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFDEA2E13098613001A5F9C /* DataViewerWindowController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CD7882D412C0B438009ACE4A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		7219AB410FAA1D5900573434 /* kineto_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kineto_Prefix.pch; sourceTree = "<group>"; };
+		72CB32F30DCA5BBF008F3AA2 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8441128B0BA76E9200F37770 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		849818220BCF1CE50085CECA /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		849818230BCF1CE50085CECA /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* kineto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kineto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD01B52A12DDB597009A9A66 /* ECNActivityInspectorScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNActivityInspectorScrollView.h; sourceTree = "<group>"; };
+		CD01B52B12DDB597009A9A66 /* ECNActivityInspectorScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNActivityInspectorScrollView.m; sourceTree = "<group>"; };
+		CD035D5E12BFC1B50053518A /* osc_receiver.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = osc_receiver.tif; path = icone/osc_receiver.tif; sourceTree = "<group>"; };
+		CD04EA9A12DDE58A002F1330 /* ECNActivityInspectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNActivityInspectorViewController.h; sourceTree = "<group>"; };
+		CD04EA9B12DDE58A002F1330 /* ECNActivityInspectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNActivityInspectorViewController.m; sourceTree = "<group>"; };
+		CD06088E129161F500130D7F /* live_input.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = live_input.qtz; path = maschere/live_input.qtz; sourceTree = "<group>"; };
+		CD128FF912C74ACE0089DAA2 /* Cross.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Cross.tiff; sourceTree = "<group>"; };
+		CD177B98127EF92D00369766 /* ECNFoundationExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNFoundationExtras.h; sourceTree = "<group>"; };
+		CD177B99127EF92D00369766 /* ECNFoundationExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNFoundationExtras.m; sourceTree = "<group>"; };
+		CD177B9B127EF93800369766 /* ECNRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNRectangle.h; sourceTree = "<group>"; };
+		CD177B9C127EF93800369766 /* ECNRectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNRectangle.m; sourceTree = "<group>"; };
+		CD177F9B127F1F2E00369766 /* camera_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = camera_icon.gif; path = icone/camera_icon.gif; sourceTree = "<group>"; };
+		CD177FBA127F211200369766 /* arrow.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = arrow.tif; path = icone/arrow.tif; sourceTree = "<group>"; };
+		CD183AFA126DC9AD00EB3717 /* ElementsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementsView.h; sourceTree = "<group>"; };
+		CD183AFB126DC9AD00EB3717 /* ElementsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementsView.m; sourceTree = "<group>"; };
+		CD1890731324D69E00AE3D4D /* kineto_logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = kineto_logo.icns; sourceTree = "<group>"; };
+		CD18D09312FFF1590007ACEB /* VVBasics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VVBasics.framework; path = Frameworks/VVBasics.framework; sourceTree = "<group>"; };
+		CD18D09512FFF1590007ACEB /* VVMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VVMIDI.framework; path = Frameworks/VVMIDI.framework; sourceTree = "<group>"; };
+		CD18D09712FFF1590007ACEB /* VVOSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VVOSC.framework; path = Frameworks/VVOSC.framework; sourceTree = "<group>"; };
+		CD1B863712F2FD820067EF4E /* kineto NSZombieEnabled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kineto NSZombieEnabled-Info.plist"; sourceTree = "<group>"; };
+		CD1B889512F313020067EF4E /* LiveInputSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveInputSelectorView.h; sourceTree = "<group>"; };
+		CD1B889612F313020067EF4E /* LiveInputSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveInputSelectorView.m; sourceTree = "<group>"; };
+		CD1FA54912EDF8FC00A3D5D7 /* CVImageBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVImageBuffer.h; sourceTree = "<group>"; };
+		CD1FA54A12EDF8FC00A3D5D7 /* CVImageBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVImageBuffer.m; sourceTree = "<group>"; };
+		CD2E336F131BB565007F7236 /* ECNOSCTargetAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCTargetAsset.h; sourceTree = "<group>"; };
+		CD2E3370131BB565007F7236 /* ECNOSCTargetAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNOSCTargetAsset.m; sourceTree = "<group>"; };
+		CD2E337C131BB763007F7236 /* ECNOSCTxAssetInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCTxAssetInstance.h; sourceTree = "<group>"; };
+		CD2E337D131BB763007F7236 /* ECNOSCTxAssetInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNOSCTxAssetInstance.m; sourceTree = "<group>"; };
+		CD2E337F131BBF99007F7236 /* assets_osctx.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = assets_osctx.tif; path = icone/assets_osctx.tif; sourceTree = "<group>"; };
+		CD2E3477131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCTxAssetInstanceSettingsPanel.h; sourceTree = "<group>"; };
+		CD2E3478131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCTxAssetInstanceSettingsPanel.m; sourceTree = "<group>"; };
+		CD2E347A131BE006007F7236 /* OSCTxSettingsPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OSCTxSettingsPanel.xib; sourceTree = "<group>"; };
+		CD2E5EA7130EE52B007D80CE /* maskSrcUsingRedChannel.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = maskSrcUsingRedChannel.cikernel; sourceTree = "<group>"; };
+		CD2FC6111285B29E003E6BF7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		CD34110512ABE21C00E6F654 /* ECNOSCManager.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ECNOSCManager.xib; sourceTree = "<group>"; };
+		CD34110912ABE50A00E6F654 /* ECNOSCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCManager.h; sourceTree = "<group>"; };
+		CD34110A12ABE50A00E6F654 /* ECNOSCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNOSCManager.m; sourceTree = "<group>"; };
+		CD34119D12ABF10E00E6F654 /* ECNOSCTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCTarget.h; sourceTree = "<group>"; };
+		CD34119E12ABF10E00E6F654 /* ECNOSCTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNOSCTarget.m; sourceTree = "<group>"; };
+		CD3551191290A289006A6BEA /* motion_mask.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = motion_mask.qtz; path = maschere/motion_mask.qtz; sourceTree = "<group>"; };
+		CD376E7D12709BEA00E5ACFB /* ECNProjectDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNProjectDocument.h; sourceTree = "<group>"; };
+		CD376E7E12709BEA00E5ACFB /* ECNProjectDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNProjectDocument.m; sourceTree = "<group>"; wrapsLines = 1; };
+		CD376F351270A0FF00E5ACFB /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		CD376FD61270A39E00E5ACFB /* ECNLiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNLiveView.h; sourceTree = "<group>"; };
+		CD376FD71270A39E00E5ACFB /* ECNLiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNLiveView.m; sourceTree = "<group>"; };
+		CD37708C1270A63400E5ACFB /* LiveViewer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveViewer.xib; sourceTree = "<group>"; };
+		CD3772331270B58600E5ACFB /* DrawingToolbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingToolbar.xib; sourceTree = "<group>"; };
+		CD37723A1270B5C400E5ACFB /* ECNDrawingToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNDrawingToolbar.h; sourceTree = "<group>"; };
+		CD37723B1270B5C400E5ACFB /* ECNDrawingToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNDrawingToolbar.m; sourceTree = "<group>"; };
+		CD37738C1270BA1E00E5ACFB /* ECNSceneWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNSceneWindowController.h; sourceTree = "<group>"; };
+		CD37738D1270BA1E00E5ACFB /* ECNSceneWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNSceneWindowController.m; sourceTree = "<group>"; };
+		CD3A10461284AC4C0056ABE3 /* ECNPlaybackController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ECNPlaybackController.xib; sourceTree = "<group>"; };
+		CD3A10501284AEBF0056ABE3 /* ECNPlaybackWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNPlaybackWindowController.h; sourceTree = "<group>"; };
+		CD3A10511284AEBF0056ABE3 /* ECNPlaybackWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNPlaybackWindowController.m; sourceTree = "<group>"; };
+		CD3A758D12889784009E8E0B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		CD3C9CB612E876DB00599BB0 /* OfflineRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfflineRenderer.h; sourceTree = "<group>"; };
+		CD3C9CB712E876DB00599BB0 /* OfflineRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineRenderer.m; sourceTree = "<group>"; };
+		CD3C9DC712E89F0000599BB0 /* OpenGLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLTexture.h; sourceTree = "<group>"; };
+		CD3C9DC812E89F0000599BB0 /* OpenGLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLTexture.m; sourceTree = "<group>"; };
+		CD3CA11B12E8FE3800599BB0 /* diff_mask_BW_distanza.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = diff_mask_BW_distanza.qtz; path = maschere/diff_mask_BW_distanza.qtz; sourceTree = "<group>"; };
+		CD3CA13312E9003A00599BB0 /* keystone.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = keystone.qtz; path = maschere/keystone.qtz; sourceTree = "<group>"; };
+		CD3DD7ED1327DCE0005FFB48 /* ECNActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNActions.h; sourceTree = "<group>"; };
+		CD4489C71309583C006B3C0A /* ECNShapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNShapes.h; sourceTree = "<group>"; };
+		CD4489DD13095952006B3C0A /* ECNElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNElements.h; sourceTree = "<group>"; };
+		CD44B13612C4E8910046A616 /* diff_mask_BW.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = diff_mask_BW.qtz; path = maschere/diff_mask_BW.qtz; sourceTree = "<group>"; };
+		CD45E32B12E5C6600033E945 /* QCMaskRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCMaskRenderer.h; sourceTree = "<group>"; };
+		CD45E32C12E5C6600033E945 /* QCMaskRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCMaskRenderer.m; sourceTree = "<group>"; };
+		CD468F2E127A244A00B92E4E /* ECNProjectDocument.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ECNProjectDocument.xib; sourceTree = "<group>"; };
+		CD46A9B113070775004A1EBF /* MyExceptionAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyExceptionAlertController.h; sourceTree = "<group>"; };
+		CD46A9B213070775004A1EBF /* MyExceptionAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyExceptionAlertController.m; sourceTree = "<group>"; };
+		CD46A9B6130707C1004A1EBF /* ExceptionAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExceptionAlert.xib; sourceTree = "<group>"; };
+		CD46AA1313070B46004A1EBF /* MyApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApplication.h; sourceTree = "<group>"; };
+		CD46AA1413070B46004A1EBF /* MyApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplication.m; sourceTree = "<group>"; };
+		CD471F9812EB373F00C11B08 /* kineto_masks.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = kineto_masks.qtz; path = maschere/kineto_masks.qtz; sourceTree = "<group>"; };
+		CD471FD012EB467200C11B08 /* solo.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = solo.tif; path = icone/solo.tif; sourceTree = "<group>"; };
+		CD471FD912EB472B00C11B08 /* ColorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorCell.h; sourceTree = "<group>"; };
+		CD471FDA12EB472B00C11B08 /* ColorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorCell.m; sourceTree = "<group>"; };
+		CD4CE36912CB76AC00A3A314 /* OSCActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OSCActionController.xib; sourceTree = "<group>"; };
+		CD4CE36F12CB76E600A3A314 /* ElementActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElementActionController.xib; sourceTree = "<group>"; };
+		CD4CE41312CB823000A3A314 /* ActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionController.xib; sourceTree = "<group>"; };
+		CD4FE8E712E98E9C005D4608 /* live_viewer.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = live_viewer.qtz; path = maschere/live_viewer.qtz; sourceTree = "<group>"; };
+		CD54F55812932F08007ABFED /* bg_auto.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = bg_auto.qtz; path = maschere/bg_auto.qtz; sourceTree = "<group>"; };
+		CD54F55912932F08007ABFED /* bg_simple.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = bg_simple.qtz; path = maschere/bg_simple.qtz; sourceTree = "<group>"; };
+		CD5BFA1912F461A0004E7A47 /* OpenGLViewKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLViewKit.h; sourceTree = "<group>"; };
+		CD5BFA1A12F461A0004E7A47 /* OpenGLViewKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLViewKit.m; sourceTree = "<group>"; };
+		CD5E726C12EF428C009B611C /* CameraControllerInQCMaskRendererView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraControllerInQCMaskRendererView.h; sourceTree = "<group>"; };
+		CD5E726D12EF428C009B611C /* CameraControllerInQCMaskRendererView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraControllerInQCMaskRendererView.m; sourceTree = "<group>"; };
+		CD626675130E709800901235 /* ECNSceneAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNSceneAction.h; sourceTree = "<group>"; };
+		CD626676130E709800901235 /* ECNSceneAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNSceneAction.m; sourceTree = "<group>"; };
+		CD626921130EBE3700901235 /* MaskSrcUsingChannelFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaskSrcUsingChannelFilter.h; path = CoreImage/MaskSrcUsingChannel/MaskSrcUsingChannelFilter.h; sourceTree = "<group>"; };
+		CD626922130EBE3700901235 /* MaskSrcUsingChannelFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaskSrcUsingChannelFilter.m; path = CoreImage/MaskSrcUsingChannel/MaskSrcUsingChannelFilter.m; sourceTree = "<group>"; };
+		CD626958130EBF8300901235 /* MaskSrcUsingChannelFilterKernel.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = MaskSrcUsingChannelFilterKernel.cikernel; path = CoreImage/MaskSrcUsingChannel/MaskSrcUsingChannelFilterKernel.cikernel; sourceTree = "<group>"; };
+		CD626962130EBFF100901235 /* MaskSrcUsingChannelFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MaskSrcUsingChannelFilter.cikernel; sourceTree = "<group>"; };
+		CD6565FD128DBF5F002217CF /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		CD70AEB0129AE20E0009F0F2 /* null.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = null.qtz; path = maschere/null.qtz; sourceTree = "<group>"; };
+		CD730E9212E6E9F100B222B7 /* QTVisualContextKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTVisualContextKit.h; sourceTree = "<group>"; };
+		CD730E9312E6E9F100B222B7 /* QTVisualContextKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTVisualContextKit.m; sourceTree = "<group>"; };
+		CD730EA312E6EF5500B222B7 /* OpenGLQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLQuad.h; sourceTree = "<group>"; };
+		CD730EA412E6EF5500B222B7 /* OpenGLQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLQuad.m; sourceTree = "<group>"; };
+		CD730EB212E6F0CA00B222B7 /* MemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemObject.h; sourceTree = "<group>"; };
+		CD730EB312E6F0CA00B222B7 /* MemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemObject.m; sourceTree = "<group>"; };
+		CD730EB412E6F0CA00B222B7 /* Memory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Memory.m; sourceTree = "<group>"; };
+		CD730EB512E6F0CA00B222B7 /* Memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Memory.h; sourceTree = "<group>"; };
+		CD730EE912E6F22A00B222B7 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
+		CD730EEA12E6F22A00B222B7 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
+		CD730EEB12E6F22A00B222B7 /* AlertPanelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertPanelKit.h; sourceTree = "<group>"; };
+		CD730EEC12E6F22A00B222B7 /* AlertPanelKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertPanelKit.m; sourceTree = "<group>"; };
+		CD773FAE12E72BB70066748C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		CD7AA3E212E6023C009E5CCD /* ECNLiveInputSelectorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNLiveInputSelectorWindowController.h; sourceTree = "<group>"; };
+		CD7AA3E312E6023C009E5CCD /* ECNLiveInputSelectorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNLiveInputSelectorWindowController.m; sourceTree = "<group>"; };
+		CD7AA3E512E605A8009E5CCD /* LiveInputSelector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveInputSelector.xib; sourceTree = "<group>"; };
+		CD7AA3F512E60966009E5CCD /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
+		CD7AA3F612E60966009E5CCD /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
+		CD7AA43912E60F99009E5CCD /* UVCCameraControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVCCameraControl.h; sourceTree = "<group>"; };
+		CD7AA43A12E60F99009E5CCD /* UVCCameraControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVCCameraControl.m; sourceTree = "<group>"; };
+		CD7D1A5E1326A1DF007DDC28 /* ECNObjectTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNObjectTypes.h; sourceTree = "<group>"; };
+		CD828B0C12AAA0920018C787 /* LiveInputRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveInputRenderer.h; sourceTree = "<group>"; };
+		CD828B0D12AAA0920018C787 /* LiveInputRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveInputRenderer.m; sourceTree = "<group>"; };
+		CD832028130C38E70063E215 /* ECNElementAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNElementAction.h; sourceTree = "<group>"; };
+		CD832029130C38E70063E215 /* ECNElementAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNElementAction.m; sourceTree = "<group>"; };
+		CD8462B0130C1C7F00F4A1B3 /* ECNTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNTrigger.h; sourceTree = "<group>"; };
+		CD8462B1130C1C7F00F4A1B3 /* ECNTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNTrigger.m; sourceTree = "<group>"; };
+		CD8462B3130C1C9600F4A1B3 /* ECNShapeTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNShapeTrigger.h; sourceTree = "<group>"; };
+		CD8462B4130C1C9600F4A1B3 /* ECNShapeTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNShapeTrigger.m; sourceTree = "<group>"; };
+		CD846403130C333900F4A1B3 /* ECNAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNAction.h; sourceTree = "<group>"; };
+		CD846404130C333900F4A1B3 /* ECNAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNAction.m; sourceTree = "<group>"; };
+		CD9429E4127F227C00921A57 /* line.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = line.tif; path = icone/line.tif; sourceTree = "<group>"; };
+		CD9429EB127F234600921A57 /* Rectangle.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Rectangle.tif; path = icone/Rectangle.tif; sourceTree = "<group>"; };
+		CD9429F4127F24E800921A57 /* timer.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = timer.tif; path = icone/timer.tif; sourceTree = "<group>"; };
+		CD9429F7127F26AF00921A57 /* osc.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = osc.tif; path = icone/osc.tif; sourceTree = "<group>"; };
+		CDA805281295A33D00B72116 /* ElementInspector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElementInspector.xib; sourceTree = "<group>"; };
+		CDA8054C1295B7CC00B72116 /* ECNElementActivityInspectorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNElementActivityInspectorWindowController.h; sourceTree = "<group>"; };
+		CDA8054D1295B7CC00B72116 /* ECNElementActivityInspectorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNElementActivityInspectorWindowController.m; sourceTree = "<group>"; };
+		CDA9362F12ABDC9B006015F2 /* ECNOSCReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCReceiver.h; sourceTree = "<group>"; };
+		CDA9363012ABDC9B006015F2 /* ECNOSCReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNOSCReceiver.m; sourceTree = "<group>"; };
+		CDADC1EF13014135002A0937 /* ECNShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNShape.h; sourceTree = "<group>"; };
+		CDADC1F013014135002A0937 /* ECNShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNShape.m; sourceTree = "<group>"; };
+		CDC2102712F8812900B14E43 /* OSCTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCTableViewDataSource.h; sourceTree = "<group>"; };
+		CDC2102812F8812900B14E43 /* OSCTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCTableViewDataSource.m; sourceTree = "<group>"; };
+		CDC9F4F7129DD1BD0064F103 /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = splash.jpg; path = splash/splash.jpg; sourceTree = "<group>"; };
+		CDC9F52F129DD5200064F103 /* splash_screen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = splash_screen.xib; sourceTree = "<group>"; };
+		CDD18B0C1326370E0052BC4A /* checkerboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkerboard.png; path = icone/checkerboard.png; sourceTree = "<group>"; };
+		CDD326F7127D7D9300E4FBA9 /* DebugIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugIncludes.h; sourceTree = "<group>"; };
+		CDDB44F712CD246100C4E5AA /* SceneActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceneActionController.xib; sourceTree = "<group>"; };
+		CDDD0CB41279BE1500759293 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		CDDD0D2D1279C1F600759293 /* ECNProjectWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNProjectWindowController.h; sourceTree = "<group>"; };
+		CDDD0D2E1279C1F600759293 /* ECNProjectWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNProjectWindowController.m; sourceTree = "<group>"; };
+		CDDD0E961279CAB300759293 /* ECNSceneWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ECNSceneWindow.xib; sourceTree = "<group>"; };
+		CDDD0E9A1279CB4900759293 /* ECNElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNElement.h; sourceTree = "<group>"; };
+		CDDD0E9B1279CB4900759293 /* ECNElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNElement.m; sourceTree = "<group>"; wrapsLines = 1; };
+		CDDD0EAE1279CC2F00759293 /* ECNScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNScene.h; sourceTree = "<group>"; };
+		CDDD0EAF1279CC2F00759293 /* ECNScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNScene.m; sourceTree = "<group>"; };
+		CDDD408D127E1F53003481BC /* ECNLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNLine.h; sourceTree = "<group>"; };
+		CDDD408E127E1F53003481BC /* ECNLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNLine.m; sourceTree = "<group>"; };
+		CDE94CCA12C8975C004C3152 /* occhio.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = occhio.gif; path = icone/occhio.gif; sourceTree = "<group>"; };
+		CDE94DC212C89DAD004C3152 /* first.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = first.tif; path = icone/first.tif; sourceTree = "<group>"; };
+		CDE94E8512C8A9BC004C3152 /* pause.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = pause.tif; sourceTree = "<group>"; };
+		CDE94E8612C8A9BC004C3152 /* play.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = play.tif; sourceTree = "<group>"; };
+		CDE94E8712C8A9BC004C3152 /* stop.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = stop.tif; sourceTree = "<group>"; };
+		CDE94E8812C8A9BC004C3152 /* test.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = test.tif; sourceTree = "<group>"; };
+		CDE97D80126F3FFC00515B57 /* ActivityInspector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityInspector.xib; sourceTree = "<group>"; };
+		CDE97DCA126F442000515B57 /* ECNLiveViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNLiveViewerController.h; sourceTree = "<group>"; };
+		CDE97DCB126F442000515B57 /* ECNLiveViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNLiveViewerController.m; sourceTree = "<group>"; };
+		CDEB98C0130586550065198E /* ECNAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNAsset.h; sourceTree = "<group>"; };
+		CDEB98C1130586550065198E /* ECNAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNAsset.m; sourceTree = "<group>"; };
+		CDEB98C31305877D0065198E /* ECNQCAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNQCAsset.h; sourceTree = "<group>"; };
+		CDEB98C41305877D0065198E /* ECNQCAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNQCAsset.m; sourceTree = "<group>"; };
+		CDEB9A4F1305B3EB0065198E /* Object inspector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Object inspector.xib"; sourceTree = "<group>"; };
+		CDEF475C1309230300EE0372 /* ElementSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElementSettings.xib; sourceTree = "<group>"; };
+		CDEF4803130933C400EE0372 /* ShapeSettingsPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeSettingsPanel.h; sourceTree = "<group>"; };
+		CDEF4804130933C400EE0372 /* ShapeSettingsPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeSettingsPanel.m; sourceTree = "<group>"; };
+		CDEF485A13093D9300EE0372 /* ECNPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNPort.h; sourceTree = "<group>"; };
+		CDEF485B13093D9300EE0372 /* ECNPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNPort.m; sourceTree = "<group>"; };
+		CDF310BC12DB800A00FC71A3 /* ECNObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNObject.h; sourceTree = "<group>"; };
+		CDF310BD12DB800A00FC71A3 /* ECNObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNObject.m; sourceTree = "<group>"; };
+		CDF692BA1313D6F100F9F810 /* ECNQCAssetInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNQCAssetInstance.h; sourceTree = "<group>"; };
+		CDF692BB1313D6F100F9F810 /* ECNQCAssetInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNQCAssetInstance.m; sourceTree = "<group>"; };
+		CDFA99AA13150077003EC2AD /* ECNAssetInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNAssetInstance.h; sourceTree = "<group>"; };
+		CDFA99AB13150077003EC2AD /* ECNAssetInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNAssetInstance.m; sourceTree = "<group>"; };
+		CDFA9ABD13150E67003EC2AD /* assets_qcpatch.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = assets_qcpatch.tif; path = icone/assets_qcpatch.tif; sourceTree = "<group>"; };
+		CDFDEA2713098562001A5F9C /* data_viewer.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = data_viewer.qtz; path = maschere/data_viewer.qtz; sourceTree = "<group>"; };
+		CDFDEA2913098580001A5F9C /* DataViewer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewer.xib; sourceTree = "<group>"; };
+		CDFDEA2D13098613001A5F9C /* DataViewerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewerWindowController.h; sourceTree = "<group>"; };
+		CDFDEA2E13098613001A5F9C /* DataViewerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewerWindowController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				8441128C0BA76E9200F37770 /* Quartz.framework in Frameworks */,
+				CDDD0CB51279BE1500759293 /* QTKit.framework in Frameworks */,
+				CD2FC6121285B29E003E6BF7 /* OpenGL.framework in Frameworks */,
+				CD3A758E12889784009E8E0B /* IOKit.framework in Frameworks */,
+				CD6565FE128DBF5F002217CF /* QuickTime.framework in Frameworks */,
+				CD773FAF12E72BB70066748C /* CoreVideo.framework in Frameworks */,
+				CD18D09412FFF1590007ACEB /* VVBasics.framework in Frameworks */,
+				CD18D09612FFF1590007ACEB /* VVMIDI.framework in Frameworks */,
+				CD18D09812FFF1590007ACEB /* VVOSC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CDD326CE127D7AEC00E4FBA9 /* Views and Controllers */,
+				CDDD0E991279CB2500759293 /* Model Classes */,
+				CD37723D1270B5C800E5ACFB /* Singleton window controllers */,
+				CD46AA1313070B46004A1EBF /* MyApplication.h */,
+				CD46AA1413070B46004A1EBF /* MyApplication.m */,
+				849818230BCF1CE50085CECA /* AppController.h */,
+				849818220BCF1CE50085CECA /* AppController.m */,
+				CDD326F7127D7D9300E4FBA9 /* DebugIncludes.h */,
+				CD46A9B113070775004A1EBF /* MyExceptionAlertController.h */,
+				CD46A9B213070775004A1EBF /* MyExceptionAlertController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				CD3A758D12889784009E8E0B /* IOKit.framework */,
+				8441128B0BA76E9200F37770 /* Quartz.framework */,
+				CD18D09312FFF1590007ACEB /* VVBasics.framework */,
+				CD18D09512FFF1590007ACEB /* VVMIDI.framework */,
+				CD18D09712FFF1590007ACEB /* VVOSC.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* kineto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* eyeconmacosx */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				CD1B863712F2FD820067EF4E /* kineto NSZombieEnabled-Info.plist */,
+			);
+			name = eyeconmacosx;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CD6267DE130E90D300901235 /* Core Image Custom Filters */,
+				CD471FDC12EB472E00C11B08 /* Custom UI */,
+				CD73100C12E6F58F00B222B7 /* Convenience classes */,
+				CD730EE812E6F22A00B222B7 /* Alert */,
+				CDF2E9AB128ED446008D53E0 /* Data streams */,
+				CD177B98127EF92D00369766 /* ECNFoundationExtras.h */,
+				CD177B99127EF92D00369766 /* ECNFoundationExtras.m */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				7219AB410FAA1D5900573434 /* kineto_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD2E5EA7130EE52B007D80CE /* maskSrcUsingRedChannel.cikernel */,
+				CDF55D6512DA7B9300706539 /* Model view controllers */,
+				CD4CE4BE12CB8DC100A3A314 /* Singleton palettes */,
+				CDEB9A4F1305B3EB0065198E /* Object inspector.xib */,
+				CD46A9B6130707C1004A1EBF /* ExceptionAlert.xib */,
+				CD4CE36812CB769600A3A314 /* ActionControllers */,
+				CDC9F4F7129DD1BD0064F103 /* splash.jpg */,
+				CD35511E1290A298006A6BEA /* maschere */,
+				CD177FAA127F1F7600369766 /* Icone */,
+				72CB32F20DCA5BBF008F3AA2 /* MainMenu.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD773FC212E72BC00066748C /* Video frameworks */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD01B51312DDB4AE009A9A66 /* Playback controller */ = {
+			isa = PBXGroup;
+			children = (
+				CD3A10461284AC4C0056ABE3 /* ECNPlaybackController.xib */,
+				CDE97D80126F3FFC00515B57 /* ActivityInspector.xib */,
+			);
+			name = "Playback controller";
+			sourceTree = "<group>";
+		};
+		CD01B52912DDB569009A9A66 /* Playback controller */ = {
+			isa = PBXGroup;
+			children = (
+				CD3A10501284AEBF0056ABE3 /* ECNPlaybackWindowController.h */,
+				CD3A10511284AEBF0056ABE3 /* ECNPlaybackWindowController.m */,
+				CD01B52A12DDB597009A9A66 /* ECNActivityInspectorScrollView.h */,
+				CD01B52B12DDB597009A9A66 /* ECNActivityInspectorScrollView.m */,
+				CD04EA9A12DDE58A002F1330 /* ECNActivityInspectorViewController.h */,
+				CD04EA9B12DDE58A002F1330 /* ECNActivityInspectorViewController.m */,
+			);
+			name = "Playback controller";
+			sourceTree = "<group>";
+		};
+		CD128FFC12C74AD60089DAA2 /* cursori */ = {
+			isa = PBXGroup;
+			children = (
+				CD128FF912C74ACE0089DAA2 /* Cross.tiff */,
+				CD177FBA127F211200369766 /* arrow.tif */,
+			);
+			name = cursori;
+			sourceTree = "<group>";
+		};
+		CD177FAA127F1F7600369766 /* Icone */ = {
+			isa = PBXGroup;
+			children = (
+				CDD18B0C1326370E0052BC4A /* checkerboard.png */,
+				CD1890731324D69E00AE3D4D /* kineto_logo.icns */,
+				CD2E337F131BBF99007F7236 /* assets_osctx.tif */,
+				CDFA9ABD13150E67003EC2AD /* assets_qcpatch.tif */,
+				CD471FD012EB467200C11B08 /* solo.tif */,
+				CDE94E8412C8A9BC004C3152 /* TASTI */,
+				CDE94DC212C89DAD004C3152 /* first.tif */,
+				CDE94CCA12C8975C004C3152 /* occhio.gif */,
+				CD128FFC12C74AD60089DAA2 /* cursori */,
+				CD035D5E12BFC1B50053518A /* osc_receiver.tif */,
+				CD9429F7127F26AF00921A57 /* osc.tif */,
+				CD9429F4127F24E800921A57 /* timer.tif */,
+				CD9429EB127F234600921A57 /* Rectangle.tif */,
+				CD9429E4127F227C00921A57 /* line.tif */,
+				CD177F9B127F1F2E00369766 /* camera_icon.gif */,
+			);
+			name = Icone;
+			sourceTree = "<group>";
+		};
+		CD1FA54812EDF8C200A3D5D7 /* CoreVideo */ = {
+			isa = PBXGroup;
+			children = (
+				CD1FA54912EDF8FC00A3D5D7 /* CVImageBuffer.h */,
+				CD1FA54A12EDF8FC00A3D5D7 /* CVImageBuffer.m */,
+			);
+			name = CoreVideo;
+			sourceTree = "<group>";
+		};
+		CD35511E1290A298006A6BEA /* maschere */ = {
+			isa = PBXGroup;
+			children = (
+				CDD32B8612F1C4A500B838BC /* old */,
+				CD70AEB0129AE20E0009F0F2 /* null.qtz */,
+				CD3CA13312E9003A00599BB0 /* keystone.qtz */,
+				CD471F9812EB373F00C11B08 /* kineto_masks.qtz */,
+				CDFDEA2713098562001A5F9C /* data_viewer.qtz */,
+			);
+			name = maschere;
+			sourceTree = "<group>";
+		};
+		CD37723D1270B5C800E5ACFB /* Singleton window controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD376F351270A0FF00E5ACFB /* SynthesizeSingleton.h */,
+				CD5E726812EF4269009B611C /* Live Input selector */,
+				CD01B52912DDB569009A9A66 /* Playback controller */,
+				CDC36A1312DA23D600993177 /* Live viewer */,
+				CDC6174C12CE154900611408 /* Element setting panels */,
+				CD37723A1270B5C400E5ACFB /* ECNDrawingToolbar.h */,
+				CD37723B1270B5C400E5ACFB /* ECNDrawingToolbar.m */,
+				CDA8054C1295B7CC00B72116 /* ECNElementActivityInspectorWindowController.h */,
+				CDA8054D1295B7CC00B72116 /* ECNElementActivityInspectorWindowController.m */,
+				CDFDEA2D13098613001A5F9C /* DataViewerWindowController.h */,
+				CDFDEA2E13098613001A5F9C /* DataViewerWindowController.m */,
+			);
+			name = "Singleton window controllers";
+			sourceTree = "<group>";
+		};
+		CD3C9DCA12E89F0600599BB0 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				CD3C9DC712E89F0000599BB0 /* OpenGLTexture.h */,
+				CD3C9DC812E89F0000599BB0 /* OpenGLTexture.m */,
+			);
+			name = Texture;
+			sourceTree = "<group>";
+		};
+		CD471FDC12EB472E00C11B08 /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				CD5E726C12EF428C009B611C /* CameraControllerInQCMaskRendererView.h */,
+				CD5E726D12EF428C009B611C /* CameraControllerInQCMaskRendererView.m */,
+				CD471FD912EB472B00C11B08 /* ColorCell.h */,
+				CD471FDA12EB472B00C11B08 /* ColorCell.m */,
+			);
+			name = "Custom UI";
+			sourceTree = "<group>";
+		};
+		CD4CE36812CB769600A3A314 /* ActionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD4CE36912CB76AC00A3A314 /* OSCActionController.xib */,
+				CD4CE36F12CB76E600A3A314 /* ElementActionController.xib */,
+				CD4CE41312CB823000A3A314 /* ActionController.xib */,
+				CDDB44F712CD246100C4E5AA /* SceneActionController.xib */,
+			);
+			name = ActionControllers;
+			sourceTree = "<group>";
+		};
+		CD4CE4BE12CB8DC100A3A314 /* Singleton palettes */ = {
+			isa = PBXGroup;
+			children = (
+				CD8320D3130C4B4D0063E215 /* Elements settings */,
+				CD01B51312DDB4AE009A9A66 /* Playback controller */,
+				CDFDEA2913098580001A5F9C /* DataViewer.xib */,
+				CDC9F52F129DD5200064F103 /* splash_screen.xib */,
+				CD3772331270B58600E5ACFB /* DrawingToolbar.xib */,
+				CDA805281295A33D00B72116 /* ElementInspector.xib */,
+				CD37708C1270A63400E5ACFB /* LiveViewer.xib */,
+				CD7AA3E512E605A8009E5CCD /* LiveInputSelector.xib */,
+				CD34110512ABE21C00E6F654 /* ECNOSCManager.xib */,
+			);
+			name = "Singleton palettes";
+			sourceTree = "<group>";
+		};
+		CD5BFA1812F461A0004E7A47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD5BFA1912F461A0004E7A47 /* OpenGLViewKit.h */,
+				CD5BFA1A12F461A0004E7A47 /* OpenGLViewKit.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD5E726812EF4269009B611C /* Live Input selector */ = {
+			isa = PBXGroup;
+			children = (
+				CDC2102612F8811200B14E43 /* OSC manager */,
+				CD7AA3E212E6023C009E5CCD /* ECNLiveInputSelectorWindowController.h */,
+				CD7AA3E312E6023C009E5CCD /* ECNLiveInputSelectorWindowController.m */,
+				CD1B889512F313020067EF4E /* LiveInputSelectorView.h */,
+				CD1B889612F313020067EF4E /* LiveInputSelectorView.m */,
+			);
+			name = "Live Input selector";
+			sourceTree = "<group>";
+		};
+		CD6267DE130E90D300901235 /* Core Image Custom Filters */ = {
+			isa = PBXGroup;
+			children = (
+				CD626962130EBFF100901235 /* MaskSrcUsingChannelFilter.cikernel */,
+				CD626958130EBF8300901235 /* MaskSrcUsingChannelFilterKernel.cikernel */,
+				CD626921130EBE3700901235 /* MaskSrcUsingChannelFilter.h */,
+				CD626922130EBE3700901235 /* MaskSrcUsingChannelFilter.m */,
+			);
+			name = "Core Image Custom Filters";
+			sourceTree = "<group>";
+		};
+		CD730E8B12E6E9F100B222B7 /* QT */ = {
+			isa = PBXGroup;
+			children = (
+				CD730E9112E6E9F100B222B7 /* VisualContext */,
+			);
+			path = QT;
+			sourceTree = "<group>";
+		};
+		CD730E9112E6E9F100B222B7 /* VisualContext */ = {
+			isa = PBXGroup;
+			children = (
+				CD730E9212E6E9F100B222B7 /* QTVisualContextKit.h */,
+				CD730E9312E6E9F100B222B7 /* QTVisualContextKit.m */,
+			);
+			path = VisualContext;
+			sourceTree = "<group>";
+		};
+		CD730EA112E6EF5500B222B7 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				CD3C9DCA12E89F0600599BB0 /* Texture */,
+				CD730EA212E6EF5500B222B7 /* Quad */,
+				CD5BFA1812F461A0004E7A47 /* View */,
+			);
+			path = OpenGL;
+			sourceTree = "<group>";
+		};
+		CD730EA212E6EF5500B222B7 /* Quad */ = {
+			isa = PBXGroup;
+			children = (
+				CD730EA312E6EF5500B222B7 /* OpenGLQuad.h */,
+				CD730EA412E6EF5500B222B7 /* OpenGLQuad.m */,
+			);
+			path = Quad;
+			sourceTree = "<group>";
+		};
+		CD730EB112E6F0CA00B222B7 /* MemObject */ = {
+			isa = PBXGroup;
+			children = (
+				CD730EB212E6F0CA00B222B7 /* MemObject.h */,
+				CD730EB312E6F0CA00B222B7 /* MemObject.m */,
+				CD730EB412E6F0CA00B222B7 /* Memory.m */,
+				CD730EB512E6F0CA00B222B7 /* Memory.h */,
+			);
+			path = MemObject;
+			sourceTree = "<group>";
+		};
+		CD730EE812E6F22A00B222B7 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				CD730EE912E6F22A00B222B7 /* Alert.m */,
+				CD730EEA12E6F22A00B222B7 /* Alert.h */,
+				CD730EEB12E6F22A00B222B7 /* AlertPanelKit.h */,
+				CD730EEC12E6F22A00B222B7 /* AlertPanelKit.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		CD73100C12E6F58F00B222B7 /* Convenience classes */ = {
+			isa = PBXGroup;
+			children = (
+				CD730EB112E6F0CA00B222B7 /* MemObject */,
+				CD730EA112E6EF5500B222B7 /* OpenGL */,
+				CD730E8B12E6E9F100B222B7 /* QT */,
+				CD1FA54812EDF8C200A3D5D7 /* CoreVideo */,
+			);
+			name = "Convenience classes";
+			sourceTree = "<group>";
+		};
+		CD773FC212E72BC00066748C /* Video frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD6565FD128DBF5F002217CF /* QuickTime.framework */,
+				CDDD0CB41279BE1500759293 /* QTKit.framework */,
+				CD2FC6111285B29E003E6BF7 /* OpenGL.framework */,
+				CD773FAE12E72BB70066748C /* CoreVideo.framework */,
+			);
+			name = "Video frameworks";
+			sourceTree = "<group>";
+		};
+		CD7AA40B12E60B06009E5CCD /* Live input */ = {
+			isa = PBXGroup;
+			children = (
+				CD7AA43912E60F99009E5CCD /* UVCCameraControl.h */,
+				CD7AA43A12E60F99009E5CCD /* UVCCameraControl.m */,
+				CD7AA3F512E60966009E5CCD /* CameraController.h */,
+				CD7AA3F612E60966009E5CCD /* CameraController.m */,
+			);
+			name = "Live input";
+			sourceTree = "<group>";
+		};
+		CD8320D3130C4B4D0063E215 /* Elements settings */ = {
+			isa = PBXGroup;
+			children = (
+				CDEF475C1309230300EE0372 /* ElementSettings.xib */,
+				CD2E347A131BE006007F7236 /* OSCTxSettingsPanel.xib */,
+			);
+			name = "Elements settings";
+			sourceTree = "<group>";
+		};
+		CD8462AF130C1C6600F4A1B3 /* Triggers */ = {
+			isa = PBXGroup;
+			children = (
+				CD8462B0130C1C7F00F4A1B3 /* ECNTrigger.h */,
+				CD8462B1130C1C7F00F4A1B3 /* ECNTrigger.m */,
+				CD8462B3130C1C9600F4A1B3 /* ECNShapeTrigger.h */,
+				CD8462B4130C1C9600F4A1B3 /* ECNShapeTrigger.m */,
+			);
+			name = Triggers;
+			sourceTree = "<group>";
+		};
+		CDADC1EE130140DC002A0937 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				CDDD408D127E1F53003481BC /* ECNLine.h */,
+				CDDD408E127E1F53003481BC /* ECNLine.m */,
+				CD177B9B127EF93800369766 /* ECNRectangle.h */,
+				CD177B9C127EF93800369766 /* ECNRectangle.m */,
+				CDADC1EF13014135002A0937 /* ECNShape.h */,
+				CDADC1F013014135002A0937 /* ECNShape.m */,
+				CD4489C71309583C006B3C0A /* ECNShapes.h */,
+			);
+			name = Shapes;
+			sourceTree = "<group>";
+		};
+		CDC2102612F8811200B14E43 /* OSC manager */ = {
+			isa = PBXGroup;
+			children = (
+				CD34110912ABE50A00E6F654 /* ECNOSCManager.h */,
+				CD34110A12ABE50A00E6F654 /* ECNOSCManager.m */,
+				CDC2102712F8812900B14E43 /* OSCTableViewDataSource.h */,
+				CDC2102812F8812900B14E43 /* OSCTableViewDataSource.m */,
+			);
+			name = "OSC manager";
+			sourceTree = "<group>";
+		};
+		CDC36A1312DA23D600993177 /* Live viewer */ = {
+			isa = PBXGroup;
+			children = (
+				CDE97DCA126F442000515B57 /* ECNLiveViewerController.h */,
+				CDE97DCB126F442000515B57 /* ECNLiveViewerController.m */,
+				CD376FD61270A39E00E5ACFB /* ECNLiveView.h */,
+				CD376FD71270A39E00E5ACFB /* ECNLiveView.m */,
+			);
+			name = "Live viewer";
+			sourceTree = "<group>";
+		};
+		CDC6174C12CE154900611408 /* Element setting panels */ = {
+			isa = PBXGroup;
+			children = (
+				CD2E3477131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.h */,
+				CD2E3478131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.m */,
+				CDEF4803130933C400EE0372 /* ShapeSettingsPanel.h */,
+				CDEF4804130933C400EE0372 /* ShapeSettingsPanel.m */,
+			);
+			name = "Element setting panels";
+			sourceTree = "<group>";
+		};
+		CDD326CE127D7AEC00E4FBA9 /* Views and Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD183AFA126DC9AD00EB3717 /* ElementsView.h */,
+				CD183AFB126DC9AD00EB3717 /* ElementsView.m */,
+				CD37738C1270BA1E00E5ACFB /* ECNSceneWindowController.h */,
+				CD37738D1270BA1E00E5ACFB /* ECNSceneWindowController.m */,
+				CDDD0D2D1279C1F600759293 /* ECNProjectWindowController.h */,
+				CDDD0D2E1279C1F600759293 /* ECNProjectWindowController.m */,
+			);
+			name = "Views and Controllers";
+			sourceTree = "<group>";
+		};
+		CDD32B8612F1C4A500B838BC /* old */ = {
+			isa = PBXGroup;
+			children = (
+				CD06088E129161F500130D7F /* live_input.qtz */,
+				CD44B13612C4E8910046A616 /* diff_mask_BW.qtz */,
+				CD3CA11B12E8FE3800599BB0 /* diff_mask_BW_distanza.qtz */,
+				CD54F55912932F08007ABFED /* bg_simple.qtz */,
+				CD54F55812932F08007ABFED /* bg_auto.qtz */,
+				CD3551191290A289006A6BEA /* motion_mask.qtz */,
+				CD4FE8E712E98E9C005D4608 /* live_viewer.qtz */,
+			);
+			name = old;
+			sourceTree = "<group>";
+		};
+		CDDD0E991279CB2500759293 /* Model Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CDF3109212DB78DF00FC71A3 /* Kineto objects */,
+				CDE9507B12C8F500004C3152 /* Actions */,
+				CD376E7D12709BEA00E5ACFB /* ECNProjectDocument.h */,
+				CD376E7E12709BEA00E5ACFB /* ECNProjectDocument.m */,
+			);
+			name = "Model Classes";
+			sourceTree = "<group>";
+		};
+		CDE94E8412C8A9BC004C3152 /* TASTI */ = {
+			isa = PBXGroup;
+			children = (
+				CDE94E8512C8A9BC004C3152 /* pause.tif */,
+				CDE94E8612C8A9BC004C3152 /* play.tif */,
+				CDE94E8712C8A9BC004C3152 /* stop.tif */,
+				CDE94E8812C8A9BC004C3152 /* test.tif */,
+			);
+			name = TASTI;
+			path = icone/TASTI;
+			sourceTree = "<group>";
+		};
+		CDE9507B12C8F500004C3152 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				CD846403130C333900F4A1B3 /* ECNAction.h */,
+				CD846404130C333900F4A1B3 /* ECNAction.m */,
+				CD3DD7ED1327DCE0005FFB48 /* ECNActions.h */,
+				CD832028130C38E70063E215 /* ECNElementAction.h */,
+				CD832029130C38E70063E215 /* ECNElementAction.m */,
+				CD626675130E709800901235 /* ECNSceneAction.h */,
+				CD626676130E709800901235 /* ECNSceneAction.m */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
+		CDE9507C12C8F525004C3152 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				CD4489DD13095952006B3C0A /* ECNElements.h */,
+				CDDD0E9A1279CB4900759293 /* ECNElement.h */,
+				CDDD0E9B1279CB4900759293 /* ECNElement.m */,
+				CDF692B91313D6D300F9F810 /* Assets instances */,
+				CDADC1EE130140DC002A0937 /* Shapes */,
+				CDFDEA14130982E2001A5F9C /* Timer */,
+				CDFDEA13130982DC001A5F9C /* OSC Receiver */,
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
+		CDEB98C6130587810065198E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CDEB98C0130586550065198E /* ECNAsset.h */,
+				CDEB98C1130586550065198E /* ECNAsset.m */,
+				CDEB98C31305877D0065198E /* ECNQCAsset.h */,
+				CDEB98C41305877D0065198E /* ECNQCAsset.m */,
+				CD2E336F131BB565007F7236 /* ECNOSCTargetAsset.h */,
+				CD2E3370131BB565007F7236 /* ECNOSCTargetAsset.m */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		CDEF485D13093DA200EE0372 /* Base classes */ = {
+			isa = PBXGroup;
+			children = (
+				CDEF485A13093D9300EE0372 /* ECNPort.h */,
+				CDEF485B13093D9300EE0372 /* ECNPort.m */,
+				CDF310BC12DB800A00FC71A3 /* ECNObject.h */,
+				CDF310BD12DB800A00FC71A3 /* ECNObject.m */,
+				CD7D1A5E1326A1DF007DDC28 /* ECNObjectTypes.h */,
+			);
+			name = "Base classes";
+			sourceTree = "<group>";
+		};
+		CDF2E9AB128ED446008D53E0 /* Data streams */ = {
+			isa = PBXGroup;
+			children = (
+				CD3C9CB612E876DB00599BB0 /* OfflineRenderer.h */,
+				CD3C9CB712E876DB00599BB0 /* OfflineRenderer.m */,
+				CD7AA40B12E60B06009E5CCD /* Live input */,
+				CD828B0C12AAA0920018C787 /* LiveInputRenderer.h */,
+				CD828B0D12AAA0920018C787 /* LiveInputRenderer.m */,
+				CD45E32B12E5C6600033E945 /* QCMaskRenderer.h */,
+				CD45E32C12E5C6600033E945 /* QCMaskRenderer.m */,
+			);
+			name = "Data streams";
+			sourceTree = "<group>";
+		};
+		CDF3109212DB78DF00FC71A3 /* Kineto objects */ = {
+			isa = PBXGroup;
+			children = (
+				CDEF485D13093DA200EE0372 /* Base classes */,
+				CDEB98C6130587810065198E /* Assets */,
+				CDF3109412DB791600FC71A3 /* Scenes */,
+				CDE9507C12C8F525004C3152 /* Elements */,
+				CD8462AF130C1C6600F4A1B3 /* Triggers */,
+				CDF3109312DB790A00FC71A3 /* OSC targets */,
+			);
+			name = "Kineto objects";
+			sourceTree = "<group>";
+		};
+		CDF3109312DB790A00FC71A3 /* OSC targets */ = {
+			isa = PBXGroup;
+			children = (
+				CD34119D12ABF10E00E6F654 /* ECNOSCTarget.h */,
+				CD34119E12ABF10E00E6F654 /* ECNOSCTarget.m */,
+			);
+			name = "OSC targets";
+			sourceTree = "<group>";
+		};
+		CDF3109412DB791600FC71A3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CDDD0EAE1279CC2F00759293 /* ECNScene.h */,
+				CDDD0EAF1279CC2F00759293 /* ECNScene.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		CDF55D6512DA7B9300706539 /* Model view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD468F2E127A244A00B92E4E /* ECNProjectDocument.xib */,
+				CDDD0E961279CAB300759293 /* ECNSceneWindow.xib */,
+			);
+			name = "Model view controllers";
+			sourceTree = "<group>";
+		};
+		CDF692B91313D6D300F9F810 /* Assets instances */ = {
+			isa = PBXGroup;
+			children = (
+				CDFA99AA13150077003EC2AD /* ECNAssetInstance.h */,
+				CDFA99AB13150077003EC2AD /* ECNAssetInstance.m */,
+				CDF692BA1313D6F100F9F810 /* ECNQCAssetInstance.h */,
+				CDF692BB1313D6F100F9F810 /* ECNQCAssetInstance.m */,
+				CD2E337C131BB763007F7236 /* ECNOSCTxAssetInstance.h */,
+				CD2E337D131BB763007F7236 /* ECNOSCTxAssetInstance.m */,
+			);
+			name = "Assets instances";
+			sourceTree = "<group>";
+		};
+		CDFDEA13130982DC001A5F9C /* OSC Receiver */ = {
+			isa = PBXGroup;
+			children = (
+				CDA9362F12ABDC9B006015F2 /* ECNOSCReceiver.h */,
+				CDA9363012ABDC9B006015F2 /* ECNOSCReceiver.m */,
+			);
+			name = "OSC Receiver";
+			sourceTree = "<group>";
+		};
+		CDFDEA14130982E2001A5F9C /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* kineto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "kineto" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				CD7882D412C0B438009ACE4A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kineto;
+			productInstallPath = "$(HOME)/Applications";
+			productName = eyeconmacosx;
+			productReference = 8D1107320486CEB800E47090 /* kineto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "kineto" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* eyeconmacosx */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* kineto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				72CB32F40DCA5BBF008F3AA2 /* MainMenu.xib in Resources */,
+				CDE97D81126F3FFC00515B57 /* ActivityInspector.xib in Resources */,
+				CD37708D1270A63400E5ACFB /* LiveViewer.xib in Resources */,
+				CD3772341270B58600E5ACFB /* DrawingToolbar.xib in Resources */,
+				CDDD0E971279CAB300759293 /* ECNSceneWindow.xib in Resources */,
+				CD468F2F127A244A00B92E4E /* ECNProjectDocument.xib in Resources */,
+				CD177F9C127F1F2E00369766 /* camera_icon.gif in Resources */,
+				CD177FBC127F211200369766 /* arrow.tif in Resources */,
+				CD9429E5127F227C00921A57 /* line.tif in Resources */,
+				CD9429EC127F234600921A57 /* Rectangle.tif in Resources */,
+				CD9429F5127F24E800921A57 /* timer.tif in Resources */,
+				CD9429F8127F26AF00921A57 /* osc.tif in Resources */,
+				CD3A10471284AC4C0056ABE3 /* ECNPlaybackController.xib in Resources */,
+				CD35511C1290A289006A6BEA /* motion_mask.qtz in Resources */,
+				CD06088F129161F500130D7F /* live_input.qtz in Resources */,
+				CD54F55A12932F08007ABFED /* bg_auto.qtz in Resources */,
+				CD54F55B12932F08007ABFED /* bg_simple.qtz in Resources */,
+				CDA805291295A33D00B72116 /* ElementInspector.xib in Resources */,
+				CD70AEB1129AE20E0009F0F2 /* null.qtz in Resources */,
+				CDC9F4F8129DD1BD0064F103 /* splash.jpg in Resources */,
+				CDC9F530129DD5200064F103 /* splash_screen.xib in Resources */,
+				CD34110612ABE21C00E6F654 /* ECNOSCManager.xib in Resources */,
+				CD035D5F12BFC1B50053518A /* osc_receiver.tif in Resources */,
+				CD44B13712C4E8910046A616 /* diff_mask_BW.qtz in Resources */,
+				CD128FFA12C74ACE0089DAA2 /* Cross.tiff in Resources */,
+				CDE94CCB12C8975C004C3152 /* occhio.gif in Resources */,
+				CDE94DC312C89DAD004C3152 /* first.tif in Resources */,
+				CDE94E8912C8A9BC004C3152 /* pause.tif in Resources */,
+				CDE94E8A12C8A9BC004C3152 /* play.tif in Resources */,
+				CDE94E8B12C8A9BC004C3152 /* stop.tif in Resources */,
+				CDE94E8C12C8A9BC004C3152 /* test.tif in Resources */,
+				CD4CE36A12CB76AC00A3A314 /* OSCActionController.xib in Resources */,
+				CD4CE37012CB76E600A3A314 /* ElementActionController.xib in Resources */,
+				CD4CE41412CB823000A3A314 /* ActionController.xib in Resources */,
+				CDDB44F812CD246100C4E5AA /* SceneActionController.xib in Resources */,
+				CD7AA3E612E605A8009E5CCD /* LiveInputSelector.xib in Resources */,
+				CD3CA11C12E8FE3800599BB0 /* diff_mask_BW_distanza.qtz in Resources */,
+				CD3CA13412E9003A00599BB0 /* keystone.qtz in Resources */,
+				CD4FE8E812E98E9C005D4608 /* live_viewer.qtz in Resources */,
+				CD471F9912EB373F00C11B08 /* kineto_masks.qtz in Resources */,
+				CD471FD112EB467200C11B08 /* solo.tif in Resources */,
+				CDEB9A501305B3EB0065198E /* Object inspector.xib in Resources */,
+				CD46A9B7130707C1004A1EBF /* ExceptionAlert.xib in Resources */,
+				CDEF475D1309230300EE0372 /* ElementSettings.xib in Resources */,
+				CDFDEA2813098562001A5F9C /* data_viewer.qtz in Resources */,
+				CDFDEA2A13098580001A5F9C /* DataViewer.xib in Resources */,
+				CDFA9ABE13150E67003EC2AD /* assets_qcpatch.tif in Resources */,
+				CD2E3380131BBF99007F7236 /* assets_osctx.tif in Resources */,
+				CD2E347B131BE006007F7236 /* OSCTxSettingsPanel.xib in Resources */,
+				CD1890741324D69E00AE3D4D /* kineto_logo.icns in Resources */,
+				CDD18B0D1326370E0052BC4A /* checkerboard.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				849818240BCF1CE50085CECA /* AppController.m in Sources */,
+				CD183AFC126DC9AD00EB3717 /* ElementsView.m in Sources */,
+				CDE97DCC126F442000515B57 /* ECNLiveViewerController.m in Sources */,
+				CD376E7F12709BEA00E5ACFB /* ECNProjectDocument.m in Sources */,
+				CD376FD81270A39E00E5ACFB /* ECNLiveView.m in Sources */,
+				CD37723C1270B5C400E5ACFB /* ECNDrawingToolbar.m in Sources */,
+				CD37738E1270BA1E00E5ACFB /* ECNSceneWindowController.m in Sources */,
+				CDDD0D2F1279C1F600759293 /* ECNProjectWindowController.m in Sources */,
+				CDDD0E9C1279CB4900759293 /* ECNElement.m in Sources */,
+				CDDD0EB01279CC2F00759293 /* ECNScene.m in Sources */,
+				CDDD408F127E1F53003481BC /* ECNLine.m in Sources */,
+				CD177B9A127EF92D00369766 /* ECNFoundationExtras.m in Sources */,
+				CD177B9D127EF93800369766 /* ECNRectangle.m in Sources */,
+				CD3A10521284AEBF0056ABE3 /* ECNPlaybackWindowController.m in Sources */,
+				CDA8054E1295B7CC00B72116 /* ECNElementActivityInspectorWindowController.m in Sources */,
+				CD828B0E12AAA0920018C787 /* LiveInputRenderer.m in Sources */,
+				CDA9363112ABDC9B006015F2 /* ECNOSCReceiver.m in Sources */,
+				CD34110B12ABE50A00E6F654 /* ECNOSCManager.m in Sources */,
+				CD34119F12ABF10E00E6F654 /* ECNOSCTarget.m in Sources */,
+				CDF310BE12DB800A00FC71A3 /* ECNObject.m in Sources */,
+				CD01B52C12DDB597009A9A66 /* ECNActivityInspectorScrollView.m in Sources */,
+				CD04EA9C12DDE58A002F1330 /* ECNActivityInspectorViewController.m in Sources */,
+				CD45E32D12E5C6600033E945 /* QCMaskRenderer.m in Sources */,
+				CD7AA3E412E6023C009E5CCD /* ECNLiveInputSelectorWindowController.m in Sources */,
+				CD7AA3F712E60966009E5CCD /* CameraController.m in Sources */,
+				CD7AA43B12E60F99009E5CCD /* UVCCameraControl.m in Sources */,
+				CD730E9612E6E9F100B222B7 /* QTVisualContextKit.m in Sources */,
+				CD730EA512E6EF5500B222B7 /* OpenGLQuad.m in Sources */,
+				CD730EB612E6F0CA00B222B7 /* MemObject.m in Sources */,
+				CD730EB712E6F0CA00B222B7 /* Memory.m in Sources */,
+				CD730EED12E6F22A00B222B7 /* Alert.m in Sources */,
+				CD730EEE12E6F22A00B222B7 /* AlertPanelKit.m in Sources */,
+				CD3C9CB812E876DB00599BB0 /* OfflineRenderer.m in Sources */,
+				CD3C9DC912E89F0000599BB0 /* OpenGLTexture.m in Sources */,
+				CD471FDB12EB472B00C11B08 /* ColorCell.m in Sources */,
+				CD1FA54B12EDF8FC00A3D5D7 /* CVImageBuffer.m in Sources */,
+				CD5E726E12EF428C009B611C /* CameraControllerInQCMaskRendererView.m in Sources */,
+				CD1B889712F313020067EF4E /* LiveInputSelectorView.m in Sources */,
+				CD5BFA1B12F461A0004E7A47 /* OpenGLViewKit.m in Sources */,
+				CDC2102912F8812900B14E43 /* OSCTableViewDataSource.m in Sources */,
+				CDADC1F113014135002A0937 /* ECNShape.m in Sources */,
+				CDEB98C2130586550065198E /* ECNAsset.m in Sources */,
+				CDEB98C51305877D0065198E /* ECNQCAsset.m in Sources */,
+				CD46A9B313070775004A1EBF /* MyExceptionAlertController.m in Sources */,
+				CD46AA1513070B46004A1EBF /* MyApplication.m in Sources */,
+				CDEF4805130933C400EE0372 /* ShapeSettingsPanel.m in Sources */,
+				CDEF485C13093D9300EE0372 /* ECNPort.m in Sources */,
+				CDFDEA2F13098613001A5F9C /* DataViewerWindowController.m in Sources */,
+				CD8462B2130C1C7F00F4A1B3 /* ECNTrigger.m in Sources */,
+				CD8462B5130C1C9600F4A1B3 /* ECNShapeTrigger.m in Sources */,
+				CD846405130C333900F4A1B3 /* ECNAction.m in Sources */,
+				CD83202A130C38E70063E215 /* ECNElementAction.m in Sources */,
+				CD626677130E709800901235 /* ECNSceneAction.m in Sources */,
+				CD626924130EBE3700901235 /* MaskSrcUsingChannelFilter.m in Sources */,
+				CD626959130EBF8300901235 /* MaskSrcUsingChannelFilterKernel.cikernel in Sources */,
+				CD626963130EBFF100901235 /* MaskSrcUsingChannelFilter.cikernel in Sources */,
+				CD2E5EA8130EE52B007D80CE /* maskSrcUsingRedChannel.cikernel in Sources */,
+				CDF692BC1313D6F100F9F810 /* ECNQCAssetInstance.m in Sources */,
+				CDFA99AC13150077003EC2AD /* ECNAssetInstance.m in Sources */,
+				CD2E3371131BB565007F7236 /* ECNOSCTargetAsset.m in Sources */,
+				CD2E337E131BB763007F7236 /* ECNOSCTxAssetInstance.m in Sources */,
+				CD2E3479131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		72CB32F20DCA5BBF008F3AA2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72CB32F30DCA5BBF008F3AA2 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/vvopensource-read-only/build/Release\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = kineto_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = kineto;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/vvopensource-read-only/build/Release\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = kineto_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = kineto;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CD31893312F7FF6E00D9306A /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = "Release 10.5";
+		};
+		CD31893412F7FF6E00D9306A /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/vvopensource-read-only/build/Release\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = kineto_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = kineto;
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Release 10.5";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "kineto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+				CD31893412F7FF6E00D9306A /* Release 10.5 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "kineto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				CD31893312F7FF6E00D9306A /* Release 10.5 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
