@@ -23,5 +23,7 @@ extern NSString *OSCAssetPortKey;
 				withOSCTargetPort: (NSNumber *)oscport;
 
 - (bool) sendValues: (NSArray *) values toAddress: (NSString *)addressPattern;
+- (bool) openOutportOnManager: (OSCManager *)oscManager;
+- (bool) closeOutportOnManager: (OSCManager *)oscManager;
 
 @end

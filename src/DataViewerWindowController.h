@@ -29,7 +29,13 @@
 
 @property (retain) id value;
 
+//Accessors
 - (void) setElementToObserve: (ECNElement *)element;
 - (ECNPort *)selectedPort;
+
+//Start/stop rendering
+- (void) startRendering;
+- (void) stopRendering;
+
 
 @end

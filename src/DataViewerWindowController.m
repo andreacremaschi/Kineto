@@ -184,6 +184,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataViewerWindowController);
 	return [oPortsArrayController selection];
 }
 
+#pragma mark *** Start / stop rendering
+
+- (void) startRendering	{
+	[oQCView startRendering];
+}
+
+- (void) stopRendering	{
+	[oQCView stopRendering];
+}
 
 
 

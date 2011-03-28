@@ -14,8 +14,8 @@
 NSString *OSCTxAssetInstanceAddressPatternKey = @"osc_addresspattern";
 NSString *OSCTxAssetInstanceBundleKey = @"osc_bundle";
 
-
 NSString *OSCTxAssetInstanceObservedPortsArrayKey = @"observed_ports";
+
 // an array of labels of ECN Elements output ports:
 // they will be used to create the bundle to send
 //NSString *OSCTxAssetInstancePortKeysArrayKey = @"ports_key";

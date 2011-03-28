@@ -16,7 +16,7 @@ NSString *ECNMaskToObserveKey = @"mask_to_observe";
 // +  +  +  +  +  +  +  +  +  +  +  +
 
 // +  + Default values  +  +  +  +  +
-NSString *ECNShapeTriggerClassValue = @"ShapeTrigger";
+NSString *ECNShapeTriggerClassValue = @"ECNShapeTrigger";
 // +  +  +  +  +  +  +  +  +  +  +  +
 
 
@@ -84,9 +84,11 @@ NSString *ECNShapeTriggerClassValue = @"ShapeTrigger";
 #pragma mark = Playback
 #pragma mark -
 #pragma mark Playback methods
+
 - (float) observedValue	{
 	float value = 0.0;
-	
+
+	// get the observed port
 	id observedPort = [self valueForPropertyKey: ECNTriggerPortToObserveKey];
 	
 	// check if port is valid, and if its value is a NSNumber
@@ -94,27 +96,10 @@ NSString *ECNShapeTriggerClassValue = @"ShapeTrigger";
 	NSObject *valueObject  = [(ECNPort*)observedPort value];
 	if (![valueObject isKindOfClass: [NSNumber class]]) return 0.0;
 	
+	// return port value as a float
 	value = [(NSNumber *)valueObject floatValue];
 	return value;
 }	
-
-/*
-- (float) observedValue	{
-	float value = 0.0;
-	
-	int maskToMonitor = [self maskToMonitor];
-	id observedPort = [self valueForPropertyKey: ECNTriggerPortToObserveKey];
-	
-	// check if port is valid, and if its value is a NSNumber
-	if ((observedPort == [NSNull null]) || (![observedPort isKindOfClass: [ECNPort class]])) return 0.0;
-	NSObject *valueObject  = [(ECNPort*)observedPort value];
-	if (![valueObject isKindOfClass: [NSDictionary class]]) return 0.0;
-	
-	//TODO: implementare un controllo sulla maschera da osservare!!!!
-	value = [[(NSDictionary *)valueObject valueForKey: @"diff_mask"] floatValue];
-	return value;
-}	
-*/
 
 - (bool) checkIfHasToBeActivated	{
 	float activationThreshold = [[self valueForPropertyKey:ECNTriggerActivationThresholdKey] floatValue];

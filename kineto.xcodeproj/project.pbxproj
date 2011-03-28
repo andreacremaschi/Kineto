@@ -58,6 +58,7 @@
 		CD4CE36A12CB76AC00A3A314 /* OSCActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4CE36912CB76AC00A3A314 /* OSCActionController.xib */; };
 		CD4CE37012CB76E600A3A314 /* ElementActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4CE36F12CB76E600A3A314 /* ElementActionController.xib */; };
 		CD4CE41412CB823000A3A314 /* ActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4CE41312CB823000A3A314 /* ActionController.xib */; };
+		CD58396313407FDB0059D504 /* ECNOSCReceiverTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = CD58396213407FDB0059D504 /* ECNOSCReceiverTrigger.m */; };
 		CD5BFA1B12F461A0004E7A47 /* OpenGLViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5BFA1A12F461A0004E7A47 /* OpenGLViewKit.m */; };
 		CD5E726E12EF428C009B611C /* CameraControllerInQCMaskRendererView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5E726D12EF428C009B611C /* CameraControllerInQCMaskRendererView.m */; };
 		CD626677130E709800901235 /* ECNSceneAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD626676130E709800901235 /* ECNSceneAction.m */; };
@@ -237,6 +238,8 @@
 		CD4CE36912CB76AC00A3A314 /* OSCActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OSCActionController.xib; sourceTree = "<group>"; };
 		CD4CE36F12CB76E600A3A314 /* ElementActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElementActionController.xib; sourceTree = "<group>"; };
 		CD4CE41312CB823000A3A314 /* ActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionController.xib; sourceTree = "<group>"; };
+		CD58396113407FDB0059D504 /* ECNOSCReceiverTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCReceiverTrigger.h; sourceTree = "<group>"; };
+		CD58396213407FDB0059D504 /* ECNOSCReceiverTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNOSCReceiverTrigger.m; sourceTree = "<group>"; };
 		CD5BFA1912F461A0004E7A47 /* OpenGLViewKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLViewKit.h; sourceTree = "<group>"; };
 		CD5BFA1A12F461A0004E7A47 /* OpenGLViewKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLViewKit.m; sourceTree = "<group>"; };
 		CD5E726C12EF428C009B611C /* CameraControllerInQCMaskRendererView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraControllerInQCMaskRendererView.h; sourceTree = "<group>"; };
@@ -744,6 +747,8 @@
 				CD8462B1130C1C7F00F4A1B3 /* ECNTrigger.m */,
 				CD8462B3130C1C9600F4A1B3 /* ECNShapeTrigger.h */,
 				CD8462B4130C1C9600F4A1B3 /* ECNShapeTrigger.m */,
+				CD58396113407FDB0059D504 /* ECNOSCReceiverTrigger.h */,
+				CD58396213407FDB0059D504 /* ECNOSCReceiverTrigger.m */,
 			);
 			name = Triggers;
 			sourceTree = "<group>";
@@ -1148,6 +1153,7 @@
 				CD66B5F5133FF239004BA4BE /* MaskSrcUsingChannelFilter.cikernel in Sources */,
 				CD66B5F6133FF239004BA4BE /* MaskSrcUsingChannelFilterKernel.cikernel in Sources */,
 				CD66B5F7133FF239004BA4BE /* maskSrcUsingRedChannel.cikernel in Sources */,
+				CD58396313407FDB0059D504 /* ECNOSCReceiverTrigger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

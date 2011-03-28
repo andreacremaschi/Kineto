@@ -7,6 +7,7 @@
 //
 
 #import "ECNOSCReceiver.h"
+#import "ECNOSCReceiverTrigger.h"
 #import "ECNProjectDocument.h"
 #import <OpenGL/CGLMacro.h>  // Set up using macros
 
@@ -15,22 +16,43 @@
 @implementation ECNOSCReceiver
 
 // +  + Elements specific properties  +
+NSString *OSCReceiverAddressPatternKey = @"osc_addresspattern";
 // +  +  +  +  +  +  +  +  +  +  +  +
 
 
 // +  + Default values  +  +  +  +  +
-NSString *ECNOSCReceiverClassValue = @"OSCReceiver";
+NSString *OSCReceiverClassValue = @"OSCReceiver";
 NSString *OSCReceiverNameDefaultValue = @"localhost receiver";
+NSString *OSCRxAddressPatternDefaultValue = @"/kineto_data";
 // +  +  +  +  +  +  +  +  +  +  +  +
 
-#pragma mark *** Accessors
+// +  +  + Shape output ports +  +  +
+NSString *OSCReceiverLastMessageReceived = @"last_osc_message";
+// +  +  +  +  +  +  +  +  +  +  +  +
 
-- (void) setInPort: (int) inPort {
-	_inPort = inPort;
+
++ (Class) triggerClass		{
+	return [ECNOSCReceiverTrigger class];
 }
 
-- (int) inPort	{
-	return _inPort;
++ (NSString*) defaultTriggerPortKey		{
+	return OSCReceiverLastMessageReceived;
+}
+
+#pragma mark *** Initialization
+
+- (void) initPorts // WithProjectDocument: (ECNProjectDocument *)document
+{
+	
+	// INPUT PORTS
+	
+	
+	// OUTPUT PORTS		
+	[self addOutputPortWithType: ECNPortTypeStructure
+						 forKey: OSCReceiverLastMessageReceived
+				 withAttributes: nil];
+
+
 }
 
 - (void) initOSCIcon
@@ -44,30 +66,16 @@ NSString *OSCReceiverNameDefaultValue = @"localhost receiver";
 }
 
 
-- (id) init
-{
-    self = [super init];
-    if (self) {
-		
-		[super setName: @"New OSC receiver"];
-		_inPort = kOSCDefaultPort; //arc4random() % 65535; // default to a random port
-		[self initOSCIcon];
-		
-	}
-	return self;
-}
-
-
-
 - (NSMutableDictionary *) attributesDictionary	{
 	
 	NSMutableDictionary* dict = [super attributesDictionary];
 	
 	// set default attributes values
-	[dict setValue: ECNOSCReceiverClassValue forKey: ECNObjectClassKey];
+	[dict setValue: OSCReceiverClassValue forKey: ECNObjectClassKey];
 	
 	// define class specific attributes	
 	NSDictionary *propertiesDict = [NSDictionary dictionaryWithObjectsAndKeys:
+									OSCRxAddressPatternDefaultValue, OSCReceiverAddressPatternKey,
 									nil];
 	
 	[[dict objectForKey: ECNPropertiesKey] addEntriesFromDictionary: propertiesDict ];
@@ -88,20 +96,12 @@ NSString *OSCReceiverNameDefaultValue = @"localhost receiver";
 	
 }
 
-+ (ECNOSCReceiver *)elementWithDocument: (ECNProjectDocument *)document	{
++ (ECNElement *)elementWithDocument: (ECNProjectDocument *)document	{
 	return [ECNOSCReceiver oscReceiverWithDocument: document];
 }
 
 
 #pragma mark *** Other
-
-- (id)copyWithZone:(NSZone *)zone {
-    id newObj = [super copyWithZone:zone];
-	
-    [newObj setImage:[self image]];
-
-    return newObj;
-}
 
 - (void)ECN_clearCachedImage {
     if (_cachedImage != _image) {
@@ -269,9 +269,6 @@ NSString *OSCReceiverNameDefaultValue = @"localhost receiver";
 - (float) checkActivityOnElementInCurrentOpenGLContextWithMotionMask: (NSBitmapImageRep*) motion_mask
 														withDiffMask: (NSBitmapImageRep*) diff_mask
 {
-	if (!_oscReceiverIsActive)	{
-		// activate receiver
-	}
 	
 	return 0.0;
 	

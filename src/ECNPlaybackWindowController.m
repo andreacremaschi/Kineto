@@ -22,6 +22,7 @@
 #import "ECNOSCTarget.h"
 #import "ECNOSCTargetAsset.h"
 #import "ECNTrigger.h"
+#import "DataViewerWindowController.h"
 
 #import <VVOSC/OSCManager.h>
 
@@ -30,6 +31,7 @@ NSString *PlaybackNewFrameHasBeenProcessedNotification = @"PlaybackNewFrameHasBe
 
 @interface ECNPlaybackWindowController (PrivateMethods)
 - (void) startPlayback;
+- (void) stop;
 @end
 
 @implementation ECNPlaybackWindowController
@@ -245,18 +247,17 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ECNPlaybackWindowController);
 }
 - (void) closeOSCPorts	{
 	
-
 	
+	for (ECNOSCTargetAsset *OSCTarget in [_curProjectDocument objectsOfKind: [ECNOSCTargetAsset class]])
+	{
+		[OSCTarget closeOutportOnManager: _OSCManager];
+		
+	}
 	
-	ECNOSCTarget *oscTarget;
-
-	for (oscTarget in [_curProjectDocument OSCtargets])
-		[oscTarget closeOutport];
-
+	// just to be sure...
 	[_OSCManager deleteAllOutputs];
 	[_OSCManager release];
-	
-	
+	_OSCManager = nil;
 }
 
 #pragma mark *** Playback logic ***
@@ -273,6 +274,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ECNPlaybackWindowController);
 			
 			case  kECNPlayEntireDocument: 
 				if ((_curProjectDocument != nil) && !(_mPlaybackState == kECNPause))
+					[[DataViewerWindowController sharedDataViewerWindowController] startRendering];
 					[self startPlayback];
 				break;
 
@@ -280,10 +282,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ECNPlaybackWindowController);
 				break;
 
 			case  kECNStop:
-			
+				[[DataViewerWindowController sharedDataViewerWindowController] stopRendering];
+				[self stop];
 				break;
 
 			case  kECNTestMode:
+				[[DataViewerWindowController sharedDataViewerWindowController] startRendering];
 				break;
 	}
 	_mPlaybackState = selColumn;				
@@ -313,6 +317,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ECNPlaybackWindowController);
 	[self closeOSCPorts];
 	
 	[mPlaybackSelectorMatrix selectCellAtRow: 0 column: kECNStop];
+	
 }
 
 - (void) playbackIsOver {

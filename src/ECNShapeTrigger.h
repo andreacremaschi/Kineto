@@ -14,7 +14,4 @@
 
 + (ECNShapeTrigger *)shapeTriggerWithDocument: (ECNProjectDocument *)document;
 
-// Accessors for data binding
-//- (int)maskToMonitor;
-
 @end

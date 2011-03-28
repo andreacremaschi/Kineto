@@ -212,4 +212,26 @@ NSString *DefaultPort = @"5000";
 }
 
 
+- (bool) closeOutportOnManager: (OSCManager *)oscManager	{
+	NSString *host = [self valueForPropertyKey: OSCAssetHostKey];
+	int osc_portNumber = [[self valueForPropertyKey:OSCAssetPortKey] intValue];
+	
+	if ((!host) || (osc_portNumber <=0) || (!oscManager)) return false;
+		
+	if (_OSCOutputPort == nil) return true;
+	
+	// check if port is effectively open 
+	OSCOutPort *OSCOutputPort = [oscManager findOutputWithAddress: host 
+											   andPort: osc_portNumber];
+	if (OSCOutputPort == nil) {
+		NSLog (@"Error: it was asked to close and OSC port that was not opened");
+		return true; // port is not opened, why should it be closed? raise an exception
+	}
+	
+	[oscManager removeOutput: OSCOutputPort];
+	[_OSCOutputPort release];
+	_OSCOutputPort=nil;
+	return true;
+}
+
 @end

@@ -105,7 +105,6 @@ extern NSString *ECNElementDidChangeNotification;
 - (NSColor *)strokeColor;
 
 // =================================== Primitives ===================================
-- (void) updateElementViewBounds;
 
 // =================================== Extended mutation ===================================
 - (void)startBoundsManipulation;

@@ -8,23 +8,12 @@
 
 #import "ECNElement.h"
 
-#define kOSCDefaultPort 5000
-
 @interface ECNOSCReceiver : ECNElement {
 @private
     NSImage *_image;
     NSImage *_cachedImage;
 	
-	int _inPort;
-	
-	
-	// playback flags and osc buffer
-	bool _oscReceiverIsActive;
 }
-
-// *** Accessors
-- (void) setInPort: (int) inPort;
-- (int) inPort;
 
 // *** Representation methods and properties
 - (void)setImage:(NSImage *)image;

@@ -840,7 +840,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	
 	[_onePixelBitmap getPixel: curPixel atX:0 y:0];
 
-	_flags.mask_extension = (float)curPixel[0]/255;
+	_flags.mask_extension = (float)curPixel[0]/255.0;
 	_flags.shouldUpdateShapeMask = false;	
 	NSLog(@"Shape for element: %@ has just been refreshed. Current shape extension: %.2f", 
 		  [self valueForPropertyKey: ECNObjectNameKey],

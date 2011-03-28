@@ -35,7 +35,7 @@ NSString *ECNTriggerDeactivationActionsListKey = @"deactivation_actions";
 
 
 // +  + Default values  +  +  +  +  +
-NSString *ECNTriggerClassValue = @"Trigger";
+NSString *ECNTriggerClassValue = @"ECNTrigger";
 // +  +  +  +  +  +  +  +  +  +  +  +
 
 

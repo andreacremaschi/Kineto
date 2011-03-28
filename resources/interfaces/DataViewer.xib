@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">823</string>
+		<string key="IBDocument.SystemVersion">10J869</string>
+		<string key="IBDocument.InterfaceBuilderVersion">851</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
-		<string key="IBDocument.HIToolboxVersion">462.00</string>
+		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSArray" key="dict.sortedKeys">
@@ -15,7 +15,7 @@
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>823</string>
+				<string>851</string>
 				<string>11</string>
 			</object>
 		</object>
@@ -141,6 +141,7 @@
 											<string>number</string>
 											<string>show_type</string>
 											<string>string</string>
+											<string>structure</string>
 										</object>
 										<object class="NSMutableArray" key="dict.values">
 											<bool key="EncodedWithXMLCoder">YES</bool>
@@ -170,6 +171,7 @@
 													<string>Enable</string>
 												</object>
 											</object>
+											<reference ref="476827200"/>
 											<reference ref="476827200"/>
 											<reference ref="476827200"/>
 											<reference ref="476827200"/>
@@ -988,15 +990,15 @@ AAAAOHtAgwAAAAAAOHFAhpKEl5gIcG9zaXRpb26GkoSam56dgfMAgTkBhoY</bytes>
 																					<string key="NS.key.0">value</string>
 																					<real value="0.0" key="NS.object.0"/>
 																				</object>
-																				<object class="NSDictionary" id="902099477">
+																				<object class="NSDictionary" id="194052297">
 																					<string key="NS.key.0">value</string>
 																					<real value="0.0" key="NS.object.0"/>
 																				</object>
-																				<object class="NSDictionary" id="527976985">
+																				<object class="NSDictionary" id="771742359">
 																					<string key="NS.key.0">value</string>
 																					<real value="0.0" key="NS.object.0"/>
 																				</object>
-																				<object class="NSDictionary" id="33237428">
+																				<object class="NSDictionary" id="946633886">
 																					<string key="NS.key.0">value</string>
 																					<real value="0.0" key="NS.object.0"/>
 																				</object>
@@ -1024,9 +1026,9 @@ AAAAOHtAgwAAAAAAOHFAhpKEl5gIcG9zaXRpb26GkoSam56dgfMAgTkBhoY</bytes>
 																				</object>
 																				<reference ref="654166209"/>
 																				<reference ref="413093843"/>
-																				<reference ref="902099477"/>
-																				<reference ref="527976985"/>
-																				<reference ref="33237428"/>
+																				<reference ref="194052297"/>
+																				<reference ref="771742359"/>
+																				<reference ref="946633886"/>
 																			</object>
 																		</object>
 																		<boolean value="NO"/>
@@ -2962,8 +2964,8 @@ hAhOU09iamVjdACFhAFpAZKEhIQITlNTdHJpbmcBlYQBKwRuYW1lhpKEl5gJU3RydWN0dXJlhoY</byt
 																							</object>
 																							<object class="NSMutableData">
 																								<bytes key="NS.bytes">BAtzdHJlYW10eXBlZIHoA4QBQISEhBNOU011dGFibGVEaWN0aW9uYXJ5AISEDE5TRGljdGlvbmFyeQCE
-hAhOU09iamVjdACFhAFpA5KEhIQITlNTdHJpbmcBlYQBKwlzY3JvbGxpbmeGkoSEhAdOU1ZhbHVlAJWE
-ASqEhAx7Q0dQb2ludD1kZH2bgwAAAAAADIFAgVoBhpKEl5gIcG9zaXRpb26GkoSZmpqbgWgCgS0BhpKE
+hAhOU09iamVjdACFhAFpA5KEhIQITlNTdHJpbmcBlYQBKwhwb3NpdGlvboaShISEB05TVmFsdWUAlYQB
+KoSEDHtDR1BvaW50PWRkfZuBaAKBLQGGkoSXmAlzY3JvbGxpbmeGkoSZmpqbgwAAAAAADIFAgVoBhpKE
 l5gKem9vbUZhY3RvcoaShISECE5TTnVtYmVyAJmahIQBZp0BhoY</bytes>
 																							</object>
 																						</object>
@@ -3756,6 +3758,39 @@ KoSEDHtDR1BvaW50PWRkfZuBxwBthoY</bytes>
 																</object>
 															</object>
 														</object>
+														<object class="NSDictionary">
+															<bool key="EncodedWithXMLCoder">YES</bool>
+															<object class="NSArray" key="dict.sortedKeys">
+																<bool key="EncodedWithXMLCoder">YES</bool>
+																<string>class</string>
+																<string>key</string>
+																<string>state</string>
+															</object>
+															<object class="NSMutableArray" key="dict.values">
+																<bool key="EncodedWithXMLCoder">YES</bool>
+																<string>QCSplitter</string>
+																<string>Splitter_9</string>
+																<object class="NSDictionary">
+																	<bool key="EncodedWithXMLCoder">YES</bool>
+																	<object class="NSArray" key="dict.sortedKeys">
+																		<bool key="EncodedWithXMLCoder">YES</bool>
+																		<string>portClass</string>
+																		<string>userInfo</string>
+																		<string>version</string>
+																	</object>
+																	<object class="NSMutableArray" key="dict.values">
+																		<bool key="EncodedWithXMLCoder">YES</bool>
+																		<string>QCStructurePort</string>
+																		<object class="NSMutableData">
+																			<bytes key="NS.bytes">BAtzdHJlYW10eXBlZIHoA4QBQISEhBNOU011dGFibGVEaWN0aW9uYXJ5AISEDE5TRGljdGlvbmFyeQCE
+hAhOU09iamVjdACFhAFpApKEhIQITlNTdHJpbmcBlYQBKwRuYW1lhpKEl5gJc3RydWN0dXJlhpKEl5gI
+cG9zaXRpb26GkoSEhAdOU1ZhbHVlAJWEASqEhAx7Q0dQb2ludD1kZH2bo4GEAYaGA</bytes>
+																		</object>
+																		<integer value="1"/>
+																	</object>
+																</object>
+															</object>
+														</object>
 													</object>
 													<object class="NSArray">
 														<bool key="EncodedWithXMLCoder">YES</bool>
@@ -3943,12 +3978,35 @@ hAhOU09iamVjdACFhAFpAZKEhIQITlNTdHJpbmcBlYQBKwRuYW1lhpKEl5gMQ2hlY2tlcmJvYXJkhoY<
 																</object>
 															</object>
 														</object>
+														<object class="NSDictionary">
+															<bool key="EncodedWithXMLCoder">YES</bool>
+															<object class="NSArray" key="dict.sortedKeys">
+																<bool key="EncodedWithXMLCoder">YES</bool>
+																<string>key</string>
+																<string>node</string>
+																<string>port</string>
+																<string>state</string>
+															</object>
+															<object class="NSMutableArray" key="dict.values">
+																<bool key="EncodedWithXMLCoder">YES</bool>
+																<string>structure</string>
+																<string>Splitter_9</string>
+																<string>input</string>
+																<object class="NSDictionary">
+																	<string key="NS.key.0">userInfo</string>
+																	<object class="NSMutableData" key="NS.object.0">
+																		<bytes key="NS.bytes">BAtzdHJlYW10eXBlZIHoA4QBQISEhBNOU011dGFibGVEaWN0aW9uYXJ5AISEDE5TRGljdGlvbmFyeQCE
+hAhOU09iamVjdACFhAFpAZKEhIQITlNTdHJpbmcBlYQBKwRuYW1lhpKEl5gJc3RydWN0dXJlhoY</bytes>
+																	</object>
+																</object>
+															</object>
+														</object>
 													</object>
 													<object class="NSMutableData">
 														<bytes key="NS.bytes">BAtzdHJlYW10eXBlZIHoA4QBQISEhBNOU011dGFibGVEaWN0aW9uYXJ5AISEDE5TRGljdGlvbmFyeQCE
 hAhOU09iamVjdACFhAFpA5KEhIQITlNTdHJpbmcBlYQBKwhwb3NpdGlvboaShISEB05TVmFsdWUAlYQB
-KoSEDHtDR1BvaW50PWRkfZsAAYaShJeYCXNjcm9sbGluZ4aShJmampuDAAAAAADgWkCBEAGGkoSXmAp6
-b29tRmFjdG9yhpKEhIQITlNOdW1iZXIAmZqEhAFmnQGGhg</bytes>
+KoSEDHtDR1BvaW50PWRkfZsAAYaShJeYCXNjcm9sbGluZ4aShJmampuDAAAAAAC4cECDAAAAAAC4cUCG
+koSXmAp6b29tRmFjdG9yhpKEhIQITlNOdW1iZXIAmZqEhAFmnQGGhg</bytes>
 													</object>
 												</object>
 											</object>
@@ -7014,7 +7072,7 @@ ciKGhg</bytes>
 																					</object>
 																					<object class="NSMutableArray" key="dict.values">
 																						<bool key="EncodedWithXMLCoder">YES</bool>
-																						<object class="NSDictionary" id="931580742">
+																						<object class="NSDictionary" id="215434052">
 																							<bool key="EncodedWithXMLCoder">YES</bool>
 																							<object class="NSArray" key="dict.sortedKeys">
 																								<bool key="EncodedWithXMLCoder">YES</bool>
@@ -7033,7 +7091,7 @@ ciKGhg</bytes>
 																								</object>
 																							</object>
 																						</object>
-																						<reference ref="931580742"/>
+																						<reference ref="215434052"/>
 																					</object>
 																				</object>
 																			</object>
@@ -7995,7 +8053,7 @@ AAAAOHtAgwAAAAAAOHFAhpKEl5gIcG9zaXRpb26GkoSam56dgfMAgTkBhoY</bytes>
 							<bool key="allowsDragIn">NO</bool>
 							<bool key="allowsDragOut">NO</bool>
 							<float key="maxFPS">10</float>
-							<bool key="autorun">YES</bool>
+							<bool key="autorun">NO</bool>
 							<int key="forwardingEventMask">0</int>
 							<object class="NSColor" key="clearColor" id="735337137">
 								<int key="NSColorSpace">1</int>
@@ -9015,15 +9073,15 @@ AAAAOHtAgwAAAAAAOHFAhpKEl5gIcG9zaXRpb26GkoSam56dgfMAgTkBhoY</bytes>
 																		<string key="NS.key.0">value</string>
 																		<real value="0.0" key="NS.object.0"/>
 																	</object>
-																	<object class="NSMutableDictionary" id="604515012">
+																	<object class="NSMutableDictionary" id="505476062">
 																		<string key="NS.key.0">value</string>
 																		<real value="0.0" key="NS.object.0"/>
 																	</object>
-																	<object class="NSMutableDictionary" id="989539707">
+																	<object class="NSMutableDictionary" id="167750913">
 																		<string key="NS.key.0">value</string>
 																		<real value="0.0" key="NS.object.0"/>
 																	</object>
-																	<object class="NSMutableDictionary" id="822215762">
+																	<object class="NSMutableDictionary" id="492248305">
 																		<string key="NS.key.0">value</string>
 																		<real value="0.0" key="NS.object.0"/>
 																	</object>
@@ -9051,9 +9109,9 @@ AAAAOHtAgwAAAAAAOHFAhpKEl5gIcG9zaXRpb26GkoSam56dgfMAgTkBhoY</bytes>
 																	</object>
 																	<reference ref="569062934"/>
 																	<reference ref="245850374"/>
-																	<reference ref="604515012"/>
-																	<reference ref="989539707"/>
-																	<reference ref="822215762"/>
+																	<reference ref="505476062"/>
+																	<reference ref="167750913"/>
+																	<reference ref="492248305"/>
 																</object>
 															</object>
 															<boolean value="NO"/>
@@ -14557,7 +14615,7 @@ Owp9A</string>
 																		</object>
 																		<object class="NSMutableArray" key="dict.values">
 																			<bool key="EncodedWithXMLCoder">YES</bool>
-																			<object class="NSMutableDictionary" id="26954381">
+																			<object class="NSMutableDictionary" id="1064772897">
 																				<bool key="EncodedWithXMLCoder">YES</bool>
 																				<object class="NSArray" key="dict.sortedKeys">
 																					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -14576,7 +14634,7 @@ Owp9A</string>
 																					</object>
 																				</object>
 																			</object>
-																			<reference ref="26954381"/>
+																			<reference ref="1064772897"/>
 																		</object>
 																	</object>
 																</object>
@@ -15811,9 +15869,9 @@ cmlwdGlvboaShJeYEFRoZSBvdXRwdXQgcG9ydC6Ghg</bytes>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{303, 347}, {469, 361}}</string>
+					<string>{{329, 347}, {469, 361}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{303, 347}, {469, 361}}</string>
+					<string>{{329, 347}, {469, 361}}</string>
 					<integer value="1"/>
 					<string>{196, 240}</string>
 					<string>{{202, 428}, {480, 270}}</string>
@@ -15930,14 +15988,14 @@ cmlwdGlvboaShJeYEFRoZSBvdXRwdXQgcG9ydC6Ghg</bytes>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">DataViewerWindowController.h</string>
+						<string key="minorKey">src/DataViewerWindowController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">ECNFoundationExtras.h</string>
+						<string key="minorKey">src/ECNFoundationExtras.h</string>
 					</object>
 				</object>
 			</object>
@@ -16447,6 +16505,20 @@ cmlwdGlvboaShJeYEFRoZSBvdXRwdXQgcG9ydC6Ghg</bytes>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Sparkle.framework/Headers/SUAppcast.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Sparkle.framework/Headers/SUUpdater.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">NSObjectController</string>
 					<string key="superclassName">NSController</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -16633,7 +16705,7 @@ cmlwdGlvboaShJeYEFRoZSBvdXRwdXQgcG9ydC6Ghg</bytes>
 			<integer value="3000" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<string key="IBDocument.LastKnownRelativeProjectPath">kineto.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../../kineto.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<bool key="EncodedWithXMLCoder">YES</bool>
