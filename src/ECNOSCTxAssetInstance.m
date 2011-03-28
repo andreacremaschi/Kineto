@@ -3,12 +3,12 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 28/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNOSCTxAssetInstance.h"
 #import "ECNOSCTargetAsset.h"
-
+ 
 // +  + Elements specific properties   +
 
 NSString *OSCTxAssetInstanceAddressPatternKey = @"osc_addresspattern";
@@ -128,6 +128,10 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 
 #pragma mark - ECNElement overrides
 
+
+- (NSImage *)icon {
+	return [NSImage imageNamed: @"osc"];
+}
 - (bool) prepareForPlayback	{
 	ECNOSCTargetAsset* asset = [self oscAsset];
 
@@ -163,6 +167,7 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 	for (c=0; c < nPorts; c++)	{
 		portValue = [(ECNPort *)[portkeysArray objectAtIndex: c] value];
 		portValue = portValue == nil ? [NSNull null] : portValue;
+		//NSLog (@"%@", portValue);
 		[valuesArray addObject: portValue];
 	}
 	

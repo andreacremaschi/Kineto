@@ -14,6 +14,11 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		CD035D5F12BFC1B50053518A /* osc_receiver.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD035D5E12BFC1B50053518A /* osc_receiver.tif */; };
+		CD0F33AA139958E800ED1746 /* motionMask.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0F33A8139958E800ED1746 /* motionMask.plist */; };
+		CD0F33AB139958E800ED1746 /* presenceMask.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0F33A9139958E800ED1746 /* presenceMask.plist */; };
+		CD10C5E1139D85670053B02D /* KCIMotionMaskGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10C5E0139D85670053B02D /* KCIMotionMaskGenerator.m */; };
+		CD10C5EA139D87710053B02D /* KCIMotionMaskGeneratorFilter.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD10C5E9139D87710053B02D /* KCIMotionMaskGeneratorFilter.cikernel */; };
+		CD10C5F5139D87920053B02D /* KCIMotionMaskGeneratorFilter.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD10C5E9139D87710053B02D /* KCIMotionMaskGeneratorFilter.cikernel */; };
 		CD128FFA12C74ACE0089DAA2 /* Cross.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CD128FF912C74ACE0089DAA2 /* Cross.tiff */; };
 		CD177B9A127EF92D00369766 /* ECNFoundationExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = CD177B99127EF92D00369766 /* ECNFoundationExtras.m */; };
 		CD177B9D127EF93800369766 /* ECNRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = CD177B9C127EF93800369766 /* ECNRectangle.m */; };
@@ -24,30 +29,59 @@
 		CD18D09412FFF1590007ACEB /* VVBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD18D09312FFF1590007ACEB /* VVBasics.framework */; };
 		CD18D09612FFF1590007ACEB /* VVMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD18D09512FFF1590007ACEB /* VVMIDI.framework */; };
 		CD18D09812FFF1590007ACEB /* VVOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD18D09712FFF1590007ACEB /* VVOSC.framework */; };
-		CD1B889712F313020067EF4E /* LiveInputSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1B889612F313020067EF4E /* LiveInputSelectorView.m */; };
-		CD1FA54B12EDF8FC00A3D5D7 /* CVImageBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1FA54A12EDF8FC00A3D5D7 /* CVImageBuffer.m */; };
+		CD1B0BCB136F425000CC357D /* kineto.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* kineto.app */; };
+		CD277B191392E29100B9015C /* AquaticPrime.c in Sources */ = {isa = PBXBuildFile; fileRef = CD277B171392E29100B9015C /* AquaticPrime.c */; };
+		CD277B5C1392E2F100B9015C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD277B5B1392E2F100B9015C /* CoreFoundation.framework */; };
+		CD277CAA1392FD9800B9015C /* Licensing.m in Sources */ = {isa = PBXBuildFile; fileRef = CD277CA91392FD9800B9015C /* Licensing.m */; };
+		CD277CB81392FFA300B9015C /* LicensingPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD277CB71392FFA300B9015C /* LicensingPanel.xib */; };
+		CD277CC3139305B100B9015C /* LicensingWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD277CC2139305B100B9015C /* LicensingWindowController.m */; };
 		CD2E3371131BB565007F7236 /* ECNOSCTargetAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2E3370131BB565007F7236 /* ECNOSCTargetAsset.m */; };
 		CD2E337E131BB763007F7236 /* ECNOSCTxAssetInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2E337D131BB763007F7236 /* ECNOSCTxAssetInstance.m */; };
 		CD2E3380131BBF99007F7236 /* assets_osctx.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD2E337F131BBF99007F7236 /* assets_osctx.tif */; };
 		CD2E3479131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2E3478131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.m */; };
-		CD2E347B131BE006007F7236 /* OSCTxSettingsPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2E347A131BE006007F7236 /* OSCTxSettingsPanel.xib */; };
 		CD2FC6121285B29E003E6BF7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2FC6111285B29E003E6BF7 /* OpenGL.framework */; };
-		CD34110612ABE21C00E6F654 /* ECNOSCManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD34110512ABE21C00E6F654 /* ECNOSCManager.xib */; };
 		CD34119F12ABF10E00E6F654 /* ECNOSCTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = CD34119E12ABF10E00E6F654 /* ECNOSCTarget.m */; };
+		CD369FED1396516F00BE56B8 /* KVideoInputSrc.m in Sources */ = {isa = PBXBuildFile; fileRef = CD369FEC1396516F00BE56B8 /* KVideoInputSrc.m */; };
+		CD369FF01396517B00BE56B8 /* KCameraInputSrc.m in Sources */ = {isa = PBXBuildFile; fileRef = CD369FEF1396517B00BE56B8 /* KCameraInputSrc.m */; };
+		CD369FF31396518C00BE56B8 /* KQTKitInputSrc.m in Sources */ = {isa = PBXBuildFile; fileRef = CD369FF21396518C00BE56B8 /* KQTKitInputSrc.m */; };
+		CD369FF6139651C900BE56B8 /* KCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = CD369FF5139651C900BE56B8 /* KCapture.m */; };
+		CD369FF9139651D500BE56B8 /* KQTKitCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = CD369FF8139651D500BE56B8 /* KQTKitCapture.m */; };
+		CD36A0061396557900BE56B8 /* KError.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0051396557900BE56B8 /* KError.m */; };
+		CD36A031139657F500BE56B8 /* TFPerformanceMeasurement.c in Sources */ = {isa = PBXBuildFile; fileRef = CD36A02E139657F500BE56B8 /* TFPerformanceMeasurement.c */; };
+		CD36A032139657F500BE56B8 /* TFPerformanceTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A030139657F500BE56B8 /* TFPerformanceTimer.m */; };
+		CD36A06D13965A3700BE56B8 /* untitled.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD36A06C13965A3700BE56B8 /* untitled.strings */; };
+		CD36A06F13965A4B00BE56B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD36A06E13965A4900BE56B8 /* Localizable.strings */; };
+		CD36A0C813965DCF00BE56B8 /* TFCI1PixelBorderAroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0A813965DCF00BE56B8 /* TFCI1PixelBorderAroundImage.m */; };
+		CD36A0C913965DCF00BE56B8 /* KCIBackgroundSubtraction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0AA13965DCF00BE56B8 /* KCIBackgroundSubtraction.m */; };
+		CD36A0CA13965DCF00BE56B8 /* TFCIRatioImageBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0AC13965DCF00BE56B8 /* TFCIRatioImageBlendFilter.m */; };
+		CD36A0CB13965DCF00BE56B8 /* TFCIBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0AE13965DCF00BE56B8 /* TFCIBlurFilter.m */; };
+		CD36A0CC13965DCF00BE56B8 /* TFCIContrastStretchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0B013965DCF00BE56B8 /* TFCIContrastStretchFilter.m */; };
+		CD36A0CD13965DCF00BE56B8 /* KCI3x3ErosionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0B213965DCF00BE56B8 /* KCI3x3ErosionFilter.m */; };
+		CD36A0CE13965DCF00BE56B8 /* KCI3x3DilationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0B413965DCF00BE56B8 /* KCI3x3DilationFilter.m */; };
+		CD36A0CF13965DCF00BE56B8 /* KCIErosionDilationComboFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0B613965DCF00BE56B8 /* KCIErosionDilationComboFilter.m */; };
+		CD36A0D013965DCF00BE56B8 /* KCIMorphologicalOpenWith3x3ShapeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0B813965DCF00BE56B8 /* KCIMorphologicalOpenWith3x3ShapeFilter.m */; };
+		CD36A0D113965DCF00BE56B8 /* KCIMorphologicalCloseWith3x3ShapeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0BA13965DCF00BE56B8 /* KCIMorphologicalCloseWith3x3ShapeFilter.m */; };
+		CD36A0D213965DCF00BE56B8 /* TFCIGrayscalingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0BC13965DCF00BE56B8 /* TFCIGrayscalingFilter.m */; };
+		CD36A0D313965DCF00BE56B8 /* TFCIColorInversionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0BE13965DCF00BE56B8 /* TFCIColorInversionFilter.m */; };
+		CD36A0D413965DCF00BE56B8 /* TFCIHighpassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0C013965DCF00BE56B8 /* TFCIHighpassFilter.m */; };
+		CD36A0D513965DCF00BE56B8 /* KFilterChain.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0C213965DCF00BE56B8 /* KFilterChain.m */; };
+		CD36A0D613965DCF00BE56B8 /* KCIFilterChain.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0C413965DCF00BE56B8 /* KCIFilterChain.m */; };
+		CD36A0D713965DCF00BE56B8 /* KCameraInputFilterChain.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0C613965DCF00BE56B8 /* KCameraInputFilterChain.m */; };
+		CD36A0F613965E0100BE56B8 /* TFCI1PixelBorderAroundImage.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0EE13965E0100BE56B8 /* TFCI1PixelBorderAroundImage.cikernel */; };
+		CD36A0F713965E0100BE56B8 /* TFCIBackgroundSubtractionFilter.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0EF13965E0100BE56B8 /* TFCIBackgroundSubtractionFilter.cikernel */; };
+		CD36A0F813965E0100BE56B8 /* TFCIRatioImageBlendFilter.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0F013965E0100BE56B8 /* TFCIRatioImageBlendFilter.cikernel */; };
+		CD36A0F913965E0100BE56B8 /* TFCIContrastStretchFilter.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0F113965E0100BE56B8 /* TFCIContrastStretchFilter.cikernel */; };
+		CD36A0FA13965E0100BE56B8 /* TFCI3x3ErosionFilter.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0F213965E0100BE56B8 /* TFCI3x3ErosionFilter.cikernel */; };
+		CD36A0FB13965E0100BE56B8 /* TFCI3x3DilationFilter.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0F313965E0100BE56B8 /* TFCI3x3DilationFilter.cikernel */; };
+		CD36A0FC13965E0100BE56B8 /* TFCIGrayscalingFilter.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD36A0F413965E0100BE56B8 /* TFCIGrayscalingFilter.cikernel */; };
+		CD36A131139661FD00BE56B8 /* CIImage+MakeBitmaps.m in Sources */ = {isa = PBXBuildFile; fileRef = CD36A12E139661FD00BE56B8 /* CIImage+MakeBitmaps.m */; };
+		CD36A132139661FD00BE56B8 /* CIImage+MakeBitmapsSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = CD36A130139661FD00BE56B8 /* CIImage+MakeBitmapsSupport.c */; settings = {COMPILER_FLAGS = "-std=c99"; }; };
+		CD36A2101396696300BE56B8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD36A20F1396696300BE56B8 /* Accelerate.framework */; };
 		CD374CF213296C91001326EA /* MaskSrcUsingChannelFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD374CEF13296C90001326EA /* MaskSrcUsingChannelFilter.m */; };
 		CD376E7F12709BEA00E5ACFB /* ECNProjectDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CD376E7E12709BEA00E5ACFB /* ECNProjectDocument.m */; };
-		CD376FD81270A39E00E5ACFB /* ECNLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD376FD71270A39E00E5ACFB /* ECNLiveView.m */; };
-		CD37708D1270A63400E5ACFB /* LiveViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD37708C1270A63400E5ACFB /* LiveViewer.xib */; };
-		CD3772341270B58600E5ACFB /* DrawingToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3772331270B58600E5ACFB /* DrawingToolbar.xib */; };
-		CD37723C1270B5C400E5ACFB /* ECNDrawingToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = CD37723B1270B5C400E5ACFB /* ECNDrawingToolbar.m */; };
-		CD37738E1270BA1E00E5ACFB /* ECNSceneWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD37738D1270BA1E00E5ACFB /* ECNSceneWindowController.m */; };
-		CD3A10471284AC4C0056ABE3 /* ECNPlaybackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3A10461284AC4C0056ABE3 /* ECNPlaybackController.xib */; };
-		CD3A10521284AEBF0056ABE3 /* ECNPlaybackWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3A10511284AEBF0056ABE3 /* ECNPlaybackWindowController.m */; };
+		CD37738E1270BA1E00E5ACFB /* KCueEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD37738D1270BA1E00E5ACFB /* KCueEditorViewController.m */; };
 		CD3A758E12889784009E8E0B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3A758D12889784009E8E0B /* IOKit.framework */; };
-		CD3C9CB812E876DB00599BB0 /* OfflineRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3C9CB712E876DB00599BB0 /* OfflineRenderer.m */; };
-		CD3C9DC912E89F0000599BB0 /* OpenGLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3C9DC812E89F0000599BB0 /* OpenGLTexture.m */; };
 		CD3CA13412E9003A00599BB0 /* keystone.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD3CA13312E9003A00599BB0 /* keystone.qtz */; };
-		CD45E32D12E5C6600033E945 /* QCMaskRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45E32C12E5C6600033E945 /* QCMaskRenderer.m */; };
 		CD468F2F127A244A00B92E4E /* ECNProjectDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD468F2E127A244A00B92E4E /* ECNProjectDocument.xib */; };
 		CD46A9B313070775004A1EBF /* MyExceptionAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD46A9B213070775004A1EBF /* MyExceptionAlertController.m */; };
 		CD46A9B7130707C1004A1EBF /* ExceptionAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD46A9B6130707C1004A1EBF /* ExceptionAlert.xib */; };
@@ -55,22 +89,18 @@
 		CD471F9912EB373F00C11B08 /* kineto_masks.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD471F9812EB373F00C11B08 /* kineto_masks.qtz */; };
 		CD471FD112EB467200C11B08 /* solo.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD471FD012EB467200C11B08 /* solo.tif */; };
 		CD471FDB12EB472B00C11B08 /* ColorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD471FDA12EB472B00C11B08 /* ColorCell.m */; };
-		CD4CE36A12CB76AC00A3A314 /* OSCActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4CE36912CB76AC00A3A314 /* OSCActionController.xib */; };
-		CD4CE37012CB76E600A3A314 /* ElementActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4CE36F12CB76E600A3A314 /* ElementActionController.xib */; };
-		CD4CE41412CB823000A3A314 /* ActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4CE41312CB823000A3A314 /* ActionController.xib */; };
+		CD50EC82139547620088DD33 /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = CD50EC81139547620088DD33 /* reset.png */; };
+		CD50EC85139547ED0088DD33 /* ECNActions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD50EC84139547ED0088DD33 /* ECNActions.m */; };
+		CD50F0CA139551E20088DD33 /* OSCAssetsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD50F0C9139551E20088DD33 /* OSCAssetsWindowController.m */; };
+		CD50F0CC139551F90088DD33 /* OSCAssetsPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD50F0CB139551F90088DD33 /* OSCAssetsPanel.xib */; };
 		CD58396313407FDB0059D504 /* ECNOSCReceiverTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = CD58396213407FDB0059D504 /* ECNOSCReceiverTrigger.m */; };
-		CD5BFA1B12F461A0004E7A47 /* OpenGLViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5BFA1A12F461A0004E7A47 /* OpenGLViewKit.m */; };
-		CD5E726E12EF428C009B611C /* CameraControllerInQCMaskRendererView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5E726D12EF428C009B611C /* CameraControllerInQCMaskRendererView.m */; };
 		CD626677130E709800901235 /* ECNSceneAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD626676130E709800901235 /* ECNSceneAction.m */; };
 		CD6565FE128DBF5F002217CF /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6565FD128DBF5F002217CF /* QuickTime.framework */; };
 		CD66B5F5133FF239004BA4BE /* MaskSrcUsingChannelFilter.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD66B5F2133FF239004BA4BE /* MaskSrcUsingChannelFilter.cikernel */; };
 		CD66B5F6133FF239004BA4BE /* MaskSrcUsingChannelFilterKernel.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD66B5F3133FF239004BA4BE /* MaskSrcUsingChannelFilterKernel.cikernel */; };
 		CD66B5F7133FF239004BA4BE /* maskSrcUsingRedChannel.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CD66B5F4133FF239004BA4BE /* maskSrcUsingRedChannel.cikernel */; };
+		CD6C7A3D13819FAC00DB1442 /* Input_camera_resolutions.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD6C7A3C13819FAC00DB1442 /* Input_camera_resolutions.plist */; };
 		CD70AEB1129AE20E0009F0F2 /* null.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CD70AEB0129AE20E0009F0F2 /* null.qtz */; };
-		CD730E9612E6E9F100B222B7 /* QTVisualContextKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730E9312E6E9F100B222B7 /* QTVisualContextKit.m */; };
-		CD730EA512E6EF5500B222B7 /* OpenGLQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730EA412E6EF5500B222B7 /* OpenGLQuad.m */; };
-		CD730EB612E6F0CA00B222B7 /* MemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730EB312E6F0CA00B222B7 /* MemObject.m */; };
-		CD730EB712E6F0CA00B222B7 /* Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730EB412E6F0CA00B222B7 /* Memory.m */; };
 		CD730EED12E6F22A00B222B7 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730EE912E6F22A00B222B7 /* Alert.m */; };
 		CD730EEE12E6F22A00B222B7 /* AlertPanelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD730EEC12E6F22A00B222B7 /* AlertPanelKit.m */; };
 		CD762D58133FF62100517F38 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD762D57133FF62100517F38 /* Info.plist */; };
@@ -78,11 +108,6 @@
 		CD762E61133FFC6F00517F38 /* VVMIDI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD18D09512FFF1590007ACEB /* VVMIDI.framework */; };
 		CD762E62133FFC6F00517F38 /* VVOSC.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD18D09712FFF1590007ACEB /* VVOSC.framework */; };
 		CD773FAF12E72BB70066748C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD773FAE12E72BB70066748C /* CoreVideo.framework */; };
-		CD7AA3E412E6023C009E5CCD /* ECNLiveInputSelectorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7AA3E312E6023C009E5CCD /* ECNLiveInputSelectorWindowController.m */; };
-		CD7AA3E612E605A8009E5CCD /* LiveInputSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7AA3E512E605A8009E5CCD /* LiveInputSelector.xib */; };
-		CD7AA3F712E60966009E5CCD /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7AA3F612E60966009E5CCD /* CameraController.m */; };
-		CD7AA43B12E60F99009E5CCD /* UVCCameraControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7AA43A12E60F99009E5CCD /* UVCCameraControl.m */; };
-		CD828B0E12AAA0920018C787 /* LiveInputRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD828B0D12AAA0920018C787 /* LiveInputRenderer.m */; };
 		CD83202A130C38E70063E215 /* ECNElementAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD832029130C38E70063E215 /* ECNElementAction.m */; };
 		CD8462B2130C1C7F00F4A1B3 /* ECNTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8462B1130C1C7F00F4A1B3 /* ECNTrigger.m */; };
 		CD8462B5130C1C9600F4A1B3 /* ECNShapeTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8462B4130C1C9600F4A1B3 /* ECNShapeTrigger.m */; };
@@ -90,46 +115,109 @@
 		CD9429E5127F227C00921A57 /* line.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD9429E4127F227C00921A57 /* line.tif */; };
 		CD9429EC127F234600921A57 /* Rectangle.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD9429EB127F234600921A57 /* Rectangle.tif */; };
 		CD9429F5127F24E800921A57 /* timer.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD9429F4127F24E800921A57 /* timer.tif */; };
-		CD9429F8127F26AF00921A57 /* osc.tif in Resources */ = {isa = PBXBuildFile; fileRef = CD9429F7127F26AF00921A57 /* osc.tif */; };
+		CDA608A81391697F001B81A0 /* KElementInspectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA608A71391697F001B81A0 /* KElementInspectorViewController.xib */; };
+		CDA608AF13916AE2001B81A0 /* KElementInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA608AE13916AE2001B81A0 /* KElementInspectorViewController.m */; };
 		CDA777A3133FDC33007497CD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA777A2133FDC33007497CD /* Sparkle.framework */; };
 		CDA777F4133FDC57007497CD /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CDA777A2133FDC33007497CD /* Sparkle.framework */; };
-		CDA805291295A33D00B72116 /* ElementInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA805281295A33D00B72116 /* ElementInspector.xib */; };
 		CDA9363112ABDC9B006015F2 /* ECNOSCReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA9363012ABDC9B006015F2 /* ECNOSCReceiver.m */; };
+		CDAD70DF1396BD8600A8AFCE /* FilterChainComposer.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAD70DE1396BD8600A8AFCE /* FilterChainComposer.xib */; };
+		CDAD70EC1396C02500A8AFCE /* KFilterChainComposerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAD70EB1396C02500A8AFCE /* KFilterChainComposerWindowController.m */; };
+		CDAD73EC1396E84D00A8AFCE /* KCIImageVisualizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAD73EB1396E84D00A8AFCE /* KCIImageVisualizer.m */; };
 		CDADC1F113014135002A0937 /* ECNShape.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADC1F013014135002A0937 /* ECNShape.m */; };
+		CDBD04B31397CB440044345A /* KImageUnitsLibraryPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBD04B21397CB440044345A /* KImageUnitsLibraryPanel.m */; };
 		CDC9F4F8129DD1BD0064F103 /* splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F4F7129DD1BD0064F103 /* splash.jpg */; };
 		CDC9F530129DD5200064F103 /* splash_screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC9F52F129DD5200064F103 /* splash_screen.xib */; };
 		CDD18B0D1326370E0052BC4A /* checkerboard.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD18B0C1326370E0052BC4A /* checkerboard.png */; };
-		CDDB44F812CD246100C4E5AA /* SceneActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDB44F712CD246100C4E5AA /* SceneActionController.xib */; };
+		CDD901F7139BE4A90026527F /* KCIThresholdFilter_Luminance.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD901F6139BE4A90026527F /* KCIThresholdFilter_Luminance.m */; };
+		CDD90216139BE6070026527F /* KCIThresholdFilter_ColorDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD90215139BE6070026527F /* KCIThresholdFilter_ColorDistance.m */; };
+		CDD90230139BE78A0026527F /* KCIThresholdFilterColorDistance.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CDD9022E139BE78A0026527F /* KCIThresholdFilterColorDistance.cikernel */; };
+		CDD90231139BE78A0026527F /* KCIThresholdFilterLuma.cikernel in Sources */ = {isa = PBXBuildFile; fileRef = CDD9022F139BE78A0026527F /* KCIThresholdFilterLuma.cikernel */; };
+		CDD90232139BE7970026527F /* KCIThresholdFilterColorDistance.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CDD9022E139BE78A0026527F /* KCIThresholdFilterColorDistance.cikernel */; };
+		CDD90233139BE7970026527F /* KCIThresholdFilterLuma.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CDD9022F139BE78A0026527F /* KCIThresholdFilterLuma.cikernel */; };
+		CDD90447139C0F5F0026527F /* ECNVideoInputAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD90446139C0F5F0026527F /* ECNVideoInputAsset.m */; };
+		CDD9DB18139CDCC900A1E259 /* KPlaybackPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD9DB17139CDCC900A1E259 /* KPlaybackPipeline.m */; };
+		CDD9DB60139CF68100A1E259 /* KPlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD9DB5F139CF68100A1E259 /* KPlaybackViewController.m */; };
+		CDD9DB63139CF6BE00A1E259 /* KNewPlaybackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD9DB62139CF6BE00A1E259 /* KNewPlaybackViewController.xib */; };
+		CDD9DC65139D202400A1E259 /* KLiveViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD9DC64139D202400A1E259 /* KLiveViewerController.m */; };
+		CDD9DC67139D207900A1E259 /* KLiveViewerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD9DC66139D207900A1E259 /* KLiveViewerController.xib */; };
+		CDD9DC73139D214900A1E259 /* AboutKineto.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD9DC72139D214900A1E259 /* AboutKineto.xib */; };
+		CDD9FE54139BB6990026527F /* defaultCameraInput.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD9FE53139BB6990026527F /* defaultCameraInput.plist */; };
 		CDDD0CB51279BE1500759293 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDD0CB41279BE1500759293 /* QTKit.framework */; };
-		CDDD0D2F1279C1F600759293 /* ECNProjectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDD0D2E1279C1F600759293 /* ECNProjectWindowController.m */; };
-		CDDD0E971279CAB300759293 /* ECNSceneWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDD0E961279CAB300759293 /* ECNSceneWindow.xib */; };
+		CDDD0D2F1279C1F600759293 /* KProjectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDD0D2E1279C1F600759293 /* KProjectWindowController.m */; };
+		CDDD0E971279CAB300759293 /* KCueEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDD0E961279CAB300759293 /* KCueEditorViewController.xib */; };
 		CDDD0E9C1279CB4900759293 /* ECNElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDD0E9B1279CB4900759293 /* ECNElement.m */; };
-		CDDD0EB01279CC2F00759293 /* ECNScene.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDD0EAF1279CC2F00759293 /* ECNScene.m */; };
+		CDDD0EB01279CC2F00759293 /* KCue.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDD0EAF1279CC2F00759293 /* KCue.m */; };
 		CDDD408F127E1F53003481BC /* ECNLine.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDD408E127E1F53003481BC /* ECNLine.m */; };
+		CDE4A9761393A882008BF405 /* AppResources.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A9751393A882008BF405 /* AppResources.m */; };
+		CDE4AB001393B9C8008BF405 /* thanksforregistering.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE4AAFF1393B9C8008BF405 /* thanksforregistering.png */; };
+		CDE4AD1A1393D00D008BF405 /* kineto_license.icns in Resources */ = {isa = PBXBuildFile; fileRef = CDE4AD191393D00D008BF405 /* kineto_license.icns */; };
+		CDE723031392643C00B3FC96 /* available_actions.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDE723021392643C00B3FC96 /* available_actions.plist */; };
+		CDE75272139BAD9000468D6A /* videoInput.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDE75271139BAD9000468D6A /* videoInput.plist */; };
+		CDE8DBF31397AF37006C6A79 /* TFThreadMessagingQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8DBF21397AF37006C6A79 /* TFThreadMessagingQueue.m */; };
 		CDE94CCB12C8975C004C3152 /* occhio.gif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94CCA12C8975C004C3152 /* occhio.gif */; };
 		CDE94DC312C89DAD004C3152 /* first.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94DC212C89DAD004C3152 /* first.tif */; };
 		CDE94E8912C8A9BC004C3152 /* pause.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94E8512C8A9BC004C3152 /* pause.tif */; };
 		CDE94E8A12C8A9BC004C3152 /* play.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94E8612C8A9BC004C3152 /* play.tif */; };
 		CDE94E8B12C8A9BC004C3152 /* stop.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94E8712C8A9BC004C3152 /* stop.tif */; };
 		CDE94E8C12C8A9BC004C3152 /* test.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDE94E8812C8A9BC004C3152 /* test.tif */; };
-		CDE97D81126F3FFC00515B57 /* ActivityInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE97D80126F3FFC00515B57 /* ActivityInspector.xib */; };
-		CDE97DCC126F442000515B57 /* ECNLiveViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE97DCB126F442000515B57 /* ECNLiveViewerController.m */; };
 		CDEB98C2130586550065198E /* ECNAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEB98C1130586550065198E /* ECNAsset.m */; };
 		CDEB98C51305877D0065198E /* ECNQCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEB98C41305877D0065198E /* ECNQCAsset.m */; };
-		CDEB9A501305B3EB0065198E /* Object inspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEB9A4F1305B3EB0065198E /* Object inspector.xib */; };
-		CDEF475D1309230300EE0372 /* ElementSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEF475C1309230300EE0372 /* ElementSettings.xib */; };
 		CDEF4805130933C400EE0372 /* ShapeSettingsPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEF4804130933C400EE0372 /* ShapeSettingsPanel.m */; };
 		CDEF485C13093D9300EE0372 /* ECNPort.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEF485B13093D9300EE0372 /* ECNPort.m */; };
+		CDEFA3451391191B0033341B /* trigger_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CDEFA3431391191B0033341B /* trigger_off.png */; };
+		CDEFA3461391191B0033341B /* trigger_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CDEFA3441391191B0033341B /* trigger_on.png */; };
+		CDEFE41E139EA68700EDE18F /* que_active.png in Resources */ = {isa = PBXBuildFile; fileRef = CDEFE41C139EA68700EDE18F /* que_active.png */; };
+		CDEFE41F139EA68700EDE18F /* que_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = CDEFE41D139EA68700EDE18F /* que_inactive.png */; };
+		CDEFE422139EA70300EDE18F /* assets_active.png in Resources */ = {isa = PBXBuildFile; fileRef = CDEFE420139EA70300EDE18F /* assets_active.png */; };
+		CDEFE423139EA70300EDE18F /* assets_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = CDEFE421139EA70300EDE18F /* assets_inactive.png */; };
+		CDF10BE1139A61BC00C6E1C8 /* TFCI1PixelBorderAroundImage.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD36A0EE13965E0100BE56B8 /* TFCI1PixelBorderAroundImage.cikernel */; };
+		CDF10BE2139A61BC00C6E1C8 /* TFCIBackgroundSubtractionFilter.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD36A0EF13965E0100BE56B8 /* TFCIBackgroundSubtractionFilter.cikernel */; };
+		CDF10BE3139A61BC00C6E1C8 /* TFCIRatioImageBlendFilter.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD36A0F013965E0100BE56B8 /* TFCIRatioImageBlendFilter.cikernel */; };
+		CDF10BE4139A61BC00C6E1C8 /* TFCIContrastStretchFilter.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD36A0F113965E0100BE56B8 /* TFCIContrastStretchFilter.cikernel */; };
+		CDF10BE5139A61BC00C6E1C8 /* TFCI3x3ErosionFilter.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD36A0F213965E0100BE56B8 /* TFCI3x3ErosionFilter.cikernel */; };
+		CDF10BE6139A61BC00C6E1C8 /* TFCI3x3DilationFilter.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD36A0F313965E0100BE56B8 /* TFCI3x3DilationFilter.cikernel */; };
+		CDF10BE7139A61BC00C6E1C8 /* TFCIGrayscalingFilter.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD36A0F413965E0100BE56B8 /* TFCIGrayscalingFilter.cikernel */; };
+		CDF10BE8139A61BC00C6E1C8 /* MaskSrcUsingChannelFilter.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD66B5F2133FF239004BA4BE /* MaskSrcUsingChannelFilter.cikernel */; };
+		CDF10BE9139A61BC00C6E1C8 /* MaskSrcUsingChannelFilterKernel.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD66B5F3133FF239004BA4BE /* MaskSrcUsingChannelFilterKernel.cikernel */; };
+		CDF10BEA139A61BC00C6E1C8 /* maskSrcUsingRedChannel.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CD66B5F4133FF239004BA4BE /* maskSrcUsingRedChannel.cikernel */; };
+		CDF2AA9413990C64002B7BD9 /* NSCIColorToNSColorValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF2AA9313990C64002B7BD9 /* NSCIColorToNSColorValueTransformer.m */; };
+		CDF2AB5313992903002B7BD9 /* KMask.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF2AB5213992903002B7BD9 /* KMask.m */; };
 		CDF310BE12DB800A00FC71A3 /* ECNObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF310BD12DB800A00FC71A3 /* ECNObject.m */; };
 		CDF692BC1313D6F100F9F810 /* ECNQCAssetInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF692BB1313D6F100F9F810 /* ECNQCAssetInstance.m */; };
+		CDF74B73139FB44B00CC4F66 /* arrow_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B6B139FB44B00CC4F66 /* arrow_off.png */; };
+		CDF74B74139FB44B00CC4F66 /* arrow_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B6C139FB44B00CC4F66 /* arrow_on.png */; };
+		CDF74B75139FB44B00CC4F66 /* bkg_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B6D139FB44B00CC4F66 /* bkg_off.png */; };
+		CDF74B76139FB44B00CC4F66 /* bkg_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B6E139FB44B00CC4F66 /* bkg_on.png */; };
+		CDF74B77139FB44B00CC4F66 /* camera_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B6F139FB44B00CC4F66 /* camera_off.png */; };
+		CDF74B78139FB44B00CC4F66 /* camera_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B70139FB44B00CC4F66 /* camera_on.png */; };
+		CDF74B79139FB44B00CC4F66 /* rect_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B71139FB44B00CC4F66 /* rect_off.png */; };
+		CDF74B7A139FB44B00CC4F66 /* rect_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B72139FB44B00CC4F66 /* rect_on.png */; };
+		CDF74B93139FB88700CC4F66 /* pause_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B8D139FB88700CC4F66 /* pause_off.png */; };
+		CDF74B94139FB88700CC4F66 /* pause_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B8E139FB88700CC4F66 /* pause_on.png */; };
+		CDF74B95139FB88700CC4F66 /* play_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B8F139FB88700CC4F66 /* play_off.png */; };
+		CDF74B96139FB88700CC4F66 /* play_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B90139FB88700CC4F66 /* play_on.png */; };
+		CDF74B97139FB88700CC4F66 /* stop_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B91139FB88700CC4F66 /* stop_off.png */; };
+		CDF74B98139FB88700CC4F66 /* stop_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B92139FB88700CC4F66 /* stop_on.png */; };
+		CDF74B9F139FB94500CC4F66 /* test_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B9D139FB94500CC4F66 /* test_off.png */; };
+		CDF74BA0139FB94500CC4F66 /* test_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF74B9E139FB94500CC4F66 /* test_on.png */; };
 		CDFA99AC13150077003EC2AD /* ECNAssetInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFA99AB13150077003EC2AD /* ECNAssetInstance.m */; };
 		CDFA9ABE13150E67003EC2AD /* assets_qcpatch.tif in Resources */ = {isa = PBXBuildFile; fileRef = CDFA9ABD13150E67003EC2AD /* assets_qcpatch.tif */; };
 		CDFDEA2813098562001A5F9C /* data_viewer.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CDFDEA2713098562001A5F9C /* data_viewer.qtz */; };
-		CDFDEA2A13098580001A5F9C /* DataViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFDEA2913098580001A5F9C /* DataViewer.xib */; };
-		CDFDEA2F13098613001A5F9C /* DataViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFDEA2E13098613001A5F9C /* DataViewerWindowController.m */; };
+		CDFE5BE2138D6B70003ED2E2 /* kineto_documents.icns in Resources */ = {isa = PBXBuildFile; fileRef = CDFE5BE1138D6B70003ED2E2 /* kineto_documents.icns */; };
+		CDFF9157139522CC00C64664 /* osc.png in Resources */ = {isa = PBXBuildFile; fileRef = CDFF9156139522CC00C64664 /* osc.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		CD1B0BC9136F422400CC357D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /Users/andreacremaschi/Public/kineto/;
+			dstSubfolderSpec = 0;
+			files = (
+				CD1B0BCB136F425000CC357D /* kineto.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD7882D412C0B438009ACE4A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +256,11 @@
 		849818230BCF1CE50085CECA /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = src/AppController.h; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* kineto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kineto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD035D5E12BFC1B50053518A /* osc_receiver.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = osc_receiver.tif; path = images/osc_receiver.tif; sourceTree = "<group>"; };
+		CD0F33A8139958E800ED1746 /* motionMask.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = motionMask.plist; path = resources/motionMask.plist; sourceTree = "<group>"; };
+		CD0F33A9139958E800ED1746 /* presenceMask.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = presenceMask.plist; path = resources/presenceMask.plist; sourceTree = "<group>"; };
+		CD10C5DF139D85670053B02D /* KCIMotionMaskGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCIMotionMaskGenerator.h; sourceTree = "<group>"; };
+		CD10C5E0139D85670053B02D /* KCIMotionMaskGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCIMotionMaskGenerator.m; sourceTree = "<group>"; };
+		CD10C5E9139D87710053B02D /* KCIMotionMaskGeneratorFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = KCIMotionMaskGeneratorFilter.cikernel; sourceTree = "<group>"; };
 		CD128FF912C74ACE0089DAA2 /* Cross.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Cross.tiff; sourceTree = "<group>"; };
 		CD177B98127EF92D00369766 /* ECNFoundationExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNFoundationExtras.h; sourceTree = "<group>"; };
 		CD177B99127EF92D00369766 /* ECNFoundationExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNFoundationExtras.m; sourceTree = "<group>"; };
@@ -182,10 +275,15 @@
 		CD18D09512FFF1590007ACEB /* VVMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VVMIDI.framework; path = Frameworks/VVMIDI.framework; sourceTree = "<group>"; };
 		CD18D09712FFF1590007ACEB /* VVOSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VVOSC.framework; path = Frameworks/VVOSC.framework; sourceTree = "<group>"; };
 		CD1B863712F2FD820067EF4E /* kineto NSZombieEnabled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "kineto NSZombieEnabled-Info.plist"; path = "resources/kineto NSZombieEnabled-Info.plist"; sourceTree = "<group>"; };
-		CD1B889512F313020067EF4E /* LiveInputSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveInputSelectorView.h; sourceTree = "<group>"; };
-		CD1B889612F313020067EF4E /* LiveInputSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveInputSelectorView.m; sourceTree = "<group>"; };
-		CD1FA54912EDF8FC00A3D5D7 /* CVImageBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVImageBuffer.h; sourceTree = "<group>"; };
-		CD1FA54A12EDF8FC00A3D5D7 /* CVImageBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVImageBuffer.m; sourceTree = "<group>"; };
+		CD1C6EC31398038D0040E1D4 /* KDragNDropDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDragNDropDataTypes.h; sourceTree = "<group>"; };
+		CD277B171392E29100B9015C /* AquaticPrime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AquaticPrime.c; sourceTree = "<group>"; };
+		CD277B181392E29100B9015C /* AquaticPrime.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = AquaticPrime.h; sourceTree = "<group>"; };
+		CD277B5B1392E2F100B9015C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		CD277CA81392FD9800B9015C /* Licensing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Licensing.h; sourceTree = "<group>"; };
+		CD277CA91392FD9800B9015C /* Licensing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Licensing.m; sourceTree = "<group>"; };
+		CD277CB71392FFA300B9015C /* LicensingPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LicensingPanel.xib; sourceTree = "<group>"; };
+		CD277CC1139305B100B9015C /* LicensingWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LicensingWindowController.h; sourceTree = "<group>"; };
+		CD277CC2139305B100B9015C /* LicensingWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicensingWindowController.m; sourceTree = "<group>"; };
 		CD2E336F131BB565007F7236 /* ECNOSCTargetAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCTargetAsset.h; sourceTree = "<group>"; };
 		CD2E3370131BB565007F7236 /* ECNOSCTargetAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNOSCTargetAsset.m; sourceTree = "<group>"; };
 		CD2E337C131BB763007F7236 /* ECNOSCTxAssetInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCTxAssetInstance.h; sourceTree = "<group>"; };
@@ -193,38 +291,86 @@
 		CD2E337F131BBF99007F7236 /* assets_osctx.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = assets_osctx.tif; path = images/assets_osctx.tif; sourceTree = "<group>"; };
 		CD2E3477131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCTxAssetInstanceSettingsPanel.h; sourceTree = "<group>"; };
 		CD2E3478131BDF5F007F7236 /* OSCTxAssetInstanceSettingsPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCTxAssetInstanceSettingsPanel.m; sourceTree = "<group>"; };
-		CD2E347A131BE006007F7236 /* OSCTxSettingsPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OSCTxSettingsPanel.xib; sourceTree = "<group>"; };
 		CD2FC6111285B29E003E6BF7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		CD34110512ABE21C00E6F654 /* ECNOSCManager.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ECNOSCManager.xib; sourceTree = "<group>"; };
 		CD34119D12ABF10E00E6F654 /* ECNOSCTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCTarget.h; sourceTree = "<group>"; };
 		CD34119E12ABF10E00E6F654 /* ECNOSCTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNOSCTarget.m; sourceTree = "<group>"; };
+		CD369FEB1396516F00BE56B8 /* KVideoInputSrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVideoInputSrc.h; sourceTree = "<group>"; };
+		CD369FEC1396516F00BE56B8 /* KVideoInputSrc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVideoInputSrc.m; sourceTree = "<group>"; };
+		CD369FEE1396517B00BE56B8 /* KCameraInputSrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCameraInputSrc.h; sourceTree = "<group>"; };
+		CD369FEF1396517B00BE56B8 /* KCameraInputSrc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCameraInputSrc.m; sourceTree = "<group>"; };
+		CD369FF11396518C00BE56B8 /* KQTKitInputSrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KQTKitInputSrc.h; sourceTree = "<group>"; };
+		CD369FF21396518C00BE56B8 /* KQTKitInputSrc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KQTKitInputSrc.m; sourceTree = "<group>"; };
+		CD369FF4139651C900BE56B8 /* KCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCapture.h; sourceTree = "<group>"; };
+		CD369FF5139651C900BE56B8 /* KCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCapture.m; sourceTree = "<group>"; };
+		CD369FF7139651D500BE56B8 /* KQTKitCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KQTKitCapture.h; sourceTree = "<group>"; };
+		CD369FF8139651D500BE56B8 /* KQTKitCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KQTKitCapture.m; sourceTree = "<group>"; };
+		CD36A0041396557900BE56B8 /* KError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KError.h; sourceTree = "<group>"; };
+		CD36A0051396557900BE56B8 /* KError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KError.m; sourceTree = "<group>"; };
+		CD36A007139655C100BE56B8 /* KIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIncludes.h; sourceTree = "<group>"; };
+		CD36A008139655EE00BE56B8 /* KLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLocalization.h; sourceTree = "<group>"; };
+		CD36A0091396560A00BE56B8 /* KExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KExceptions.h; sourceTree = "<group>"; };
+		CD36A02D139657F500BE56B8 /* TFPerformanceMeasurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPerformanceMeasurement.h; sourceTree = "<group>"; };
+		CD36A02E139657F500BE56B8 /* TFPerformanceMeasurement.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TFPerformanceMeasurement.c; sourceTree = "<group>"; };
+		CD36A02F139657F500BE56B8 /* TFPerformanceTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPerformanceTimer.h; sourceTree = "<group>"; };
+		CD36A030139657F500BE56B8 /* TFPerformanceTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFPerformanceTimer.m; sourceTree = "<group>"; };
+		CD36A049139659F700BE56B8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = resources/English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD36A06C13965A3700BE56B8 /* untitled.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = untitled.strings; path = resources/untitled.strings; sourceTree = "<group>"; };
+		CD36A0A713965DCF00BE56B8 /* TFCI1PixelBorderAroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFCI1PixelBorderAroundImage.h; sourceTree = "<group>"; };
+		CD36A0A813965DCF00BE56B8 /* TFCI1PixelBorderAroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFCI1PixelBorderAroundImage.m; sourceTree = "<group>"; };
+		CD36A0A913965DCF00BE56B8 /* KCIBackgroundSubtraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCIBackgroundSubtraction.h; sourceTree = "<group>"; };
+		CD36A0AA13965DCF00BE56B8 /* KCIBackgroundSubtraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCIBackgroundSubtraction.m; sourceTree = "<group>"; };
+		CD36A0AB13965DCF00BE56B8 /* TFCIRatioImageBlendFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFCIRatioImageBlendFilter.h; sourceTree = "<group>"; };
+		CD36A0AC13965DCF00BE56B8 /* TFCIRatioImageBlendFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFCIRatioImageBlendFilter.m; sourceTree = "<group>"; };
+		CD36A0AD13965DCF00BE56B8 /* TFCIBlurFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFCIBlurFilter.h; sourceTree = "<group>"; };
+		CD36A0AE13965DCF00BE56B8 /* TFCIBlurFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFCIBlurFilter.m; sourceTree = "<group>"; };
+		CD36A0AF13965DCF00BE56B8 /* TFCIContrastStretchFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFCIContrastStretchFilter.h; sourceTree = "<group>"; };
+		CD36A0B013965DCF00BE56B8 /* TFCIContrastStretchFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFCIContrastStretchFilter.m; sourceTree = "<group>"; };
+		CD36A0B113965DCF00BE56B8 /* KCI3x3ErosionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCI3x3ErosionFilter.h; sourceTree = "<group>"; };
+		CD36A0B213965DCF00BE56B8 /* KCI3x3ErosionFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCI3x3ErosionFilter.m; sourceTree = "<group>"; };
+		CD36A0B313965DCF00BE56B8 /* KCI3x3DilationFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCI3x3DilationFilter.h; sourceTree = "<group>"; };
+		CD36A0B413965DCF00BE56B8 /* KCI3x3DilationFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCI3x3DilationFilter.m; sourceTree = "<group>"; };
+		CD36A0B513965DCF00BE56B8 /* KCIErosionDilationComboFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCIErosionDilationComboFilter.h; sourceTree = "<group>"; };
+		CD36A0B613965DCF00BE56B8 /* KCIErosionDilationComboFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCIErosionDilationComboFilter.m; sourceTree = "<group>"; };
+		CD36A0B713965DCF00BE56B8 /* KCIMorphologicalOpenWith3x3ShapeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCIMorphologicalOpenWith3x3ShapeFilter.h; sourceTree = "<group>"; };
+		CD36A0B813965DCF00BE56B8 /* KCIMorphologicalOpenWith3x3ShapeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCIMorphologicalOpenWith3x3ShapeFilter.m; sourceTree = "<group>"; };
+		CD36A0B913965DCF00BE56B8 /* KCIMorphologicalCloseWith3x3ShapeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCIMorphologicalCloseWith3x3ShapeFilter.h; sourceTree = "<group>"; };
+		CD36A0BA13965DCF00BE56B8 /* KCIMorphologicalCloseWith3x3ShapeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCIMorphologicalCloseWith3x3ShapeFilter.m; sourceTree = "<group>"; };
+		CD36A0BB13965DCF00BE56B8 /* TFCIGrayscalingFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFCIGrayscalingFilter.h; sourceTree = "<group>"; };
+		CD36A0BC13965DCF00BE56B8 /* TFCIGrayscalingFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFCIGrayscalingFilter.m; sourceTree = "<group>"; };
+		CD36A0BD13965DCF00BE56B8 /* TFCIColorInversionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFCIColorInversionFilter.h; sourceTree = "<group>"; };
+		CD36A0BE13965DCF00BE56B8 /* TFCIColorInversionFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFCIColorInversionFilter.m; sourceTree = "<group>"; };
+		CD36A0BF13965DCF00BE56B8 /* TFCIHighpassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFCIHighpassFilter.h; sourceTree = "<group>"; };
+		CD36A0C013965DCF00BE56B8 /* TFCIHighpassFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFCIHighpassFilter.m; sourceTree = "<group>"; };
+		CD36A0C113965DCF00BE56B8 /* KFilterChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFilterChain.h; sourceTree = "<group>"; };
+		CD36A0C213965DCF00BE56B8 /* KFilterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFilterChain.m; sourceTree = "<group>"; };
+		CD36A0C313965DCF00BE56B8 /* KCIFilterChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCIFilterChain.h; sourceTree = "<group>"; };
+		CD36A0C413965DCF00BE56B8 /* KCIFilterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCIFilterChain.m; sourceTree = "<group>"; };
+		CD36A0C513965DCF00BE56B8 /* KCameraInputFilterChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCameraInputFilterChain.h; sourceTree = "<group>"; };
+		CD36A0C613965DCF00BE56B8 /* KCameraInputFilterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCameraInputFilterChain.m; sourceTree = "<group>"; };
+		CD36A0EE13965E0100BE56B8 /* TFCI1PixelBorderAroundImage.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TFCI1PixelBorderAroundImage.cikernel; sourceTree = "<group>"; };
+		CD36A0EF13965E0100BE56B8 /* TFCIBackgroundSubtractionFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TFCIBackgroundSubtractionFilter.cikernel; sourceTree = "<group>"; };
+		CD36A0F013965E0100BE56B8 /* TFCIRatioImageBlendFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TFCIRatioImageBlendFilter.cikernel; sourceTree = "<group>"; };
+		CD36A0F113965E0100BE56B8 /* TFCIContrastStretchFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TFCIContrastStretchFilter.cikernel; sourceTree = "<group>"; };
+		CD36A0F213965E0100BE56B8 /* TFCI3x3ErosionFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TFCI3x3ErosionFilter.cikernel; sourceTree = "<group>"; };
+		CD36A0F313965E0100BE56B8 /* TFCI3x3DilationFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TFCI3x3DilationFilter.cikernel; sourceTree = "<group>"; };
+		CD36A0F413965E0100BE56B8 /* TFCIGrayscalingFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TFCIGrayscalingFilter.cikernel; sourceTree = "<group>"; };
+		CD36A12D139661FD00BE56B8 /* CIImage+MakeBitmaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CIImage+MakeBitmaps.h"; sourceTree = "<group>"; };
+		CD36A12E139661FD00BE56B8 /* CIImage+MakeBitmaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CIImage+MakeBitmaps.m"; sourceTree = "<group>"; };
+		CD36A12F139661FD00BE56B8 /* CIImage+MakeBitmapsSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CIImage+MakeBitmapsSupport.h"; sourceTree = "<group>"; };
+		CD36A130139661FD00BE56B8 /* CIImage+MakeBitmapsSupport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "CIImage+MakeBitmapsSupport.c"; sourceTree = "<group>"; };
+		CD36A20F1396696300BE56B8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		CD374CEF13296C90001326EA /* MaskSrcUsingChannelFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskSrcUsingChannelFilter.m; sourceTree = "<group>"; };
 		CD374CF013296C90001326EA /* MaskSrcUsingChannelFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskSrcUsingChannelFilter.h; sourceTree = "<group>"; };
 		CD376E7D12709BEA00E5ACFB /* ECNProjectDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNProjectDocument.h; sourceTree = "<group>"; };
 		CD376E7E12709BEA00E5ACFB /* ECNProjectDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNProjectDocument.m; sourceTree = "<group>"; wrapsLines = 1; };
 		CD376F351270A0FF00E5ACFB /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
-		CD376FD61270A39E00E5ACFB /* ECNLiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNLiveView.h; sourceTree = "<group>"; };
-		CD376FD71270A39E00E5ACFB /* ECNLiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNLiveView.m; sourceTree = "<group>"; };
-		CD37708C1270A63400E5ACFB /* LiveViewer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveViewer.xib; sourceTree = "<group>"; };
-		CD3772331270B58600E5ACFB /* DrawingToolbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingToolbar.xib; sourceTree = "<group>"; };
-		CD37723A1270B5C400E5ACFB /* ECNDrawingToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNDrawingToolbar.h; sourceTree = "<group>"; };
-		CD37723B1270B5C400E5ACFB /* ECNDrawingToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNDrawingToolbar.m; sourceTree = "<group>"; };
-		CD37738C1270BA1E00E5ACFB /* ECNSceneWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNSceneWindowController.h; sourceTree = "<group>"; };
-		CD37738D1270BA1E00E5ACFB /* ECNSceneWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNSceneWindowController.m; sourceTree = "<group>"; };
-		CD3A10461284AC4C0056ABE3 /* ECNPlaybackController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ECNPlaybackController.xib; sourceTree = "<group>"; };
-		CD3A10501284AEBF0056ABE3 /* ECNPlaybackWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNPlaybackWindowController.h; sourceTree = "<group>"; };
-		CD3A10511284AEBF0056ABE3 /* ECNPlaybackWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNPlaybackWindowController.m; sourceTree = "<group>"; };
+		CD37738C1270BA1E00E5ACFB /* KCueEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCueEditorViewController.h; sourceTree = "<group>"; };
+		CD37738D1270BA1E00E5ACFB /* KCueEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCueEditorViewController.m; sourceTree = "<group>"; };
 		CD3A758D12889784009E8E0B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		CD3C9CB612E876DB00599BB0 /* OfflineRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfflineRenderer.h; sourceTree = "<group>"; };
-		CD3C9CB712E876DB00599BB0 /* OfflineRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineRenderer.m; sourceTree = "<group>"; };
-		CD3C9DC712E89F0000599BB0 /* OpenGLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLTexture.h; sourceTree = "<group>"; };
-		CD3C9DC812E89F0000599BB0 /* OpenGLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLTexture.m; sourceTree = "<group>"; };
 		CD3CA13312E9003A00599BB0 /* keystone.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = keystone.qtz; sourceTree = "<group>"; };
 		CD3DD7ED1327DCE0005FFB48 /* ECNActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNActions.h; sourceTree = "<group>"; };
 		CD4489C71309583C006B3C0A /* ECNShapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNShapes.h; sourceTree = "<group>"; };
 		CD4489DD13095952006B3C0A /* ECNElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNElements.h; sourceTree = "<group>"; };
-		CD45E32B12E5C6600033E945 /* QCMaskRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCMaskRenderer.h; sourceTree = "<group>"; };
-		CD45E32C12E5C6600033E945 /* QCMaskRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCMaskRenderer.m; sourceTree = "<group>"; };
 		CD468F2E127A244A00B92E4E /* ECNProjectDocument.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ECNProjectDocument.xib; sourceTree = "<group>"; };
 		CD46A9B113070775004A1EBF /* MyExceptionAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyExceptionAlertController.h; path = src/MyExceptionAlertController.h; sourceTree = "<group>"; };
 		CD46A9B213070775004A1EBF /* MyExceptionAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyExceptionAlertController.m; path = src/MyExceptionAlertController.m; sourceTree = "<group>"; };
@@ -235,46 +381,28 @@
 		CD471FD012EB467200C11B08 /* solo.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = solo.tif; path = images/solo.tif; sourceTree = "<group>"; };
 		CD471FD912EB472B00C11B08 /* ColorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorCell.h; sourceTree = "<group>"; };
 		CD471FDA12EB472B00C11B08 /* ColorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorCell.m; sourceTree = "<group>"; };
-		CD4CE36912CB76AC00A3A314 /* OSCActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OSCActionController.xib; sourceTree = "<group>"; };
-		CD4CE36F12CB76E600A3A314 /* ElementActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElementActionController.xib; sourceTree = "<group>"; };
-		CD4CE41312CB823000A3A314 /* ActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionController.xib; sourceTree = "<group>"; };
+		CD50EC81139547620088DD33 /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
+		CD50EC84139547ED0088DD33 /* ECNActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNActions.m; sourceTree = "<group>"; };
+		CD50F0C8139551E20088DD33 /* OSCAssetsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCAssetsWindowController.h; sourceTree = "<group>"; };
+		CD50F0C9139551E20088DD33 /* OSCAssetsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCAssetsWindowController.m; sourceTree = "<group>"; };
+		CD50F0CB139551F90088DD33 /* OSCAssetsPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OSCAssetsPanel.xib; sourceTree = "<group>"; };
 		CD58396113407FDB0059D504 /* ECNOSCReceiverTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCReceiverTrigger.h; sourceTree = "<group>"; };
 		CD58396213407FDB0059D504 /* ECNOSCReceiverTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNOSCReceiverTrigger.m; sourceTree = "<group>"; };
-		CD5BFA1912F461A0004E7A47 /* OpenGLViewKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLViewKit.h; sourceTree = "<group>"; };
-		CD5BFA1A12F461A0004E7A47 /* OpenGLViewKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLViewKit.m; sourceTree = "<group>"; };
-		CD5E726C12EF428C009B611C /* CameraControllerInQCMaskRendererView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraControllerInQCMaskRendererView.h; sourceTree = "<group>"; };
-		CD5E726D12EF428C009B611C /* CameraControllerInQCMaskRendererView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraControllerInQCMaskRendererView.m; sourceTree = "<group>"; };
 		CD626675130E709800901235 /* ECNSceneAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNSceneAction.h; sourceTree = "<group>"; };
 		CD626676130E709800901235 /* ECNSceneAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNSceneAction.m; sourceTree = "<group>"; };
 		CD6565FD128DBF5F002217CF /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		CD66B5F2133FF239004BA4BE /* MaskSrcUsingChannelFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MaskSrcUsingChannelFilter.cikernel; sourceTree = "<group>"; };
 		CD66B5F3133FF239004BA4BE /* MaskSrcUsingChannelFilterKernel.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MaskSrcUsingChannelFilterKernel.cikernel; sourceTree = "<group>"; };
 		CD66B5F4133FF239004BA4BE /* maskSrcUsingRedChannel.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = maskSrcUsingRedChannel.cikernel; sourceTree = "<group>"; };
+		CD6C7A3C13819FAC00DB1442 /* Input_camera_resolutions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Input_camera_resolutions.plist; path = resources/Input_camera_resolutions.plist; sourceTree = "<group>"; };
 		CD70AEB0129AE20E0009F0F2 /* null.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = null.qtz; sourceTree = "<group>"; };
-		CD730E9212E6E9F100B222B7 /* QTVisualContextKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTVisualContextKit.h; sourceTree = "<group>"; };
-		CD730E9312E6E9F100B222B7 /* QTVisualContextKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTVisualContextKit.m; sourceTree = "<group>"; };
-		CD730EA312E6EF5500B222B7 /* OpenGLQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLQuad.h; sourceTree = "<group>"; };
-		CD730EA412E6EF5500B222B7 /* OpenGLQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLQuad.m; sourceTree = "<group>"; };
-		CD730EB212E6F0CA00B222B7 /* MemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemObject.h; sourceTree = "<group>"; };
-		CD730EB312E6F0CA00B222B7 /* MemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemObject.m; sourceTree = "<group>"; };
-		CD730EB412E6F0CA00B222B7 /* Memory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Memory.m; sourceTree = "<group>"; };
-		CD730EB512E6F0CA00B222B7 /* Memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Memory.h; sourceTree = "<group>"; };
 		CD730EE912E6F22A00B222B7 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
 		CD730EEA12E6F22A00B222B7 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
 		CD730EEB12E6F22A00B222B7 /* AlertPanelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertPanelKit.h; sourceTree = "<group>"; };
 		CD730EEC12E6F22A00B222B7 /* AlertPanelKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertPanelKit.m; sourceTree = "<group>"; };
 		CD762D57133FF62100517F38 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD773FAE12E72BB70066748C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		CD7AA3E212E6023C009E5CCD /* ECNLiveInputSelectorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNLiveInputSelectorWindowController.h; sourceTree = "<group>"; };
-		CD7AA3E312E6023C009E5CCD /* ECNLiveInputSelectorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNLiveInputSelectorWindowController.m; sourceTree = "<group>"; };
-		CD7AA3E512E605A8009E5CCD /* LiveInputSelector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveInputSelector.xib; sourceTree = "<group>"; };
-		CD7AA3F512E60966009E5CCD /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
-		CD7AA3F612E60966009E5CCD /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
-		CD7AA43912E60F99009E5CCD /* UVCCameraControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVCCameraControl.h; sourceTree = "<group>"; };
-		CD7AA43A12E60F99009E5CCD /* UVCCameraControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVCCameraControl.m; sourceTree = "<group>"; };
 		CD7D1A5E1326A1DF007DDC28 /* ECNObjectTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNObjectTypes.h; sourceTree = "<group>"; };
-		CD828B0C12AAA0920018C787 /* LiveInputRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveInputRenderer.h; sourceTree = "<group>"; };
-		CD828B0D12AAA0920018C787 /* LiveInputRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveInputRenderer.m; sourceTree = "<group>"; };
 		CD832028130C38E70063E215 /* ECNElementAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNElementAction.h; sourceTree = "<group>"; };
 		CD832029130C38E70063E215 /* ECNElementAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNElementAction.m; sourceTree = "<group>"; };
 		CD8462B0130C1C7F00F4A1B3 /* ECNTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNTrigger.h; sourceTree = "<group>"; };
@@ -286,58 +414,115 @@
 		CD9429E4127F227C00921A57 /* line.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = line.tif; path = images/line.tif; sourceTree = "<group>"; };
 		CD9429EB127F234600921A57 /* Rectangle.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Rectangle.tif; path = images/Rectangle.tif; sourceTree = "<group>"; };
 		CD9429F4127F24E800921A57 /* timer.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = timer.tif; path = images/timer.tif; sourceTree = "<group>"; };
-		CD9429F7127F26AF00921A57 /* osc.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = osc.tif; path = images/osc.tif; sourceTree = "<group>"; };
+		CDA608A71391697F001B81A0 /* KElementInspectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KElementInspectorViewController.xib; sourceTree = "<group>"; };
+		CDA608AD13916AE2001B81A0 /* KElementInspectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KElementInspectorViewController.h; sourceTree = "<group>"; };
+		CDA608AE13916AE2001B81A0 /* KElementInspectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KElementInspectorViewController.m; sourceTree = "<group>"; };
 		CDA777A2133FDC33007497CD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
-		CDA805281295A33D00B72116 /* ElementInspector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElementInspector.xib; sourceTree = "<group>"; };
 		CDA9362F12ABDC9B006015F2 /* ECNOSCReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNOSCReceiver.h; sourceTree = "<group>"; };
 		CDA9363012ABDC9B006015F2 /* ECNOSCReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNOSCReceiver.m; sourceTree = "<group>"; };
+		CDAD70DE1396BD8600A8AFCE /* FilterChainComposer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterChainComposer.xib; sourceTree = "<group>"; };
+		CDAD70EA1396C02500A8AFCE /* KFilterChainComposerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFilterChainComposerWindowController.h; sourceTree = "<group>"; };
+		CDAD70EB1396C02500A8AFCE /* KFilterChainComposerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFilterChainComposerWindowController.m; sourceTree = "<group>"; };
+		CDAD73EA1396E84D00A8AFCE /* KCIImageVisualizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCIImageVisualizer.h; sourceTree = "<group>"; };
+		CDAD73EB1396E84D00A8AFCE /* KCIImageVisualizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCIImageVisualizer.m; sourceTree = "<group>"; };
 		CDADC1EF13014135002A0937 /* ECNShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNShape.h; sourceTree = "<group>"; };
 		CDADC1F013014135002A0937 /* ECNShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNShape.m; sourceTree = "<group>"; };
+		CDBD04B11397CB440044345A /* KImageUnitsLibraryPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KImageUnitsLibraryPanel.h; sourceTree = "<group>"; };
+		CDBD04B21397CB440044345A /* KImageUnitsLibraryPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KImageUnitsLibraryPanel.m; sourceTree = "<group>"; };
 		CDC9F4F7129DD1BD0064F103 /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = splash.jpg; path = splash/splash.jpg; sourceTree = "<group>"; };
 		CDC9F52F129DD5200064F103 /* splash_screen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = splash_screen.xib; sourceTree = "<group>"; };
 		CDD18B0C1326370E0052BC4A /* checkerboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkerboard.png; path = images/checkerboard.png; sourceTree = "<group>"; };
 		CDD326F7127D7D9300E4FBA9 /* DebugIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugIncludes.h; path = src/DebugIncludes.h; sourceTree = "<group>"; };
-		CDDB44F712CD246100C4E5AA /* SceneActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceneActionController.xib; sourceTree = "<group>"; };
+		CDD901F5139BE4A90026527F /* KCIThresholdFilter_Luminance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCIThresholdFilter_Luminance.h; sourceTree = "<group>"; };
+		CDD901F6139BE4A90026527F /* KCIThresholdFilter_Luminance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCIThresholdFilter_Luminance.m; sourceTree = "<group>"; };
+		CDD90214139BE6070026527F /* KCIThresholdFilter_ColorDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCIThresholdFilter_ColorDistance.h; sourceTree = "<group>"; };
+		CDD90215139BE6070026527F /* KCIThresholdFilter_ColorDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCIThresholdFilter_ColorDistance.m; sourceTree = "<group>"; };
+		CDD9022E139BE78A0026527F /* KCIThresholdFilterColorDistance.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = KCIThresholdFilterColorDistance.cikernel; sourceTree = "<group>"; };
+		CDD9022F139BE78A0026527F /* KCIThresholdFilterLuma.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = KCIThresholdFilterLuma.cikernel; sourceTree = "<group>"; };
+		CDD90445139C0F5F0026527F /* ECNVideoInputAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNVideoInputAsset.h; sourceTree = "<group>"; };
+		CDD90446139C0F5F0026527F /* ECNVideoInputAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNVideoInputAsset.m; sourceTree = "<group>"; };
+		CDD9DB16139CDCC900A1E259 /* KPlaybackPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPlaybackPipeline.h; path = src/KPlaybackPipeline.h; sourceTree = "<group>"; };
+		CDD9DB17139CDCC900A1E259 /* KPlaybackPipeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPlaybackPipeline.m; path = src/KPlaybackPipeline.m; sourceTree = "<group>"; };
+		CDD9DB5E139CF68100A1E259 /* KPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPlaybackViewController.h; sourceTree = "<group>"; };
+		CDD9DB5F139CF68100A1E259 /* KPlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPlaybackViewController.m; sourceTree = "<group>"; };
+		CDD9DB62139CF6BE00A1E259 /* KNewPlaybackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KNewPlaybackViewController.xib; sourceTree = "<group>"; };
+		CDD9DC05139D1ACC00A1E259 /* KPreferencesStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPreferencesStrings.h; sourceTree = "<group>"; };
+		CDD9DC63139D202400A1E259 /* KLiveViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLiveViewerController.h; sourceTree = "<group>"; };
+		CDD9DC64139D202400A1E259 /* KLiveViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLiveViewerController.m; sourceTree = "<group>"; };
+		CDD9DC66139D207900A1E259 /* KLiveViewerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KLiveViewerController.xib; sourceTree = "<group>"; };
+		CDD9DC72139D214900A1E259 /* AboutKineto.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutKineto.xib; sourceTree = "<group>"; };
+		CDD9FE53139BB6990026527F /* defaultCameraInput.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaultCameraInput.plist; path = resources/defaultCameraInput.plist; sourceTree = "<group>"; };
 		CDDD0CB41279BE1500759293 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
-		CDDD0D2D1279C1F600759293 /* ECNProjectWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNProjectWindowController.h; sourceTree = "<group>"; };
-		CDDD0D2E1279C1F600759293 /* ECNProjectWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNProjectWindowController.m; sourceTree = "<group>"; };
-		CDDD0E961279CAB300759293 /* ECNSceneWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ECNSceneWindow.xib; sourceTree = "<group>"; };
+		CDDD0D2D1279C1F600759293 /* KProjectWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KProjectWindowController.h; sourceTree = "<group>"; };
+		CDDD0D2E1279C1F600759293 /* KProjectWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KProjectWindowController.m; sourceTree = "<group>"; };
+		CDDD0E961279CAB300759293 /* KCueEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCueEditorViewController.xib; sourceTree = "<group>"; };
 		CDDD0E9A1279CB4900759293 /* ECNElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNElement.h; sourceTree = "<group>"; };
 		CDDD0E9B1279CB4900759293 /* ECNElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNElement.m; sourceTree = "<group>"; wrapsLines = 1; };
-		CDDD0EAE1279CC2F00759293 /* ECNScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNScene.h; sourceTree = "<group>"; };
-		CDDD0EAF1279CC2F00759293 /* ECNScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNScene.m; sourceTree = "<group>"; };
+		CDDD0EAE1279CC2F00759293 /* KCue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCue.h; sourceTree = "<group>"; };
+		CDDD0EAF1279CC2F00759293 /* KCue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCue.m; sourceTree = "<group>"; };
 		CDDD408D127E1F53003481BC /* ECNLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNLine.h; sourceTree = "<group>"; };
 		CDDD408E127E1F53003481BC /* ECNLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNLine.m; sourceTree = "<group>"; };
+		CDE4A9741393A882008BF405 /* AppResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppResources.h; sourceTree = "<group>"; };
+		CDE4A9751393A882008BF405 /* AppResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppResources.m; sourceTree = "<group>"; };
+		CDE4AAFF1393B9C8008BF405 /* thanksforregistering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thanksforregistering.png; sourceTree = "<group>"; };
+		CDE4AD191393D00D008BF405 /* kineto_license.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = kineto_license.icns; path = images/kineto_license.icns; sourceTree = "<group>"; };
+		CDE723021392643C00B3FC96 /* available_actions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = available_actions.plist; path = resources/available_actions.plist; sourceTree = "<group>"; };
+		CDE75271139BAD9000468D6A /* videoInput.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = videoInput.plist; path = resources/videoInput.plist; sourceTree = "<group>"; };
+		CDE8DBF11397AF37006C6A79 /* TFThreadMessagingQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFThreadMessagingQueue.h; sourceTree = "<group>"; };
+		CDE8DBF21397AF37006C6A79 /* TFThreadMessagingQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFThreadMessagingQueue.m; sourceTree = "<group>"; };
 		CDE94CCA12C8975C004C3152 /* occhio.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = occhio.gif; path = images/occhio.gif; sourceTree = "<group>"; };
 		CDE94DC212C89DAD004C3152 /* first.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = first.tif; path = images/first.tif; sourceTree = "<group>"; };
 		CDE94E8512C8A9BC004C3152 /* pause.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = pause.tif; sourceTree = "<group>"; };
 		CDE94E8612C8A9BC004C3152 /* play.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = play.tif; sourceTree = "<group>"; };
 		CDE94E8712C8A9BC004C3152 /* stop.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = stop.tif; sourceTree = "<group>"; };
 		CDE94E8812C8A9BC004C3152 /* test.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = test.tif; sourceTree = "<group>"; };
-		CDE97D80126F3FFC00515B57 /* ActivityInspector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityInspector.xib; sourceTree = "<group>"; };
-		CDE97DCA126F442000515B57 /* ECNLiveViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNLiveViewerController.h; sourceTree = "<group>"; };
-		CDE97DCB126F442000515B57 /* ECNLiveViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNLiveViewerController.m; sourceTree = "<group>"; };
 		CDEB98C0130586550065198E /* ECNAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNAsset.h; sourceTree = "<group>"; };
 		CDEB98C1130586550065198E /* ECNAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNAsset.m; sourceTree = "<group>"; };
 		CDEB98C31305877D0065198E /* ECNQCAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNQCAsset.h; sourceTree = "<group>"; };
 		CDEB98C41305877D0065198E /* ECNQCAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNQCAsset.m; sourceTree = "<group>"; };
-		CDEB9A4F1305B3EB0065198E /* Object inspector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Object inspector.xib"; sourceTree = "<group>"; };
-		CDEF475C1309230300EE0372 /* ElementSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElementSettings.xib; sourceTree = "<group>"; };
 		CDEF4803130933C400EE0372 /* ShapeSettingsPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeSettingsPanel.h; sourceTree = "<group>"; };
 		CDEF4804130933C400EE0372 /* ShapeSettingsPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeSettingsPanel.m; sourceTree = "<group>"; };
 		CDEF485A13093D9300EE0372 /* ECNPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNPort.h; sourceTree = "<group>"; };
 		CDEF485B13093D9300EE0372 /* ECNPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNPort.m; sourceTree = "<group>"; };
+		CDEFA3431391191B0033341B /* trigger_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trigger_off.png; path = images/trigger_off.png; sourceTree = "<group>"; };
+		CDEFA3441391191B0033341B /* trigger_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trigger_on.png; path = images/trigger_on.png; sourceTree = "<group>"; };
+		CDEFE41C139EA68700EDE18F /* que_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = que_active.png; sourceTree = "<group>"; };
+		CDEFE41D139EA68700EDE18F /* que_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = que_inactive.png; sourceTree = "<group>"; };
+		CDEFE420139EA70300EDE18F /* assets_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = assets_active.png; path = resources/images/tasti_project_document/assets_active.png; sourceTree = SOURCE_ROOT; };
+		CDEFE421139EA70300EDE18F /* assets_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = assets_inactive.png; path = resources/images/tasti_project_document/assets_inactive.png; sourceTree = SOURCE_ROOT; };
+		CDF2A96713990605002B7BD9 /* KConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KConstants.h; sourceTree = "<group>"; };
+		CDF2AA9213990C64002B7BD9 /* NSCIColorToNSColorValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCIColorToNSColorValueTransformer.h; sourceTree = "<group>"; };
+		CDF2AA9313990C64002B7BD9 /* NSCIColorToNSColorValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCIColorToNSColorValueTransformer.m; sourceTree = "<group>"; };
+		CDF2AB5113992903002B7BD9 /* KMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMask.h; sourceTree = "<group>"; };
+		CDF2AB5213992903002B7BD9 /* KMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMask.m; sourceTree = "<group>"; };
 		CDF310BC12DB800A00FC71A3 /* ECNObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNObject.h; sourceTree = "<group>"; };
 		CDF310BD12DB800A00FC71A3 /* ECNObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNObject.m; sourceTree = "<group>"; };
 		CDF692BA1313D6F100F9F810 /* ECNQCAssetInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNQCAssetInstance.h; sourceTree = "<group>"; };
 		CDF692BB1313D6F100F9F810 /* ECNQCAssetInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNQCAssetInstance.m; sourceTree = "<group>"; };
+		CDF74B6B139FB44B00CC4F66 /* arrow_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_off.png; path = ../kineto/resources/images/toolbar_icons/arrow_off.png; sourceTree = SOURCE_ROOT; };
+		CDF74B6C139FB44B00CC4F66 /* arrow_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_on.png; path = ../kineto/resources/images/toolbar_icons/arrow_on.png; sourceTree = SOURCE_ROOT; };
+		CDF74B6D139FB44B00CC4F66 /* bkg_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bkg_off.png; path = ../kineto/resources/images/toolbar_icons/bkg_off.png; sourceTree = SOURCE_ROOT; };
+		CDF74B6E139FB44B00CC4F66 /* bkg_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bkg_on.png; path = ../kineto/resources/images/toolbar_icons/bkg_on.png; sourceTree = SOURCE_ROOT; };
+		CDF74B6F139FB44B00CC4F66 /* camera_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_off.png; path = ../kineto/resources/images/toolbar_icons/camera_off.png; sourceTree = SOURCE_ROOT; };
+		CDF74B70139FB44B00CC4F66 /* camera_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_on.png; path = ../kineto/resources/images/toolbar_icons/camera_on.png; sourceTree = SOURCE_ROOT; };
+		CDF74B71139FB44B00CC4F66 /* rect_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rect_off.png; path = ../kineto/resources/images/toolbar_icons/rect_off.png; sourceTree = SOURCE_ROOT; };
+		CDF74B72139FB44B00CC4F66 /* rect_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rect_on.png; path = ../kineto/resources/images/toolbar_icons/rect_on.png; sourceTree = SOURCE_ROOT; };
+		CDF74B8D139FB88700CC4F66 /* pause_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause_off.png; path = ../kineto/resources/images/playback/pause_off.png; sourceTree = SOURCE_ROOT; };
+		CDF74B8E139FB88700CC4F66 /* pause_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause_on.png; path = ../kineto/resources/images/playback/pause_on.png; sourceTree = SOURCE_ROOT; };
+		CDF74B8F139FB88700CC4F66 /* play_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_off.png; path = ../kineto/resources/images/playback/play_off.png; sourceTree = SOURCE_ROOT; };
+		CDF74B90139FB88700CC4F66 /* play_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_on.png; path = ../kineto/resources/images/playback/play_on.png; sourceTree = SOURCE_ROOT; };
+		CDF74B91139FB88700CC4F66 /* stop_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop_off.png; path = ../kineto/resources/images/playback/stop_off.png; sourceTree = SOURCE_ROOT; };
+		CDF74B92139FB88700CC4F66 /* stop_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop_on.png; path = ../kineto/resources/images/playback/stop_on.png; sourceTree = SOURCE_ROOT; };
+		CDF74B9D139FB94500CC4F66 /* test_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test_off.png; path = ../kineto/resources/images/playback/test_off.png; sourceTree = SOURCE_ROOT; };
+		CDF74B9E139FB94500CC4F66 /* test_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test_on.png; path = ../kineto/resources/images/playback/test_on.png; sourceTree = SOURCE_ROOT; };
 		CDFA99AA13150077003EC2AD /* ECNAssetInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECNAssetInstance.h; sourceTree = "<group>"; };
 		CDFA99AB13150077003EC2AD /* ECNAssetInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECNAssetInstance.m; sourceTree = "<group>"; };
 		CDFA9ABD13150E67003EC2AD /* assets_qcpatch.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = assets_qcpatch.tif; path = images/assets_qcpatch.tif; sourceTree = "<group>"; };
 		CDFDEA2713098562001A5F9C /* data_viewer.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = data_viewer.qtz; sourceTree = "<group>"; };
-		CDFDEA2913098580001A5F9C /* DataViewer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewer.xib; sourceTree = "<group>"; };
-		CDFDEA2D13098613001A5F9C /* DataViewerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewerWindowController.h; sourceTree = "<group>"; };
-		CDFDEA2E13098613001A5F9C /* DataViewerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewerWindowController.m; sourceTree = "<group>"; };
+		CDFE5BE1138D6B70003ED2E2 /* kineto_documents.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = kineto_documents.icns; path = images/kineto_documents.icns; sourceTree = "<group>"; };
+		CDFF8FB813950C4300C64664 /* NSUserDefaults+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+Extras.h"; path = "src/NSUserDefaults+Extras.h"; sourceTree = "<group>"; };
+		CDFF8FB913950C4300C64664 /* NSUserDefaults+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+Extras.m"; path = "src/NSUserDefaults+Extras.m"; sourceTree = "<group>"; };
+		CDFF9156139522CC00C64664 /* osc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = osc.png; path = images/toolbar_icons/osc.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +541,8 @@
 				CD18D09612FFF1590007ACEB /* VVMIDI.framework in Frameworks */,
 				CD18D09812FFF1590007ACEB /* VVOSC.framework in Frameworks */,
 				CDA777A3133FDC33007497CD /* Sparkle.framework in Frameworks */,
+				CD277B5C1392E2F100B9015C /* CoreFoundation.framework in Frameworks */,
+				CD36A2101396696300BE56B8 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,9 +552,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CDD9DB15139CDCA700A1E259 /* Processing pipeline */,
 				CDD326CE127D7AEC00E4FBA9 /* Views and Controllers */,
 				CDDD0E991279CB2500759293 /* Model Classes */,
-				CD37723D1270B5C800E5ACFB /* Singleton window controllers */,
 				CD46AA1313070B46004A1EBF /* MyApplication.h */,
 				CD46AA1413070B46004A1EBF /* MyApplication.m */,
 				849818230BCF1CE50085CECA /* AppController.h */,
@@ -382,6 +569,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD36A20F1396696300BE56B8 /* Accelerate.framework */,
 				CDA777A2133FDC33007497CD /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				CD3A758D12889784009E8E0B /* IOKit.framework */,
@@ -399,6 +587,7 @@
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				CD277B5B1392E2F100B9015C /* CoreFoundation.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -426,15 +615,29 @@
 		29B97315FDCFA39411CA2CEA /* Other sources */ = {
 			isa = PBXGroup;
 			children = (
+				CDFF8FB513950C0900C64664 /* Extensions */,
+				CD36A02C139657F500BE56B8 /* Performance Measuring */,
+				CD376F351270A0FF00E5ACFB /* SynthesizeSingleton.h */,
+				CDE8DBF11397AF37006C6A79 /* TFThreadMessagingQueue.h */,
+				CDE8DBF21397AF37006C6A79 /* TFThreadMessagingQueue.m */,
+				CD277AF91392E22800B9015C /* Licensing (AquaticPrime) */,
 				CD6267DE130E90D300901235 /* Core Image Custom Filters */,
 				CD471FDC12EB472E00C11B08 /* Custom UI */,
-				CD73100C12E6F58F00B222B7 /* Convenience classes */,
 				CD730EE812E6F22A00B222B7 /* Alert */,
-				CDF2E9AB128ED446008D53E0 /* Data streams */,
 				CD177B98127EF92D00369766 /* ECNFoundationExtras.h */,
 				CD177B99127EF92D00369766 /* ECNFoundationExtras.m */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				7219AB410FAA1D5900573434 /* kineto_Prefix.pch */,
+				CDE4A9741393A882008BF405 /* AppResources.h */,
+				CDE4A9751393A882008BF405 /* AppResources.m */,
+				CD36A0041396557900BE56B8 /* KError.h */,
+				CD36A0051396557900BE56B8 /* KError.m */,
+				CD36A007139655C100BE56B8 /* KIncludes.h */,
+				CD36A008139655EE00BE56B8 /* KLocalization.h */,
+				CD36A0091396560A00BE56B8 /* KExceptions.h */,
+				CD1C6EC31398038D0040E1D4 /* KDragNDropDataTypes.h */,
+				CDF2A96713990605002B7BD9 /* KConstants.h */,
+				CDD9DC05139D1ACC00A1E259 /* KPreferencesStrings.h */,
 			);
 			name = "Other sources";
 			path = src;
@@ -450,6 +653,14 @@
 				CD1B863712F2FD820067EF4E /* kineto NSZombieEnabled-Info.plist */,
 				CD762D57133FF62100517F38 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				CD6C7A3C13819FAC00DB1442 /* Input_camera_resolutions.plist */,
+				CDE723021392643C00B3FC96 /* available_actions.plist */,
+				CD36A06E13965A4900BE56B8 /* Localizable.strings */,
+				CD36A06C13965A3700BE56B8 /* untitled.strings */,
+				CDE75271139BAD9000468D6A /* videoInput.plist */,
+				CD0F33A8139958E800ED1746 /* motionMask.plist */,
+				CD0F33A9139958E800ED1746 /* presenceMask.plist */,
+				CDD9FE53139BB6990026527F /* defaultCameraInput.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -462,24 +673,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CD01B51312DDB4AE009A9A66 /* Playback controller */ = {
-			isa = PBXGroup;
-			children = (
-				CD3A10461284AC4C0056ABE3 /* ECNPlaybackController.xib */,
-				CDE97D80126F3FFC00515B57 /* ActivityInspector.xib */,
-			);
-			name = "Playback controller";
-			sourceTree = "<group>";
-		};
-		CD01B52912DDB569009A9A66 /* Playback controller */ = {
-			isa = PBXGroup;
-			children = (
-				CD3A10501284AEBF0056ABE3 /* ECNPlaybackWindowController.h */,
-				CD3A10511284AEBF0056ABE3 /* ECNPlaybackWindowController.m */,
-			);
-			name = "Playback controller";
 			sourceTree = "<group>";
 		};
 		CD128FFC12C74AD60089DAA2 /* cursori */ = {
@@ -495,17 +688,23 @@
 		CD177FAA127F1F7600369766 /* Icone */ = {
 			isa = PBXGroup;
 			children = (
+				CDEFE41B139EA68700EDE18F /* tasti_project_document */,
+				CDFF8EDC139504D500C64664 /* toolbar_icons */,
+				CDE4AD191393D00D008BF405 /* kineto_license.icns */,
+				CDEFA3431391191B0033341B /* trigger_off.png */,
+				CDEFA3441391191B0033341B /* trigger_on.png */,
+				CDFE5BE1138D6B70003ED2E2 /* kineto_documents.icns */,
 				CDD18B0C1326370E0052BC4A /* checkerboard.png */,
 				CD1890731324D69E00AE3D4D /* kineto_logo.icns */,
 				CD2E337F131BBF99007F7236 /* assets_osctx.tif */,
 				CDFA9ABD13150E67003EC2AD /* assets_qcpatch.tif */,
 				CD471FD012EB467200C11B08 /* solo.tif */,
-				CDE94E8412C8A9BC004C3152 /* TASTI */,
+				CDE94E8412C8A9BC004C3152 /* playback */,
 				CDE94DC212C89DAD004C3152 /* first.tif */,
 				CDE94CCA12C8975C004C3152 /* occhio.gif */,
 				CD128FFC12C74AD60089DAA2 /* cursori */,
 				CD035D5E12BFC1B50053518A /* osc_receiver.tif */,
-				CD9429F7127F26AF00921A57 /* osc.tif */,
+				CDFF9156139522CC00C64664 /* osc.png */,
 				CD9429F4127F24E800921A57 /* timer.tif */,
 				CD9429EB127F234600921A57 /* Rectangle.tif */,
 				CD9429E4127F227C00921A57 /* line.tif */,
@@ -515,13 +714,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		CD1FA54812EDF8C200A3D5D7 /* CoreVideo */ = {
+		CD277AF91392E22800B9015C /* Licensing (AquaticPrime) */ = {
 			isa = PBXGroup;
 			children = (
-				CD1FA54912EDF8FC00A3D5D7 /* CVImageBuffer.h */,
-				CD1FA54A12EDF8FC00A3D5D7 /* CVImageBuffer.m */,
+				CD277B181392E29100B9015C /* AquaticPrime.h */,
+				CD277B171392E29100B9015C /* AquaticPrime.c */,
+				CD277CA81392FD9800B9015C /* Licensing.h */,
+				CD277CA91392FD9800B9015C /* Licensing.m */,
 			);
-			name = CoreVideo;
+			name = "Licensing (AquaticPrime)";
 			sourceTree = "<group>";
 		};
 		CD35511E1290A298006A6BEA /* QTZ masks */ = {
@@ -536,88 +737,179 @@
 			path = resources/qc_masks;
 			sourceTree = "<group>";
 		};
-		CD37723D1270B5C800E5ACFB /* Singleton window controllers */ = {
+		CD369FEA1396514700BE56B8 /* Video Input Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CD376F351270A0FF00E5ACFB /* SynthesizeSingleton.h */,
-				CD5E726812EF4269009B611C /* Live Input selector */,
-				CD01B52912DDB569009A9A66 /* Playback controller */,
-				CDC36A1312DA23D600993177 /* Live viewer */,
-				CDC6174C12CE154900611408 /* Element setting panels */,
-				CD37723A1270B5C400E5ACFB /* ECNDrawingToolbar.h */,
-				CD37723B1270B5C400E5ACFB /* ECNDrawingToolbar.m */,
-				CDFDEA2D13098613001A5F9C /* DataViewerWindowController.h */,
-				CDFDEA2E13098613001A5F9C /* DataViewerWindowController.m */,
+				CDF2AB5413992A07002B7BD9 /* Masks */,
+				CD36A0A313965DCF00BE56B8 /* Filtering */,
+				CD369FFD1396525A00BE56B8 /* Image & Camera Sources */,
+				CD369FEB1396516F00BE56B8 /* KVideoInputSrc.h */,
+				CD369FEC1396516F00BE56B8 /* KVideoInputSrc.m */,
 			);
-			name = "Singleton window controllers";
+			name = "Video Input Sources";
 			path = src;
 			sourceTree = "<group>";
 		};
-		CD3C9DCA12E89F0600599BB0 /* Texture */ = {
+		CD369FFA139651DC00BE56B8 /* Image Acquisition */ = {
 			isa = PBXGroup;
 			children = (
-				CD3C9DC712E89F0000599BB0 /* OpenGLTexture.h */,
-				CD3C9DC812E89F0000599BB0 /* OpenGLTexture.m */,
+				CD36A26313966DD900BE56B8 /* Syphon classes */,
+				CD36A26213966DC500BE56B8 /* Camera classes */,
+				CD369FF4139651C900BE56B8 /* KCapture.h */,
+				CD369FF5139651C900BE56B8 /* KCapture.m */,
 			);
-			name = Texture;
+			name = "Image Acquisition";
+			sourceTree = "<group>";
+		};
+		CD369FFB139651F000BE56B8 /* QTKit */ = {
+			isa = PBXGroup;
+			children = (
+				CD369FF7139651D500BE56B8 /* KQTKitCapture.h */,
+				CD369FF8139651D500BE56B8 /* KQTKitCapture.m */,
+			);
+			name = QTKit;
+			sourceTree = "<group>";
+		};
+		CD369FFC139651F800BE56B8 /* libdc1394 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = libdc1394;
+			sourceTree = "<group>";
+		};
+		CD369FFD1396525A00BE56B8 /* Image & Camera Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CD369FFA139651DC00BE56B8 /* Image Acquisition */,
+				CD369FEE1396517B00BE56B8 /* KCameraInputSrc.h */,
+				CD369FEF1396517B00BE56B8 /* KCameraInputSrc.m */,
+			);
+			name = "Image & Camera Sources";
+			sourceTree = "<group>";
+		};
+		CD36A02C139657F500BE56B8 /* Performance Measuring */ = {
+			isa = PBXGroup;
+			children = (
+				CD36A02D139657F500BE56B8 /* TFPerformanceMeasurement.h */,
+				CD36A02E139657F500BE56B8 /* TFPerformanceMeasurement.c */,
+				CD36A02F139657F500BE56B8 /* TFPerformanceTimer.h */,
+				CD36A030139657F500BE56B8 /* TFPerformanceTimer.m */,
+			);
+			name = "Performance Measuring";
+			sourceTree = "<group>";
+		};
+		CD36A0A313965DCF00BE56B8 /* Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				CD36A0C113965DCF00BE56B8 /* KFilterChain.h */,
+				CD36A0C213965DCF00BE56B8 /* KFilterChain.m */,
+				CD36A0C313965DCF00BE56B8 /* KCIFilterChain.h */,
+				CD36A0C413965DCF00BE56B8 /* KCIFilterChain.m */,
+				CD36A0C513965DCF00BE56B8 /* KCameraInputFilterChain.h */,
+				CD36A0C613965DCF00BE56B8 /* KCameraInputFilterChain.m */,
+				CD36A0A413965DCF00BE56B8 /* CIFilters */,
+			);
+			name = Filtering;
+			sourceTree = "<group>";
+		};
+		CD36A0A413965DCF00BE56B8 /* CIFilters */ = {
+			isa = PBXGroup;
+			children = (
+				CD10C5DF139D85670053B02D /* KCIMotionMaskGenerator.h */,
+				CD10C5E0139D85670053B02D /* KCIMotionMaskGenerator.m */,
+				CD36A0A913965DCF00BE56B8 /* KCIBackgroundSubtraction.h */,
+				CD36A0AA13965DCF00BE56B8 /* KCIBackgroundSubtraction.m */,
+				CDD901F5139BE4A90026527F /* KCIThresholdFilter_Luminance.h */,
+				CDD901F6139BE4A90026527F /* KCIThresholdFilter_Luminance.m */,
+				CDD90214139BE6070026527F /* KCIThresholdFilter_ColorDistance.h */,
+				CDD90215139BE6070026527F /* KCIThresholdFilter_ColorDistance.m */,
+				CD36A0A713965DCF00BE56B8 /* TFCI1PixelBorderAroundImage.h */,
+				CD36A0A813965DCF00BE56B8 /* TFCI1PixelBorderAroundImage.m */,
+				CD36A0AB13965DCF00BE56B8 /* TFCIRatioImageBlendFilter.h */,
+				CD36A0AC13965DCF00BE56B8 /* TFCIRatioImageBlendFilter.m */,
+				CD36A0AD13965DCF00BE56B8 /* TFCIBlurFilter.h */,
+				CD36A0AE13965DCF00BE56B8 /* TFCIBlurFilter.m */,
+				CD36A0AF13965DCF00BE56B8 /* TFCIContrastStretchFilter.h */,
+				CD36A0B013965DCF00BE56B8 /* TFCIContrastStretchFilter.m */,
+				CD36A0B113965DCF00BE56B8 /* KCI3x3ErosionFilter.h */,
+				CD36A0B213965DCF00BE56B8 /* KCI3x3ErosionFilter.m */,
+				CD36A0B313965DCF00BE56B8 /* KCI3x3DilationFilter.h */,
+				CD36A0B413965DCF00BE56B8 /* KCI3x3DilationFilter.m */,
+				CD36A0B513965DCF00BE56B8 /* KCIErosionDilationComboFilter.h */,
+				CD36A0B613965DCF00BE56B8 /* KCIErosionDilationComboFilter.m */,
+				CD36A0B713965DCF00BE56B8 /* KCIMorphologicalOpenWith3x3ShapeFilter.h */,
+				CD36A0B813965DCF00BE56B8 /* KCIMorphologicalOpenWith3x3ShapeFilter.m */,
+				CD36A0B913965DCF00BE56B8 /* KCIMorphologicalCloseWith3x3ShapeFilter.h */,
+				CD36A0BA13965DCF00BE56B8 /* KCIMorphologicalCloseWith3x3ShapeFilter.m */,
+				CD36A0BB13965DCF00BE56B8 /* TFCIGrayscalingFilter.h */,
+				CD36A0BC13965DCF00BE56B8 /* TFCIGrayscalingFilter.m */,
+				CD36A0BD13965DCF00BE56B8 /* TFCIColorInversionFilter.h */,
+				CD36A0BE13965DCF00BE56B8 /* TFCIColorInversionFilter.m */,
+				CD36A0BF13965DCF00BE56B8 /* TFCIHighpassFilter.h */,
+				CD36A0C013965DCF00BE56B8 /* TFCIHighpassFilter.m */,
+			);
+			name = CIFilters;
+			sourceTree = "<group>";
+		};
+		CD36A12C139661FD00BE56B8 /* CIImage Bitmap Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				CD36A12D139661FD00BE56B8 /* CIImage+MakeBitmaps.h */,
+				CD36A12E139661FD00BE56B8 /* CIImage+MakeBitmaps.m */,
+				CD36A12F139661FD00BE56B8 /* CIImage+MakeBitmapsSupport.h */,
+				CD36A130139661FD00BE56B8 /* CIImage+MakeBitmapsSupport.c */,
+			);
+			name = "CIImage Bitmap Rendering";
+			sourceTree = "<group>";
+		};
+		CD36A26213966DC500BE56B8 /* Camera classes */ = {
+			isa = PBXGroup;
+			children = (
+				CD369FF11396518C00BE56B8 /* KQTKitInputSrc.h */,
+				CD369FF21396518C00BE56B8 /* KQTKitInputSrc.m */,
+				CD369FFC139651F800BE56B8 /* libdc1394 */,
+				CD369FFB139651F000BE56B8 /* QTKit */,
+			);
+			name = "Camera classes";
+			sourceTree = "<group>";
+		};
+		CD36A26313966DD900BE56B8 /* Syphon classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Syphon classes";
+			sourceTree = "<group>";
+		};
+		CD37723D1270B5C800E5ACFB /* Singleton window controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDDD0D2D1279C1F600759293 /* KProjectWindowController.h */,
+				CDDD0D2E1279C1F600759293 /* KProjectWindowController.m */,
+				CDF74717139F769900CC4F66 /* Project window view panes */,
+				CDC6174C12CE154900611408 /* Element setting panels */,
+				CD277CC1139305B100B9015C /* LicensingWindowController.h */,
+				CD277CC2139305B100B9015C /* LicensingWindowController.m */,
+				CD50F0C8139551E20088DD33 /* OSCAssetsWindowController.h */,
+				CD50F0C9139551E20088DD33 /* OSCAssetsWindowController.m */,
+			);
+			name = "Singleton window controllers";
 			sourceTree = "<group>";
 		};
 		CD471FDC12EB472E00C11B08 /* Custom UI */ = {
 			isa = PBXGroup;
 			children = (
-				CD5E726C12EF428C009B611C /* CameraControllerInQCMaskRendererView.h */,
-				CD5E726D12EF428C009B611C /* CameraControllerInQCMaskRendererView.m */,
 				CD471FD912EB472B00C11B08 /* ColorCell.h */,
 				CD471FDA12EB472B00C11B08 /* ColorCell.m */,
 			);
 			name = "Custom UI";
 			sourceTree = "<group>";
 		};
-		CD4CE36812CB769600A3A314 /* ActionControllers */ = {
-			isa = PBXGroup;
-			children = (
-				CD4CE36912CB76AC00A3A314 /* OSCActionController.xib */,
-				CD4CE36F12CB76E600A3A314 /* ElementActionController.xib */,
-				CD4CE41312CB823000A3A314 /* ActionController.xib */,
-				CDDB44F712CD246100C4E5AA /* SceneActionController.xib */,
-			);
-			name = ActionControllers;
-			sourceTree = "<group>";
-		};
 		CD4CE4BE12CB8DC100A3A314 /* Singleton palettes */ = {
 			isa = PBXGroup;
 			children = (
-				CD8320D3130C4B4D0063E215 /* Elements settings */,
-				CD01B51312DDB4AE009A9A66 /* Playback controller */,
-				CDFDEA2913098580001A5F9C /* DataViewer.xib */,
 				CDC9F52F129DD5200064F103 /* splash_screen.xib */,
-				CD3772331270B58600E5ACFB /* DrawingToolbar.xib */,
-				CDA805281295A33D00B72116 /* ElementInspector.xib */,
-				CD37708C1270A63400E5ACFB /* LiveViewer.xib */,
-				CD7AA3E512E605A8009E5CCD /* LiveInputSelector.xib */,
-				CD34110512ABE21C00E6F654 /* ECNOSCManager.xib */,
 			);
 			name = "Singleton palettes";
-			sourceTree = "<group>";
-		};
-		CD5BFA1812F461A0004E7A47 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CD5BFA1912F461A0004E7A47 /* OpenGLViewKit.h */,
-				CD5BFA1A12F461A0004E7A47 /* OpenGLViewKit.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CD5E726812EF4269009B611C /* Live Input selector */ = {
-			isa = PBXGroup;
-			children = (
-				CD7AA3E212E6023C009E5CCD /* ECNLiveInputSelectorWindowController.h */,
-				CD7AA3E312E6023C009E5CCD /* ECNLiveInputSelectorWindowController.m */,
-				CD1B889512F313020067EF4E /* LiveInputSelectorView.h */,
-				CD1B889612F313020067EF4E /* LiveInputSelectorView.m */,
-			);
-			name = "Live Input selector";
 			sourceTree = "<group>";
 		};
 		CD6267DE130E90D300901235 /* Core Image Custom Filters */ = {
@@ -632,59 +924,21 @@
 		CD66B5F1133FF239004BA4BE /* cikernels */ = {
 			isa = PBXGroup;
 			children = (
+				CD36A0EF13965E0100BE56B8 /* TFCIBackgroundSubtractionFilter.cikernel */,
+				CD10C5E9139D87710053B02D /* KCIMotionMaskGeneratorFilter.cikernel */,
+				CDD9022E139BE78A0026527F /* KCIThresholdFilterColorDistance.cikernel */,
+				CDD9022F139BE78A0026527F /* KCIThresholdFilterLuma.cikernel */,
+				CD36A0EE13965E0100BE56B8 /* TFCI1PixelBorderAroundImage.cikernel */,
+				CD36A0F013965E0100BE56B8 /* TFCIRatioImageBlendFilter.cikernel */,
+				CD36A0F113965E0100BE56B8 /* TFCIContrastStretchFilter.cikernel */,
+				CD36A0F213965E0100BE56B8 /* TFCI3x3ErosionFilter.cikernel */,
+				CD36A0F313965E0100BE56B8 /* TFCI3x3DilationFilter.cikernel */,
+				CD36A0F413965E0100BE56B8 /* TFCIGrayscalingFilter.cikernel */,
 				CD66B5F2133FF239004BA4BE /* MaskSrcUsingChannelFilter.cikernel */,
 				CD66B5F3133FF239004BA4BE /* MaskSrcUsingChannelFilterKernel.cikernel */,
 				CD66B5F4133FF239004BA4BE /* maskSrcUsingRedChannel.cikernel */,
 			);
 			path = cikernels;
-			sourceTree = "<group>";
-		};
-		CD730E8B12E6E9F100B222B7 /* QTVisualContext C Api management */ = {
-			isa = PBXGroup;
-			children = (
-				CD730E9112E6E9F100B222B7 /* VisualContext */,
-			);
-			name = "QTVisualContext C Api management";
-			path = QT;
-			sourceTree = "<group>";
-		};
-		CD730E9112E6E9F100B222B7 /* VisualContext */ = {
-			isa = PBXGroup;
-			children = (
-				CD730E9212E6E9F100B222B7 /* QTVisualContextKit.h */,
-				CD730E9312E6E9F100B222B7 /* QTVisualContextKit.m */,
-			);
-			path = VisualContext;
-			sourceTree = "<group>";
-		};
-		CD730EA112E6EF5500B222B7 /* OpenGL */ = {
-			isa = PBXGroup;
-			children = (
-				CD3C9DCA12E89F0600599BB0 /* Texture */,
-				CD730EA212E6EF5500B222B7 /* Quad */,
-				CD5BFA1812F461A0004E7A47 /* View */,
-			);
-			path = OpenGL;
-			sourceTree = "<group>";
-		};
-		CD730EA212E6EF5500B222B7 /* Quad */ = {
-			isa = PBXGroup;
-			children = (
-				CD730EA312E6EF5500B222B7 /* OpenGLQuad.h */,
-				CD730EA412E6EF5500B222B7 /* OpenGLQuad.m */,
-			);
-			path = Quad;
-			sourceTree = "<group>";
-		};
-		CD730EB112E6F0CA00B222B7 /* MemObject */ = {
-			isa = PBXGroup;
-			children = (
-				CD730EB212E6F0CA00B222B7 /* MemObject.h */,
-				CD730EB312E6F0CA00B222B7 /* MemObject.m */,
-				CD730EB412E6F0CA00B222B7 /* Memory.m */,
-				CD730EB512E6F0CA00B222B7 /* Memory.h */,
-			);
-			path = MemObject;
 			sourceTree = "<group>";
 		};
 		CD730EE812E6F22A00B222B7 /* Alert */ = {
@@ -698,17 +952,6 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
-		CD73100C12E6F58F00B222B7 /* Convenience classes */ = {
-			isa = PBXGroup;
-			children = (
-				CD730EB112E6F0CA00B222B7 /* MemObject */,
-				CD730EA112E6EF5500B222B7 /* OpenGL */,
-				CD730E8B12E6E9F100B222B7 /* QTVisualContext C Api management */,
-				CD1FA54812EDF8C200A3D5D7 /* CoreVideo */,
-			);
-			name = "Convenience classes";
-			sourceTree = "<group>";
-		};
 		CD773FC212E72BC00066748C /* Video frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,26 +961,6 @@
 				CD773FAE12E72BB70066748C /* CoreVideo.framework */,
 			);
 			name = "Video frameworks";
-			sourceTree = "<group>";
-		};
-		CD7AA40B12E60B06009E5CCD /* Live input */ = {
-			isa = PBXGroup;
-			children = (
-				CD7AA43912E60F99009E5CCD /* UVCCameraControl.h */,
-				CD7AA43A12E60F99009E5CCD /* UVCCameraControl.m */,
-				CD7AA3F512E60966009E5CCD /* CameraController.h */,
-				CD7AA3F612E60966009E5CCD /* CameraController.m */,
-			);
-			name = "Live input";
-			sourceTree = "<group>";
-		};
-		CD8320D3130C4B4D0063E215 /* Elements settings */ = {
-			isa = PBXGroup;
-			children = (
-				CDEF475C1309230300EE0372 /* ElementSettings.xib */,
-				CD2E347A131BE006007F7236 /* OSCTxSettingsPanel.xib */,
-			);
-			name = "Elements settings";
 			sourceTree = "<group>";
 		};
 		CD8462AF130C1C6600F4A1B3 /* Triggers */ = {
@@ -756,12 +979,15 @@
 		CDAC4DAD132AA24C00518CB9 /* interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				CD468F2E127A244A00B92E4E /* ECNProjectDocument.xib */,
+				CDF74718139F769900CC4F66 /* Pane views */,
 				72CB32F20DCA5BBF008F3AA2 /* MainMenu.xib */,
-				CDF55D6512DA7B9300706539 /* Model view controllers */,
 				CD4CE4BE12CB8DC100A3A314 /* Singleton palettes */,
-				CDEB9A4F1305B3EB0065198E /* Object inspector.xib */,
 				CD46A9B6130707C1004A1EBF /* ExceptionAlert.xib */,
-				CD4CE36812CB769600A3A314 /* ActionControllers */,
+				CD277CB71392FFA300B9015C /* LicensingPanel.xib */,
+				CD50F0CB139551F90088DD33 /* OSCAssetsPanel.xib */,
+				CDAD70DE1396BD8600A8AFCE /* FilterChainComposer.xib */,
+				CDD9DC72139D214900A1E259 /* AboutKineto.xib */,
 			);
 			name = interfaces;
 			path = resources/interfaces;
@@ -770,11 +996,25 @@
 		CDAC4DB0132AA27800518CB9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CDE4AAFF1393B9C8008BF405 /* thanksforregistering.png */,
 				CDC9F4F7129DD1BD0064F103 /* splash.jpg */,
 				CD177FAA127F1F7600369766 /* Icone */,
 			);
 			name = images;
 			path = resources/images;
+			sourceTree = "<group>";
+		};
+		CDAD73E91396E82F00A8AFCE /* Filter chain composer */ = {
+			isa = PBXGroup;
+			children = (
+				CDAD70EA1396C02500A8AFCE /* KFilterChainComposerWindowController.h */,
+				CDAD70EB1396C02500A8AFCE /* KFilterChainComposerWindowController.m */,
+				CDBD04B11397CB440044345A /* KImageUnitsLibraryPanel.h */,
+				CDBD04B21397CB440044345A /* KImageUnitsLibraryPanel.m */,
+				CDF2AA9213990C64002B7BD9 /* NSCIColorToNSColorValueTransformer.h */,
+				CDF2AA9313990C64002B7BD9 /* NSCIColorToNSColorValueTransformer.m */,
+			);
+			name = "Filter chain composer";
 			sourceTree = "<group>";
 		};
 		CDADC1EE130140DC002A0937 /* Shapes */ = {
@@ -791,17 +1031,6 @@
 			name = Shapes;
 			sourceTree = "<group>";
 		};
-		CDC36A1312DA23D600993177 /* Live viewer */ = {
-			isa = PBXGroup;
-			children = (
-				CDE97DCA126F442000515B57 /* ECNLiveViewerController.h */,
-				CDE97DCB126F442000515B57 /* ECNLiveViewerController.m */,
-				CD376FD61270A39E00E5ACFB /* ECNLiveView.h */,
-				CD376FD71270A39E00E5ACFB /* ECNLiveView.m */,
-			);
-			name = "Live viewer";
-			sourceTree = "<group>";
-		};
 		CDC6174C12CE154900611408 /* Element setting panels */ = {
 			isa = PBXGroup;
 			children = (
@@ -816,15 +1045,34 @@
 		CDD326CE127D7AEC00E4FBA9 /* Views and Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CDAD73E91396E82F00A8AFCE /* Filter chain composer */,
+				CD37723D1270B5C800E5ACFB /* Singleton window controllers */,
 				CD183AFA126DC9AD00EB3717 /* ElementsView.h */,
 				CD183AFB126DC9AD00EB3717 /* ElementsView.m */,
-				CD37738C1270BA1E00E5ACFB /* ECNSceneWindowController.h */,
-				CD37738D1270BA1E00E5ACFB /* ECNSceneWindowController.m */,
-				CDDD0D2D1279C1F600759293 /* ECNProjectWindowController.h */,
-				CDDD0D2E1279C1F600759293 /* ECNProjectWindowController.m */,
 			);
 			name = "Views and Controllers";
 			path = src;
+			sourceTree = "<group>";
+		};
+		CDD9DB15139CDCA700A1E259 /* Processing pipeline */ = {
+			isa = PBXGroup;
+			children = (
+				CD369FEA1396514700BE56B8 /* Video Input Sources */,
+				CDD9DB16139CDCC900A1E259 /* KPlaybackPipeline.h */,
+				CDD9DB17139CDCC900A1E259 /* KPlaybackPipeline.m */,
+			);
+			name = "Processing pipeline";
+			sourceTree = "<group>";
+		};
+		CDD9DC62139D201200A1E259 /* Live viewer */ = {
+			isa = PBXGroup;
+			children = (
+				CDD9DC63139D202400A1E259 /* KLiveViewerController.h */,
+				CDD9DC64139D202400A1E259 /* KLiveViewerController.m */,
+				CDAD73EA1396E84D00A8AFCE /* KCIImageVisualizer.h */,
+				CDAD73EB1396E84D00A8AFCE /* KCIImageVisualizer.m */,
+			);
+			name = "Live viewer";
 			sourceTree = "<group>";
 		};
 		CDDD0E991279CB2500759293 /* Model Classes */ = {
@@ -839,15 +1087,20 @@
 			path = src;
 			sourceTree = "<group>";
 		};
-		CDE94E8412C8A9BC004C3152 /* TASTI */ = {
+		CDE94E8412C8A9BC004C3152 /* playback */ = {
 			isa = PBXGroup;
 			children = (
-				CDE94E8512C8A9BC004C3152 /* pause.tif */,
-				CDE94E8612C8A9BC004C3152 /* play.tif */,
-				CDE94E8712C8A9BC004C3152 /* stop.tif */,
-				CDE94E8812C8A9BC004C3152 /* test.tif */,
+				CDF74B8D139FB88700CC4F66 /* pause_off.png */,
+				CDF74B8E139FB88700CC4F66 /* pause_on.png */,
+				CDF74B8F139FB88700CC4F66 /* play_off.png */,
+				CDF74B90139FB88700CC4F66 /* play_on.png */,
+				CDF74B91139FB88700CC4F66 /* stop_off.png */,
+				CDF74B92139FB88700CC4F66 /* stop_on.png */,
+				CDF74B9D139FB94500CC4F66 /* test_off.png */,
+				CDF74B9E139FB94500CC4F66 /* test_on.png */,
+				CDF74B82139FB87700CC4F66 /* old */,
 			);
-			name = TASTI;
+			name = playback;
 			path = images/TASTI;
 			sourceTree = "<group>";
 		};
@@ -857,6 +1110,7 @@
 				CD846403130C333900F4A1B3 /* ECNAction.h */,
 				CD846404130C333900F4A1B3 /* ECNAction.m */,
 				CD3DD7ED1327DCE0005FFB48 /* ECNActions.h */,
+				CD50EC84139547ED0088DD33 /* ECNActions.m */,
 				CD832028130C38E70063E215 /* ECNElementAction.h */,
 				CD832029130C38E70063E215 /* ECNElementAction.m */,
 				CD626675130E709800901235 /* ECNSceneAction.h */,
@@ -888,6 +1142,8 @@
 				CDEB98C41305877D0065198E /* ECNQCAsset.m */,
 				CD2E336F131BB565007F7236 /* ECNOSCTargetAsset.h */,
 				CD2E3370131BB565007F7236 /* ECNOSCTargetAsset.m */,
+				CDD90445139C0F5F0026527F /* ECNVideoInputAsset.h */,
+				CDD90446139C0F5F0026527F /* ECNVideoInputAsset.m */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -904,18 +1160,24 @@
 			name = "Base classes";
 			sourceTree = "<group>";
 		};
-		CDF2E9AB128ED446008D53E0 /* Data streams */ = {
+		CDEFE41B139EA68700EDE18F /* tasti_project_document */ = {
 			isa = PBXGroup;
 			children = (
-				CD3C9CB612E876DB00599BB0 /* OfflineRenderer.h */,
-				CD3C9CB712E876DB00599BB0 /* OfflineRenderer.m */,
-				CD7AA40B12E60B06009E5CCD /* Live input */,
-				CD828B0C12AAA0920018C787 /* LiveInputRenderer.h */,
-				CD828B0D12AAA0920018C787 /* LiveInputRenderer.m */,
-				CD45E32B12E5C6600033E945 /* QCMaskRenderer.h */,
-				CD45E32C12E5C6600033E945 /* QCMaskRenderer.m */,
+				CDEFE420139EA70300EDE18F /* assets_active.png */,
+				CDEFE421139EA70300EDE18F /* assets_inactive.png */,
+				CDEFE41C139EA68700EDE18F /* que_active.png */,
+				CDEFE41D139EA68700EDE18F /* que_inactive.png */,
 			);
-			name = "Data streams";
+			path = tasti_project_document;
+			sourceTree = "<group>";
+		};
+		CDF2AB5413992A07002B7BD9 /* Masks */ = {
+			isa = PBXGroup;
+			children = (
+				CDF2AB5113992903002B7BD9 /* KMask.h */,
+				CDF2AB5213992903002B7BD9 /* KMask.m */,
+			);
+			name = Masks;
 			sourceTree = "<group>";
 		};
 		CDF3109212DB78DF00FC71A3 /* Kineto objects */ = {
@@ -943,19 +1205,10 @@
 		CDF3109412DB791600FC71A3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CDDD0EAE1279CC2F00759293 /* ECNScene.h */,
-				CDDD0EAF1279CC2F00759293 /* ECNScene.m */,
+				CDDD0EAE1279CC2F00759293 /* KCue.h */,
+				CDDD0EAF1279CC2F00759293 /* KCue.m */,
 			);
 			name = Scenes;
-			sourceTree = "<group>";
-		};
-		CDF55D6512DA7B9300706539 /* Model view controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CD468F2E127A244A00B92E4E /* ECNProjectDocument.xib */,
-				CDDD0E961279CAB300759293 /* ECNSceneWindow.xib */,
-			);
-			name = "Model view controllers";
 			sourceTree = "<group>";
 		};
 		CDF692B91313D6D300F9F810 /* Assets instances */ = {
@@ -969,6 +1222,67 @@
 				CD2E337D131BB763007F7236 /* ECNOSCTxAssetInstance.m */,
 			);
 			name = "Assets instances";
+			sourceTree = "<group>";
+		};
+		CDF74717139F769900CC4F66 /* Project window view panes */ = {
+			isa = PBXGroup;
+			children = (
+				CDF74777139F769900CC4F66 /* Element inspector */,
+				CDF74745139F769900CC4F66 /* Cue editor */,
+				CDF7471F139F769900CC4F66 /* Playback */,
+				CDD9DC62139D201200A1E259 /* Live viewer */,
+			);
+			name = "Project window view panes";
+			sourceTree = "<group>";
+		};
+		CDF74718139F769900CC4F66 /* Pane views */ = {
+			isa = PBXGroup;
+			children = (
+				CDD9DC66139D207900A1E259 /* KLiveViewerController.xib */,
+				CDD9DB62139CF6BE00A1E259 /* KNewPlaybackViewController.xib */,
+				CDDD0E961279CAB300759293 /* KCueEditorViewController.xib */,
+				CDA608A71391697F001B81A0 /* KElementInspectorViewController.xib */,
+			);
+			name = "Pane views";
+			sourceTree = "<group>";
+		};
+		CDF7471F139F769900CC4F66 /* Playback */ = {
+			isa = PBXGroup;
+			children = (
+				CDD9DB5E139CF68100A1E259 /* KPlaybackViewController.h */,
+				CDD9DB5F139CF68100A1E259 /* KPlaybackViewController.m */,
+			);
+			name = Playback;
+			sourceTree = "<group>";
+		};
+		CDF74745139F769900CC4F66 /* Cue editor */ = {
+			isa = PBXGroup;
+			children = (
+				CD37738C1270BA1E00E5ACFB /* KCueEditorViewController.h */,
+				CD37738D1270BA1E00E5ACFB /* KCueEditorViewController.m */,
+			);
+			name = "Cue editor";
+			sourceTree = "<group>";
+		};
+		CDF74777139F769900CC4F66 /* Element inspector */ = {
+			isa = PBXGroup;
+			children = (
+				CDA608AD13916AE2001B81A0 /* KElementInspectorViewController.h */,
+				CDA608AE13916AE2001B81A0 /* KElementInspectorViewController.m */,
+			);
+			name = "Element inspector";
+			sourceTree = "<group>";
+		};
+		CDF74B82139FB87700CC4F66 /* old */ = {
+			isa = PBXGroup;
+			children = (
+				CD50EC81139547620088DD33 /* reset.png */,
+				CDE94E8512C8A9BC004C3152 /* pause.tif */,
+				CDE94E8612C8A9BC004C3152 /* play.tif */,
+				CDE94E8712C8A9BC004C3152 /* stop.tif */,
+				CDE94E8812C8A9BC004C3152 /* test.tif */,
+			);
+			name = old;
 			sourceTree = "<group>";
 		};
 		CDFDEA13130982DC001A5F9C /* OSC Receiver */ = {
@@ -987,6 +1301,33 @@
 			name = Timer;
 			sourceTree = "<group>";
 		};
+		CDFF8EDC139504D500C64664 /* toolbar_icons */ = {
+			isa = PBXGroup;
+			children = (
+				CDF74B6B139FB44B00CC4F66 /* arrow_off.png */,
+				CDF74B6C139FB44B00CC4F66 /* arrow_on.png */,
+				CDF74B6D139FB44B00CC4F66 /* bkg_off.png */,
+				CDF74B6E139FB44B00CC4F66 /* bkg_on.png */,
+				CDF74B6F139FB44B00CC4F66 /* camera_off.png */,
+				CDF74B70139FB44B00CC4F66 /* camera_on.png */,
+				CDF74B71139FB44B00CC4F66 /* rect_off.png */,
+				CDF74B72139FB44B00CC4F66 /* rect_on.png */,
+			);
+			name = toolbar_icons;
+			path = images/toolbar_icons;
+			sourceTree = "<group>";
+		};
+		CDFF8FB513950C0900C64664 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD36A12C139661FD00BE56B8 /* CIImage Bitmap Rendering */,
+				CDFF8FB813950C4300C64664 /* NSUserDefaults+Extras.h */,
+				CDFF8FB913950C4300C64664 /* NSUserDefaults+Extras.m */,
+			);
+			name = Extensions;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -999,6 +1340,7 @@
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				CD7882D412C0B438009ACE4A /* CopyFiles */,
 				CDA777C4133FDC3D007497CD /* CopyFiles */,
+				CD1B0BC9136F422400CC357D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1039,25 +1381,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD10C5F5139D87920053B02D /* KCIMotionMaskGeneratorFilter.cikernel in Resources */,
+				CDD90232139BE7970026527F /* KCIThresholdFilterColorDistance.cikernel in Resources */,
+				CDD90233139BE7970026527F /* KCIThresholdFilterLuma.cikernel in Resources */,
+				CDF10BE1139A61BC00C6E1C8 /* TFCI1PixelBorderAroundImage.cikernel in Resources */,
+				CDF10BE2139A61BC00C6E1C8 /* TFCIBackgroundSubtractionFilter.cikernel in Resources */,
+				CDF10BE3139A61BC00C6E1C8 /* TFCIRatioImageBlendFilter.cikernel in Resources */,
+				CDF10BE4139A61BC00C6E1C8 /* TFCIContrastStretchFilter.cikernel in Resources */,
+				CDF10BE5139A61BC00C6E1C8 /* TFCI3x3ErosionFilter.cikernel in Resources */,
+				CDF10BE6139A61BC00C6E1C8 /* TFCI3x3DilationFilter.cikernel in Resources */,
+				CDF10BE7139A61BC00C6E1C8 /* TFCIGrayscalingFilter.cikernel in Resources */,
+				CDF10BE8139A61BC00C6E1C8 /* MaskSrcUsingChannelFilter.cikernel in Resources */,
+				CDF10BE9139A61BC00C6E1C8 /* MaskSrcUsingChannelFilterKernel.cikernel in Resources */,
+				CDF10BEA139A61BC00C6E1C8 /* maskSrcUsingRedChannel.cikernel in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				72CB32F40DCA5BBF008F3AA2 /* MainMenu.xib in Resources */,
-				CDE97D81126F3FFC00515B57 /* ActivityInspector.xib in Resources */,
-				CD37708D1270A63400E5ACFB /* LiveViewer.xib in Resources */,
-				CD3772341270B58600E5ACFB /* DrawingToolbar.xib in Resources */,
-				CDDD0E971279CAB300759293 /* ECNSceneWindow.xib in Resources */,
+				CDDD0E971279CAB300759293 /* KCueEditorViewController.xib in Resources */,
 				CD468F2F127A244A00B92E4E /* ECNProjectDocument.xib in Resources */,
 				CD177F9C127F1F2E00369766 /* camera_icon.gif in Resources */,
 				CD177FBC127F211200369766 /* arrow.tif in Resources */,
 				CD9429E5127F227C00921A57 /* line.tif in Resources */,
 				CD9429EC127F234600921A57 /* Rectangle.tif in Resources */,
 				CD9429F5127F24E800921A57 /* timer.tif in Resources */,
-				CD9429F8127F26AF00921A57 /* osc.tif in Resources */,
-				CD3A10471284AC4C0056ABE3 /* ECNPlaybackController.xib in Resources */,
-				CDA805291295A33D00B72116 /* ElementInspector.xib in Resources */,
 				CD70AEB1129AE20E0009F0F2 /* null.qtz in Resources */,
 				CDC9F4F8129DD1BD0064F103 /* splash.jpg in Resources */,
 				CDC9F530129DD5200064F103 /* splash_screen.xib in Resources */,
-				CD34110612ABE21C00E6F654 /* ECNOSCManager.xib in Resources */,
 				CD035D5F12BFC1B50053518A /* osc_receiver.tif in Resources */,
 				CD128FFA12C74ACE0089DAA2 /* Cross.tiff in Resources */,
 				CDE94CCB12C8975C004C3152 /* occhio.gif in Resources */,
@@ -1066,25 +1414,58 @@
 				CDE94E8A12C8A9BC004C3152 /* play.tif in Resources */,
 				CDE94E8B12C8A9BC004C3152 /* stop.tif in Resources */,
 				CDE94E8C12C8A9BC004C3152 /* test.tif in Resources */,
-				CD4CE36A12CB76AC00A3A314 /* OSCActionController.xib in Resources */,
-				CD4CE37012CB76E600A3A314 /* ElementActionController.xib in Resources */,
-				CD4CE41412CB823000A3A314 /* ActionController.xib in Resources */,
-				CDDB44F812CD246100C4E5AA /* SceneActionController.xib in Resources */,
-				CD7AA3E612E605A8009E5CCD /* LiveInputSelector.xib in Resources */,
 				CD3CA13412E9003A00599BB0 /* keystone.qtz in Resources */,
 				CD471F9912EB373F00C11B08 /* kineto_masks.qtz in Resources */,
 				CD471FD112EB467200C11B08 /* solo.tif in Resources */,
-				CDEB9A501305B3EB0065198E /* Object inspector.xib in Resources */,
 				CD46A9B7130707C1004A1EBF /* ExceptionAlert.xib in Resources */,
-				CDEF475D1309230300EE0372 /* ElementSettings.xib in Resources */,
 				CDFDEA2813098562001A5F9C /* data_viewer.qtz in Resources */,
-				CDFDEA2A13098580001A5F9C /* DataViewer.xib in Resources */,
 				CDFA9ABE13150E67003EC2AD /* assets_qcpatch.tif in Resources */,
 				CD2E3380131BBF99007F7236 /* assets_osctx.tif in Resources */,
-				CD2E347B131BE006007F7236 /* OSCTxSettingsPanel.xib in Resources */,
 				CD1890741324D69E00AE3D4D /* kineto_logo.icns in Resources */,
 				CDD18B0D1326370E0052BC4A /* checkerboard.png in Resources */,
 				CD762D58133FF62100517F38 /* Info.plist in Resources */,
+				CD6C7A3D13819FAC00DB1442 /* Input_camera_resolutions.plist in Resources */,
+				CDFE5BE2138D6B70003ED2E2 /* kineto_documents.icns in Resources */,
+				CDEFA3451391191B0033341B /* trigger_off.png in Resources */,
+				CDEFA3461391191B0033341B /* trigger_on.png in Resources */,
+				CDA608A81391697F001B81A0 /* KElementInspectorViewController.xib in Resources */,
+				CDE723031392643C00B3FC96 /* available_actions.plist in Resources */,
+				CD277CB81392FFA300B9015C /* LicensingPanel.xib in Resources */,
+				CDE4AB001393B9C8008BF405 /* thanksforregistering.png in Resources */,
+				CDE4AD1A1393D00D008BF405 /* kineto_license.icns in Resources */,
+				CDFF9157139522CC00C64664 /* osc.png in Resources */,
+				CD50EC82139547620088DD33 /* reset.png in Resources */,
+				CD50F0CC139551F90088DD33 /* OSCAssetsPanel.xib in Resources */,
+				CD36A06D13965A3700BE56B8 /* untitled.strings in Resources */,
+				CD36A06F13965A4B00BE56B8 /* Localizable.strings in Resources */,
+				CDAD70DF1396BD8600A8AFCE /* FilterChainComposer.xib in Resources */,
+				CD0F33AA139958E800ED1746 /* motionMask.plist in Resources */,
+				CD0F33AB139958E800ED1746 /* presenceMask.plist in Resources */,
+				CDE75272139BAD9000468D6A /* videoInput.plist in Resources */,
+				CDD9FE54139BB6990026527F /* defaultCameraInput.plist in Resources */,
+				CDD9DB63139CF6BE00A1E259 /* KNewPlaybackViewController.xib in Resources */,
+				CDD9DC67139D207900A1E259 /* KLiveViewerController.xib in Resources */,
+				CDD9DC73139D214900A1E259 /* AboutKineto.xib in Resources */,
+				CDEFE41E139EA68700EDE18F /* que_active.png in Resources */,
+				CDEFE41F139EA68700EDE18F /* que_inactive.png in Resources */,
+				CDEFE422139EA70300EDE18F /* assets_active.png in Resources */,
+				CDEFE423139EA70300EDE18F /* assets_inactive.png in Resources */,
+				CDF74B73139FB44B00CC4F66 /* arrow_off.png in Resources */,
+				CDF74B74139FB44B00CC4F66 /* arrow_on.png in Resources */,
+				CDF74B75139FB44B00CC4F66 /* bkg_off.png in Resources */,
+				CDF74B76139FB44B00CC4F66 /* bkg_on.png in Resources */,
+				CDF74B77139FB44B00CC4F66 /* camera_off.png in Resources */,
+				CDF74B78139FB44B00CC4F66 /* camera_on.png in Resources */,
+				CDF74B79139FB44B00CC4F66 /* rect_off.png in Resources */,
+				CDF74B7A139FB44B00CC4F66 /* rect_on.png in Resources */,
+				CDF74B93139FB88700CC4F66 /* pause_off.png in Resources */,
+				CDF74B94139FB88700CC4F66 /* pause_on.png in Resources */,
+				CDF74B95139FB88700CC4F66 /* play_off.png in Resources */,
+				CDF74B96139FB88700CC4F66 /* play_on.png in Resources */,
+				CDF74B97139FB88700CC4F66 /* stop_off.png in Resources */,
+				CDF74B98139FB88700CC4F66 /* stop_on.png in Resources */,
+				CDF74B9F139FB94500CC4F66 /* test_off.png in Resources */,
+				CDF74BA0139FB94500CC4F66 /* test_on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1098,39 +1479,20 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				849818240BCF1CE50085CECA /* AppController.m in Sources */,
 				CD183AFC126DC9AD00EB3717 /* ElementsView.m in Sources */,
-				CDE97DCC126F442000515B57 /* ECNLiveViewerController.m in Sources */,
 				CD376E7F12709BEA00E5ACFB /* ECNProjectDocument.m in Sources */,
-				CD376FD81270A39E00E5ACFB /* ECNLiveView.m in Sources */,
-				CD37723C1270B5C400E5ACFB /* ECNDrawingToolbar.m in Sources */,
-				CD37738E1270BA1E00E5ACFB /* ECNSceneWindowController.m in Sources */,
-				CDDD0D2F1279C1F600759293 /* ECNProjectWindowController.m in Sources */,
+				CD37738E1270BA1E00E5ACFB /* KCueEditorViewController.m in Sources */,
+				CDDD0D2F1279C1F600759293 /* KProjectWindowController.m in Sources */,
 				CDDD0E9C1279CB4900759293 /* ECNElement.m in Sources */,
-				CDDD0EB01279CC2F00759293 /* ECNScene.m in Sources */,
+				CDDD0EB01279CC2F00759293 /* KCue.m in Sources */,
 				CDDD408F127E1F53003481BC /* ECNLine.m in Sources */,
 				CD177B9A127EF92D00369766 /* ECNFoundationExtras.m in Sources */,
 				CD177B9D127EF93800369766 /* ECNRectangle.m in Sources */,
-				CD3A10521284AEBF0056ABE3 /* ECNPlaybackWindowController.m in Sources */,
-				CD828B0E12AAA0920018C787 /* LiveInputRenderer.m in Sources */,
 				CDA9363112ABDC9B006015F2 /* ECNOSCReceiver.m in Sources */,
 				CD34119F12ABF10E00E6F654 /* ECNOSCTarget.m in Sources */,
 				CDF310BE12DB800A00FC71A3 /* ECNObject.m in Sources */,
-				CD45E32D12E5C6600033E945 /* QCMaskRenderer.m in Sources */,
-				CD7AA3E412E6023C009E5CCD /* ECNLiveInputSelectorWindowController.m in Sources */,
-				CD7AA3F712E60966009E5CCD /* CameraController.m in Sources */,
-				CD7AA43B12E60F99009E5CCD /* UVCCameraControl.m in Sources */,
-				CD730E9612E6E9F100B222B7 /* QTVisualContextKit.m in Sources */,
-				CD730EA512E6EF5500B222B7 /* OpenGLQuad.m in Sources */,
-				CD730EB612E6F0CA00B222B7 /* MemObject.m in Sources */,
-				CD730EB712E6F0CA00B222B7 /* Memory.m in Sources */,
 				CD730EED12E6F22A00B222B7 /* Alert.m in Sources */,
 				CD730EEE12E6F22A00B222B7 /* AlertPanelKit.m in Sources */,
-				CD3C9CB812E876DB00599BB0 /* OfflineRenderer.m in Sources */,
-				CD3C9DC912E89F0000599BB0 /* OpenGLTexture.m in Sources */,
 				CD471FDB12EB472B00C11B08 /* ColorCell.m in Sources */,
-				CD1FA54B12EDF8FC00A3D5D7 /* CVImageBuffer.m in Sources */,
-				CD5E726E12EF428C009B611C /* CameraControllerInQCMaskRendererView.m in Sources */,
-				CD1B889712F313020067EF4E /* LiveInputSelectorView.m in Sources */,
-				CD5BFA1B12F461A0004E7A47 /* OpenGLViewKit.m in Sources */,
 				CDADC1F113014135002A0937 /* ECNShape.m in Sources */,
 				CDEB98C2130586550065198E /* ECNAsset.m in Sources */,
 				CDEB98C51305877D0065198E /* ECNQCAsset.m in Sources */,
@@ -1138,7 +1500,6 @@
 				CD46AA1513070B46004A1EBF /* MyApplication.m in Sources */,
 				CDEF4805130933C400EE0372 /* ShapeSettingsPanel.m in Sources */,
 				CDEF485C13093D9300EE0372 /* ECNPort.m in Sources */,
-				CDFDEA2F13098613001A5F9C /* DataViewerWindowController.m in Sources */,
 				CD8462B2130C1C7F00F4A1B3 /* ECNTrigger.m in Sources */,
 				CD8462B5130C1C9600F4A1B3 /* ECNShapeTrigger.m in Sources */,
 				CD846405130C333900F4A1B3 /* ECNAction.m in Sources */,
@@ -1154,6 +1515,62 @@
 				CD66B5F6133FF239004BA4BE /* MaskSrcUsingChannelFilterKernel.cikernel in Sources */,
 				CD66B5F7133FF239004BA4BE /* maskSrcUsingRedChannel.cikernel in Sources */,
 				CD58396313407FDB0059D504 /* ECNOSCReceiverTrigger.m in Sources */,
+				CDA608AF13916AE2001B81A0 /* KElementInspectorViewController.m in Sources */,
+				CD277B191392E29100B9015C /* AquaticPrime.c in Sources */,
+				CD277CAA1392FD9800B9015C /* Licensing.m in Sources */,
+				CD277CC3139305B100B9015C /* LicensingWindowController.m in Sources */,
+				CDE4A9761393A882008BF405 /* AppResources.m in Sources */,
+				CD50EC85139547ED0088DD33 /* ECNActions.m in Sources */,
+				CD50F0CA139551E20088DD33 /* OSCAssetsWindowController.m in Sources */,
+				CD369FED1396516F00BE56B8 /* KVideoInputSrc.m in Sources */,
+				CD369FF01396517B00BE56B8 /* KCameraInputSrc.m in Sources */,
+				CD369FF31396518C00BE56B8 /* KQTKitInputSrc.m in Sources */,
+				CD369FF6139651C900BE56B8 /* KCapture.m in Sources */,
+				CD369FF9139651D500BE56B8 /* KQTKitCapture.m in Sources */,
+				CD36A0061396557900BE56B8 /* KError.m in Sources */,
+				CD36A031139657F500BE56B8 /* TFPerformanceMeasurement.c in Sources */,
+				CD36A032139657F500BE56B8 /* TFPerformanceTimer.m in Sources */,
+				CD36A0C813965DCF00BE56B8 /* TFCI1PixelBorderAroundImage.m in Sources */,
+				CD36A0C913965DCF00BE56B8 /* KCIBackgroundSubtraction.m in Sources */,
+				CD36A0CA13965DCF00BE56B8 /* TFCIRatioImageBlendFilter.m in Sources */,
+				CD36A0CB13965DCF00BE56B8 /* TFCIBlurFilter.m in Sources */,
+				CD36A0CC13965DCF00BE56B8 /* TFCIContrastStretchFilter.m in Sources */,
+				CD36A0CD13965DCF00BE56B8 /* KCI3x3ErosionFilter.m in Sources */,
+				CD36A0CE13965DCF00BE56B8 /* KCI3x3DilationFilter.m in Sources */,
+				CD36A0CF13965DCF00BE56B8 /* KCIErosionDilationComboFilter.m in Sources */,
+				CD36A0D013965DCF00BE56B8 /* KCIMorphologicalOpenWith3x3ShapeFilter.m in Sources */,
+				CD36A0D113965DCF00BE56B8 /* KCIMorphologicalCloseWith3x3ShapeFilter.m in Sources */,
+				CD36A0D213965DCF00BE56B8 /* TFCIGrayscalingFilter.m in Sources */,
+				CD36A0D313965DCF00BE56B8 /* TFCIColorInversionFilter.m in Sources */,
+				CD36A0D413965DCF00BE56B8 /* TFCIHighpassFilter.m in Sources */,
+				CD36A0D513965DCF00BE56B8 /* KFilterChain.m in Sources */,
+				CD36A0D613965DCF00BE56B8 /* KCIFilterChain.m in Sources */,
+				CD36A0D713965DCF00BE56B8 /* KCameraInputFilterChain.m in Sources */,
+				CD36A0F613965E0100BE56B8 /* TFCI1PixelBorderAroundImage.cikernel in Sources */,
+				CD36A0F713965E0100BE56B8 /* TFCIBackgroundSubtractionFilter.cikernel in Sources */,
+				CD36A0F813965E0100BE56B8 /* TFCIRatioImageBlendFilter.cikernel in Sources */,
+				CD36A0F913965E0100BE56B8 /* TFCIContrastStretchFilter.cikernel in Sources */,
+				CD36A0FA13965E0100BE56B8 /* TFCI3x3ErosionFilter.cikernel in Sources */,
+				CD36A0FB13965E0100BE56B8 /* TFCI3x3DilationFilter.cikernel in Sources */,
+				CD36A0FC13965E0100BE56B8 /* TFCIGrayscalingFilter.cikernel in Sources */,
+				CD36A131139661FD00BE56B8 /* CIImage+MakeBitmaps.m in Sources */,
+				CD36A132139661FD00BE56B8 /* CIImage+MakeBitmapsSupport.c in Sources */,
+				CDAD70EC1396C02500A8AFCE /* KFilterChainComposerWindowController.m in Sources */,
+				CDAD73EC1396E84D00A8AFCE /* KCIImageVisualizer.m in Sources */,
+				CDE8DBF31397AF37006C6A79 /* TFThreadMessagingQueue.m in Sources */,
+				CDBD04B31397CB440044345A /* KImageUnitsLibraryPanel.m in Sources */,
+				CDF2AA9413990C64002B7BD9 /* NSCIColorToNSColorValueTransformer.m in Sources */,
+				CDF2AB5313992903002B7BD9 /* KMask.m in Sources */,
+				CDD901F7139BE4A90026527F /* KCIThresholdFilter_Luminance.m in Sources */,
+				CDD90216139BE6070026527F /* KCIThresholdFilter_ColorDistance.m in Sources */,
+				CDD90230139BE78A0026527F /* KCIThresholdFilterColorDistance.cikernel in Sources */,
+				CDD90231139BE78A0026527F /* KCIThresholdFilterLuma.cikernel in Sources */,
+				CDD90447139C0F5F0026527F /* ECNVideoInputAsset.m in Sources */,
+				CDD9DB18139CDCC900A1E259 /* KPlaybackPipeline.m in Sources */,
+				CDD9DB60139CF68100A1E259 /* KPlaybackViewController.m in Sources */,
+				CDD9DC65139D202400A1E259 /* KLiveViewerController.m in Sources */,
+				CD10C5E1139D85670053B02D /* KCIMotionMaskGenerator.m in Sources */,
+				CD10C5EA139D87710053B02D /* KCIMotionMaskGeneratorFilter.cikernel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1174,6 +1591,14 @@
 				72CB32F30DCA5BBF008F3AA2 /* MainMenu.xib */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CD36A06E13965A4900BE56B8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD36A049139659F700BE56B8 /* English */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1234,6 +1659,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = resources/;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lcrypto";
 				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
@@ -1243,12 +1669,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_AUTO_VECTORIZATION = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_FAST_MATH = YES;
+				GCC_STRICT_ALIASING = YES;
+				GCC_UNROLL_LOOPS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lcrypto";
 				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
@@ -1264,6 +1696,7 @@
 				INFOPLIST_FILE = resources/;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lcrypto";
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
 			};

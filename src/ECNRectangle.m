@@ -3,7 +3,7 @@
 //  eyeconmacosx
 //
 //  Created by Andrea Cremaschi on 01/11/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNRectangle.h"
@@ -56,7 +56,7 @@ NSString *RectangleNameDefaultValue = @"New rectangle";
 	return [ECNRectangle rectangleWithDocument: document];
 }
 
-#pragma mark ***
+#pragma mark *** ECNElement overrides
 
 - (NSBezierPath *)bezierPathInRect: (NSRect )rect {
 	NSRect drawingBounds = [self calcPixelBoundsInRect: rect]; 
@@ -161,6 +161,28 @@ NSString *RectangleNameDefaultValue = @"New rectangle";
         bounds.size.width = bounds.size.height;
         [self setBounds:bounds];
     }
+}
+
+
+
+#pragma mark *** ECNShape overrides
+
+// optimization override:
+// Rectangles don't need to perform mask operations!
+// just crop and return
+- (CIImage*) calculateMaskImageWithMask: (CIImage *)cimask	{
+	
+	NSRect srcRect = NSRectFromCGRect( [cimask extent] );
+	
+	NSRect cropRect = [self calcPixelBoundsInRect: srcRect];
+	cropRect.origin.y = [cimask extent].size.height - cropRect.origin.y - cropRect.size.height;
+	
+//	CIImage * shapeImage = [self valueForOutputKey: ShapeOutputShapeImage];
+	CIImage * cropSrcImage = [super CIcropImage: cimask withRect: cropRect ];
+	
+//	CIImage * result = [self CIMultiplyWithInputImage: cropSrcImage
+//								  withBackgroundImage: shapeImage];
+	return cropSrcImage;
 }
 
 #pragma mark *** Playback

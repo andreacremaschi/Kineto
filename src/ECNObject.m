@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 10/01/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNObject.h"
@@ -13,6 +13,8 @@
 
 #import "ECNProjectDocument.h"
 
+// +  + Private key for Coding protocol  +
+NSString *ECNAttributesKey = @"attributes";
 
 // +  + Object attributes  +
 NSString *ECNObjectUniqueIDKey = @"id";
@@ -150,7 +152,21 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 	return [_attributes valueForKey: ECNObjectUniqueIDKey];
 }
 
-			
+#pragma mark -
+#pragma mark  <NSCoding> protocol implementation
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+    //[super encodeWithCoder:coder];
+    [coder encodeObject:_attributes forKey: ECNAttributesKey];
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+   // self = [super initWithCoder:coder];
+	self = [self init];
+	_attributes = [[coder decodeObjectForKey: ECNAttributesKey] retain];
+    return self;
+}
+
 #pragma mark -
 #pragma mark  Persistance
 
@@ -487,8 +503,11 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 
 - (BOOL)setValue:(id)value forPropertyKey:(NSString *)key	{
 	if (![[self propertyKeys] containsObject:key])	
-		return false;	
-	[[_attributes valueForKey: ECNPropertiesKey] setObject: value forKey: key];
+		return false;
+	if (value != nil) 
+		[[_attributes valueForKey: ECNPropertiesKey] setObject: value forKey: key];
+	else
+		[[_attributes valueForKey: ECNPropertiesKey] setObject: [NSNull null] forKey: key];
 	return true;
 }
 
@@ -659,12 +678,16 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 - (void)setValue:(id)value forKey:(NSString *)key	{
 	bool success;
 
-
+	[self willChangeValueForKey: key];
 	// search the key in the property array
 	success = [self setValue: value forPropertyKey:key];
 	if (success)	
-	{	NSLog(@"ECNObject: value set for property key: %@: %@", key, value);
-		return;}
+	{	//if ([value isKindOfClass: 
+		@try {	// in case of null values!
+			NSLog(@"ECNObject: value set for property key: %@: %@", key, value);
+		} @catch(NSException *exception) {}
+		return;
+	}
 	
 	// search the key in the input array
 	success = [self setValue: value forInputKey:key];
@@ -672,6 +695,7 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 		NSLog(@"ECNObject: value set for input key: %@: %@", key, value);
 		return;
 	}
+	[self didChangeValueForKey: key];
 	
 	// if not in the property array, maybe the key is in the instance properties.
 	if (!success)	

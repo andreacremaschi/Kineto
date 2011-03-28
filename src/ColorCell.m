@@ -4,7 +4,7 @@
 // color cell test
 //
 // Created by John Harte on Sat Sep 14 2002.
-// Copyright (c) 2002 __MyCompanyName__. All rights reserved.
+// Copyright (c) 2002 AndreaCremaschi. All rights reserved.
 //
 
 
@@ -14,7 +14,7 @@
 
 - (void) drawWithFrame: (NSRect) cellFrame inView: (NSView*)
 controlView {
-	NSRect sqare = NSInsetRect (cellFrame, 0.5, 0.5);
+	NSRect sqare = NSInsetRect (cellFrame, 0.5,0.5);
 	
 	// use the smallest size to sqare off the box & center the box
 	if (sqare.size.height < sqare.size.width) {
@@ -31,7 +31,7 @@ controlView {
 	[NSBezierPath strokeRect: sqare];
 	
 	[(NSColor*) [self objectValue] set];
-	[NSBezierPath fillRect: NSInsetRect (sqare, 2.0, 2.0)];
+	[NSBezierPath fillRect: NSInsetRect (sqare, 0.5, 0.5)];
 }
 
 @end

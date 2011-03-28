@@ -3,7 +3,7 @@
 //  eyeconmacosx
 //
 //  Created by Andrea Cremaschi on 28/10/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNObject.h"
@@ -26,7 +26,7 @@ extern NSString *ECNElementStrokeColorKey ;
 
 
 @class ECNProjectDocument;
-@class ECNScene;
+@class KCue;
 @class ECNAction;
 @class ECNTrigger;
 
@@ -77,8 +77,8 @@ extern NSString *ECNElementDidChangeNotification;
 + (Class) triggerClass;
 
 // ========================= Document accessors and conveniences =========================
-- (void)setScene:(ECNScene *)scene;
-- (ECNScene *)scene;
+- (void)setScene:(KCue *)scene;
+- (KCue *)scene;
 - (NSUndoManager *)undoManager;
 
 - (bool)isEnabled;
@@ -89,6 +89,8 @@ extern NSString *ECNElementDidChangeNotification;
 
 - (void) setActiveWhenSceneOpens: (bool) activeWhenSceneOpens;
 - (bool) activeWhenSceneOpens;
+
+- (NSString *)position;
 
 // =================================== Primitives ===================================
 - (void)didChange;
@@ -123,8 +125,6 @@ extern NSString *ECNElementDidChangeNotification;
 
 @end
 
-
-
 @interface ECNElement (ECNDrawing)
 
 - (NSRect)drawingBounds;
@@ -137,6 +137,9 @@ extern NSString *ECNElementDidChangeNotification;
 
 //funzione di disegno per il playback!
 - (void) drawInOpenGLContext: (NSOpenGLContext *)openGLContext;
+
+//icon to display in scenewindow tableview
+- (NSImage *)icon;
 @end
 
 
@@ -145,7 +148,7 @@ extern NSString *ECNElementDidChangeNotification;
 
 + (NSCursor *)creationCursor;
 
-- (BOOL)createWithEvent:(NSEvent *)theEvent inScene:(ECNScene *)scene inView:(NSView *)view;
+- (BOOL)createWithEvent:(NSEvent *)theEvent inScene:(KCue *)scene inView:(NSView *)view;
 
 //- (BOOL)isEditable;
 //- (void)startEditingWithEvent:(NSEvent *)event inView:(ElementsView *)view;
@@ -160,9 +163,10 @@ extern NSString *ECNElementDidChangeNotification;
 @interface ECNElement (ECNPlaybackHandling)
 - (bool) prepareForPlayback;
 - (void) commitActionsForActiveTriggers;
-- (void) setActivationState: (bool) active;
-- (bool) activationState;
+- (void) setActivationState: (NSUInteger) activationState;
+- (NSUInteger) activationState;
 - (BOOL) executeAtTime:(NSTimeInterval)time;
+- (id) valueForOutputPort:(NSString *)portKey;
 
 @end
 
@@ -172,5 +176,9 @@ extern NSString *ECNElementDidChangeNotification;
 							// NB this is temporary, but it has to be a list of trigger, not just one!
 - (NSArray *)triggers;
 + (NSString *)defaultTriggerPortKey;
+
+
+
+
 
 @end

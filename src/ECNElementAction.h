@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 16/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNAction.h"
@@ -20,6 +20,16 @@
 @end
 
 @interface ECNElementToggleAction : ECNAction {
+	
+}
+@end
+
+@interface ECNElementTriggerAction : ECNAction {
+	
+}
+@end 
+
+@interface ECNElementTriggerOffAction : ECNAction {
 	
 }
 @end

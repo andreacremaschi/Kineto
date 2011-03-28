@@ -3,11 +3,11 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 16/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNSceneAction.h"
-#import "ECNScene.h"
+#import "KCue.h"
 
 #import "ECNProjectDocument.h"
 
@@ -16,13 +16,21 @@
 
 // +  + Default values  +  +  +  +  +
 NSString *SceneActivateActionClassValue = @"ECNSceneActivateAction";
-NSString *SceneActivateActionNameValue = @"Activate scene";
+NSString *SceneActivateActionNameValue = @"Play cue";
+NSString *SceneActivateActionIcon = @"Cross";
 
 NSString *SceneDeactivateActionClassValue = @"ECNSceneDeactivateAction";
-NSString *SceneDeactivateActionNameValue = @"Deactivate scene";
+NSString *SceneDeactivateActionNameValue = @"Stop cue";
+NSString *SceneDeactivateActionIcon = @"Cross";
 
 NSString *SceneToggleActionClassValue = @"ECNSceneToggleAction";
-NSString *SceneToggleActionNameValue = @"Toggle scene";
+NSString *SceneToggleActionNameValue = @"Toggle cue";
+NSString *SceneToggleActionIcon = @"Cross";
+
+NSString *SceneResetActionClassValue = @"ECNSceneResetAction";
+NSString *SceneResetActionNameValue = @"Reset cue";
+NSString *SceneResetActionIcon = @"reset";
+
 // +  +  +  +  +  +  +  +  +  +  +  +
 
 
@@ -34,7 +42,11 @@ NSString *SceneToggleActionNameValue = @"Toggle scene";
 }
 
 + (Class ) targetType	{
-	return [ECNScene class];
+	return [KCue class];
+}
+
++ (NSString *)icon_name	{
+	return @"play"; //ECNSceneActivateActionIcon; //default icon
 }
 
 + (ECNSceneActivateAction *)activateActionWithDocument: (ECNProjectDocument *)document {
@@ -49,7 +61,7 @@ NSString *SceneToggleActionNameValue = @"Toggle scene";
 }
 
 + (ECNAction *)actionWithDocument: (ECNProjectDocument *)document withTarget: (ECNObject *) target {
-	if (![target isKindOfClass: [ECNSceneActivateAction targetType]]) 
+	if (target && ![target isKindOfClass: [ECNSceneActivateAction targetType]]) 
 		return nil;
 	ECNAction *newAction = [ECNSceneActivateAction activateActionWithDocument: document];
 	[newAction setTarget: target];
@@ -57,9 +69,9 @@ NSString *SceneToggleActionNameValue = @"Toggle scene";
 }
 
 - (void) performAction	{
-	id target =[self target];
-	NSAssert ([target isKindOfClass: [ECNScene class]], @"Action received a wrong object type!");
-	
+	if ((id)[self target] == [NSNull null]) return;
+	NSAssert ([[self target] isKindOfClass: [KCue class]], @"Action received a wrong object type!");
+	KCue *target = (KCue *)[self target];	
 	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: true];
 }
 
@@ -73,7 +85,11 @@ NSString *SceneToggleActionNameValue = @"Toggle scene";
 }
 
 + (Class ) targetType	{
-	return [ECNScene class];
+	return [KCue class];
+}
+
++ (NSString *)icon_name	{
+	return @"stop"; //ECNSceneDeactivateActionIcon; //default icon
 }
 
 + (ECNSceneDeactivateAction *)deactivateActionWithDocument: (ECNProjectDocument *)document {
@@ -88,7 +104,7 @@ NSString *SceneToggleActionNameValue = @"Toggle scene";
 }
 
 + (ECNAction *)actionWithDocument: (ECNProjectDocument *)document withTarget: (ECNObject *) target {
-	if (![target isKindOfClass: [ECNSceneDeactivateAction targetType]]) 
+	if (target && ![target isKindOfClass: [ECNSceneDeactivateAction targetType]]) 
 		return nil;
 	ECNAction *newAction = [ECNSceneDeactivateAction deactivateActionWithDocument: document];
 	[newAction setTarget: target];
@@ -96,9 +112,10 @@ NSString *SceneToggleActionNameValue = @"Toggle scene";
 }
 
 - (void) performAction	{
-	id target =[self target];
-	NSAssert ([target isKindOfClass: [ECNScene class]], @"Action received a wrong object type!");
-	
+	if ((id)[self target] == [NSNull null]) return;
+	NSAssert ([[self target] isKindOfClass: [KCue class]], @"Action received a wrong object type!");
+	KCue *target = (KCue *)[self target];	
+
 	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: false];
 }
 
@@ -112,7 +129,11 @@ NSString *SceneToggleActionNameValue = @"Toggle scene";
 }
 
 + (Class ) targetType	{
-	return [ECNScene class];
+	return [KCue class];
+}
+
++ (NSString *)icon_name	{
+	return @"Cross"; //ECNSceneToggleActionIcon; //default icon
 }
 
 + (ECNSceneToggleAction *)toggleActionWithDocument: (ECNProjectDocument *)document {
@@ -127,7 +148,7 @@ NSString *SceneToggleActionNameValue = @"Toggle scene";
 }
 
 + (ECNAction *)actionWithDocument: (ECNProjectDocument *)document withTarget: (ECNObject *) target {
-	if (![target isKindOfClass: [ECNSceneToggleAction targetType]]) 
+	if (target && ![target isKindOfClass: [ECNSceneToggleAction targetType]]) 
 		return nil;
 	ECNAction *newAction = [ECNSceneToggleAction toggleActionWithDocument: document] ;
 	[newAction setTarget: target];
@@ -136,10 +157,57 @@ NSString *SceneToggleActionNameValue = @"Toggle scene";
 
 
 - (void) performAction	{
-	id target =[self target];
-	NSAssert ([target isKindOfClass: [ECNScene class]], @"Action received a wrong object type!");
-	
+	if ((id)[self target] == [NSNull null]) return;
+	NSAssert ([[self target] isKindOfClass: [KCue class]], @"Action received a wrong object type!");
+	KCue *target = (KCue *)[self target];	
+
 	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: ![[target document] isSceneActive: target]];
 }
 
 @end
+
+@implementation ECNSceneResetAction
+
++ (NSString *) actionName	{
+	return SceneResetActionNameValue;
+}
+
++ (Class ) targetType	{
+	return [KCue class];
+}
+
++ (NSString *)icon_name	{
+	return SceneResetActionIcon; //ECNSceneToggleActionIcon; //default icon
+}
+
++ (ECNSceneResetAction *)resetActionWithDocument: (ECNProjectDocument *)document {
+	ECNSceneResetAction *newAction = [[[ECNSceneResetAction alloc] initWithProjectDocument: document] autorelease];
+	if (newAction != nil)	{
+		[newAction setValue: SceneResetActionClassValue forPropertyKey: ECNObjectClassKey];
+		[newAction setValue: SceneResetActionNameValue forPropertyKey: ECNObjectNameKey];
+		
+	}
+	return newAction;
+	
+}
+
++ (ECNAction *)actionWithDocument: (ECNProjectDocument *)document withTarget: (ECNObject *) target {
+	if (target && ![target isKindOfClass: [ECNSceneResetAction targetType]]) 
+		return nil;
+	ECNAction *newAction = [ECNSceneResetAction resetActionWithDocument: document] ;
+	[newAction setTarget: target];
+	return newAction;	
+}
+
+
+- (void) performAction	{
+	/*if ((id)[self target] == [NSNull null]) return;
+	NSAssert ([[self target] isKindOfClass: [ECNScene class]], @"Action received a wrong object type!");
+	ECNScene *target = (ECNScene *)[self target];	
+	
+	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: ![[target document] isSceneActive: target]];*/
+	// TODO: IMPLEMENTARE!
+}
+
+@end
+

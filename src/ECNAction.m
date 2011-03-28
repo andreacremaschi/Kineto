@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 16/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNAction.h"
@@ -57,6 +57,15 @@ NSString *ECNActionDefaultName = @"Generic action";
 + (Class ) targetType	{
 	return nil;
 }
+
++ (NSImage *) icon {
+	return [NSImage imageNamed: [self icon_name]];
+}
+				
++ (NSString *)icon_name	{
+	return @"Cross"; //default icon
+}
+
 
 - (NSString *)description	{
 	id target = [self valueForPropertyKey: ECNActionTargetKey];

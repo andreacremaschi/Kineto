@@ -3,17 +3,17 @@
 //  eyeconmacosx
 //
 //  Created by Andrea Cremaschi on 19/10/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 AndreaCremaschi. All rights reserved.
 //
 
 #import <AppKit/AppKit.h>
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
 
-@class ECNScene;
+@class KCue;
 @class ECNElement;
 @class ECNProjectDocument;
-@class ECNSceneWindowController;
+@class KCueEditorViewController;
 
 #define ECN_HALF_HANDLE_WIDTH 4.0
 #define ECN_HANDLE_WIDTH (ECN_HALF_HANDLE_WIDTH * 2.0)
@@ -24,9 +24,9 @@ extern NSString *ElementsViewDoubleClicOnElementNotification;
 @interface ElementsView : NSView {
 @private
     //IBOutlet ECNSceneWindowController *controller;
-	//ECNScene * _scene;
+	KCue * scene;
 
-    NSMutableArray *_selectedElements;
+    NSMutableSet *_selectedElements;
 	
 	
     ECNElement *_creatingElement;
@@ -58,8 +58,16 @@ extern NSString *ElementsViewDoubleClicOnElementNotification;
 	
 	NSImage * _background;
 	bool _bUseBackground;
+	NSNumber *bgOpacity;
 	
+	Class currentElementClass;
+	NSColor *currentColor;
 }
+
+@property (assign)KCue *scene;
+@property (retain)NSNumber *bgOpacity;
+@property (retain)NSColor*currentColor;
+@property (retain)Class currentElementClass; 
 
 // ECNSceneWindowController accessors and convenience methods
 //- (void)setSceneWindowController:(ECNSceneWindowController *)theController;
@@ -139,9 +147,9 @@ extern NSString *ElementsViewDoubleClicOnElementNotification;
 - (IBAction)selectAll:(id)sender;
 - (IBAction)deselectAll:(id)sender;
 
-/*
+
 - (IBAction)delete:(id)sender;
-- (IBAction)bringToFront:(id)sender;
+/*- (IBAction)bringToFront:(id)sender;
 - (IBAction)sendToBack:(id)sender;
 - (IBAction)alignLeftEdges:(id)sender;
 - (IBAction)alignRightEdges:(id)sender;

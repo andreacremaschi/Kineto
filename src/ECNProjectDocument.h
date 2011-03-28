@@ -3,17 +3,17 @@
 //  eyeconmacosx
 //
 //  Created by Andrea Cremaschi on 21/10/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 AndreaCremaschi. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 #import <AppKit/AppKit.h>
 #import "DebugIncludes.h"	
 
-@class ECNScene;
+@class KCue;
 @class ECNObject;
 @class ECNOSCTarget;
-
+@class ECNAsset;
 //extern NSString *ECNPlaybackIsOverNotification;
 
 @interface ECNProjectDocument : NSDocument {
@@ -33,17 +33,18 @@
 - (ECNObject *)objectWithID: (NSNumber *) ID;
 
 // === Accessors
-- (NSArray *)scenes;
+- (NSArray *)cues;
 - (NSArray *)assets;
+- (NSArray *)videoAssets;
 
 - (NSArray *)objectsOfKind: (Class) objectKind ;
+- (ECNAsset *)defaultAssetOfKind: (Class) objectKind ;
 
 // === Data management
-- (ECNScene *)createNewScene;
+- (KCue *)createNewCue;
 
 // === Representation management
-- (void) openSceneWindowController: (ECNScene *) scene;
-- (void)invalidateScene:(ECNScene *)scene;
+- (void)invalidateScene:(KCue *)scene;
 
 // === Object collection management
 - (void)addObject:(ECNObject *)object;
@@ -58,8 +59,8 @@
 // === playback management
 - (void) resetToInitialState;
 - (NSSet *)activeScenes;
-- (void) setSceneActivationState: (ECNScene *)scene active: (bool) active;
-- (bool) isSceneActive: (ECNScene *)scene;
+- (void) setSceneActivationState: (KCue *)scene active: (bool) active;
+- (bool) isSceneActive: (KCue *)scene;
 
 // === Asset management
 - (void) importAsset: (NSString *)filePath;

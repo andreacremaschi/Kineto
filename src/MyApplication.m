@@ -50,6 +50,7 @@
 
 @implementation MyApplication
 
+
 static void CrashMyApplication() {
     *(char *)0x08 = 1;
 }

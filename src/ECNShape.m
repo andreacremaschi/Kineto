@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 08/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNShape.h"
@@ -66,7 +66,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	[dict setValue: ShapeClassValue forKey: ECNObjectClassKey];
 
 	NSDictionary *propertiesDict = [NSDictionary dictionaryWithObjectsAndKeys:
-									[NSNumber numberWithInt:0], ShapeMaskToObserveKey,
+									[NSNull null], ShapeMaskToObserveKey,
 									nil];
 
 
@@ -201,6 +201,10 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 #pragma mark -
 #pragma mark ECNElement overrides
 
+- (NSImage *)icon {
+	return [NSImage imageNamed: @"Rectangle"];
+}
+
 - (void) setBounds:(NSRect)bounds	{
 	[super setBounds: bounds];
 	_flags.shouldUpdateShapeMask = true;
@@ -212,6 +216,10 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	CIImage *shapeImage;
 	
 	CIImage * cimask = [self valueForInputKey: ShapeInputMaskImage];
+	
+	//reset previous values for output ports!
+	for (ECNPort *myPort in [self valueForInputKey: ECNOutputPortsKey])
+		[myPort invalidate];
 	
 	// generate shape mask 
 	if (_flags.shouldUpdateShapeMask)	{
@@ -229,18 +237,9 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	[self setValue:	maskImage
 	  forOutputKey: ShapeOutputMaskImage ];
 	
-	// generate masked image	
-	[self setValue:	[self calculateOutputMaskedImage]
-	  forOutputKey: ShapeOutputImage ];
-	
-	
-	// calculate image analysis
-	[self calculateAreaAverageWithMask: maskImage];
-	[self calculateAreaColumnAverageWithMask: maskImage];
-	[self calculateAreaRowAverageWithMask: maskImage];
-	
-	return true; //[super executeAtTime: time];
+	return [super executeAtTime: time];
 }
+
 
 - (void) drawInOpenGLContext: (NSOpenGLContext *)openGLContext
 {
@@ -383,7 +382,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 								 samplesPerPixel:4
 								 hasAlpha: YES 
 								 isPlanar: NO 
-								 colorSpaceName:NSCalibratedRGBColorSpace
+								 colorSpaceName: nil//NSCalibratedRGBColorSpace
 								 bytesPerRow: 0
 								 bitsPerPixel:32] autorelease] ;
 
@@ -931,5 +930,36 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 */
 
 
+#pragma mark ECNElement (PlaybachHandling) Overrides
+// ECNElement::valueForOutputPort override
+// used for cache reasons
+- (id) valueForOutputPort:(NSString *)portKey	{
+	
+	CIImage *maskImage = [self valueForOutputKey: ShapeOutputMaskImage];
+	if (portKey == ShapeOutputMaskImage)	{
+	
+		[self setValue:	[self calculateOutputMaskedImage]
+				forOutputKey: ShapeOutputImage ];
+	} else	
+	if (portKey == ShapeOutputExtension)	{
+			[self calculateAreaAverageWithMask: maskImage];
+	} else
+	if ((portKey == ShapeOutputHighest) || 
+		(portKey == ShapeOutputLowest) ||
+		(portKey == ShapeOutputMiddleVertical))	{
+		[self calculateAreaRowAverageWithMask: maskImage];			
+	} 	else
+	if ((portKey == ShapeOutputRightmost) || 
+		(portKey == ShapeOutputLeftmost) ||
+		(portKey == ShapeOutputMiddleHorizontal))	{
+		[self calculateAreaColumnAverageWithMask: maskImage];
+			
+	} 	
+	
+	return [super valueForOutputPort: portKey];
+	// calculate image analysis
+	
+		
+}
 
 @end

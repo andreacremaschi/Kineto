@@ -12,7 +12,7 @@
 				<string>kin</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>kineto_logo.icns</string>
+			<string>kineto_documents.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>Kineto Format</string>
 			<key>CFBundleTypeOSTypes</key>

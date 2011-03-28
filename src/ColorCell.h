@@ -4,7 +4,7 @@
 // color cell test
 //
 // Created by John Harte on Sat Sep 14 2002.
-// Copyright (c) 2002 __MyCompanyName__. All rights reserved.
+// Copyright (c) 2002 AndreaCremaschi. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

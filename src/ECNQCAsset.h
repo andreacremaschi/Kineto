@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 11/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNAsset.h"

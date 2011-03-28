@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 10/01/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 
@@ -11,6 +11,8 @@
 #import <AppKit/AppKit.h>
 
 #import "ECNPort.h"
+
+#define ECNObjectDataType @"ECNObjectDataType"
 
 // +  + Object specific properties  +
 extern NSString *ECNObjectUniqueIDKey;
@@ -27,7 +29,7 @@ extern NSString *ECNOutputPortsKey ;
 
 
 @class ECNProjectDocument;
-@interface ECNObject : NSObject  {
+@interface ECNObject : NSObject <NSCoding>  {
 	int _uniqueID;
 	ECNProjectDocument *_document;
 	
@@ -54,6 +56,8 @@ extern NSString *ECNOutputPortsKey ;
 // ================================ Unique identifier =================================
 /*- (void) setID: (int) objectID;*/
 - (NSNumber *) ID;
+- (NSString *)name;
+- (void)setName: (NSString *) name;
 
 
 

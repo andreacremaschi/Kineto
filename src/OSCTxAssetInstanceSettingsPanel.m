@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 14/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "OSCTxAssetInstanceSettingsPanel.h"
@@ -13,7 +13,7 @@
 #import "ECNOSCTargetAsset.h"
 
 #import "ECNProjectDocument.h"
-#import "ECNScene.h"
+#import "KCue.h"
 #import "ECNTrigger.h"
 
 #import <VVOSC/VVOSC.h>

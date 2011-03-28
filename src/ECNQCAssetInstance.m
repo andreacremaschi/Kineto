@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 22/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNQCAssetInstance.h"
@@ -98,15 +98,13 @@ NSString *AssetInstanceQCIconDefaultValue = @"assets_qcpatch";
 + (ECNQCAssetInstance *)qcAssetInstanceWithAsset: (ECNAsset *) asset	{
 //	ECNProjectDocument *document = [asset document];
 	
-	ECNQCAssetInstance *qcInstance = [[ECNQCAssetInstance alloc] initWithAsset: asset ];
+	ECNQCAssetInstance *qcInstance = [[ECNQCAssetInstance alloc] initWithAsset: asset];
 									   
 	if (qcInstance != nil)	{
 		[qcInstance setValue: QCAssetInstanceClassValue forPropertyKey: ECNObjectClassKey];
 		[qcInstance setValue: QCAssetInstanceDefaultNameValue forPropertyKey: ECNObjectNameKey];
 	}
 	return qcInstance;
-	
-	return nil;
 	
 }
 

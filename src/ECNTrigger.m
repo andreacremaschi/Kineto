@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 16/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNTrigger.h"
@@ -18,15 +18,19 @@
 @end
 
 @implementation ECNTrigger
+@synthesize latencyTimer;
 
 // +  + Elements specific properties  +
 
+NSString *ECNTriggerElementToObserveKey = @"element_to_observe"; // port to observe. The way this is identified is defined in subclasses
 NSString *ECNTriggerPortToObserveKey = @"port_to_observe"; // port to observe. The way this is identified is defined in subclasses
 
 NSString *ECNTriggerLatencyKey = @"latency"; // the time the trigger will be inactive after activating
 
 NSString *ECNTriggerActivationThresholdKey = @"activation_threshold"; // Activation threshold
 NSString *ECNTriggerDeactivationThresholdKey = @"deactivation_threshold"; // Deactivation threshold
+NSString *ECNTriggerBindThresholdValuesKey = @"bind_threshold_values"; // force threshold values to be the same
+
 
 NSString *ECNTriggerActivationActionsListKey = @"activation_actions";
 NSString *ECNTriggerDeactivationActionsListKey = @"deactivation_actions";
@@ -62,9 +66,11 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 	
 	NSDictionary *propertiesDict = [NSDictionary dictionaryWithObjectsAndKeys:
 									[NSNull null], ECNTriggerPortToObserveKey, 
+									[NSNull null], ECNTriggerElementToObserveKey,
 									[NSNumber numberWithFloat: 0.0], ECNTriggerLatencyKey, 
 									[NSNumber numberWithFloat: 0.5], ECNTriggerActivationThresholdKey, 
 									[NSNumber numberWithFloat: 0.5], ECNTriggerDeactivationThresholdKey,
+									[NSNumber numberWithBool: true], ECNTriggerBindThresholdValuesKey,
 									[NSMutableArray arrayWithCapacity: 0], ECNTriggerActivationActionsListKey,
 									[NSMutableArray arrayWithCapacity: 0], ECNTriggerDeactivationActionsListKey,
 									nil];
@@ -103,11 +109,63 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 #pragma mark -
 #pragma mark Accessors
 
-- (void) setPortToObserve: (ECNPort *)port_to_observe	{
-	[self setValue: port_to_observe forPropertyKey: ECNTriggerPortToObserveKey];
+
+- (void) setActive: (bool) active {
+
+	// no state change, return
+	if (active == _flags.isActive) return;
+	
+	// trigger deactivating
+	if (active == false)	{
+		_flags.isActive = false;
+		_flags.shouldBeDeactivated=false;
+		_flags.shouldCommitDeactivationActions = true;
+	}
+	else {
+		// the trigger should commit activation actions!
+		// set the flag 
+		_flags.shouldCommitActivationActions = true;
+		_flags.shouldBeDeactivated = true;
+		_flags.isActive = true;
+		
+		// start latency period
+		[self startLatencyPeriod];
+		
+	}
 }
 
-- (ECNPort *) portToObserve	{
+- (void) setActivationState: (NSUInteger) activationState	{
+	if (activationState == NSOnState || NSOffState)
+		// on or off state; 
+		[self setActive: (activationState == NSOnState)];
+	else {
+		// mixed state: reset trigger
+		_flags.isActive = NSOffState;
+		_flags.shouldBeDeactivated = false;
+		_flags.shouldCommitActivationActions = false;
+		_flags.shouldCommitDeactivationActions = false;
+	}
+}
+
+- (NSUInteger) activationState	{
+	//element not set or element not active:return mixed state
+	ECNElement *elementToObserve = [self valueForPropertyKey: ECNTriggerElementToObserveKey];
+	if (!elementToObserve || (![elementToObserve activationState]) ) return NSMixedState;
+
+	return _flags.isActive ? NSOnState : NSOffState;
+}
+
+- (void) setElementToObserve: (ECNElement *)element atPort: (NSString *)portKey	{
+	[self setValue: portKey forPropertyKey: ECNTriggerPortToObserveKey];
+	[self setValue: element forPropertyKey: ECNTriggerElementToObserveKey];
+}
+
+- (ECNElement*) elementToObserve {
+	return [self valueForPropertyKey: ECNTriggerElementToObserveKey];
+}
+
+
+- (NSString *) keyOfPortToObserve	{
 	return [self valueForPropertyKey: ECNTriggerPortToObserveKey];
 }
 
@@ -131,6 +189,14 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 	 
 }
 	
+- (void) addDeactivationAction: (ECNAction*) newAction	{
+	
+	if (!newAction) return;
+	
+	NSMutableArray *deactivationActionArray = [self valueForPropertyKey: ECNTriggerDeactivationActionsListKey];
+	[deactivationActionArray addObject: newAction];
+	
+}
 #pragma mark -
 #pragma mark = Playback
 #pragma mark -
@@ -138,6 +204,13 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 
 - (id) lastValue	{
 	return _flags.lastValue;
+}
+- (void) setLastValue: (id) newValue	{
+	[self willChangeValueForKey: @"lastValue"];
+	id oldValue = _flags.lastValue ;
+	_flags.lastValue = [newValue retain];
+	[oldValue release];
+	[self didChangeValueForKey: @"lastValue"];
 }
 
 #pragma mark Observing port for value changes
@@ -149,64 +222,54 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 	_flags.shouldCommitActivationActions = false;
 	_flags.shouldCommitDeactivationActions = false;
 	
-	// register self for port changes notification
+	/*// register self for port changes notification
 	[[self valueForPropertyKey: ECNTriggerPortToObserveKey] addObserver: self
 		   forKeyPath: @"value"
 			  options: NSKeyValueObservingOptionNew
-			  context: nil];
+			  context: nil];*/
 	
 }
 
+- (BOOL) executeAtTime:(NSTimeInterval)time {
+	
+	// 1. in latency period:
+	if ((_flags.isActive)							// this means: latency period
+		&& (_flags.shouldBeDeactivated)				// this means: latency period is over
+		&& [self checkIfHasToBeDeactivated])		// this means: current value is under deactivation threshold
+		[self setActive: false];
+	
+	// 2. not in latency period:
+	// store current value as in latency period it will not be updated!
+	//if (!(_flags.isActive)) {
+	[self setLastValue: [[[self elementToObserve] valueForOutputPort: [self keyOfPortToObserve]] copy]] ;
+	//}
+	
+	// 3. entering in latency period:
+	// if not in latency period,
+	// check (in subclass method) if trigger has to be activated
+	if (!(_flags.isActive) && [self checkIfHasToBeActivated])
+		[self setActive: true];
+		
+	return true;
+	
 
+}
+
+/*
 - (void)observeValueForKeyPath:(NSString *)keyPath 
 					  ofObject:(id)object 
 						change:(NSDictionary *)change 
 					   context:(void *)context	{
 
 	
-	
-	// 1. in latency period:
-	// ACHTUNG: this check shouldn't be done here! 
-	// this method is called only when values change, but the deactivation should happen 
-	// independently from value changes
-	if ((_flags.isActive) && (_flags.shouldBeDeactivated) && [self checkIfHasToBeDeactivated]) {
-		_flags.isActive = false;
-		_flags.shouldBeDeactivated=false;
-		_flags.shouldCommitDeactivationActions = true;
-	}
-
-	// 2. not in latency period:
-	// store current value as in latency period it will not be updated!
-	if (!(_flags.isActive) && [self portToObserve]) {
-		id tempValue = _flags.lastValue;
-		_flags.lastValue = [[[self portToObserve] value] retain];
-		[tempValue release];
-	}
-	
-	// 3. entering in latency period:
-	// if not in latency period,
-	// check (in subclass method) if trigger has to be activated
-	if (!(_flags.isActive) && [self checkIfHasToBeActivated])	{
-
-		// the trigger should commit activation actions!
-		// set the flag 
-		_flags.shouldCommitActivationActions = true;
-		_flags.shouldBeDeactivated = true;
-		_flags.isActive = true;
-
-		// start latency period
-		[self startLatencyPeriod];
-		
-	}
-	return;
-}
+}*/
 
 - (void) endObservingElement	{
 	
 	// unregister self for port changes notification
-	[[self valueForPropertyKey: ECNTriggerPortToObserveKey] removeObserver:self 
+	/*[[self valueForPropertyKey: ECNTriggerPortToObserveKey] removeObserver:self 
 																forKeyPath:@"value"];
-	
+	*/
 }
 
 
@@ -217,6 +280,8 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 	
 }
 
+
+
 #pragma mark Latency period
 
 - (void) startLatencyPeriod
@@ -225,11 +290,13 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 	if (latencyPeriod > 0)	{
 		_flags.shouldBeDeactivated = false;
 		//NSLog(@"latency period begins: %.2f", latencyPeriod);
-		[[NSRunLoop currentRunLoop] addTimer: [NSTimer timerWithTimeInterval: latencyPeriod
-																	 target: self
-																   selector: @selector(_exitLatencyPeriod:)
-																   userInfo: nil
-																	repeats: false]
+		if (latencyTimer) [latencyTimer invalidate];
+		[self setLatencyTimer: [NSTimer timerWithTimeInterval: latencyPeriod
+								target: self
+							  selector: @selector(_exitLatencyPeriod:)
+							  userInfo: nil
+													  repeats: false]];
+		[[NSRunLoop currentRunLoop] addTimer: latencyTimer
 									 forMode: NSDefaultRunLoopMode];
 	}
 	else _flags.shouldBeDeactivated = true;
@@ -266,6 +333,13 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 	
 }
 
+- (void)triggerOffElement	{
+	
+	if (latencyTimer) [latencyTimer invalidate];
+	_flags.isActive=false;
+	_flags.shouldCommitDeactivationActions = true;
+	
+}
 - (bool) checkIfHasToBeActivated	{
 	
 	return false; // abstract class: check if triggered in subclasses

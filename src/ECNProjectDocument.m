@@ -3,24 +3,25 @@
 //  eyeconmacosx
 //
 //  Created by Andrea Cremaschi on 21/10/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 AndreaCremaschi. All rights reserved.
 //
 #import "ECNObject.h"
 
 #import "ECNProjectDocument.h"
-#import "ECNProjectWindowController.h"
-#import "ECNSceneWindowController.h"
-#import "ECNScene.h"
+#import "KProjectWindowController.h"
+#import "KCueEditorViewController.h"
+#import "KCue.h"
 #import "ECNOSCTarget.h"
 #import "ElementsView.h"
-#import "ECNLiveViewerController.h"
+
 #import "ECNQCAsset.h"
 //#import "ECNActions.h"
+#import "ECNVideoInputAsset.h"
 
 #import <VVOSC/VVOSC.h>
 
 
-NSString *strNewSceneDefaultName = @"New scene ";
+NSString *strNewSceneDefaultName = @"New cue ";
 //NSString *ECNPlaybackIsOverNotification = @"ECNPlaybackIsOver";
 
 
@@ -91,7 +92,7 @@ NSString *ECNDocumentType = @"Kineto Format";
 */
 
 - (void)makeWindowControllers {
-    ECNProjectWindowController *myController = [[ECNProjectWindowController allocWithZone:[self zone]] init];    
+    KProjectWindowController *myController = [[KProjectWindowController allocWithZone:[self zone]] init];    
 	[self addWindowController:myController];
     [myController release];
 	
@@ -114,15 +115,27 @@ NSString *ECNDocumentType = @"Kineto Format";
 	return _curActiveScenes;
 }
 
-- (NSArray *)scenes {
-   return [self objectsOfKind: [ECNScene class]];
+- (NSArray *)cues {
+   return [self objectsOfKind: [KCue class]];
 }
 - (NSArray *)assets	{
 	return [self objectsOfKind: [ECNAsset class]];	
 }
+- (NSArray *)videoAssets	{
+	return [self objectsOfKind: [ECNVideoInputAsset class]];	
+}
+
+- (ECNAsset *)defaultAssetOfKind: (Class) objectKind {
+	NSAssert ([objectKind isSubclassOfClass: [ECNAsset class]], @"Assertion error in ECNProjectDocument:defaultAssetOfKind");
+	NSArray *assets = [self objectsOfKind: objectKind];
+	if ([assets count] > 0) 
+		return [assets objectAtIndex: 0]; //for now return the first object in the array
+	return nil;
+	
+}
 
 
--(ECNScene *)createNewScene {
+-(KCue *)createNewCue {
 
 	//cicla tra le scene e controlla
 	//- se esiste già una scena con quel nome
@@ -136,7 +149,7 @@ NSString *ECNDocumentType = @"Kineto Format";
 	
 	newSceneName = [[[NSString alloc] initWithString: strNewSceneDefaultName] autorelease];
 
-	NSArray *scenes = [self scenes]; 
+	NSArray *scenes = [self cues]; 
 	if ([scenes count] > 0)
 	while (!nameIsNew)
 	{
@@ -155,7 +168,8 @@ NSString *ECNDocumentType = @"Kineto Format";
 	}
 	// se esiste modifica il contatore
 	
-	ECNScene *_creatingScene = [ECNScene sceneWithDocument: self]; //[[ECNScene allocWithZone:[self zone]] initWithProjectDocument: self];
+	[self willChangeValueForKey:@"cues"];
+	KCue *_creatingScene = [KCue sceneWithDocument: self]; //[[ECNScene allocWithZone:[self zone]] initWithProjectDocument: self];
 	if (_creatingScene)	{
 		[_creatingScene setValue: newSceneName forPropertyKey: ECNObjectNameKey];	
 		[_creatingScene setValue: [NSNumber numberWithBool: !firstSceneExists] forPropertyKey: ECNSceneActiveAtFirstKey];
@@ -165,6 +179,7 @@ NSString *ECNDocumentType = @"Kineto Format";
 		[_creatingScene release];
 		return nil;
 	}
+		[self didChangeValueForKey:@"cues"];
 	return _creatingScene;
 }
 
@@ -330,50 +345,8 @@ static int ECNCurrentDocumentVersion = 1;
 
 #pragma mark *** window controller management
 
-- (ECNSceneWindowController *)openedSceneWindowControllerForScene: (ECNScene *)scene	{
-	int i;
-	ECNScene *curScene;
-	ECNSceneWindowController *sceneWindowController;
-	NSWindowController *windowController;
-	
-	// check if double-clicked scene is already opened
-	for (i=0; i<[[self windowControllers] count]; i++)
-	{	
-		windowController = [[self windowControllers] objectAtIndex: i];
-		if ([windowController isKindOfClass: [ECNSceneWindowController class]])
-		{
-			sceneWindowController = (ECNSceneWindowController *)windowController;
-			curScene = (ECNScene*)[sceneWindowController scene];
-			if (curScene == scene)
-			{	
-				// scene window already opened. return it
-				return sceneWindowController;
-			}
-		}
-	}
-	return nil;
-}
 
-
-
-- (void) openSceneWindowController:(ECNScene *)sceneToOpen {
-	
-	ECNSceneWindowController *sceneWindowController = [self openedSceneWindowControllerForScene: sceneToOpen];
-	if (sceneWindowController != nil)	{
-		[ [sceneWindowController window] makeKeyAndOrderFront: self];
-		return;
-	}
-	
-	//apre una nuova finestra per la Scena selezionata
-	//ECNSceneWindowController *myController = 
-	[ECNSceneWindowController windowWithScene: sceneToOpen];
-
-	
-}
-
-
-
-- (void)invalidateScene:(ECNScene *)scene {
+- (void)invalidateScene:(KCue *)scene {
 /*    NSArray *windowControllers = [self windowControllers];
 	
     [windowControllers makeObjectsPerformSelector:@selector(invalidateScene:) withObject:scene];
@@ -389,28 +362,33 @@ static int ECNCurrentDocumentVersion = 1;
 
 #pragma mark *** Objects management ***
 - (void)addObject:(ECNObject *)object	{
-	if ([object isKindOfClass: [ECNScene class]])
+	if ([object isKindOfClass: [KCue class]])
 		[self willChangeValueForKey: @"scenes"];
+	else if ([object isKindOfClass: [ECNVideoInputAsset class]])
+		[self willChangeValueForKey: @"videoAssets"];
 	else if ([object isKindOfClass: [ECNAsset class]])
 		[self willChangeValueForKey: @"assets"];
 
 	[_objects insertObject: object atIndex: 0];
 
-	if ([object isKindOfClass: [ECNScene class]])
+	if ([object isKindOfClass: [KCue class]])
 		[self didChangeValueForKey: @"scenes"];
+	else if ([object isKindOfClass: [ECNVideoInputAsset class]])
+		[self didChangeValueForKey: @"videoAssets"];
 	else if ([object isKindOfClass: [ECNAsset class]])
 		[self didChangeValueForKey: @"assets"];
+
 }
 
 - (void)removeObject:(ECNObject *)object	{
-	if ([object isKindOfClass: [ECNScene class]])
+	if ([object isKindOfClass: [KCue class]])
 		[self willChangeValueForKey: @"scenes"];
 	else if ([object isKindOfClass: [ECNAsset class]])
 		[self willChangeValueForKey: @"assets"];
 	
 		[_objects removeObject:object];
 	
-	if ([object isKindOfClass: [ECNScene class]])
+	if ([object isKindOfClass: [KCue class]])
 		[self didChangeValueForKey: @"scenes"];
 	else if ([object isKindOfClass: [ECNAsset class]])
 		[self didChangeValueForKey: @"assets"];
@@ -437,8 +415,8 @@ static int ECNCurrentDocumentVersion = 1;
 	// reset "_curActiveScenes" to initial states
 	[_curActiveScenes removeAllObjects];
 	
-	NSArray *scenes = [self scenes];
-	for (ECNScene *curScene in scenes)
+	NSArray *scenes = [self cues];
+	for (KCue *curScene in scenes)
 		if ([[curScene valueForPropertyKey: ECNSceneActiveAtFirstKey] boolValue]) 	{	
 			NSLog (@"adding scene: '%@' to active scenes array", [curScene valueForPropertyKey: ECNObjectNameKey]) ;
 			[curScene resetToInitialState];
@@ -447,10 +425,10 @@ static int ECNCurrentDocumentVersion = 1;
 	
 } // resetToInitialState
 	
-- (void) setSceneActivationState: (ECNScene *)scene active: (bool) active	{
+- (void) setSceneActivationState: (KCue *)scene active: (bool) active	{
 
 	// check if target scene is owned by this document, else return
-	if (![[self scenes] containsObject: scene]) return;
+	if (![[self cues] containsObject: scene]) return;
 	
 	if (active)
 	{
@@ -469,7 +447,7 @@ static int ECNCurrentDocumentVersion = 1;
 } // setSceneActivationState
 
 
-- (bool) isSceneActive: (ECNScene *)scene	{
+- (bool) isSceneActive: (KCue *)scene	{
 	return [_curActiveScenes containsObject: scene];
 }
 

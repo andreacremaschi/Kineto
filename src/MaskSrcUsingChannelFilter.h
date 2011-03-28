@@ -3,7 +3,7 @@
 //  MaskSrcUsingChannel
 //
 //  Created by Andrea Cremaschi on 18/02/11.
-//  Copyright __MyCompanyName__ 2011. All rights reserved.
+//  Copyright AndreaCremaschi 2011. All rights reserved.
 
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>

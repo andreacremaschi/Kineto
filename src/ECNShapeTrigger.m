@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 16/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNShapeTrigger.h"
@@ -59,8 +59,8 @@ NSString *ECNShapeTriggerClassValue = @"ECNShapeTrigger";
 		// default port to observe is set in method initWithProjectDocument in ECNShape.m
 		[newTrigger setValue: [NSNull null] forPropertyKey:  ECNTriggerPortToObserveKey]; 
 		[newTrigger setValue: [NSNumber numberWithFloat: 0.1] forPropertyKey:  ECNTriggerLatencyKey];
-		[newTrigger setValue: [NSNumber numberWithFloat: 0.1] forPropertyKey:  ECNTriggerActivationThresholdKey];
-		[newTrigger setValue: [NSNumber numberWithFloat: 0.9] forPropertyKey:  ECNTriggerDeactivationThresholdKey];
+		[newTrigger setValue: [NSNumber numberWithFloat: 0.3] forPropertyKey:  ECNTriggerActivationThresholdKey];
+		[newTrigger setValue: [NSNumber numberWithFloat: 0.3] forPropertyKey:  ECNTriggerDeactivationThresholdKey];
 	}
 	return newTrigger;
 	
@@ -89,11 +89,16 @@ NSString *ECNShapeTriggerClassValue = @"ECNShapeTrigger";
 	float value = 0.0;
 
 	// get the observed port
-	id observedPort = [self valueForPropertyKey: ECNTriggerPortToObserveKey];
+	id observedPortKey = [self valueForPropertyKey: ECNTriggerPortToObserveKey];
+	id observedElement = [self valueForPropertyKey: ECNTriggerElementToObserveKey];
 	
+	// check if observed element is valid, and if its value is a ECNElement
+	if ((observedElement == [NSNull null]) || (![observedElement isKindOfClass: [ECNElement class]])) return 0.0;
+
 	// check if port is valid, and if its value is a NSNumber
-	if ((observedPort == [NSNull null]) || (![observedPort isKindOfClass: [ECNPort class]])) return 0.0;
-	NSObject *valueObject  = [(ECNPort*)observedPort value];
+	if ((observedPortKey == [NSNull null]) || (![observedPortKey isKindOfClass: [NSString class]])) return 0.0;
+	
+	NSObject *valueObject  = [observedElement valueForOutputKey: observedPortKey];
 	if (![valueObject isKindOfClass: [NSNumber class]]) return 0.0;
 	
 	// return port value as a float
@@ -108,7 +113,8 @@ NSString *ECNShapeTriggerClassValue = @"ECNShapeTrigger";
 
 - (bool) checkIfHasToBeDeactivated	{
 	float deactivationThreshold = [[self valueForPropertyKey:ECNTriggerDeactivationThresholdKey] floatValue];	
-	return ([self observedValue] <= deactivationThreshold); 
+	float observedValue = [self observedValue];
+	return (observedValue <= deactivationThreshold); 
 }
 
 

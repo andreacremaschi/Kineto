@@ -3,7 +3,7 @@
 //  eyeconmacosx
 //
 //  Created by Andrea Cremaschi on 18/10/10.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
+//  Copyright AndreaCremaschi 2010. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

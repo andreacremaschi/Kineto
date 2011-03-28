@@ -3,9 +3,17 @@
  *  kineto
  *
  *  Created by Andrea Cremaschi on 09/03/11.
- *  Copyright 2011 __MyCompanyName__. All rights reserved.
+ *  Copyright 2011 AndreaCremaschi. All rights reserved.
  *
  */
 
 #import "ECNElementAction.h"
 #import "ECNSceneAction.h"
+
+@interface ECNActionFactory : ECNObject {
+	
+}
+
++ (NSArray *)actionsArray;
+
+@end

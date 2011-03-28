@@ -3,11 +3,11 @@
 //  eyeconmacosx
 //
 //  Created by Andrea Cremaschi on 28/10/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNElement.h"
-#import "ECNScene.h"
+#import "KCue.h"
 #import "ECNProjectDocument.h"
 #import "ElementsView.h"
 
@@ -109,7 +109,7 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 			NSLog(@"Be careful: triggerClass has not been implemented in class '%@'. Please do it!", [self class]);
 		} else	{
 			if (![[[self class] defaultTriggerPortKey] isEqual: @""])
-				[trigger setPortToObserve: [self outputPortWithKey: [[self class] defaultTriggerPortKey]]];
+				[trigger setElementToObserve: self atPort: [[self class] defaultTriggerPortKey] ];
 			else 
 				NSLog(@"Be careful: defaultTriggerKey has not been implemented in class '%@'. Please do it!", [self class]);
 
@@ -162,12 +162,16 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 #pragma mark -
 #pragma mark *** Document accessors and conveniences ***
 
-- (void)setScene:(ECNScene *)scene {
+- (void)setScene:(KCue *)scene {
     [self setValue: scene forPropertyKey: ECNElementSceneKey];
 }
 
-- (ECNScene *)scene {
+- (KCue *)scene {
     return [self valueForPropertyKey: ECNElementSceneKey];
+}
+
+- (NSString *)position	{
+	return [NSString stringWithFormat: @"%@:%@", [[self scene] name], [self valueForPropertyKey: ECNObjectNameKey]];
 }
 
 
@@ -852,6 +856,10 @@ NSString *ElementNameDefaultValue = @"Undefined element";
     }
 }
 
+- (NSImage *)icon {
+	return [NSImage imageNamed: @"Cross"];// set a default icon. This should be overridden in subclasses
+}
+
 #pragma mark *** Event handling ***
 
 + (NSCursor *)creationCursor {
@@ -865,7 +873,7 @@ NSString *ElementNameDefaultValue = @"Undefined element";
     return crosshairCursor;
 }
 
-- (BOOL)createWithEvent:(NSEvent *)theEvent inScene:(ECNScene *)scene inView:(NSView *)view {
+- (BOOL)createWithEvent:(NSEvent *)theEvent inScene:(KCue *)scene inView:(NSView *)view {
 	
     // default implementation tracks until mouseUp: just setting the bounds of the new element.
     NSPoint point = [view convertPoint:[theEvent locationInWindow] fromView:nil];
@@ -973,7 +981,7 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 	
 	//TODO: sistemare questa funzione: "element" è membro della classe Scene, a sua volta parte di un array "scenes" membro di ProjectDocument
 	
-    NSArray *scenes = [[self document] scenes];
+    NSArray *scenes = [[self document] cues];
     long index1 = [scenes indexOfObjectIdenticalTo:[self scene]];
     if (index1 != NSNotFound) {
 		NSArray *elements = [scenes objectAtIndex: index1];
@@ -1041,7 +1049,8 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 }
 
 - (ECNTrigger *)firstTrigger	{
-	return [[self valueForPropertyKey: ECNElementTriggersListKey] objectAtIndex: 0];
+	NSArray *triggersArray = [self valueForPropertyKey: ECNElementTriggersListKey];
+	return (triggersArray && [triggersArray count] > 0) ? [triggersArray objectAtIndex: 0] : nil;
 }
 
 - (NSArray *)triggers	{
@@ -1055,14 +1064,13 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 - (bool) prepareForPlayback	{
 	return true;	
 }
-
-- (void) setActivationState: (bool) active	{
-	if ([self activationState] != active)	{
+- (void) setActivationState: (NSUInteger) activationState {
+	if ([self activationState] != activationState)	{
 		
-		[[self scene] setElementActivationState: self active: active];
+		[[self scene] setElementActivationState: self active: (activationState == NSOnState)];
 
 		// tell triggers to begin observing self for value changes
-		if (active)
+		if (activationState == NSOnState)
 			for (ECNTrigger *curTrigger in [self triggers])
 				[curTrigger beginObservingElement];
 		else 
@@ -1072,7 +1080,7 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 	return;	
 }
 
-- (bool) activationState	{
+- (NSUInteger) activationState{
 	return [[self scene] isElementActive: self];	
 }
 
@@ -1084,8 +1092,16 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 }
 
 - (BOOL) executeAtTime:(NSTimeInterval)time {
+	for (ECNTrigger *curTrigger in [self triggers]) 
+		[curTrigger executeAtTime: time];
 	return true;
 }
 
+
+#pragma mark Port management
+- (id) valueForOutputPort:(NSString *)portKey	{
+	ECNPort *port = [self outputPortWithKey: portKey];
+	return [port value];
+}
 
 @end

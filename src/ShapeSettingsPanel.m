@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 14/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ShapeSettingsPanel.h"
@@ -11,7 +11,7 @@
 #import "ECNElement.h"
 
 #import "ECNProjectDocument.h"
-#import "ECNScene.h"
+#import "KCue.h"
 #import "ECNTrigger.h"
 
 @implementation ShapeSettingsPanel
@@ -71,7 +71,7 @@
 - (void )refreshAvailableTargets	{
 	NSMutableArray *targetsArray = [NSMutableArray arrayWithCapacity: 0];
 	
-	[targetsArray addObjectsFromArray: [[_element document] scenes]];
+	[targetsArray addObjectsFromArray: [[_element document] cues]];
 	[targetsArray addObjectsFromArray: [[_element scene] elements]];
 	
 	[self willChangeValueForKey:@"availableTargets"];

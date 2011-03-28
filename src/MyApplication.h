@@ -47,7 +47,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class Licensing;
 @interface MyApplication : NSApplication {
+
 
 }
 

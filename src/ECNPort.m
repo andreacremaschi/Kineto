@@ -3,7 +3,7 @@
 //  kineto
 //
 //  Created by Andrea Cremaschi on 14/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 AndreaCremaschi. All rights reserved.
 //
 
 #import "ECNPort.h"
@@ -207,6 +207,7 @@
 	
 	if (_value!=nil) [_value release];
 	_value = [value retain];
+	_isValid = true;
 	
 	[self didChangeValueForKey:@"stringValue"];
 	[self didChangeValueForKey:@"value"];

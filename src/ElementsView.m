@@ -3,22 +3,25 @@
 //  eyeconmacosx
 //
 //  Created by Andrea Cremaschi on 19/10/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 AndreaCremaschi. All rights reserved.
 //
 
 //#import <OpenGL/CGLMacro.h>  // Set up using macros
 #import "ElementsView.h"
 #import "ECNElement.h"
-#import "ECNScene.h"
-#import "ECNDrawingToolbar.h";
+#import "KCue.h"
 #import "ECNProjectDocument.h"
 #import "ECNFoundationExtras.h"
-#import "ECNSceneWindowController.h"
+#import "KCueEditorViewController.h"
 
 NSString *ElementsViewSelectionDidChangeNotification = @"ElementsViewSelectionDidChange";
 NSString *ElementsViewDoubleClicOnElementNotification = @"ElementsViewNewElementToEditNotification";
 
 @implementation ElementsView
+@synthesize scene;
+@synthesize bgOpacity;
+@synthesize currentElementClass;
+@synthesize currentColor;
 
 static float ECNDefaultPasteCascadeDelta = 10.0;
 
@@ -63,6 +66,13 @@ static float ECNDefaultPasteCascadeDelta = 10.0;
 
 #pragma mark ***  accessors and convenience methods ***
 
+
+- (void) setCurrentElementClass: (Class )newClass {
+	NSAssert (newClass == nil || [newClass isSubclassOfClass: [ECNElement class]], @"ElementsView error: tried to set a creation class that is not a subclass of ECNElement and that is not nil.");
+								  currentElementClass = newClass;
+	
+	
+}
 /*- (NSArray *)scenes {
     return [(ECNProjectDocument *)[[self sceneWindowController] document] scenes];
 }*/
@@ -80,11 +90,16 @@ static float ECNDefaultPasteCascadeDelta = 10.0;
 	_bUseBackground = bUseBG;	
 }
 
-- (void) setBackground: (NSImage *) newBackgroudn {
+- (void) setBackground: (NSImage *) newBackground {
 	
 	//retain background image
-	_background = newBackgroudn;
+	_background = newBackground;
 	[_background retain];
+}
+
+- (void) setBgOpacity: (NSNumber *)newOpacity {
+	bgOpacity = [newOpacity retain];
+	[self setNeedsDisplay: true];
 }
 
 #pragma mark *** ECNSceneWindowController accessors and convenience methods
@@ -96,10 +111,35 @@ static float ECNDefaultPasteCascadeDelta = 10.0;
     return [[self window] windowController];
 }*/
 
-- (ECNScene *)scene {
+/*- (ECNScene *)scene {
 //	NSLog (@"ElementsView owner is of class kind: %@", [[self sceneWindowController] class]);
 	return [[[self window] windowController] scene];
+}*/
+
+- (void)setScene:(KCue *)newScene {
+	/*if (scene){
+		[self removeObserver: scene
+				  forKeyPath: @"elements"];
+
+	}
+	
+	[newScene addObserver: self
+		   forKeyPath: ECNSceneElementsListKey
+			  options: NSKeyValueObservingOptionNew
+			  context: nil
+	 ];*/
+	scene = newScene;
+	
 }
+/*
+ // KVO implementation
+- (void)observeValueForKeyPath:(NSString *)keyPath 
+					  ofObject:(id)object
+						change:(NSDictionary *)change 
+					   context:(void *)context {
+
+	[self setNeedsDisplay:true];
+}*/
 
 - (ECNProjectDocument *)ecnProjectDocument {
     return [[self scene] document];
@@ -310,7 +350,7 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 
 
 - (void)mouseDown:(NSEvent *)theEvent {
-    Class theClass = [[ECNDrawingToolbarController sharedECNDrawingToolbarController] currentElementClass];
+    Class theClass = currentElementClass;
    /* if ([self editingElement]) {
         [self endEditing];
     }*/
@@ -327,7 +367,6 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
     if (theClass) {
         [self clearSelection];
         [self createElementOfClass:theClass withEvent:theEvent];
-		[[ECNDrawingToolbarController sharedECNDrawingToolbarController] selectArrowTool];
     } else {
         [self selectAndTrackMouseWithEvent:theEvent];
     }
@@ -367,8 +406,8 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 		
 		[_background	drawInRect:rect 
 					   fromRect:srcRect 
-						operation: NSCompositeCopy  
-					   fraction:1.0];
+						operation: NSCompositeSourceOver  
+					   fraction: [bgOpacity floatValue]];
 	}
 	
   // if ([self showsGrid]) {
@@ -442,11 +481,10 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 		
         [self selectElement:_creatingElement];
 
-        /*if ([_creatingElement isEditable]) {
-            [self startEditingElement:_creatingElement withEvent:nil ];
-        }*/
-		[_creatingElement setStrokeColor: [[ECNDrawingToolbarController sharedECNDrawingToolbarController] currentColor]];
+		[_creatingElement setStrokeColor: currentColor];
+
         [[document undoManager] setActionName:[NSString stringWithFormat:NSLocalizedStringFromTable(@"Create %@", @"UndoStrings", @"Action name for newly created elements.  Class name is inserted at the substitution."), [[NSBundle mainBundle] localizedStringForKey:NSStringFromClass(theClass) value:@"" table:@"ElementClassNames"]]];
+		
     }
     [_creatingElement release];
     _creatingElement = nil;
@@ -744,7 +782,7 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
         [[self scene] performSelector:@selector(removeElement:) withEachObjectInArray:selCopy];
         [selCopy release];
         [[[self ecnProjectDocument] undoManager] setActionName:NSLocalizedStringFromTable(@"Delete", @"UndoStrings", @"Action name for deletions.")];
-	
+		[self setNeedsDisplay:true];
 		[[NSNotificationCenter defaultCenter] postNotificationName:ElementsViewSelectionDidChangeNotification object:self];
 
     }
