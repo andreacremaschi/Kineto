@@ -1,0 +1,1355 @@
+Tdc1394
+v7
+r0
+t319827774.774716
+cCheck dependencies
+cSymLink "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/Current" A
+cSymLink "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Resources" Versions/Current/Resources
+cSymLink "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/dc1394" Versions/Current/dc1394
+cSymLink "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Headers" Versions/Current/Headers
+cProcessInfoPlistFile "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Resources/Info.plist" Info.plist
+cPhaseScriptExecution Configure "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Script-6EC4AEF50DD9CDD10085D7B8.sh"
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/camera.h libdc1394-current/dc1394/camera.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/capture.h libdc1394-current/dc1394/capture.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/control.h libdc1394-current/dc1394/control.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/conversions.h libdc1394-current/dc1394/conversions.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/dc1394.h libdc1394-current/dc1394/dc1394.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/format7.h libdc1394-current/dc1394/format7.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/iso.h libdc1394-current/dc1394/iso.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/log.h libdc1394-current/dc1394/log.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/register.h libdc1394-current/dc1394/register.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/types.h libdc1394-current/dc1394/types.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/utils.h libdc1394-current/dc1394/utils.h
+cCpHeader build/Debug/dc1394.framework/Versions/A/Headers/video.h libdc1394-current/dc1394/video.h
+cCopyStringsFile "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+cProcessPCH /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch.gch dc1394_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/bayer.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/bayer.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/capture-C9DAB2106008F3AE.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/capture.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/control-BADD7064C2F913B0.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/control.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/conversions.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/conversions.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/enumeration.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/enumeration.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/format7.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/format7.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/iso.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/iso.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/log.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/log.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/capture-BD9BC4C7B31915B0.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/capture.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/control-AE9E831C160935B2.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/control.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/register.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/register.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/utils.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/utils.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/avt.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/avt.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/basler.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/pixelink.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/pixelink.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/internal.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/internal.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/basler_sff_registry.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler_sff_registry.c" normal i386 c com.apple.compilers.gcc.4_2
+cLd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/dc1394" normal i386
+cPhaseScriptExecution "Copy additional Headers" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Script-6EC4AF0A0DD9CECA0085D7B8.sh"
+cTouch "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework"
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004CDD84CB00000000000000EE
+t1289585867
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c00000000486499690000000000000942
+t1214552425
+s2370
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h
+c0000000047BAD4120000000000000400
+t1203426322
+s1024
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOCFPlugIn.h
+c00000000481BC12A00000000000008D0
+t1209778474
+s2256
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h
+c00000000481BC12A0000000000010CC8
+t1209778474
+s68808
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/IOKit.framework/Headers/firewire/IOFireWireLib.h
+c0000000048649C3E0000000000028128
+t1214553150
+s164136
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/IOKit.framework/Headers/firewire/IOFireWireLibIsoch.h
+c0000000048649C3E000000000000BD46
+t1214553150
+s48454
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/arpa/inet.h
+c00000000464386D70000000000001533
+t1178830551
+s5427
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/errno.h
+c0000000047BA993000000000000003EB
+t1203411248
+s1003
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/fcntl.h
+c0000000047BA993000000000000003EA
+t1203411248
+s1002
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/inttypes.h
+c0000000047BA993000000000000027D1
+t1203411248
+s10193
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/mach/mach.h
+c0000000048648AD90000000000001057
+t1214548697
+s4183
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/math.h
+c0000000047BA987000000000000004B7
+t1203411056
+s1207
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/memory.h
+c0000000047BA99300000000000000765
+t1203411248
+s1893
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/netinet/in.h
+c0000000047E883C30000000000005346
+t1206420419
+s21318
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdio.h
+c0000000047BA99310000000000003D1D
+t1203411249
+s15645
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdlib.h
+c0000000047BA99310000000000002A79
+t1203411249
+s10873
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/string.h
+c0000000047BA99320000000000001731
+t1203411250
+s5937
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/ioctl.h
+c0000000047E883CF00000000000011D1
+t1206420431
+s4561
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/mman.h
+c0000000047E883D00000000000001F86
+t1206420432
+s8070
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/stat.h
+c0000000047E883D100000000000047CE
+t1206420433
+s18382
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/time.h
+c0000000047E883D20000000000001E18
+t1206420434
+s7704
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/types.h
+c0000000047E883D2000000000000290F
+t1206420434
+s10511
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/unistd.h
+c0000000047BA993200000000000053FF
+t1203411250
+s21503
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h
+c000000004A11EAF10000000000000C7E
+t1242688241
+s3198
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdarg.h
+c000000004A11EAF100000000000010DD
+t1242688241
+s4317
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h
+c000000004A11EAF1000000000000190C
+t1242688241
+s6412
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/System/Library/Frameworks/IOKit.framework/IOKit
+c000000004CD606F8000000000017B260
+t1289094904
+s1552992
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/English.lproj/InfoPlist.strings
+c00000000482B5041000000000000005C
+t1210798145
+s92
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework
+t1298134974
+s204
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Headers
+t3
+s24
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Resources
+t3
+s26
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/camera.h
+t1298134972
+s8281
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/capture.h
+t1298134972
+s3921
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/control.h
+t1298134972
+s14422
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/conversions.h
+t1298134972
+s8953
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/dc1394.h
+t1298134972
+s1911
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/format7.h
+t1298134972
+s7844
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/iso.h
+t1298134972
+s6940
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/log.h
+t1298134972
+s11281
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/register.h
+t1298134972
+s6548
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/types.h
+t1298134972
+s5361
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/utils.h
+t1298134972
+s3541
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers/video.h
+t1298134972
+s10789
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Resources/English.lproj/InfoPlist.strings
+t1298134972
+s92
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Resources/Info.plist
+t1298134962
+s713
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/dc1394
+t1298134974
+s270884
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/Current
+t3
+s1
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/dc1394
+t3
+s23
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/avt.o
+t1298134973
+s68712
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/basler.o
+t1298134973
+s25980
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/basler_sff_registry.o
+t1298134973
+s6760
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/bayer.o
+t1298134973
+s65048
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/capture-BD9BC4C7B31915B0.o
+t1298134973
+s57300
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/capture-C9DAB2106008F3AE.o
+t1298134972
+s9736
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/control-AE9E831C160935B2.o
+t1298134973
+s44500
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/control-BADD7064C2F913B0.o
+t1298134973
+s99536
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/conversions.o
+t1298134972
+s30256
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/dc1394.LinkFileList
+c000000004D5FF7B20000000000000C0B
+t1298134962
+s3083
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/enumeration.o
+t1298134972
+s10324
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/format7.o
+t1298134973
+s47956
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/internal.o
+t1298134973
+s18592
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/iso.o
+t1298134972
+s8048
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/log.o
+t1298134972
+s9876
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/pixelink.o
+t1298134973
+s21712
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/register.o
+t1298134973
+s16368
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/utils.o
+t1298134973
+s17204
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Script-6EC4AEF50DD9CDD10085D7B8.sh
+c000000004D5FF7B2000000000000002D
+t1298134962
+s45
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Script-6EC4AF0A0DD9CECA0085D7B8.sh
+c000000004D5FF7B200000000000001B8
+t1298134962
+s440
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/dc1394_Prefix.pch
+c00000000482B50410000000000000090
+t1210798145
+s144
+i<Cocoa/Cocoa.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-2.0.2/dc1394/control.h
+c00000000482B50410000000000003856
+t1210798145
+s14422
+i<dc1394/log.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-2.0.2/dc1394/internal.h
+c00000000482B50410000000000001BE2
+t1210798145
+s7138
+i"config.h"
+i"offsets.h"
+i"platform.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-2.0.2/dc1394/offsets.h
+c00000000482B504100000000000015C9
+t1210798145
+s5577
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-2.0.2/dc1394/platform.h
+c00000000482B5041000000000000103F
+t1210798145
+s4159
+i<stdint.h>
+i<dc1394/camera.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-2.0.2/dc1394/register.h
+c00000000482B50410000000000001994
+t1210798145
+s6548
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-2.0.2/dc1394/utils.h
+c00000000482B50410000000000000DD5
+t1210798145
+s3541
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/config.h
+c00000000482B50410000000000000B09
+t1210798145
+s2825
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/bayer.c
+c00000000482B50410000000000014307
+t1210798145
+s82695
+i<limits.h>
+i<math.h>
+i<stdlib.h>
+i<string.h>
+i"conversions.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/camera.h
+c00000000482B50410000000000002059
+t1210798145
+s8281
+i<dc1394/log.h>
+i<stdio.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/capture.c
+c00000000482B504100000000000008F6
+t1210798145
+s2294
+i<stdio.h>
+i"control.h"
+i"platform.h"
+i"internal.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/capture.h
+c00000000482B50410000000000000F51
+t1210798145
+s3921
+i<dc1394/log.h>
+i<dc1394/video.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/control.c
+c00000000482B50410000000000010D5B
+t1210798145
+s68955
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<inttypes.h>
+i"internal.h"
+i"offsets.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/control.h
+c00000000482B50410000000000003856
+t1210798145
+s14422
+i<dc1394/log.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/conversions.c
+c00000000482B50410000000000007275
+t1210798145
+s29301
+i<string.h>
+i<stdlib.h>
+i"conversions.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/conversions.h
+c00000000482B504100000000000022F9
+t1210798145
+s8953
+i<dc1394/log.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/dc1394.h
+c00000000482B50410000000000000777
+t1210798145
+s1911
+i<dc1394/types.h>
+i<dc1394/camera.h>
+i<dc1394/control.h>
+i<dc1394/capture.h>
+i<dc1394/conversions.h>
+i<dc1394/format7.h>
+i<dc1394/iso.h>
+i<dc1394/log.h>
+i<dc1394/register.h>
+i<dc1394/video.h>
+i<dc1394/utils.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/enumeration.c
+c00000000482B50410000000000001DDB
+t1210798145
+s7643
+i<stdio.h>
+i<stdlib.h>
+i<inttypes.h>
+i<string.h>
+i<dc1394/control.h>
+i"internal.h"
+i"platform.h"
+i"log.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/format7.c
+c00000000482B5041000000000000864D
+t1210798145
+s34381
+i<unistd.h>
+i<netinet/in.h>
+i<errno.h>
+i<stdlib.h>
+i"control.h"
+i"internal.h"
+i"register.h"
+i"offsets.h"
+i"utils.h"
+i"config.h"
+i"log.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/format7.h
+c00000000482B50410000000000001EA4
+t1210798145
+s7844
+i<dc1394/log.h>
+i<dc1394/video.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/internal.c
+c00000000482B50410000000000002728
+t1210798145
+s10024
+i"internal.h"
+i"utils.h"
+i"log.h"
+i"register.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/internal.h
+c00000000482B50410000000000001BE2
+t1210798145
+s7138
+i"config.h"
+i"offsets.h"
+i"platform.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/iso.c
+c00000000482B50410000000000000E2C
+t1210798145
+s3628
+i"iso.h"
+i"platform.h"
+i"internal.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/iso.h
+c00000000482B50410000000000001B1C
+t1210798145
+s6940
+i<dc1394/log.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/log.c
+c00000000482B504100000000000010A6
+t1210798145
+s4262
+i"log.h"
+i<stdarg.h>
+i<stdlib.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/log.h
+c00000000482B50410000000000002C11
+t1210798145
+s11281
+i<dc1394/dc1394.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/capture.c
+c00000000482B50410000000000006374
+t1210798145
+s25460
+i<stdlib.h>
+i<string.h>
+i<sys/types.h>
+i<sys/time.h>
+i<netinet/in.h>
+i<unistd.h>
+i<sys/stat.h>
+i<fcntl.h>
+i<sys/ioctl.h>
+i<sys/mman.h>
+i<errno.h>
+i<mach/mach.h>
+i<CoreFoundation/CoreFoundation.h>
+i<IOKit/firewire/IOFireWireLib.h>
+i<IOKit/firewire/IOFireWireLibIsoch.h>
+i<CoreServices/CoreServices.h>
+i"config.h"
+i"internal.h"
+i"macosx/macosx.h"
+i"macosx/capture.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/capture.h
+c00000000482B504100000000000004FB
+t1210798145
+s1275
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/control.c
+c00000000482B50410000000000002C01
+t1210798145
+s11265
+i<stdio.h>
+i<sys/time.h>
+i<CoreFoundation/CoreFoundation.h>
+i<IOKit/IOCFPlugIn.h>
+i<IOKit/IOKitLib.h>
+i<IOKit/firewire/IOFireWireLib.h>
+i"config.h"
+i"platform.h"
+i"internal.h"
+i"macosx.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/macosx.h
+c00000000482B50410000000000000C9B
+t1210798145
+s3227
+i<dc1394/dc1394.h>
+i"macosx/capture.h"
+i<IOKit/firewire/IOFireWireLib.h>
+i<CoreServices/CoreServices.h>
+i"platform.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/offsets.h
+c00000000482B504100000000000015C9
+t1210798145
+s5577
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/platform.h
+c00000000482B5041000000000000103F
+t1210798145
+s4159
+i<stdint.h>
+i<dc1394/camera.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/register.c
+c00000000482B50410000000000002EF3
+t1210798145
+s12019
+i<inttypes.h>
+i"control.h"
+i"internal.h"
+i"offsets.h"
+i"register.h"
+i"utils.h"
+i"config.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/register.h
+c00000000482B50410000000000001994
+t1210798145
+s6548
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/types.h
+c00000000482B504100000000000014F1
+t1210798145
+s5361
+i<stdint.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/utils.c
+c00000000482B50410000000000002EC6
+t1210798145
+s11974
+i"internal.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/utils.h
+c00000000482B50410000000000000DD5
+t1210798145
+s3541
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/avt.c
+c00000000482B50410000000000010ACB
+t1210798145
+s68299
+i<unistd.h>
+i<stdlib.h>
+i<string.h>
+i"vendor/avt.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/avt.h
+c00000000482B50410000000000004157
+t1210798145
+s16727
+i<stdint.h>
+i<dc1394/types.h>
+i<dc1394/log.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler.c
+c00000000482B504100000000000047C3
+t1210798145
+s18371
+i<inttypes.h>
+i"../internal.h"
+i"../register.h"
+i"../utils.h"
+i"../control.h"
+i"basler.h"
+i"basler_sff_registry.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler.h
+c00000000482B50410000000000000BBC
+t1210798145
+s3004
+i"basler_sff.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler_sff.h
+c00000000482B5041000000000000239F
+t1210798145
+s9119
+i<stdint.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler_sff_registry.c
+c00000000482B5041000000000000210C
+t1210798145
+s8460
+i<memory.h>
+i<stdint.h>
+i"../control.h"
+i"basler_sff_registry.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler_sff_registry.h
+c00000000482B50410000000000000909
+t1210798145
+s2313
+i"basler_sff.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/pixelink.c
+c00000000482B5041000000000000582B
+t1210798145
+s22571
+i<unistd.h>
+i<stdlib.h>
+i<string.h>
+i<arpa/inet.h>
+i"vendor/pixelink.h"
+i"log.h"
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/pixelink.h
+c00000000482B50410000000000001755
+t1210798145
+s5973
+i<dc1394/log.h>
+i<dc1394/types.h>
+
+N/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/video.h
+c00000000482B50410000000000002A25
+t1210798145
+s10789
+i<dc1394/log.h>
+
+N/var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch.gch
+t1298134972
+s2138480
+
+NInfo.plist
+c00000000482B50410000000000000352
+t1210798145
+s850
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies319827762#319827762#0(0"0(0#1#0"8639015104#0"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/avt.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/avt.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827773.242492
+e319827773.541060
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/avt.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/avt.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@154"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/avt.c319827773#319827773#0(0"0(0#0#146"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/avt.c8640097248#2736"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/avt.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/avt.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/basler.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827773.359550
+e319827773.484230
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/basler.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@157"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler.c319827773#319827773#0(0"0(0#0#149"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler.c8631736608#2742"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/basler.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/basler_sff_registry.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler_sff_registry.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827773.645247
+e319827773.707422
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/basler_sff_registry.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler_sff_registry.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@170"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler_sff_registry.c319827773#319827773#0(0"0(0#0#162"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler_sff_registry.c8640710752#2768"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/basler_sff_registry.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/basler_sff_registry.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/bayer.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/bayer.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827772.597928
+e319827773.359380
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/bayer.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/bayer.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@149"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/bayer.c319827772#319827773#0(0"0(0#0#141"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/bayer.c8639549792#2733"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/bayer.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/bayer.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/capture-BD9BC4C7B31915B0.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/capture.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827772.958541
+e319827773.710813
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/capture-BD9BC4C7B31915B0.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/capture.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@158"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/capture.c319827772#319827773#0(0"0(0#0#150"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/capture.c8629690272#2761"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/capture.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/capture-BD9BC4C7B31915B0.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/capture-C9DAB2106008F3AE.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/capture.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827772.599749
+e319827772.716736
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/capture-C9DAB2106008F3AE.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/capture.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@151"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/capture.c319827772#319827772#0(0"0(0#0#143"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/capture.c8637250048#2754"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/capture.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/capture-C9DAB2106008F3AE.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/control-AE9E831C160935B2.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/control.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827773.055392
+e319827773.723168
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/control-AE9E831C160935B2.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/control.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@158"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/control.c319827773#319827773#0(0"0(0#0#150"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/control.c8635442176#2761"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/macosx/control.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/control-AE9E831C160935B2.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/control-BADD7064C2F913B0.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/control.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827772.601116
+e319827773.058430
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/control-BADD7064C2F913B0.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/control.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@151"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/control.c319827772#319827773#0(0"0(0#0#143"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/control.c8634177056#2754"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/control.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/control-BADD7064C2F913B0.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/conversions.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/conversions.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827772.602873
+e319827772.813336
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/conversions.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/conversions.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@155"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/conversions.c319827772#319827772#0(0"0(0#0#147"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/conversions.c8631595744#2745"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/conversions.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/conversions.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/enumeration.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/enumeration.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827772.716894
+e319827772.799979
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/enumeration.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/enumeration.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@155"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/enumeration.c319827772#319827772#0(0"0(0#0#147"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/enumeration.c8639602944#2745"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/enumeration.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/enumeration.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/format7.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/format7.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827772.800158
+e319827773.055231
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/format7.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/format7.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@151"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/format7.c319827772#319827773#0(0"0(0#0#143"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/format7.c8637764736#2737"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/format7.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/format7.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/internal.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/internal.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827773.541388
+e319827773.647758
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/internal.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/internal.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@152"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/internal.c319827773#319827773#0(0"0(0#0#144"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/internal.c8631817216#2739"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/internal.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/internal.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/iso.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/iso.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827772.813611
+e319827772.878340
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/iso.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/iso.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@147"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/iso.c319827772#319827772#0(0"0(0#0#139"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/iso.c8634573664#2729"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/iso.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/iso.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/log.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/log.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827772.878506
+e319827772.958387
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/log.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/log.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@147"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/log.c319827772#319827772#0(0"0(0#0#139"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/log.c8631595136#2729"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/log.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/log.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/pixelink.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/pixelink.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827773.484414
+e319827773.645068
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/pixelink.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/pixelink.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@159"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/pixelink.c319827773#319827773#0(0"0(0#0#151"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/pixelink.c8639106080#2746"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/vendor/pixelink.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/pixelink.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/register.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/register.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827773.058879
+e319827773.151791
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/register.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/register.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@152"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/register.c319827773#319827773#0(0"0(0#0#144"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/register.c8640100096#2739"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/register.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/register.o"0#
+
+CCompileC build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/utils.o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/utils.c" normal i386 c com.apple.compilers.gcc.4_2
+s319827773.151963
+e319827773.242331
+r1
+xCompileC
+xbuild/dc1394.build/Debug/dc1394.build/Objects-normal/i386/utils.o
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/utils.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@149"Compile /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/utils.c319827773#319827773#0(0"0(0#0#141"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/utils.c8636850080#2733"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -include /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/utils.c" -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/utils.o"0#
+
+CCopyStringsFile "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+s319827772.078409
+e319827772.407551
+r1
+xCopyStringsFile
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings319827772#319827772#0(0"0(0#0#140"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/English.lproj/InfoPlist.strings8629922688#517"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Resources/English.lproj"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/camera.h libdc1394-current/dc1394/camera.h
+s319827772.034819
+e319827772.072881
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/camera.h
+xlibdc1394-current/dc1394/camera.h
+lSLF07#2@38"Copy libdc1394-current/dc1394/camera.h319827772#319827772#0(0"0(0#0#142"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/camera.h8639897696#584"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/camera.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/capture.h libdc1394-current/dc1394/capture.h
+s319827772.035726
+e319827772.069511
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/capture.h
+xlibdc1394-current/dc1394/capture.h
+lSLF07#2@39"Copy libdc1394-current/dc1394/capture.h319827772#319827772#0(0"0(0#0#143"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/capture.h8639212512#585"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/capture.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/control.h libdc1394-current/dc1394/control.h
+s319827772.036624
+e319827772.069790
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/control.h
+xlibdc1394-current/dc1394/control.h
+lSLF07#2@39"Copy libdc1394-current/dc1394/control.h319827772#319827772#0(0"0(0#0#143"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/control.h8638785280#585"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/control.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/conversions.h libdc1394-current/dc1394/conversions.h
+s319827772.037684
+e319827772.073103
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/conversions.h
+xlibdc1394-current/dc1394/conversions.h
+lSLF07#2@43"Copy libdc1394-current/dc1394/conversions.h319827772#319827772#0(0"0(0#0#147"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/conversions.h8637561184#589"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/conversions.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/dc1394.h libdc1394-current/dc1394/dc1394.h
+s319827772.038483
+e319827772.073302
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/dc1394.h
+xlibdc1394-current/dc1394/dc1394.h
+lSLF07#2@38"Copy libdc1394-current/dc1394/dc1394.h319827772#319827772#0(0"0(0#0#142"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/dc1394.h8636466112#584"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/dc1394.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/format7.h libdc1394-current/dc1394/format7.h
+s319827772.039080
+e319827772.073503
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/format7.h
+xlibdc1394-current/dc1394/format7.h
+lSLF07#2@39"Copy libdc1394-current/dc1394/format7.h319827772#319827772#0(0"0(0#0#143"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/format7.h8634451744#585"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/format7.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/iso.h libdc1394-current/dc1394/iso.h
+s319827772.039855
+e319827772.070055
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/iso.h
+xlibdc1394-current/dc1394/iso.h
+lSLF07#2@35"Copy libdc1394-current/dc1394/iso.h319827772#319827772#0(0"0(0#0#139"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/iso.h8631813184#581"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/iso.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/log.h libdc1394-current/dc1394/log.h
+s319827772.040471
+e319827772.073964
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/log.h
+xlibdc1394-current/dc1394/log.h
+lSLF07#2@35"Copy libdc1394-current/dc1394/log.h319827772#319827772#0(0"0(0#0#139"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/log.h8631660992#581"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/log.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/register.h libdc1394-current/dc1394/register.h
+s319827772.041214
+e319827772.073689
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/register.h
+xlibdc1394-current/dc1394/register.h
+lSLF07#2@40"Copy libdc1394-current/dc1394/register.h319827772#319827772#0(0"0(0#0#144"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/register.h8631587488#586"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/register.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/types.h libdc1394-current/dc1394/types.h
+s319827772.041781
+e319827772.074732
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/types.h
+xlibdc1394-current/dc1394/types.h
+lSLF07#2@37"Copy libdc1394-current/dc1394/types.h319827772#319827772#0(0"0(0#0#141"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/types.h8631449120#583"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/types.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/utils.h libdc1394-current/dc1394/utils.h
+s319827772.070527
+e319827772.078049
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/utils.h
+xlibdc1394-current/dc1394/utils.h
+lSLF07#2@37"Copy libdc1394-current/dc1394/utils.h319827772#319827772#0(0"0(0#0#141"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/utils.h8631143808#583"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/utils.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CCpHeader build/Debug/dc1394.framework/Versions/A/Headers/video.h libdc1394-current/dc1394/video.h
+s319827772.071714
+e319827772.078321
+r1
+xCpHeader
+xbuild/Debug/dc1394.framework/Versions/A/Headers/video.h
+xlibdc1394-current/dc1394/video.h
+lSLF07#2@37"Copy libdc1394-current/dc1394/video.h319827772#319827772#0(0"0(0#0#141"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/video.h8630971904#583"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/libdc1394-current/dc1394/video.h" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Headers"0#
+
+CLd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/dc1394" normal i386
+s319827773.723271
+e319827774.751883
+r1
+xLd
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/dc1394
+xnormal
+xi386
+lSLF07#2@160"Link /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/dc1394319827773#319827774#0(0"0(0#0#0"8638092384#1063"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.5.sdk "-L/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" -filelist "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/dc1394.LinkFileList" -install_name @executable_path/../Frameworks/dc1394.framework/Versions/A/dc1394 -mmacosx-version-min=10.5 -framework IOKit -framework Cocoa -single_module -compatibility_version 1 -current_version 1 -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/dc1394"0#
+
+CPhaseScriptExecution "Copy additional Headers" "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Script-6EC4AF0A0DD9CECA0085D7B8.sh"
+s319827774.751987
+e319827774.770774
+r1
+xPhaseScriptExecution
+xCopy additional Headers
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Script-6EC4AF0A0DD9CECA0085D7B8.sh
+lSLF07#2@49"Run custom shell script 'Copy additional Headers'319827774#319827774#0(0"0(0#0#0"8630976032#19710"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER andreacremaschi    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386 ppc"    setenv ARCHS_STANDARD_32_BIT "i386 ppc"    setenv ARCHS_STANDARD_64_BIT x86_64    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build"    setenv BUILD_ROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build"    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug"    setenv CACHE_ROOT /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502    setenv CCHROOT /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/JavaClasses"    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A"    setenv CODE_SIGNING_ALLOWED YES    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/CompositeSDKs    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug"    setenv CONFIGURATION_TEMP_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug"    setenv CONTENTS_FOLDER_PATH dc1394.framework/Versions/A    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv CURRENT_VERSION Current    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources"    setenv DERIVED_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources"    setenv DERIVED_SOURCES_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources"    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH dc1394.framework/Versions/A/Resources/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/dc1394.dst    setenv DWARF_DSYM_FILE_NAME dc1394.framework.dSYM    setenv DWARF_DSYM_FOLDER_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug"    setenv DYLIB_COMPATIBILITY_VERSION 1    setenv DYLIB_CURRENT_VERSION 1    setenv DYLIB_INSTALL_NAME_BASE "@executable_path/../Frameworks"    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn .git CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH dc1394.framework/Versions/A/Resources/English.lproj    setenv EXECUTABLE_FOLDER_PATH dc1394.framework/Versions/A    setenv EXECUTABLE_NAME dc1394    setenv EXECUTABLE_PATH dc1394.framework/Versions/A/dc1394    setenv FILE_LIST "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects/LinkFileList"    setenv FIXED_FILES_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/FixedFiles"    setenv FRAMEWORKS_FOLDER_PATH dc1394.framework/Versions/A/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME dc1394.framework    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_MODEL_TUNING G5    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER dc1394_Prefix.pch    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION 4.2    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE NO    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include\" libdc1394-current/**"    setenv ICONV /usr/bin/iconv    setenv INFOPLISTSTRINGS_PATH dc1394.framework/Versions/A/Resources/English.lproj/InfoPlist.strings    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE Info.plist    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PATH dc1394.framework/Versions/A/Resources/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INSTALL_DIR "/tmp/dc1394.dst@executable_path/../Frameworks"    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER andreacremaschi    setenv INSTALL_PATH "@executable_path/../Frameworks"    setenv INSTALL_ROOT /tmp/dc1394.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH dc1394.framework/Versions/A/Resources/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_DYLIB_INSTALL_NAME "@executable_path/../Frameworks/dc1394.framework/Versions/A/dc1394"    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-LinkMap-normal-i386.txt"    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/dc1394.LinkFileList"    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH dc1394.framework/Versions/A/Resources/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_dylib    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv MAC_OS_X_VERSION_ACTUAL 1066    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0606    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects"    setenv OBJECT_FILE_DIR_normal "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal"    setenv OBJROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build"    setenv ONLY_ACTIVE_ARCH YES    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv PACKAGE_TYPE com.apple.package-type.wrapper.framework    setenv PASCAL_STRINGS YES    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH dc1394.framework/Versions/A/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS c    setenv PKGINFO_FILE_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/PkgInfo"    setenv PKGINFO_PATH dc1394.framework/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/usr    setenv PLATFORM_NAME macosx    setenv PLATFORM_PRODUCT_BUILD_VERSION 10M2423    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PLUGINS_FOLDER_PATH dc1394.framework/Versions/A/Resources    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/PrefixHeaders"    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH dc1394.framework/Versions/A/PrivateHeaders    setenv PRODUCT_NAME dc1394    setenv PRODUCT_SETTINGS_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/Info.plist"    setenv PRODUCT_TYPE com.apple.product-type.framework    setenv PROFILING_CODE NO    setenv PROJECT dc1394    setenv PROJECT_DERIVED_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/DerivedSources"    setenv PROJECT_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv PROJECT_FILE_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/dc1394.xcodeproj"    setenv PROJECT_NAME dc1394    setenv PROJECT_TEMP_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build"    setenv PUBLIC_HEADERS_FOLDER_PATH dc1394.framework/Versions/A/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/ResourceManagerResources"    setenv REZ_OBJECTS_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/ResourceManagerResources/Objects"    setenv REZ_SEARCH_PATHS "\"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH dc1394.framework/Versions/A/Resources/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/SDKs/MacOSX10.5.sdk    setenv SDK_DIR /Developer/SDKs/MacOSX10.5.sdk    setenv SDK_NAME macosx10.5    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/DerivedSources"    setenv SHARED_FRAMEWORKS_FOLDER_PATH dc1394.framework/Versions/A/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH dc1394.framework/Versions/A/Resources    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv SRCROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE debugging    setenv SYMBOL_REPOSITORY_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/SymbolRepositories"    setenv SYMROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build"    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME dc1394    setenv TARGET_BUILD_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug"    setenv TARGET_NAME dc1394    setenv TARGET_TEMP_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build"    setenv TEMP_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build"    setenv TEMP_FILES_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build"    setenv TEMP_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build"    setenv TEMP_ROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build"    setenv UID 502    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH dc1394.framework/Versions/A/Resources    setenv UNSTRIPPED_PRODUCT NO    setenv USER andreacremaschi    setenv USER_APPS_DIR /Users/andreacremaschi/Applications    setenv USER_LIBRARY_DIR /Users/andreacremaschi/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 ppc ppc64 ppc7400 ppc970 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH dc1394.framework/Versions/A/Resources/version.plist    setenv VERSIONS_FOLDER_PATH dc1394.framework/Versions    setenv VERSION_INFO_BUILDER andreacremaschi    setenv VERSION_INFO_FILE dc1394_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:dc1394  PROJECT:dc1394-\""    setenv WRAPPER_EXTENSION framework    setenv WRAPPER_NAME dc1394.framework    setenv WRAPPER_SUFFIX .framework    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 10M2423    setenv XCODE_VERSION_ACTUAL 0325    setenv XCODE_VERSION_MAJOR 0300    setenv XCODE_VERSION_MINOR 0320    setenv YACC /Developer/usr/bin/yacc    setenv _REAL_SDKROOT macosx10.5    /bin/sh -c "\"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Script-6EC4AF0A0DD9CECA0085D7B8.sh\""0#
+
+CPhaseScriptExecution Configure "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Script-6EC4AEF50DD9CDD10085D7B8.sh"
+s319827762.565420
+e319827772.034660
+r1
+xPhaseScriptExecution
+xConfigure
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Script-6EC4AEF50DD9CDD10085D7B8.sh
+ochecking for doxygen... no
+oconfigure: WARNING: doxygen not found - will not generate any doxygen documentation (requires doxygen package)
+ochecking for perl... /usr/bin/perl
+ochecking for a BSD-compatible install... /usr/bin/install -c
+ochecking whether build environment is sane... yes
+o/bin/sh: /Users/andreacremaschi/Desktop/realta: No such file or directory
+oconfigure: WARNING: `missing' script is too old or missing
+ochecking for a thread-safe mkdir -p... ./install-sh -c -d
+ochecking for gawk... no
+ochecking for mawk... no
+ochecking for nawk... no
+ochecking for awk... awk
+ochecking whether make sets $(MAKE)... yes
+ochecking for gcc... gcc
+ochecking for C compiler default output file name... a.out
+ochecking whether the C compiler works... yes
+ochecking whether we are cross compiling... no
+ochecking for suffix of executables... 
+ochecking for suffix of object files... o
+ochecking whether we are using the GNU C compiler... yes
+ochecking whether gcc accepts -g... yes
+ochecking for gcc option to accept ISO C89... none needed
+ochecking for style of include used by make... GNU
+ochecking dependency style of gcc... gcc3
+ochecking build system type... i386-apple-darwin10.6.0
+ochecking host system type... i386-apple-darwin10.6.0
+ochecking for a sed that does not truncate output... /usr/bin/sed
+ochecking for grep that handles long lines and -e... /usr/bin/grep
+ochecking for egrep... /usr/bin/grep -E
+ochecking for ld used by gcc... /Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld
+ochecking if the linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) is GNU ld... no
+ochecking for /Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld option to reload object files... -r
+ochecking for BSD-compatible nm... /Developer/usr/bin/nm
+ochecking whether ln -s works... yes
+ochecking how to recognize dependent libraries... pass_all
+ochecking how to run the C preprocessor... gcc -E
+ochecking for ANSI C header files... yes
+ochecking for sys/types.h... yes
+ochecking for sys/stat.h... yes
+ochecking for stdlib.h... yes
+ochecking for string.h... yes
+ochecking for memory.h... yes
+ochecking for strings.h... yes
+ochecking for inttypes.h... yes
+ochecking for stdint.h... yes
+ochecking for unistd.h... yes
+ochecking dlfcn.h usability... yes
+ochecking dlfcn.h presence... yes
+ochecking for dlfcn.h... yes
+ochecking for g++... g++
+ochecking whether we are using the GNU C++ compiler... yes
+ochecking whether g++ accepts -g... yes
+ochecking dependency style of g++... gcc3
+ochecking how to run the C++ preprocessor... g++ -E
+ochecking for g77... no
+ochecking for xlf... no
+ochecking for f77... no
+ochecking for frt... no
+ochecking for pgf77... no
+ochecking for cf77... no
+ochecking for fort77... no
+ochecking for fl32... no
+ochecking for af77... no
+ochecking for xlf90... no
+ochecking for f90... no
+ochecking for pgf90... no
+ochecking for pghpf... no
+ochecking for epcf90... no
+ochecking for gfortran... no
+ochecking for g95... no
+ochecking for xlf95... no
+ochecking for f95... no
+ochecking for fort... no
+ochecking for ifort... no
+ochecking for ifc... no
+ochecking for efc... no
+ochecking for pgf95... no
+ochecking for lf95... no
+ochecking for ftn... no
+ochecking whether we are using the GNU Fortran 77 compiler... no
+ochecking whether  accepts -g... no
+ochecking the maximum length of command line arguments... 196608
+ochecking command to parse /Developer/usr/bin/nm output from gcc object... rm: conftest.dSYM: is a directory
+ook
+ochecking for objdir... .libs
+ochecking for ar... ar
+ochecking for ranlib... ranlib
+ochecking for strip... strip
+ochecking for dsymutil... dsymutil
+ochecking for nmedit... nmedit
+ochecking for -single_module linker flag... yes
+ochecking for -exported_symbols_list linker flag... yes
+orm: conftest.dSYM: is a directory
+ochecking if gcc supports -fno-rtti -fno-exceptions... no
+ochecking for gcc option to produce PIC... -fno-common
+ochecking if gcc PIC flag -fno-common works... yes
+ochecking if gcc static flag -static works... no
+ochecking if gcc supports -c -o file.o... yes
+ochecking whether the gcc linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) supports shared libraries... yes
+ochecking dynamic linker characteristics... darwin10.6.0 dyld
+ochecking how to hardcode library paths into programs... immediate
+ochecking whether stripping libraries is possible... yes
+ochecking if libtool supports shared libraries... yes
+ochecking whether to build shared libraries... yes
+ochecking whether to build static libraries... yes
+oconfigure: creating libtool
+oappending configuration tag "CXX" to libtool
+ochecking for ld used by g++... /Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld
+ochecking if the linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) is GNU ld... no
+ochecking whether the g++ linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) supports shared libraries... yes
+ochecking for g++ option to produce PIC... -fno-common
+ochecking if g++ PIC flag -fno-common works... yes
+ochecking if g++ static flag -static works... no
+ochecking if g++ supports -c -o file.o... yes
+ochecking whether the g++ linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) supports shared libraries... yes
+ochecking dynamic linker characteristics... darwin10.6.0 dyld
+o(cached) (cached) checking how to hardcode library paths into programs... immediate
+oappending configuration tag "F77" to libtool
+ochecking whether gcc and cc understand -c and -o together... yes
+ochecking for C/C++ restrict keyword... __restrict
+ochecking for pow in -lm... yes
+ochecking for IOMasterPort in -lIOKit... yes
+ochecking for Xv extensions... no
+ochecking for ANSI C header files... (cached) yes
+ochecking for stdint.h... (cached) yes
+ochecking fcntl.h usability... yes
+ochecking fcntl.h presence... yes
+ochecking for fcntl.h... yes
+ochecking sys/ioctl.h usability... yes
+ochecking sys/ioctl.h presence... yes
+ochecking for sys/ioctl.h... yes
+ochecking for unistd.h... (cached) yes
+ochecking sys/mman.h usability... yes
+ochecking sys/mman.h presence... yes
+ochecking for sys/mman.h... yes
+ochecking netinet/in.h usability... yes
+ochecking netinet/in.h presence... yes
+ochecking for netinet/in.h... yes
+ochecking for X... no
+ochecking for size_t... yes
+ochecking for stdlib.h... (cached) yes
+ochecking for unistd.h... (cached) yes
+ochecking for getpagesize... yes
+ochecking for working mmap... yes
+oconfigure: creating ./config.status
+oconfig.status: creating Makefile
+oconfig.status: creating libdc1394-2.pc
+oconfig.status: creating dc1394/Makefile
+oconfig.status: creating dc1394/linux/Makefile
+oconfig.status: creating dc1394/juju/Makefile
+oconfig.status: creating dc1394/macosx/Makefile
+oconfig.status: creating dc1394/msw/Makefile
+oconfig.status: creating dc1394/vendor/Makefile
+oconfig.status: creating examples/Makefile
+oconfig.status: creating config.h
+oconfig.status: config.h is unchanged
+oconfig.status: executing depfiles commands
+lSLF07#2@35"Run custom shell script 'Configure'319827762#319827772#0(6767"checking for doxygen... noconfigure: WARNING: doxygen not found - will not generate any doxygen documentation (requires doxygen package)checking for perl... /usr/bin/perlchecking for a BSD-compatible install... /usr/bin/install -cchecking whether build environment is sane... yes/bin/sh: /Users/andreacremaschi/Desktop/realta: No such file or directoryconfigure: WARNING: `missing' script is too old or missingchecking for a thread-safe mkdir -p... ./install-sh -c -dchecking for gawk... nochecking for mawk... nochecking for nawk... nochecking for awk... awkchecking whether make sets $(MAKE)... yeschecking for gcc... gccchecking for C compiler default output file name... a.outchecking whether the C compiler works... yeschecking whether we are cross compiling... nochecking for suffix of executables... checking for suffix of object files... ochecking whether we are using the GNU C compiler... yeschecking whether gcc accepts -g... yeschecking for gcc option to accept ISO C89... none neededchecking for style of include used by make... GNUchecking dependency style of gcc... gcc3checking build system type... i386-apple-darwin10.6.0checking host system type... i386-apple-darwin10.6.0checking for a sed that does not truncate output... /usr/bin/sedchecking for grep that handles long lines and -e... /usr/bin/grepchecking for egrep... /usr/bin/grep -Echecking for ld used by gcc... /Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ldchecking if the linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) is GNU ld... nochecking for /Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld option to reload object files... -rchecking for BSD-compatible nm... /Developer/usr/bin/nmchecking whether ln -s works... yeschecking how to recognize dependent libraries... pass_allchecking how to run the C preprocessor... gcc -Echecking for ANSI C header files... yeschecking for sys/types.h... yeschecking for sys/stat.h... yeschecking for stdlib.h... yeschecking for string.h... yeschecking for memory.h... yeschecking for strings.h... yeschecking for inttypes.h... yeschecking for stdint.h... yeschecking for unistd.h... yeschecking dlfcn.h usability... yeschecking dlfcn.h presence... yeschecking for dlfcn.h... yeschecking for g++... g++checking whether we are using the GNU C++ compiler... yeschecking whether g++ accepts -g... yeschecking dependency style of g++... gcc3checking how to run the C++ preprocessor... g++ -Echecking for g77... nochecking for xlf... nochecking for f77... nochecking for frt... nochecking for pgf77... nochecking for cf77... nochecking for fort77... nochecking for fl32... nochecking for af77... nochecking for xlf90... nochecking for f90... nochecking for pgf90... nochecking for pghpf... nochecking for epcf90... nochecking for gfortran... nochecking for g95... nochecking for xlf95... nochecking for f95... nochecking for fort... nochecking for ifort... nochecking for ifc... nochecking for efc... nochecking for pgf95... nochecking for lf95... nochecking for ftn... nochecking whether we are using the GNU Fortran 77 compiler... nochecking whether  accepts -g... nochecking the maximum length of command line arguments... 196608checking command to parse /Developer/usr/bin/nm output from gcc object... rm: conftest.dSYM: is a directoryokchecking for objdir... .libschecking for ar... archecking for ranlib... ranlibchecking for strip... stripchecking for dsymutil... dsymutilchecking for nmedit... nmeditchecking for -single_module linker flag... yeschecking for -exported_symbols_list linker flag... yesrm: conftest.dSYM: is a directorychecking if gcc supports -fno-rtti -fno-exceptions... nochecking for gcc option to produce PIC... -fno-commonchecking if gcc PIC flag -fno-common works... yeschecking if gcc static flag -static works... nochecking if gcc supports -c -o file.o... yeschecking whether the gcc linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) supports shared libraries... yeschecking dynamic linker characteristics... darwin10.6.0 dyldchecking how to hardcode library paths into programs... immediatechecking whether stripping libraries is possible... yeschecking if libtool supports shared libraries... yeschecking whether to build shared libraries... yeschecking whether to build static libraries... yesconfigure: creating libtoolappending configuration tag "CXX" to libtoolchecking for ld used by g++... /Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ldchecking if the linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) is GNU ld... nochecking whether the g++ linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) supports shared libraries... yeschecking for g++ option to produce PIC... -fno-commonchecking if g++ PIC flag -fno-common works... yeschecking if g++ static flag -static works... nochecking if g++ supports -c -o file.o... yeschecking whether the g++ linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) supports shared libraries... yeschecking dynamic linker characteristics... darwin10.6.0 dyld(cached) (cached) checking how to hardcode library paths into programs... immediateappending configuration tag "F77" to libtoolchecking whether gcc and cc understand -c and -o together... yeschecking for C/C++ restrict keyword... __restrictchecking for pow in -lm... yeschecking for IOMasterPort in -lIOKit... yeschecking for Xv extensions... nochecking for ANSI C header files... (cached) yeschecking for stdint.h... (cached) yeschecking fcntl.h usability... yeschecking fcntl.h presence... yeschecking for fcntl.h... yeschecking sys/ioctl.h usability... yeschecking sys/ioctl.h presence... yeschecking for sys/ioctl.h... yeschecking for unistd.h... (cached) yeschecking sys/mman.h usability... yeschecking sys/mman.h presence... yeschecking for sys/mman.h... yeschecking netinet/in.h usability... yeschecking netinet/in.h presence... yeschecking for netinet/in.h... yeschecking for X... nochecking for size_t... yeschecking for stdlib.h... (cached) yeschecking for unistd.h... (cached) yeschecking for getpagesize... yeschecking for working mmap... yesconfigure: creating ./config.statusconfig.status: creating Makefileconfig.status: creating libdc1394-2.pcconfig.status: creating dc1394/Makefileconfig.status: creating dc1394/linux/Makefileconfig.status: creating dc1394/juju/Makefileconfig.status: creating dc1394/macosx/Makefileconfig.status: creating dc1394/msw/Makefileconfig.status: creating dc1394/vendor/Makefileconfig.status: creating examples/Makefileconfig.status: creating config.hconfig.status: config.h is unchangedconfig.status: executing depfiles commands157(13@27"checking for doxygen... no319827762#0#27#0(1@0"0(13@111"configure: WARNING: doxygen not found - will not generate any doxygen documentation (requires doxygen package)319827762#27#111#0(1@0"0(13@35"checking for perl... /usr/bin/perl319827762#138#35#0(1@0"0(13@61"checking for a BSD-compatible install... /usr/bin/install -c319827762#173#61#0(1@0"0(13@50"checking whether build environment is sane... yes319827763#234#50#0(1@0"0(4@73"/bin/sh: /Users/andreacremaschi/Desktop/realta: No such file or directory319827763#284#74#0(1@0"0(13@59"configure: WARNING: `missing' script is too old or missing319827763#358#59#0(1@0"0(13@58"checking for a thread-safe mkdir -p... ./install-sh -c -d319827763#417#58#0(1@0"0(13@24"checking for gawk... no319827763#475#24#0(1@0"0(13@24"checking for mawk... no319827764#499#24#0(1@0"0(13@24"checking for nawk... no319827764#523#24#0(1@0"0(13@24"checking for awk... awk319827764#547#24#0(1@0"0(13@42"checking whether make sets $(MAKE)... yes319827764#571#42#0(1@0"0(13@24"checking for gcc... gcc319827764#613#24#0(1@0"0(13@58"checking for C compiler default output file name... a.out319827764#637#58#0(1@0"0(13@45"checking whether the C compiler works... yes319827764#695#45#0(1@0"0(13@46"checking whether we are cross compiling... no319827764#740#46#0(1@0"0(13@39"checking for suffix of executables... 319827764#786#39#0(1@0"0(13@41"checking for suffix of object files... o319827764#825#41#0(1@0"0(13@56"checking whether we are using the GNU C compiler... yes319827764#866#56#0(1@0"0(13@39"checking whether gcc accepts -g... yes319827764#922#39#0(1@0"0(13@57"checking for gcc option to accept ISO C89... none needed319827764#961#57#0(1@0"0(13@50"checking for style of include used by make... GNU319827764#1018#50#0(1@0"0(13@41"checking dependency style of gcc... gcc3319827765#1068#41#0(1@0"0(13@54"checking build system type... i386-apple-darwin10.6.0319827765#1109#54#0(1@0"0(13@53"checking host system type... i386-apple-darwin10.6.0319827765#1163#53#0(1@0"0(13@65"checking for a sed that does not truncate output... /usr/bin/sed319827765#1216#65#0(1@0"0(13@66"checking for grep that handles long lines and -e... /usr/bin/grep319827765#1281#66#0(1@0"0(13@39"checking for egrep... /usr/bin/grep -E319827765#1347#39#0(1@0"0(13@87"checking for ld used by gcc... /Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld319827765#1386#87#0(1@0"0(13@97"checking if the linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) is GNU ld... no319827765#1473#97#0(1@0"0(13@105"checking for /Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld option to reload object files... -r319827765#1570#105#0(1@0"0(13@56"checking for BSD-compatible nm... /Developer/usr/bin/nm319827765#1675#56#0(1@0"0(13@36"checking whether ln -s works... yes319827765#1731#36#0(1@0"0(13@58"checking how to recognize dependent libraries... pass_all319827765#1767#58#0(1@0"0(13@49"checking how to run the C preprocessor... gcc -E319827765#1825#49#0(1@0"0(13@40"checking for ANSI C header files... yes319827766#1874#40#0(1@0"0(13@32"checking for sys/types.h... yes319827766#1914#32#0(1@0"0(13@31"checking for sys/stat.h... yes319827766#1946#31#0(1@0"0(13@29"checking for stdlib.h... yes319827766#1977#29#0(1@0"0(13@29"checking for string.h... yes319827766#2006#29#0(1@0"0(13@29"checking for memory.h... yes319827766#2035#29#0(1@0"0(13@30"checking for strings.h... yes319827766#2064#30#0(1@0"0(13@31"checking for inttypes.h... yes319827766#2094#31#0(1@0"0(13@29"checking for stdint.h... yes319827766#2125#29#0(1@0"0(13@29"checking for unistd.h... yes319827766#2154#29#0(1@0"0(13@34"checking dlfcn.h usability... yes319827767#2183#34#0(1@0"0(13@33"checking dlfcn.h presence... yes319827767#2217#33#0(1@0"0(13@28"checking for dlfcn.h... yes319827767#2250#28#0(1@0"0(13@24"checking for g++... g++319827767#2278#24#0(1@0"0(13@58"checking whether we are using the GNU C++ compiler... yes319827767#2302#58#0(1@0"0(13@39"checking whether g++ accepts -g... yes319827767#2360#39#0(1@0"0(13@41"checking dependency style of g++... gcc3319827767#2399#41#0(1@0"0(13@51"checking how to run the C++ preprocessor... g++ -E319827767#2440#51#0(1@0"0(13@23"checking for g77... no319827767#2491#23#0(1@0"0(13@23"checking for xlf... no319827767#2514#23#0(1@0"0(13@23"checking for f77... no319827767#2537#23#0(1@0"0(13@23"checking for frt... no319827767#2560#23#0(1@0"0(13@25"checking for pgf77... no319827767#2583#25#0(1@0"0(13@24"checking for cf77... no319827767#2608#24#0(1@0"0(13@26"checking for fort77... no319827767#2632#26#0(1@0"0(13@24"checking for fl32... no319827767#2658#24#0(1@0"0(13@24"checking for af77... no319827767#2682#24#0(1@0"0(13@25"checking for xlf90... no319827767#2706#25#0(1@0"0(13@23"checking for f90... no319827767#2731#23#0(1@0"0(13@25"checking for pgf90... no319827767#2754#25#0(1@0"0(13@25"checking for pghpf... no319827767#2779#25#0(1@0"0(13@26"checking for epcf90... no319827767#2804#26#0(1@0"0(13@28"checking for gfortran... no319827767#2830#28#0(1@0"0(13@23"checking for g95... no319827767#2858#23#0(1@0"0(13@25"checking for xlf95... no319827767#2881#25#0(1@0"0(13@23"checking for f95... no319827767#2906#23#0(1@0"0(13@24"checking for fort... no319827767#2929#24#0(1@0"0(13@25"checking for ifort... no319827767#2953#25#0(1@0"0(13@23"checking for ifc... no319827767#2978#23#0(1@0"0(13@23"checking for efc... no319827767#3001#23#0(1@0"0(13@25"checking for pgf95... no319827767#3024#25#0(1@0"0(13@24"checking for lf95... no319827767#3049#24#0(1@0"0(13@23"checking for ftn... no319827767#3073#23#0(1@0"0(13@64"checking whether we are using the GNU Fortran 77 compiler... no319827767#3096#64#0(1@0"0(13@35"checking whether  accepts -g... no319827767#3160#35#0(1@0"0(13@64"checking the maximum length of command line arguments... 196608319827767#3195#64#0(1@0"0(13@108"checking command to parse /Developer/usr/bin/nm output from gcc object... rm: conftest.dSYM: is a directory319827767#3259#108#0(1@0"0(13@3"ok319827768#3367#3#0(1@0"0(13@29"checking for objdir... .libs319827768#3370#29#0(1@0"0(13@22"checking for ar... ar319827768#3399#22#0(1@0"0(13@30"checking for ranlib... ranlib319827768#3421#30#0(1@0"0(13@28"checking for strip... strip319827768#3451#28#0(1@0"0(13@34"checking for dsymutil... dsymutil319827768#3479#34#0(1@0"0(13@30"checking for nmedit... nmedit319827768#3513#30#0(1@0"0(13@47"checking for -single_module linker flag... yes319827768#3543#47#0(1@0"0(13@55"checking for -exported_symbols_list linker flag... yes319827768#3590#55#0(1@0"0(13@34"rm: conftest.dSYM: is a directory319827768#3645#34#0(1@0"0(13@57"checking if gcc supports -fno-rtti -fno-exceptions... no319827768#3679#57#0(1@0"0(13@54"checking for gcc option to produce PIC... -fno-common319827768#3736#54#0(1@0"0(13@50"checking if gcc PIC flag -fno-common works... yes319827768#3790#50#0(1@0"0(13@48"checking if gcc static flag -static works... no319827768#3840#48#0(1@0"0(13@45"checking if gcc supports -c -o file.o... yes319827768#3888#45#0(1@0"0(13@123"checking whether the gcc linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) supports shared libraries... yes319827768#3933#123#0(1@0"0(13@61"checking dynamic linker characteristics... darwin10.6.0 dyld319827768#4056#61#0(1@0"0(13@66"checking how to hardcode library paths into programs... immediate319827768#4117#66#0(1@0"0(13@56"checking whether stripping libraries is possible... yes319827768#4183#56#0(1@0"0(13@53"checking if libtool supports shared libraries... yes319827768#4239#53#0(1@0"0(13@50"checking whether to build shared libraries... yes319827768#4292#50#0(1@0"0(13@50"checking whether to build static libraries... yes319827768#4342#50#0(1@0"0(13@28"configure: creating libtool319827768#4392#28#0(1@0"0(13@45"appending configuration tag "CXX" to libtool319827768#4420#45#0(1@0"0(13@87"checking for ld used by g++... /Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld319827768#4465#87#0(1@0"0(13@97"checking if the linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) is GNU ld... no319827768#4552#97#0(1@0"0(13@123"checking whether the g++ linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) supports shared libraries... yes319827768#4649#123#0(1@0"0(13@54"checking for g++ option to produce PIC... -fno-common319827769#4772#54#0(1@0"0(13@50"checking if g++ PIC flag -fno-common works... yes319827769#4826#50#0(1@0"0(13@48"checking if g++ static flag -static works... no319827769#4876#48#0(1@0"0(13@45"checking if g++ supports -c -o file.o... yes319827769#4924#45#0(1@0"0(13@123"checking whether the g++ linker (/Developer/usr/libexec/gcc/i686-apple-darwin10/4.2.1/ld) supports shared libraries... yes319827769#4969#123#0(1@0"0(13@61"checking dynamic linker characteristics... darwin10.6.0 dyld319827769#5092#61#0(1@0"0(13@84"(cached) (cached) checking how to hardcode library paths into programs... immediate319827769#5153#84#0(1@0"0(13@45"appending configuration tag "F77" to libtool319827769#5237#45#0(1@0"0(13@65"checking whether gcc and cc understand -c and -o together... yes319827769#5282#65#0(1@0"0(13@50"checking for C/C++ restrict keyword... __restrict319827769#5347#50#0(1@0"0(13@31"checking for pow in -lm... yes319827769#5397#31#0(1@0"0(13@44"checking for IOMasterPort in -lIOKit... yes319827769#5428#44#0(1@0"0(13@33"checking for Xv extensions... no319827770#5472#33#0(1@0"0(13@49"checking for ANSI C header files... (cached) yes319827770#5505#49#0(1@0"0(13@38"checking for stdint.h... (cached) yes319827770#5554#38#0(1@0"0(13@34"checking fcntl.h usability... yes319827770#5592#34#0(1@0"0(13@33"checking fcntl.h presence... yes319827770#5626#33#0(1@0"0(13@28"checking for fcntl.h... yes319827770#5659#28#0(1@0"0(13@38"checking sys/ioctl.h usability... yes319827770#5687#38#0(1@0"0(13@37"checking sys/ioctl.h presence... yes319827770#5725#37#0(1@0"0(13@32"checking for sys/ioctl.h... yes319827770#5762#32#0(1@0"0(13@38"checking for unistd.h... (cached) yes319827770#5794#38#0(1@0"0(13@37"checking sys/mman.h usability... yes319827770#5832#37#0(1@0"0(13@36"checking sys/mman.h presence... yes319827770#5869#36#0(1@0"0(13@31"checking for sys/mman.h... yes319827770#5905#31#0(1@0"0(13@39"checking netinet/in.h usability... yes319827770#5936#39#0(1@0"0(13@38"checking netinet/in.h presence... yes319827770#5975#38#0(1@0"0(13@33"checking for netinet/in.h... yes319827770#6013#33#0(1@0"0(13@21"checking for X... no319827770#6046#21#0(1@0"0(13@27"checking for size_t... yes319827770#6067#27#0(1@0"0(13@38"checking for stdlib.h... (cached) yes319827770#6094#38#0(1@0"0(13@38"checking for unistd.h... (cached) yes319827770#6132#38#0(1@0"0(13@32"checking for getpagesize... yes319827771#6170#32#0(1@0"0(13@33"checking for working mmap... yes319827771#6202#33#0(1@0"0(13@36"configure: creating ./config.status319827771#6235#36#0(1@0"0(13@33"config.status: creating Makefile319827771#6271#33#0(1@0"0(13@39"config.status: creating libdc1394-2.pc319827771#6304#39#0(1@0"0(13@40"config.status: creating dc1394/Makefile319827771#6343#40#0(1@0"0(13@46"config.status: creating dc1394/linux/Makefile319827771#6383#46#0(1@0"0(13@45"config.status: creating dc1394/juju/Makefile319827771#6429#45#0(1@0"0(13@47"config.status: creating dc1394/macosx/Makefile319827771#6474#47#0(1@0"0(13@44"config.status: creating dc1394/msw/Makefile319827771#6521#44#0(1@0"0(13@47"config.status: creating dc1394/vendor/Makefile319827771#6565#47#0(1@0"0(13@42"config.status: creating examples/Makefile319827771#6612#42#0(1@0"0(13@33"config.status: creating config.h319827771#6654#33#0(1@0"0(13@37"config.status: config.h is unchanged319827771#6687#37#0(1@0"0(13@43"config.status: executing depfiles commands319827771#6724#43#0(1@0"0(0#0#0"3688838851736136704#19710"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER andreacremaschi    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386 ppc"    setenv ARCHS_STANDARD_32_BIT "i386 ppc"    setenv ARCHS_STANDARD_64_BIT x86_64    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build"    setenv BUILD_ROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build"    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug"    setenv CACHE_ROOT /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502    setenv CCHROOT /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/JavaClasses"    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A"    setenv CODE_SIGNING_ALLOWED YES    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/CompositeSDKs    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug"    setenv CONFIGURATION_TEMP_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug"    setenv CONTENTS_FOLDER_PATH dc1394.framework/Versions/A    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv CURRENT_VERSION Current    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources"    setenv DERIVED_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources"    setenv DERIVED_SOURCES_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources"    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH dc1394.framework/Versions/A/Resources/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/dc1394.dst    setenv DWARF_DSYM_FILE_NAME dc1394.framework.dSYM    setenv DWARF_DSYM_FOLDER_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug"    setenv DYLIB_COMPATIBILITY_VERSION 1    setenv DYLIB_CURRENT_VERSION 1    setenv DYLIB_INSTALL_NAME_BASE "@executable_path/../Frameworks"    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn .git CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH dc1394.framework/Versions/A/Resources/English.lproj    setenv EXECUTABLE_FOLDER_PATH dc1394.framework/Versions/A    setenv EXECUTABLE_NAME dc1394    setenv EXECUTABLE_PATH dc1394.framework/Versions/A/dc1394    setenv FILE_LIST "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects/LinkFileList"    setenv FIXED_FILES_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/FixedFiles"    setenv FRAMEWORKS_FOLDER_PATH dc1394.framework/Versions/A/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME dc1394.framework    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_MODEL_TUNING G5    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER dc1394_Prefix.pch    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION 4.2    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE NO    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include\" libdc1394-current/**"    setenv ICONV /usr/bin/iconv    setenv INFOPLISTSTRINGS_PATH dc1394.framework/Versions/A/Resources/English.lproj/InfoPlist.strings    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE Info.plist    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PATH dc1394.framework/Versions/A/Resources/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INSTALL_DIR "/tmp/dc1394.dst@executable_path/../Frameworks"    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER andreacremaschi    setenv INSTALL_PATH "@executable_path/../Frameworks"    setenv INSTALL_ROOT /tmp/dc1394.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH dc1394.framework/Versions/A/Resources/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_DYLIB_INSTALL_NAME "@executable_path/../Frameworks/dc1394.framework/Versions/A/dc1394"    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-LinkMap-normal-i386.txt"    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal/i386/dc1394.LinkFileList"    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH dc1394.framework/Versions/A/Resources/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_dylib    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv MAC_OS_X_VERSION_ACTUAL 1066    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0606    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects"    setenv OBJECT_FILE_DIR_normal "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Objects-normal"    setenv OBJROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build"    setenv ONLY_ACTIVE_ARCH YES    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv PACKAGE_TYPE com.apple.package-type.wrapper.framework    setenv PASCAL_STRINGS YES    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH dc1394.framework/Versions/A/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS c    setenv PKGINFO_FILE_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/PkgInfo"    setenv PKGINFO_PATH dc1394.framework/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/usr    setenv PLATFORM_NAME macosx    setenv PLATFORM_PRODUCT_BUILD_VERSION 10M2423    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PLUGINS_FOLDER_PATH dc1394.framework/Versions/A/Resources    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/PrefixHeaders"    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH dc1394.framework/Versions/A/PrivateHeaders    setenv PRODUCT_NAME dc1394    setenv PRODUCT_SETTINGS_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/Info.plist"    setenv PRODUCT_TYPE com.apple.product-type.framework    setenv PROFILING_CODE NO    setenv PROJECT dc1394    setenv PROJECT_DERIVED_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/DerivedSources"    setenv PROJECT_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv PROJECT_FILE_PATH "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/dc1394.xcodeproj"    setenv PROJECT_NAME dc1394    setenv PROJECT_TEMP_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build"    setenv PUBLIC_HEADERS_FOLDER_PATH dc1394.framework/Versions/A/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/ResourceManagerResources"    setenv REZ_OBJECTS_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/ResourceManagerResources/Objects"    setenv REZ_SEARCH_PATHS "\"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH dc1394.framework/Versions/A/Resources/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/SDKs/MacOSX10.5.sdk    setenv SDK_DIR /Developer/SDKs/MacOSX10.5.sdk    setenv SDK_NAME macosx10.5    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/DerivedSources"    setenv SHARED_FRAMEWORKS_FOLDER_PATH dc1394.framework/Versions/A/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH dc1394.framework/Versions/A/Resources    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv SRCROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE debugging    setenv SYMBOL_REPOSITORY_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/SymbolRepositories"    setenv SYMROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build"    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME dc1394    setenv TARGET_BUILD_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug"    setenv TARGET_NAME dc1394    setenv TARGET_TEMP_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build"    setenv TEMP_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build"    setenv TEMP_FILES_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build"    setenv TEMP_FILE_DIR "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build"    setenv TEMP_ROOT "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build"    setenv UID 502    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH dc1394.framework/Versions/A/Resources    setenv UNSTRIPPED_PRODUCT NO    setenv USER andreacremaschi    setenv USER_APPS_DIR /Users/andreacremaschi/Applications    setenv USER_LIBRARY_DIR /Users/andreacremaschi/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 ppc ppc64 ppc7400 ppc970 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH dc1394.framework/Versions/A/Resources/version.plist    setenv VERSIONS_FOLDER_PATH dc1394.framework/Versions    setenv VERSION_INFO_BUILDER andreacremaschi    setenv VERSION_INFO_FILE dc1394_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:dc1394  PROJECT:dc1394-\""    setenv WRAPPER_EXTENSION framework    setenv WRAPPER_NAME dc1394.framework    setenv WRAPPER_SUFFIX .framework    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 10M2423    setenv XCODE_VERSION_ACTUAL 0325    setenv XCODE_VERSION_MAJOR 0300    setenv XCODE_VERSION_MINOR 0320    setenv YACC /Developer/usr/bin/yacc    setenv _REAL_SDKROOT macosx10.5    /bin/sh -c "\"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/Script-6EC4AEF50DD9CDD10085D7B8.sh\""0#
+
+CProcessInfoPlistFile "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Resources/Info.plist" Info.plist
+s319827762.559847
+e319827762.565315
+r1
+xProcessInfoPlistFile
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Resources/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist319827762#319827762#0(0"0(0#0#119"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/Info.plist8639539648#371"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    builtin-infoPlistUtility Info.plist -expandbuildsettings -platform macosx -o "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/A/Resources/Info.plist"0#
+
+CProcessPCH /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch.gch dc1394_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
+s319827772.407732
+e319827772.597700
+r1
+xProcessPCH
+x/var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch.gch
+xdc1394_Prefix.pch
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@28"Precompile dc1394_Prefix.pch319827772#319827772#0(0"0(0#0#126"/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/dc1394_Prefix.pch8640801280#2543"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-generated-files.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-own-target-headers.hmap" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-all-target-headers.hmap" -iquote "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/dc1394-project-headers.hmap" "-F/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/include" -Ilibdc1394-current -Ilibdc1394-current/dc1394 -Ilibdc1394-current/examples -Ilibdc1394-current/dc1394/.deps -Ilibdc1394-current/dc1394/juju -Ilibdc1394-current/dc1394/linux -Ilibdc1394-current/dc1394/macosx -Ilibdc1394-current/dc1394/msw -Ilibdc1394-current/dc1394/vendor -Ilibdc1394-current/examples/.deps -Ilibdc1394-current/dc1394/juju/.deps -Ilibdc1394-current/dc1394/linux/.deps -Ilibdc1394-current/dc1394/macosx/.deps -Ilibdc1394-current/dc1394/msw/.deps -Ilibdc1394-current/dc1394/vendor/.deps "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources/i386" "-I/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/dc1394.build/Debug/dc1394.build/DerivedSources" -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/dc1394_Prefix.pch" -o /var/folders/Xf/Xfw9y2uTE6G+IdncCiz+9k+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/dc1394_Prefix-aruewnulryhmhkasmpcevefpzney/dc1394_Prefix.pch.gch0#
+
+CSymLink "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Headers" Versions/Current/Headers
+s319827762.556806
+e319827762.559714
+r1
+xSymLink
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Headers
+xVersions/Current/Headers
+lSLF07#2@153"Process /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Headers319827762#319827762#0(0"0(0#0#0"8631719584#307"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /bin/ln -sf Versions/Current/Headers "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Headers"0#
+
+CSymLink "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Resources" Versions/Current/Resources
+s319827762.331887
+e319827762.558008
+r1
+xSymLink
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Resources
+xVersions/Current/Resources
+lSLF07#2@155"Process /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Resources319827762#319827762#0(0"0(0#0#0"8630041504#311"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /bin/ln -sf Versions/Current/Resources "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Resources"0#
+
+CSymLink "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/Current" A
+s319827762.328587
+e319827762.556425
+r1
+xSymLink
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/Current
+xA
+lSLF07#2@162"Process /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/Current319827762#319827762#0(0"0(0#0#0"8630953248#293"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /bin/ln -sf A "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/Versions/Current"0#
+
+CSymLink "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/dc1394" Versions/Current/dc1394
+s319827762.332648
+e319827762.556657
+r1
+xSymLink
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/dc1394
+xVersions/Current/dc1394
+lSLF07#2@152"Process /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/dc1394319827762#319827762#0(0"0(0#0#0"8618307168#305"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /bin/ln -sf Versions/Current/dc1394 "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework/dc1394"0#
+
+CTouch "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework"
+s319827774.770932
+e319827774.774642
+r1
+xTouch
+x/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework
+lSLF07#2@143"Touch /Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework319827774#319827774#0(0"0(0#0#0"8630757920#280"    cd "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project"    /usr/bin/touch -c "/Users/andreacremaschi/Desktop/realta aumentata/eyeconmacosx/eyeconmacosx/Frameworks/libdc1394/xcode-project/build/Debug/dc1394.framework"0#
+

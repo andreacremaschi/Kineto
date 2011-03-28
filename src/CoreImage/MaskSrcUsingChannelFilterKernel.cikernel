@@ -1,0 +1,7 @@
+kernel vec4 maskImageWithRedChannel(sampler image1, sampler mask)
+{
+	float d;
+	d =  sample(mask, samplerCoord(mask)).r;
+	
+	return sample(image1, samplerCoord(image1)) * d;
+}
