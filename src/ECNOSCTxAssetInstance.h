@@ -11,10 +11,13 @@
 extern NSString *OSCTxAssetInstanceAddressPatternKey;
 extern NSString *OSCTxAssetInstanceBundleKey;
 extern NSString *OSCTxAssetInstanceObservedPortsArrayKey;
+extern NSString *OSCTxAssetInstancePacketComposerScriptKey;
 
 @class ECNOSCTargetAsset;
 @interface ECNOSCTxAssetInstance : ECNAssetInstance {
+	NSDictionary *lastPacketSent;
 }
+@property (readonly) NSDictionary *lastPacketSent;
 
 - (void) addPortToObserve: (ECNPort *)outputport;
 

@@ -36,6 +36,7 @@
 - (NSArray *)cues;
 - (NSArray *)assets;
 - (NSArray *)videoAssets;
+- (NSArray *)oscTargetAssets;
 
 - (NSArray *)objectsOfKind: (Class) objectKind ;
 - (ECNAsset *)defaultAssetOfKind: (Class) objectKind ;

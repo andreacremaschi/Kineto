@@ -74,6 +74,7 @@ extern NSString *ECNOutputPortsKey ;
 - (void) addOutputPortWithType:(NSString*)type forKey:(NSString*)key withAttributes:(NSDictionary*)attributes;
 - (NSArray *)outputKeys;
 - (NSArray *)outputPorts;
+- (NSArray *)numericOutputPorts;
 
 - (ECNPort *)outputPortWithKey:(NSString *)key;
 

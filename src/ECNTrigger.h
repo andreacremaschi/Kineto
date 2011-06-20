@@ -37,19 +37,21 @@ extern NSString *ECNTriggerDeactivationActionsListKey;
 		bool shouldCommitActivationActions;
 		bool shouldCommitDeactivationActions;
 		id lastValue;
+		NSTimeInterval activationTime;
 	//	NSDate *triggerTime;
     } _flags;
 	NSTimer *latencyTimer;
 }
 
 @property (retain) NSTimer * latencyTimer;
+@property (getter= isActive) bool active;
 
 + (ECNTrigger *)triggerWithDocument: (ECNProjectDocument *)document;
 
 - (void) addActivationAction: (ECNAction*) newAction;
 - (void) addDeactivationAction: (ECNAction*) newAction;
 
-- (bool) isActive;
+- (bool) active;
 
 #pragma mark Accessors
 - (void) setElementToObserve: (ECNElement *)element atPort: (NSString *)portKey;
@@ -71,7 +73,10 @@ extern NSString *ECNTriggerDeactivationActionsListKey;
 - (bool) shouldCommitActions;	
 - (NSArray *)actionsToCommit;
 
+#pragma mark Graphic representation
+- (void) drawInCGContext: (CGContextRef)context withRect: (CGRect) rect;
 
-@property NSUInteger activationState;
+
+//@property NSUInteger activationState;
 
 @end

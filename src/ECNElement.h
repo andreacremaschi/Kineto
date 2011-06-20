@@ -129,6 +129,7 @@ extern NSString *ECNElementDidChangeNotification;
 
 - (NSRect)drawingBounds;
 - (NSBezierPath *)bezierPathInRect: (NSRect )rect;
+- (CGMutablePathRef)quartzPathInRect: (CGRect) rect;
 - (void)drawInView:(NSView *)view isSelected:(BOOL)flag;
 - (unsigned)knobMask;
 - (int)knobUnderPoint:(NSPoint)point inView:(NSView *)view;
@@ -136,7 +137,8 @@ extern NSString *ECNElementDidChangeNotification;
 - (void)drawHandlesInView:(NSView *)view;
 
 //funzione di disegno per il playback!
-- (void) drawInOpenGLContext: (NSOpenGLContext *)openGLContext;
+//- (void) drawInOpenGLContext: (NSOpenGLContext *)openGLContext;
+- (void) drawInCGContext: (CGContextRef)context withRect: (CGRect) rect;
 
 //icon to display in scenewindow tableview
 - (NSImage *)icon;
@@ -161,13 +163,13 @@ extern NSString *ECNElementDidChangeNotification;
 
 // === Playback handling ===
 @interface ECNElement (ECNPlaybackHandling)
-- (bool) prepareForPlayback;
+- (bool) prepareForPlaybackWithError: (NSError **)error;
 - (void) commitActionsForActiveTriggers;
-- (void) setActivationState: (NSUInteger) activationState;
-- (NSUInteger) activationState;
+/*- (void) setActivationState: (NSUInteger) activationState;
+- (NSUInteger) activationState;*/
 - (BOOL) executeAtTime:(NSTimeInterval)time;
 - (id) valueForOutputPort:(NSString *)portKey;
-
+- (id) defaultValue;
 @end
 
 @interface ECNElement (ECNTriggers)
@@ -176,9 +178,5 @@ extern NSString *ECNElementDidChangeNotification;
 							// NB this is temporary, but it has to be a list of trigger, not just one!
 - (NSArray *)triggers;
 + (NSString *)defaultTriggerPortKey;
-
-
-
-
 
 @end

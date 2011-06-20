@@ -13,6 +13,7 @@
 
 NSString *OSCTxAssetInstanceAddressPatternKey = @"osc_addresspattern";
 NSString *OSCTxAssetInstanceBundleKey = @"osc_bundle";
+NSString *OSCTxAssetInstancePacketComposerScriptKey = @"packet_composer_script";
 
 NSString *OSCTxAssetInstanceObservedPortsArrayKey = @"observed_ports";
 
@@ -43,6 +44,7 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 // +  +  +  +  +  +  +  +  +  +  +  +
 
 @implementation ECNOSCTxAssetInstance
+@synthesize lastPacketSent;
 
 - (NSMutableDictionary *) attributesDictionary	{
 	
@@ -56,6 +58,7 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 									AddressPatternDefaultValue, OSCTxAssetInstanceAddressPatternKey,
 									[NSNumber numberWithBool: [BundleDefaultValue boolValue]], OSCTxAssetInstanceBundleKey,
 									[NSMutableArray arrayWithCapacity: 0], OSCTxAssetInstanceObservedPortsArrayKey,
+									@"", OSCTxAssetInstancePacketComposerScriptKey,
 									nil];
 	
 	
@@ -70,12 +73,14 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 {
 	self = [super initWithAsset: asset];
 	if (self) {
-		
+		lastPacketSent= nil;	
 	}
 	return self;	
 }
 
 - (void)dealloc {	
+	if (nil!= lastPacketSent) 
+		[lastPacketSent release];
     [super dealloc];
 }
 
@@ -128,20 +133,18 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 
 #pragma mark - ECNElement overrides
 
+- (id) defaultValue	{
+	return lastPacketSent;
+	
+}
 
 - (NSImage *)icon {
 	return [NSImage imageNamed: @"osc"];
 }
-- (bool) prepareForPlayback	{
-	ECNOSCTargetAsset* asset = [self oscAsset];
+- (bool) prepareForPlaybackWithError: (NSError **)error	{
+	ECNOSCTargetAsset* asset = [self oscAsset];	
+	return [asset loadAssetWithError: *error];
 
-	OSCOutPort	*OSCtarget = [asset loadAsset];
-
-	if (OSCtarget)	{
-//		_OSCOutPort = [OSCtarget retain];
-		return true;	
-	} else 
-		return false;
 }
 
 
@@ -149,13 +152,18 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 - (BOOL) executeAtTime:(NSTimeInterval)time {
 	
 	ECNOSCTargetAsset* asset = [self oscAsset];
+	NSMutableArray *valuesArray = [NSMutableArray arrayWithCapacity: 0];
+	 [valuesArray addObject: [self valueForPropertyKey: OSCTxAssetInstancePacketComposerScriptKey]];
+	
+	
+	
 	NSArray *portkeysArray = [self valueForPropertyKey: OSCTxAssetInstanceObservedPortsArrayKey];
 	NSString *addressPattern = [self valueForPropertyKey: OSCTxAssetInstanceAddressPatternKey];
 	
 	
 	if ((!asset) || (!portkeysArray) || (!addressPattern) ) return false;
 	
-	int nPorts = [portkeysArray count];
+	/*int nPorts = [portkeysArray count];
 	if (nPorts <=0) return true; // no values to send, exit
 	
 	// create an array to store values to send
@@ -169,33 +177,54 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 		portValue = portValue == nil ? [NSNull null] : portValue;
 		//NSLog (@"%@", portValue);
 		[valuesArray addObject: portValue];
-	}
-	
-	bool result = [asset sendValues: valuesArray toAddress: addressPattern];
-	if (result)
+	}*/
+
+	NSError *error;
+	bool result = [asset sendValues: valuesArray 
+						  toAddress: addressPattern
+							  error: &error];
+	if (result)	{
+
+		
+		NSDictionary *oldPacket = lastPacketSent;
+		lastPacketSent = [[NSDictionary dictionaryWithObjectsAndKeys:
+						  valuesArray,@"values",
+						  [NSNumber numberWithInt: time], @"timestamp",
+						  nil] retain];
+		
+		if (oldPacket != nil) 
+			[oldPacket release];
+		
 		return [super executeAtTime: time];
-	else 
+	}
+	else {
+		NSLog (@"Error sending OSC packet: %@", [error description]);
 		return false;
+	}
 	
 }
 
+- (void) drawInCGContext: (CGContextRef)context withRect: (CGRect) rect {
+	
+	
+}
 
 #pragma mark OSC methods
 
-- (void) sendObservedValues	{
+/*- (void) sendObservedValues	{
 	
 	
 	//NSLog(@"%s",__func__);
 	
 	
-/*	OSCMessage		*msg = nil;
+	OSCMessage		*msg = nil;
 	OSCBundle		*bundle = nil;
-	OSCPacket		*packet = nil;*/
+	OSCPacket		*packet = nil;
 	
 
 	
 	//	make a message to the specified address
-/*	msg = [OSCMessage createWithAddress: host];
+	msg = [OSCMessage createWithAddress: host];
 	
 	[msg addFloat: value];
 	
@@ -218,7 +247,7 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 	
 	[_OSCOutPort sendThisPacket: packet];
 	
-	_lastValueSent = value;*/
-}
+	_lastValueSent = value;
+}*/
 
 @end

@@ -164,8 +164,19 @@ NSString *AssetInstanceGenericIconDefaultValue = @"osc_receiver";
 }
 
 
-
+#pragma mark ECNElement overrides
 #pragma mark Drawing methods
+
+- (BOOL)hitTest:(NSPoint)point 
+	 isSelected:(BOOL)isSelected 
+		 inView:(NSView *)ecnView {
+	return false;
+}
+
+// an asset instance acts in elementsview as an invisible element
+- (bool) isVisible {
+	return false;
+}
 
 - (unsigned)knobMask {
 	return (NoKnob);
@@ -174,7 +185,7 @@ NSString *AssetInstanceGenericIconDefaultValue = @"osc_receiver";
 - (void)drawInView:(NSView *)view 
 		isSelected:(BOOL)flag {
 	
-    NSRect bounds = [self calcDrawingBoundsInView: view];
+   /* NSRect bounds = [self calcDrawingBoundsInView: view];
     NSImage *image;
     
     image = [self iconInView: view];
@@ -185,7 +196,9 @@ NSString *AssetInstanceGenericIconDefaultValue = @"osc_receiver";
 				  fraction: 1.0f];
 		//        [image compositeToPoint:NSMakePoint(NSMinX(bounds), NSMaxY(bounds)) operation:NSCompositeSourceOver];
     }
-    [super drawInView:view isSelected:flag];
+//    [super drawInView:view isSelected:flag];*/
+	
+	
 }
 
 

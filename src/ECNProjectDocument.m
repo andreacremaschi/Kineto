@@ -14,7 +14,7 @@
 #import "ECNOSCTarget.h"
 #import "ElementsView.h"
 
-#import "ECNQCAsset.h"
+#import "ECNAssets.h"
 //#import "ECNActions.h"
 #import "ECNVideoInputAsset.h"
 
@@ -124,6 +124,11 @@ NSString *ECNDocumentType = @"Kineto Format";
 - (NSArray *)videoAssets	{
 	return [self objectsOfKind: [ECNVideoInputAsset class]];	
 }
+
+- (NSArray *)oscTargetAssets {
+	return [self objectsOfKind: [ECNOSCTargetAsset class]];		
+}
+
 
 - (ECNAsset *)defaultAssetOfKind: (Class) objectKind {
 	NSAssert ([objectKind isSubclassOfClass: [ECNAsset class]], @"Assertion error in ECNProjectDocument:defaultAssetOfKind");
@@ -364,15 +369,20 @@ static int ECNCurrentDocumentVersion = 1;
 - (void)addObject:(ECNObject *)object	{
 	if ([object isKindOfClass: [KCue class]])
 		[self willChangeValueForKey: @"scenes"];
+	else if ([object isKindOfClass: [ECNOSCTargetAsset class]])
+		[self willChangeValueForKey: @"oscTargetAssets"];
 	else if ([object isKindOfClass: [ECNVideoInputAsset class]])
 		[self willChangeValueForKey: @"videoAssets"];
 	else if ([object isKindOfClass: [ECNAsset class]])
 		[self willChangeValueForKey: @"assets"];
 
-	[_objects insertObject: object atIndex: 0];
+	//[_objects insertObject: object atIndex: 0];
+	[_objects addObject: object];
 
 	if ([object isKindOfClass: [KCue class]])
 		[self didChangeValueForKey: @"scenes"];
+	else if ([object isKindOfClass: [ECNOSCTargetAsset class]])
+		[self didChangeValueForKey: @"oscTargetAssets"];
 	else if ([object isKindOfClass: [ECNVideoInputAsset class]])
 		[self didChangeValueForKey: @"videoAssets"];
 	else if ([object isKindOfClass: [ECNAsset class]])

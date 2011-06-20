@@ -7,6 +7,7 @@
 //
 
 #import "ECNAsset.h"
+#import "KIncludes.h"
 
 
 @interface ECNAsset (PrivateMethods)
@@ -85,6 +86,17 @@ NSString *AssetNameDefaultValue = @"New asset";
 
 #pragma mark *** Asset methods
 
+- (void) addDelegate: (id) delegate	{
+	TFThrowMethodNotImplementedException();
+	
+	return;
+}
+- (void) removeDelegate: (id) delegate {
+	TFThrowMethodNotImplementedException();
+	
+	return ;
+}
+
 - (NSString *)position	{
 	return 	[self valueForPropertyKey: AssetFilePathKey];
 }
@@ -97,6 +109,13 @@ NSString *AssetNameDefaultValue = @"New asset";
 
 - (id) loadAsset	{
 	return nil;
+}
+
+- (bool) loadAssetWithError: (NSError*)error {
+	TFThrowMethodNotImplementedException();
+	
+	return false;
+	
 }
 
 @end

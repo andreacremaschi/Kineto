@@ -634,6 +634,24 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 	return [_attributes valueForKey: ECNOutputPortsKey] ;
 }
 
+- (NSArray *)outputPortsOfType: (NSString *)portType	{
+	id outports = [_attributes valueForKey: ECNOutputPortsKey];
+	if ([outports isKindOfClass: [NSArray class]]) {
+		NSMutableArray *numericoutports = [NSMutableArray array];
+		for (id outPort in outports)
+			if ([outPort isKindOfClass: [ECNPort class]] && [[outPort type] isEqualToString: portType]) {
+				[numericoutports addObject: outPort];
+			}
+		return numericoutports;
+
+	}
+	return [NSArray array];
+}
+				 
+
+- (NSArray *)numericOutputPorts {
+	return [self outputPortsOfType: ECNPortTypeNumber];
+}
 
 
 - (void) addInputPortWithType:(NSString*)type forKey:(NSString*)key withAttributes:(NSDictionary*)attributes	{
@@ -678,28 +696,50 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 - (void)setValue:(id)value forKey:(NSString *)key	{
 	bool success;
 
-	[self willChangeValueForKey: key];
-	// search the key in the property array
-	success = [self setValue: value forPropertyKey:key];
-	if (success)	
-	{	//if ([value isKindOfClass: 
-		@try {	// in case of null values!
+	@synchronized (self) {
+		
+		[self willChangeValueForKey: key];
+		// search the key in the property array
+		success = [self setValue: value forPropertyKey:key];
+
+		if (!success) {
+			success = [self setValue: value forInputKey:key];
+			if (!success)
+				[super setValue: value forKey: key];
+		
+		}
+		if (success)
 			NSLog(@"ECNObject: value set for property key: %@: %@", key, value);
-		} @catch(NSException *exception) {}
-		return;
-	}
-	
-	// search the key in the input array
-	success = [self setValue: value forInputKey:key];
-	if (success)	{
-		NSLog(@"ECNObject: value set for input key: %@: %@", key, value);
-		return;
-	}
-	[self didChangeValueForKey: key];
-	
-	// if not in the property array, maybe the key is in the instance properties.
-	if (!success)	
+		else {
+			NSLog(@"ECNObject: object doesn't have the property key: %@", key, value);
+
+		}
+
+		[self didChangeValueForKey: key];
+
+		/*
+			if (!success)
+		{	//if ([value isKindOfClass: 
+			@try {	// in case of null values!
+				NSLog(@"ECNObject: value set for property key: %@: %@", key, value);
+			} @catch(NSException *exception) {}
+			[self didChangeValueForKey: key];
+			return;
+		}
+		
+		// search the key in the input array
+		if (success)	{
+			NSLog(@"ECNObject: value set for input key: %@: %@", key, value);
+			[self didChangeValueForKey: key];
+			return;
+		}
+		
+		
+		// if not in the property array, maybe the key is in the instance properties.
+		if (!success)	
 			[super setValue: value forKey: key];
+	}*/
+	}
 }
 
 - (id)valueForKey:(NSString *)key	{

@@ -126,6 +126,46 @@ NSString *LineNameDefaultValue = @"New line";
 }
 
 
+- (CGMutablePathRef)quartzPathInRect: (CGRect) rect {
+	
+	NSRect drawingBounds = [self calcPixelBoundsInRect: NSRectToCGRect( rect )]; 
+//	CGRect cgDrawingBounds = NSRectToCGRect(drawingBounds);
+	
+	// CG contexts are upside down in respect of NS graphics contexts!
+	drawingBounds.origin.y = rect.size.height - drawingBounds.origin.y - drawingBounds.size.height;
+	
+	
+    CGMutablePathRef path = CGPathCreateMutable();
+	
+	if ([self startsAtLowerLeft]) {
+		CGPathMoveToPoint(path, 
+						  nil,
+						  NSMinX(drawingBounds),
+						  NSMinY(drawingBounds));
+		CGPathAddLineToPoint (path,
+							  nil,
+							  NSMaxX(drawingBounds),
+							  NSMaxY(drawingBounds));
+		
+    } else {
+		CGPathMoveToPoint(path, 
+						  nil,
+						  NSMinX(drawingBounds),
+						  NSMaxY(drawingBounds));
+		CGPathAddLineToPoint (path,
+							  nil,
+							  NSMaxX(drawingBounds),
+							  NSMinY(drawingBounds));
+		
+		/*        [path moveToPoint:NSMakePoint(NSMinX(drawingBounds), NSMinY(drawingBounds))];
+        [path lineToPoint:NSMakePoint(NSMaxX(drawingBounds), NSMaxY(drawingBounds))];*/
+    }
+	
+	CGPathCloseSubpath ( path);
+	return path;
+}
+
+
 - (void) drawInOpenGLContext: (NSOpenGLContext *)openGLContext {
 	
 	NSRect drawingBounds = [self bounds];

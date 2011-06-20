@@ -14,12 +14,16 @@ extern NSString *AssetFilePathKey;
 
 }
 
+- (void) addDelegate: (id) delegate;
+- (void) removeDelegate: (id) delegate;
+
 - (NSString *)position;
 
 - (id) initAssetWithProjectDocument: (ECNProjectDocument *)document
 					   withFilePath: (NSString *)filePath;
 	
 - (id) loadAsset;
+- (bool) loadAssetWithError: (NSError*)error;
 + (Class) instanceClass;
 
 @end

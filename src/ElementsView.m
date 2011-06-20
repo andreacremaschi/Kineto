@@ -22,6 +22,7 @@ NSString *ElementsViewDoubleClicOnElementNotification = @"ElementsViewNewElement
 @synthesize bgOpacity;
 @synthesize currentElementClass;
 @synthesize currentColor;
+@synthesize backgroundImage;
 
 static float ECNDefaultPasteCascadeDelta = 10.0;
 
@@ -49,7 +50,7 @@ static float ECNDefaultPasteCascadeDelta = 10.0;
         _gridColor = [[NSColor lightGrayColor] retain];
         _unhideKnobsTimer = nil;
 		_background = nil;
-		_bUseBackground = true;
+		useBackground = true;
     }
     return self;
 }
@@ -86,15 +87,18 @@ static float ECNDefaultPasteCascadeDelta = 10.0;
 	return [self scene];
 }*/
 
-- (void)useBackground:(bool)bUseBG {
-	_bUseBackground = bUseBG;	
+- (void)setUseBackground:(bool)bUseBG {
+	useBackground = bUseBG;	
+	[self setNeedsDisplay: YES];
 }
 
-- (void) setBackground: (NSImage *) newBackground {
-	
-	//retain background image
-	_background = newBackground;
-	[_background retain];
+
+
+- (void) setBackgroundImage:(NSImageRep *) bgImage {
+	NSImageRep *oldImage = backgroundImage;
+	backgroundImage = [bgImage retain];
+	[oldImage release];
+	[self setNeedsDisplay: YES];
 }
 
 - (void) setBgOpacity: (NSNumber *)newOpacity {
@@ -267,22 +271,19 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 
 #pragma mark *** Geometry calculations
 - (ECNElement *)elementUnderPoint:(NSPoint)point {
-    // ECNProjectDocument *document = [self ecnProjectDocument];
+
     NSArray *elements = [[self scene] elements];
     ECNElement *curElement = nil;
 	
 	for (curElement in elements)
-//    for (i=0; i<c; i++) {
-  //      curElement = [elements objectAtIndex:i];
+
         if (	[self mouse:point inRect:[curElement calcDrawingBoundsInView: self]]
 				&& [curElement hitTest:point isSelected:[self elementIsSelected:curElement] inView: self] 
 				&& [curElement isVisible]) 
             break;
-    //}
-//    if (i < c) {
-        return curElement;
-/*    } else 
-        return nil;*/
+
+	return curElement;
+
 }
 
 - (NSSet *)elementsIntersectingRect:(NSRect)rect {
@@ -293,7 +294,8 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 	
     for (i=0; i<c; i++) {
         curElement = [elements objectAtIndex:i];
-        if (NSIntersectsRect(rect, [curElement calcDrawingBoundsInView: self]) && [curElement isVisible]) {
+        if (NSIntersectsRect(rect, [curElement calcDrawingBoundsInView: self]) && 
+			[curElement isVisible]) {
             [result addObject:curElement];
         }
     }
@@ -392,10 +394,10 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 	
 	[[NSColor whiteColor] set];
     NSRectFill(rect);
-	if ((_background) && (_bUseBackground))
-	{	NSSize imgRectSize = [_background size];
+	if ((nil != backgroundImage) && (useBackground))
+	{	NSSize imgRectSize = [backgroundImage size];
 		
-		NSRect srcRect;
+	/*	NSRect srcRect;
 		float xFact = imgRectSize.width / viewBounds.size.width;
 		float yFact = imgRectSize.height / viewBounds.size.height;
 		
@@ -404,10 +406,12 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 		srcRect.size.width = rect.size.width * xFact;
 		srcRect.size.height = rect.size.height * yFact;
 		
-		[_background	drawInRect:rect 
-					   fromRect:srcRect 
-						operation: NSCompositeSourceOver  
-					   fraction: [bgOpacity floatValue]];
+	*/
+		[backgroundImage drawInRect: viewBounds
+						   fromRect: NSMakeRect(0,0, imgRectSize.width, imgRectSize.height)
+						  operation: NSCompositeSourceOver  
+						   fraction: [bgOpacity floatValue]
+					 respectFlipped: YES hints: nil];
 	}
 	
   // if ([self showsGrid]) {

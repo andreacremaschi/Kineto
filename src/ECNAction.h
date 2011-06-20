@@ -8,7 +8,7 @@
 
 #import "ECNObject.h"
 
-@class ECNElement;
+@class ECNElement, KPlaybackPipeline;
 @interface ECNAction : ECNObject {
 
 }
@@ -25,7 +25,7 @@
 - (ECNObject *)target;
 - (void) setTarget: (ECNObject *)target;
 
-- (void) performAction;
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline;
 + (NSImage *)icon;
 + (NSString *)icon_name;
 

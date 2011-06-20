@@ -57,7 +57,7 @@ extern NSString *ElementsViewDoubleClicOnElementNotification;
     NSRect _horizontalRulerLineRect;
 	
 	NSImage * _background;
-	bool _bUseBackground;
+	bool useBackground;
 	NSNumber *bgOpacity;
 	
 	Class currentElementClass;
@@ -68,21 +68,19 @@ extern NSString *ElementsViewDoubleClicOnElementNotification;
 @property (retain)NSNumber *bgOpacity;
 @property (retain)NSColor*currentColor;
 @property (retain)Class currentElementClass; 
+@property (retain)NSImageRep *backgroundImage;
+@property bool useBackground;
 
 // ECNSceneWindowController accessors and convenience methods
 //- (void)setSceneWindowController:(ECNSceneWindowController *)theController;
 //- (ECNSceneWindowController *)sceneWindowController;
 //- (ECNProjectDocument *)ecnProjectDocument;
 //- (void)setScene:(ECNScene *)scene;
-- (void)useBackground:(bool)bUseBG;
-
 // recupera elenco scene ed elementi dalle classi superiori
 /*- (NSArray *)scenes;
 - (NSArray *)elements;
 */
 
-
-- (void) setBackground: (NSImage *) newBackgroudn;
 
 // Display invalidation
 - (void)invalidateElement:(ECNElement *)element;

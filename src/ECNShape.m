@@ -154,11 +154,12 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 							pixelsHigh: 1 
 							bitsPerSample:8
 							samplesPerPixel:4
-							hasAlpha:YES 
+							hasAlpha:YES
 							isPlanar:NO 
 							colorSpaceName:NSCalibratedRGBColorSpace
 							bytesPerRow: 0
 							bitsPerPixel:32] retain];
+	
 		_onePixelContext = [[NSGraphicsContext
 							 graphicsContextWithBitmapImageRep:_onePixelBitmap] retain];
 		
@@ -168,7 +169,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 		_MaskSrcUsingChannelFilter = [[[MaskSrcUsingChannelFilter alloc] init] retain];
 
 		_flags.shouldUpdateShapeMask = true;
-		_flags.mask_extension = 1.0;		
+//		_flags.mask_extension = 1.0;		
 		
 	/*}
 	return self;	*/
@@ -240,6 +241,26 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	return [super executeAtTime: time];
 }
 
+- (void) drawInCGContext: (CGContextRef)context withRect: (CGRect) rect {
+	CGMutablePathRef objectPath = [self quartzPathInRect: rect];
+	
+	NSColor *objectColor = [self strokeColor];
+	
+	CGContextSetRGBStrokeColor (
+								context,
+								[objectColor redComponent],
+								[objectColor greenComponent],
+								[objectColor blueComponent], 1.0
+								);
+	
+	CGContextSetLineWidth (context, rect.size.width / 160.0);
+	
+	CGContextBeginPath(context);
+	CGContextAddPath(context, objectPath);
+	CGContextStrokePath( context);	
+	
+}
+/*
 
 - (void) drawInOpenGLContext: (NSOpenGLContext *)openGLContext
 {
@@ -325,8 +346,13 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	
     // Check for errors.
     glGetError();
-}
+}*/
 
+// returns a default value for the current element
+- (id) defaultValue	{
+	
+	return [[self firstTrigger] lastValue] ;
+}
 
 #pragma mark -
 #pragma mark Core Image primitives
@@ -382,7 +408,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 								 samplesPerPixel:4
 								 hasAlpha: YES 
 								 isPlanar: NO 
-								 colorSpaceName: nil//NSCalibratedRGBColorSpace
+								 colorSpaceName: NSCalibratedRGBColorSpace
 								 bytesPerRow: 0
 								 bitsPerPixel:32] autorelease] ;
 
@@ -431,33 +457,21 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	NSUInteger curPixel[4];
 	
 	[_areaAverageFilter setDefaults];
+	
 	CIImage *result = [self calculateAreaAverageWithFilter: _areaAverageFilter 
 												  withMask: cimask];
 	
 	[[_onePixelContext CIContext] drawImage: result
 									atPoint: CGPointZero
-								   fromRect: [result extent]];
+								   fromRect: CGRectMake (0,0,1,1) ];
 	
 	[_onePixelBitmap getPixel:curPixel atX:0 y:0];
 	
-/*	[self setValue:	
-	  [NSDictionary dictionaryWithObjectsAndKeys:
-	   [NSNumber numberWithFloat: (curPixel[0] / 255.0) / _flags.mask_extension],	@"diff_mask",
-	   [NSNumber numberWithFloat: (curPixel[1] / 255.0) / _flags.mask_extension],	@"motion_mask",
-	   nil]
-	    forOutputKey: ShapeOutputExtension ];
-*/
+
 	[self setValue:	
-	  [NSNumber numberWithFloat: (curPixel[[self maskToObserve]] / 255.0) / _flags.mask_extension]
+	  [NSNumber numberWithFloat: (curPixel[0] / 255.0) ] // / _flags.mask_extension]
 	  forOutputKey: ShapeOutputExtension ];
-	
-	
-/*	return [NSDictionary dictionaryWithObjectsAndKeys:
-			[NSNumber numberWithFloat: (curPixel[0] /255.0) / mask_extension ], @"diff_mask",
-			[NSNumber numberWithFloat: (curPixel[1] / 255.0) / mask_extension ], @"motion_mask", 
-			nil];*/
-			
-//	return [NSNumber numberWithFloat: (float)curPixel[0] / 255.0];
+	//NSLog( @"%i, %i, %i, %i", curPixel[0],curPixel[1], curPixel[2], curPixel[3]);
 	
 }
 
@@ -471,6 +485,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	
 	CIFilter *columnAverageFilter   = [CIFilter filterWithName: @"CIColumnAverage"] ;
 	CIImage *result = [self calculateAreaAverageWithFilter: columnAverageFilter withMask: cimask];
+	
 	NSBitmapImageRep * resultBitmap = [[self drawCIImageInBitmap: result] retain];
 	
 	int i, c;
@@ -478,7 +493,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	int leftMost[nMasks];
 	int rightMost[nMasks];
 	int middleHorizontal[nMasks];
-	int maskToObserve =[self maskToObserve];
+	//int maskToObserve =[self maskToObserve];
 	
 	for (c=0;c<nMasks;c++)	{
 		 leftMost[c] = 0;
@@ -504,15 +519,15 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	[resultBitmap release];
 
 	[self setValue:	
-	 [NSNumber numberWithFloat: (float)rightMost[maskToObserve] / maskSize.width]
+	 [NSNumber numberWithFloat: (float)rightMost[0] / maskSize.width]
 	  forOutputKey: ShapeOutputRightmost ];
 	
 	[self setValue:	
-	 [NSNumber numberWithFloat: (float)leftMost[maskToObserve] / maskSize.width]
+	 [NSNumber numberWithFloat: (float)leftMost[0] / maskSize.width]
 	  forOutputKey: ShapeOutputLeftmost ];
 	
 	[self setValue:	
-	 [NSNumber numberWithFloat: (float)middleHorizontal[maskToObserve] / maskSize.width]
+	 [NSNumber numberWithFloat: (float)middleHorizontal[0] / maskSize.width]
 	  forOutputKey: ShapeOutputMiddleHorizontal ];
 	
 	/*
@@ -557,7 +572,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	int highest[nMasks];
 	int lowest[nMasks];
 	int middleVertical[nMasks];
-	int maskToObserve =[self maskToObserve];
+	//int maskToObserve =[self maskToObserve];
 	
 	for (c=0;c<nMasks;c++)	{
 		highest[c] = 0;
@@ -567,18 +582,19 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	}
 	//NSLog(@"%.2f, %.2f", maskSize.width, maskSize.height);
 	//NSLog(@"%i", maskSize.width );
-
+	c=0;
 	for (i=0;i<maskSize.height;i++)	{
 		[resultBitmap getPixel:curPixel atX:i y:0];
-		for (c=0;c<nMasks;c++)	{
+		
+		//for (c=0;c<nMasks;c++)	{
 			if (curPixel[c] > 0)	{
 				lowest[c] = (lowest[c] == 0) ? i : lowest[c];
 				highest[c] = i; 
 			}
-		}
+		//}
 	}
 
-	for (c=0;c<nMasks;c++)
+	//for (c=0;c<nMasks;c++)
 		middleVertical[c] = highest[c] > 0 ? (highest[c] + lowest[c]) / 2 : 0;
 	
 	//NSLog(@"Leftmost: %.2f, Rightmost: %.2f, Middle horz: %.2f", (float)leftMost / maskSize.width, (float)rightMost / maskSize.width, (float)middleHorizontal / maskSize.width);
@@ -586,15 +602,15 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	
 
 	[self setValue:	
-	  [NSNumber numberWithFloat: (float)highest[maskToObserve] / maskSize.height]
+	  [NSNumber numberWithFloat: (float)highest[0] / maskSize.height]
 	  forOutputKey: ShapeOutputHighest ];
 	
 	[self setValue:	
-	  [NSNumber numberWithFloat: (float)lowest[maskToObserve] / maskSize.height]
+	  [NSNumber numberWithFloat: (float)lowest[0] / maskSize.height]
 	  forOutputKey: ShapeOutputLowest ];
 	
 	[self setValue:	
-	  [NSNumber numberWithFloat: (float)middleVertical[maskToObserve] / maskSize.height]
+	  [NSNumber numberWithFloat: (float)middleVertical[0] / maskSize.height]
 	  forOutputKey: ShapeOutputMiddleVertical ];
 
 	
@@ -800,6 +816,11 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	NSGraphicsContext * nscg = [NSGraphicsContext graphicsContextWithGraphicsPort:cg flipped:NO];
 	[NSGraphicsContext setCurrentContext:nscg];
 	
+	// set background color to TRANSPARENCY (this is important for area average calculation!)
+	[[NSColor clearColor] set];
+	NSRectFillUsingOperation(  rect, NSCompositeCopy);    
+							 
+	
 	// Here is where you want to do all of your drawing...
 	[[NSColor whiteColor] set];
 	NSBezierPath *bezierPath = [self bezierPathInRect: rect]; 
@@ -835,15 +856,16 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	
 	[[_onePixelContext CIContext] drawImage: shapeExtensionImage
 									atPoint: CGPointZero
-								   fromRect: [shapeExtensionImage extent]];
+								   fromRect: CGRectMake (0,0,1,1)];
 	
 	[_onePixelBitmap getPixel: curPixel atX:0 y:0];
 
-	_flags.mask_extension = (float)curPixel[0]/255.0;
+//	_flags.mask_extension = (float)curPixel[0]/255.0;
 	_flags.shouldUpdateShapeMask = false;	
-	NSLog(@"Shape for element: %@ has just been refreshed. Current shape extension: %.2f", 
-		  [self valueForPropertyKey: ECNObjectNameKey],
-		  _flags.mask_extension);
+	NSLog(@"Shape for element: %@ has just been refreshed.",[self valueForPropertyKey: ECNObjectNameKey]);
+  
+		/*  ,[self valueForPropertyKey: ECNObjectNameKey],
+		  _flags.mask_extension);*/
 	
 	
 	// Housekeeping

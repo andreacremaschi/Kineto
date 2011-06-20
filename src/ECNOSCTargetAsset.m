@@ -9,26 +9,9 @@
 
 #import "ECNOSCTargetAsset.h"
 #import "ECNOSCTxAssetInstance.h"
-#import <VVOSC/VVOSC.h>
+#import "KOSCManager.h"
 
 
-@interface OSCMessage (ECNConvenience)
-- (void) addObjectValue: (id) value;
-@end
-
-@implementation OSCMessage (ECNConvenience)
-- (void) addObjectValue: (id) objectValue	{
-	if (objectValue == nil) return;
-	if ([objectValue isKindOfClass: [NSNumber class]])	{
-		[self addFloat: [objectValue floatValue]];
-		
-	} else 
-		if ([objectValue isKindOfClass: [NSString class]])	{
-			[self addString: objectValue];
-		}
-	return;
-}
-@end
 
 @implementation ECNOSCTargetAsset
 
@@ -69,7 +52,6 @@ NSString *DefaultPort = @"5000";
 }
 
 - (void) dealloc {
-	if (_OSCOutputPort) [_OSCOutputPort release];
 	[super dealloc];
 }
 
@@ -82,11 +64,11 @@ NSString *DefaultPort = @"5000";
 																				 withFilePath: @""] autorelease];
 	
 	if (newOSCAsset != nil)	{
-		
+		[self willChangeValueForKey: @"position"];
 		[newOSCAsset setValue: OSCAssetNameDefaultValue forPropertyKey: ECNObjectNameKey];		
 		[newOSCAsset setValue: targetIP forPropertyKey: OSCAssetHostKey];		
 		[newOSCAsset setValue: oscport forPropertyKey: OSCAssetPortKey];		
-		
+		[self didChangeValueForKey: @"position"];		
 	}
 	return newOSCAsset;
 	
@@ -105,56 +87,27 @@ NSString *DefaultPort = @"5000";
 			 [self valueForPropertyKey: OSCAssetPortKey] ];
 }
 
+- (bool) loadAssetWithError: (NSError*)error {
+	
+	return [self openWithError: error];
+}
+
 #pragma mark OSC methods
 
 - (bool) sendValues: (NSArray *) values	
-		  toAddress: (NSString *)addressPattern	{
+		  toAddress: (NSString *)addressPattern
+			  error: (NSError **)error {
 	
-	
-	OSCMessage		*msg = nil;
-	OSCPacket		*packet = nil;
-	
+
 	NSString *host = [self valueForPropertyKey: OSCAssetHostKey];
 	int osc_portNumber = [[self valueForPropertyKey:OSCAssetPortKey] intValue];
 	
-	bool isBundle = [values count] > 0 ? true : false;
-	
-	
-	//	make a message to the specified address
-	msg = [OSCMessage createWithAddress: addressPattern];
-	
-	//	if i'm sending as a bundle...
-	if (isBundle)	{
-		
-		//	make a bundle
-		OSCBundle *bundle = [OSCBundle create];
-		
-		//	add the message to the bundle
-		for (id value in values)	{
-			[msg addObjectValue: value];
-			[bundle addElement: msg];
-		}
-		
-		//	make the packet from the bundle
-		packet = [OSCPacket createWithContent:bundle];
-	}
-	//	else if i'm just sending the msg
-	else	{
-		//	make the packet from the msg
-		[msg addObjectValue: [values objectAtIndex: 0]];
-		packet = [OSCPacket createWithContent:msg];
-	}	
-	
-	if (_OSCOutputPort == nil)	{
-		// why _OSCOutputPort is nil? it should already be opened in openOutportOnManager: method!
-		// raise an exception
-		NSLog (@"Playback error: couldn't send a message to %@:%i because port hasn't been opened!", host, osc_portNumber);
-		return false;
-	}
-	
-	[_OSCOutputPort sendThisPacket: packet];
-	
-	return true;
+	return [[KOSCManager sharedKOSCManager] sendValues: values
+												toHost: host
+											  withPort: osc_portNumber
+										   withAddress: addressPattern
+												 error: error];
+
 }
 
 - (NSArray *)oscOutputPorts {
@@ -176,62 +129,24 @@ NSString *DefaultPort = @"5000";
 	return array;
 }
 
-- (bool) openOutportOnManager: (OSCManager *)oscManager	{
-	
+- (bool) openWithError: (NSError **)error	{
 	NSString *host = [self valueForPropertyKey: OSCAssetHostKey];
-	int osc_portNumber = [[self valueForPropertyKey:OSCAssetPortKey] intValue];
-
-	if ((!host) || (osc_portNumber <=0) || (!oscManager)) return false;
+	int nPort = [[self valueForPropertyKey: OSCAssetPortKey] intValue];
 	
-	NSArray *outputPorts = [self oscOutputPorts];
-	NSArray *inputPorts = [self oscInputPorts];	
-
-	NSLog (@"Output ports for host: %@ are: %@", host, outputPorts);
-	NSLog (@"Input ports for host: %@ are: %@", host, inputPorts);
-	
-	if ([outputPorts count] > 0)	{
-
-		// check if port is not already open on osc manager
-		_OSCOutputPort = [oscManager findOutputWithAddress: host 
-												   andPort: osc_portNumber];
-		
-		if (_OSCOutputPort != nil) return true; // port is already open!
-		
-		// open the osc port
-		_OSCOutputPort = [[oscManager createNewOutputToAddress: host atPort: osc_portNumber] retain];
-
-		if (_OSCOutputPort == nil)	{
-			//something went wrong
-			//TODO raise an exception
-			NSLog(@"OSC Error: couldn't open OSC port %i on host %@", osc_portNumber,  host);		
-			
-		}
-	}
-	return true;	
+	return (![[KOSCManager sharedKOSCManager] openConnectionWithHost: host
+										 withPort: nPort
+											error: error]);
 	
 }
 
-
-- (bool) closeOutportOnManager: (OSCManager *)oscManager	{
+- (bool) closeWithError: (NSError **)error {
+	
 	NSString *host = [self valueForPropertyKey: OSCAssetHostKey];
 	int osc_portNumber = [[self valueForPropertyKey:OSCAssetPortKey] intValue];
 	
-	if ((!host) || (osc_portNumber <=0) || (!oscManager)) return false;
-		
-	if (_OSCOutputPort == nil) return true;
-	
-	// check if port is effectively open 
-	OSCOutPort *OSCOutputPort = [oscManager findOutputWithAddress: host 
-											   andPort: osc_portNumber];
-	if (OSCOutputPort == nil) {
-		NSLog (@"Error: it was asked to close and OSC port that was not opened");
-		return true; // port is not opened, why should it be closed? raise an exception
-	}
-	
-	[oscManager removeOutput: OSCOutputPort];
-	[_OSCOutputPort release];
-	_OSCOutputPort=nil;
-	return true;
+	return (![[KOSCManager sharedKOSCManager] closeConnectionWithHost: host
+									 withPort: osc_portNumber
+											error: error]);
 }
 
 @end

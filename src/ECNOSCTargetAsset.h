@@ -7,23 +7,24 @@
 //
 
 #import "ECNAsset.h"
-#import <VVOSC/VVOSC.h>
 
 // +  + Object specific properties  +
 extern NSString *OSCAssetHostKey;
 extern NSString *OSCAssetPortKey;
 
 @interface ECNOSCTargetAsset : ECNAsset {
-	OSCManager *_oscManager;
-	OSCOutPort *_OSCOutputPort;
-}
+	
+} 
 
 + (ECNOSCTargetAsset *)assetWithDocument: (ECNProjectDocument *)document 
 				  withOSCTargetIP: (NSString *)targetIP
 				withOSCTargetPort: (NSNumber *)oscport;
 
-- (bool) sendValues: (NSArray *) values toAddress: (NSString *)addressPattern;
-- (bool) openOutportOnManager: (OSCManager *)oscManager;
-- (bool) closeOutportOnManager: (OSCManager *)oscManager;
+- (bool) closeWithError: (NSError **)error;
+- (bool) openWithError: (NSError **)error;
+
+- (bool) sendValues: (NSArray *) values 
+		  toAddress: (NSString *)addressPattern
+			  error: (NSError **)error;
 
 @end

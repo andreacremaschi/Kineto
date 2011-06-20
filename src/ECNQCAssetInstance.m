@@ -125,7 +125,7 @@ NSString *AssetInstanceQCIconDefaultValue = @"assets_qcpatch";
 
 #pragma mark - ECNElement overrides
 
-- (bool) prepareForPlayback	{
+- (bool) prepareForPlaybackWithError: (NSError **)error	{
 	ECNQCAsset* asset = [self qcAsset];
 	
 	QCRenderer *renderer = [asset loadAsset];

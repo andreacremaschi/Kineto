@@ -9,7 +9,7 @@
 #import "ECNElement.h"
 
 // +  + Object specific properties  +
-
+extern NSString *ShapeMaskToObserveKey;
 
 // +  +  +  +  +  +  +  +  +  +  +  +
 
@@ -39,7 +39,7 @@ extern NSString *ShapeOutputMiddleVertical;
 
 	struct __shapeFlags {
 		bool shouldUpdateShapeMask;
-		float mask_extension;
+//		float mask_extension;
     } _flags;
 	
 	

@@ -118,4 +118,35 @@ NSString *ECNShapeTriggerClassValue = @"ECNShapeTrigger";
 }
 
 
+#pragma mark -
+#pragma mark ### ECNTrigger overrides ###
+
+
+#pragma mark Drawing methods
+- (void) drawInCGContext: (CGContextRef)context
+				withRect: (CGRect) rect	
+{
+	if (_flags.isActive) {
+	
+		ECNElement *elementToObserve = [self valueForPropertyKey: ECNTriggerElementToObserveKey];
+		CGMutablePathRef elementPath = [elementToObserve quartzPathInRect: rect];
+		
+		
+		//	NSColor *objectColor = [self strokeColor];
+		
+		
+		CGContextSetRGBStrokeColor (context,
+									0.0, 0.0, 1.0, 1.0
+									);
+		CGContextSetLineWidth (context, rect.size.width / 160.0 * 2.5);
+		
+		CGContextBeginPath(context);
+		CGContextAddPath(context, elementPath);
+		CGContextStrokePath( context);	
+	}
+	
+	
+	
+}
+
 @end

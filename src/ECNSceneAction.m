@@ -8,6 +8,7 @@
 
 #import "ECNSceneAction.h"
 #import "KCue.h"
+#import "KPlaybackPipeline.h"
 
 #import "ECNProjectDocument.h"
 
@@ -68,11 +69,13 @@ NSString *SceneResetActionIcon = @"reset";
 	return newAction;	
 }
 
-- (void) performAction	{
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline	{
 	if ((id)[self target] == [NSNull null]) return;
 	NSAssert ([[self target] isKindOfClass: [KCue class]], @"Action received a wrong object type!");
 	KCue *target = (KCue *)[self target];	
-	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: true];
+//	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: true];
+	
+	[pipeline activateCue: target];
 }
 
 @end
@@ -111,12 +114,12 @@ NSString *SceneResetActionIcon = @"reset";
 	return newAction;	
 }
 
-- (void) performAction	{
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline	{
 	if ((id)[self target] == [NSNull null]) return;
 	NSAssert ([[self target] isKindOfClass: [KCue class]], @"Action received a wrong object type!");
 	KCue *target = (KCue *)[self target];	
-
-	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: false];
+	[pipeline deactivateCue: target];
+//	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: false];
 }
 
 @end
@@ -156,12 +159,12 @@ NSString *SceneResetActionIcon = @"reset";
 }
 
 
-- (void) performAction	{
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline	{
 	if ((id)[self target] == [NSNull null]) return;
 	NSAssert ([[self target] isKindOfClass: [KCue class]], @"Action received a wrong object type!");
 	KCue *target = (KCue *)[self target];	
-
-	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: ![[target document] isSceneActive: target]];
+	[pipeline toggleCue: target];
+//	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: ![[target document] isSceneActive: target]];
 }
 
 @end
@@ -200,12 +203,14 @@ NSString *SceneResetActionIcon = @"reset";
 }
 
 
-- (void) performAction	{
-	/*if ((id)[self target] == [NSNull null]) return;
-	NSAssert ([[self target] isKindOfClass: [ECNScene class]], @"Action received a wrong object type!");
-	ECNScene *target = (ECNScene *)[self target];	
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline	{
+	if ((id)[self target] == [NSNull null]) return;
+	NSAssert ([[self target] isKindOfClass: [KCue class]], @"Action received a wrong object type!");
+	KCue *target = (KCue *)[self target];	
 	
-	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: ![[target document] isSceneActive: target]];*/
+	[pipeline resetCue: target];
+
+//	[(ECNProjectDocument *)[target document] setSceneActivationState: target active: ![[target document] isSceneActive: target]];*/
 	// TODO: IMPLEMENTARE!
 }
 

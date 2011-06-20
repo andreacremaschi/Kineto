@@ -9,6 +9,8 @@
 #import "ECNElementAction.h"
 #import "ECNElement.h"
 #import "KCue.h"
+#import "KPlaybackPipeline.h"
+
 
 // +  + Elements specific properties  +
 // +  +  +  +  +  +  +  +  +  +  +  +
@@ -66,12 +68,14 @@ NSString *ElementTriggerOffActionNameValue = @"Trigger element off";
 	return newAction;	
 }
 
-- (void) performAction	{
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline	{
 	id target = [self target];
 	if (!target) return;
 	if (![target isKindOfClass: [ECNElement class]]) return;
-	KCue *scene = [(ECNElement *)target scene];
-	[scene setElementActivationState: target active: true ];
+
+	[pipeline activateElement: target];
+/*	KCue *scene = [(ECNElement *)target scene];
+	[scene setElementActivationState: target active: true ];*/
 }
 
 @end
@@ -109,12 +113,14 @@ NSString *ElementTriggerOffActionNameValue = @"Trigger element off";
 	return newAction;	
 }
 
-- (void) performAction	{
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline	{
 	id target = [self target];
 	if (!target) return;
 	if (![target isKindOfClass: [ECNElement class]]) return;
-	KCue *scene = [(ECNElement *)target scene];
-	[scene setElementActivationState: target active: false];
+
+	[pipeline deactivateElement: target];
+	/*KCue *scene = [(ECNElement *)target scene];
+	[scene setElementActivationState: target active: false];*/
 
 }
 
@@ -156,12 +162,15 @@ NSString *ElementTriggerOffActionNameValue = @"Trigger element off";
 }
 
 
-- (void) performAction	{
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline	{
 	id target = [self target];
 	if (!target) return;
 	if (![target isKindOfClass: [ECNElement class]]) return;
-	KCue *scene = [(ECNElement *)target scene];
-	[scene setElementActivationState: target active: ! [scene isElementActive: target] ];
+	
+	[pipeline toggleElement: target];
+	
+/*	KCue *scene = [(ECNElement *)target scene];
+	[scene setElementActivationState: target active: ! [scene isElementActive: target] ];*/
 
 }
 @end
@@ -200,14 +209,15 @@ NSString *ElementTriggerOffActionNameValue = @"Trigger element off";
 }
 
 
-- (void) performAction	{
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline	{
 	id target = [self target];
 	if (!target) return;
 	if (![target isKindOfClass: [ECNElement class]]) return;
 /*	ECNScene *scene = [(ECNElement *)target scene];
 	[scene setActivationState: ![scene activationState]];*/
 	
-	[[target firstTrigger] triggerElement];
+	[pipeline triggerElement: target];
+	//[[target firstTrigger] triggerElement];
 	// TODO: trigger element's first trigger!
 	
 }
@@ -248,14 +258,15 @@ NSString *ElementTriggerOffActionNameValue = @"Trigger element off";
 }
 
 
-- (void) performAction	{
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline	{
 	id target = [self target];
 	if (!target) return;
 	if (![target isKindOfClass: [ECNElement class]]) return;
 	/*	ECNScene *scene = [(ECNElement *)target scene];
 	 [scene setActivationState: ![scene activationState]];*/
-	
-	[[target firstTrigger] triggerOffElement];
+	[pipeline triggerOffElement: target];
+
+//	[[target firstTrigger] triggerOffElement];
 	
 }
 @end

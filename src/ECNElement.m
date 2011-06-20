@@ -14,6 +14,8 @@
 #import "ECNAction.h"
 #import "ECNTrigger.h"
 
+#import "KIncludes.h"
+
 NSString *ECNElementDidChangeNotification = @"ECNElementDidChange";
 
 // +  + Elements specific properties  +
@@ -23,7 +25,7 @@ NSString *ECNElementStrokeColorKey = @"stroke_color";
 NSString *ECNElementVisibleKey = @"visible";
 NSString *ECNElementEnabledKey = @"enabled";
 
-NSString *ECNElementSceneKey = @"scene";
+NSString *ECNElementSceneKey = @"cue";
 NSString *ECNElementActiveWhenSceneOpensKey = @"active_when_scene_opens";
 
 NSString *ECNElementTriggersListKey = @"triggers";
@@ -775,49 +777,45 @@ NSString *ElementNameDefaultValue = @"Undefined element";
     return nil;
 }
 
-- (NSBezierPath *)bezierPathInRect: (NSRect )rect {
+
+- (CGMutablePathRef)quartzPathInRect: (CGRect) rect {
+	TFThrowMethodNotImplementedException();
 	return nil;
 }
 
-- (void)drawInCurrentOpenGLContext:(NSRect)rect {
-   /* NSBezierPath *path = [self bezierPath];
-    if (path) {
-        if ([self drawsFill]) {
-            [[self fillColor] set];
-            [path fill];
-        }
-        if ([self drawsStroke]) {
-            [[self strokeColor] set];
-            [path stroke];
-        }
-    }*/
+- (NSBezierPath *)bezierPathInRect: (NSRect )rect {
+	TFThrowMethodNotImplementedException();
+	return nil;
+}
+
+/*- (void)drawInCurrentOpenGLContext:(NSRect)rect {
 
 	//to override!!!
 	
-}
+}*/
 
+- (void) drawInCGContext: (CGContextRef)context withRect: (CGRect) rect {
+
+	TFThrowMethodNotImplementedException();
+
+}
 
 - (void)drawInView:(NSView *)view isSelected:(BOOL)flag {
     NSBezierPath *path = [self bezierPathInRect: [view bounds]];
     if (path) {
-/*        if ([self drawsFill]) {
-            [[self fillColor] set];
-            [path fill];
-        }*/
-//        if ([self drawsStroke]) {
-            [[self strokeColor] set];
-            [path stroke];
-  //      }
+		[[self strokeColor] set];
+		[path stroke];
     }
     if (flag) {
         [self drawHandlesInView:view];
     }
 }
 
-- (void) drawInOpenGLContext: (NSOpenGLContext *)openGLContext
-{	NSLog(@"class drawInOpenGLContext: has not been subclassed in class: %@", [self class]);
+/*- (void) drawInOpenGLContext: (NSOpenGLContext *)openGLContext
+{	TFThrowMethodNotImplementedException();
 	return;
-}
+}*/
+
 
 - (unsigned)knobMask {
     return AllKnobsMask;
@@ -1061,10 +1059,10 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 #pragma mark -
 
 #pragma mark State modification
-- (bool) prepareForPlayback	{
+- (bool) prepareForPlaybackWithError: (NSError **)error	{
 	return true;	
 }
-- (void) setActivationState: (NSUInteger) activationState {
+/*- (void) setActivationState: (NSUInteger) activationState {
 	if ([self activationState] != activationState)	{
 		
 		[[self scene] setElementActivationState: self active: (activationState == NSOnState)];
@@ -1082,7 +1080,7 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 
 - (NSUInteger) activationState{
 	return [[self scene] isElementActive: self];	
-}
+}*/
 
 #pragma mark Playback methods
 - (void) updateOutputPorts	{
@@ -1102,6 +1100,13 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 - (id) valueForOutputPort:(NSString *)portKey	{
 	ECNPort *port = [self outputPortWithKey: portKey];
 	return [port value];
+}
+
+// returns a default value for the current element
+- (id) defaultValue	{
+	TFThrowMethodNotImplementedException();
+
+	return nil;
 }
 
 @end

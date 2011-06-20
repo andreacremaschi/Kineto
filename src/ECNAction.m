@@ -70,13 +70,12 @@ NSString *ECNActionDefaultName = @"Generic action";
 - (NSString *)description	{
 	id target = [self valueForPropertyKey: ECNActionTargetKey];
 	
-	// questo controllo non funziona in caso di data binding
-	// perchè target è di classe NSKVONotifying_xxx
-	//if ([target isKindOfClass: [ECNObject class]]) return @"";
-	
-
 	NSString *description = [[[self class] actionName] stringByAppendingString: @" "];
-	return [description stringByAppendingString: [target name]];
+	if (target!=nil)
+		description = [description stringByAppendingString: @"<null>" ];		  
+	else
+		description = [description stringByAppendingString:[target name] ];
+	return description;
 }
 
 #pragma mark Constructors
@@ -131,7 +130,7 @@ NSString *ECNActionDefaultName = @"Generic action";
 #pragma mark -
 #pragma mark Action methods
 
-- (void) performAction	{
+- (void) performActionOnPipeline: (KPlaybackPipeline *)pipeline	{
 	
 }
 

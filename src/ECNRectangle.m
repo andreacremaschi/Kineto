@@ -68,6 +68,24 @@ NSString *RectangleNameDefaultValue = @"New rectangle";
     return path;
 }
 
+- (CGMutablePathRef)quartzPathInRect: (CGRect) rect {
+	
+	NSRect drawingBounds = [self calcPixelBoundsInRect: NSRectToCGRect( rect )]; 
+	CGRect cgDrawingBounds = NSRectToCGRect(drawingBounds);
+	
+	// CG contexts are upside down in respect of NS graphics contexts!
+	cgDrawingBounds.origin.y = rect.size.height - cgDrawingBounds.origin.y - cgDrawingBounds.size.height;
+	
+    CGMutablePathRef path = CGPathCreateMutable();
+
+	CGPathAddRect (path,
+				   nil,
+				   cgDrawingBounds );
+
+	CGPathCloseSubpath ( path);
+	return path;
+}
+   
 
 
 
