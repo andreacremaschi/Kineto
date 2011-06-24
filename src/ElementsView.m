@@ -26,6 +26,9 @@ NSString *ElementsViewDoubleClicOnElementNotification = @"ElementsViewNewElement
 
 static float ECNDefaultPasteCascadeDelta = 10.0;
 
+#pragma mark -
+#pragma mark Initialization
+
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -65,7 +68,7 @@ static float ECNDefaultPasteCascadeDelta = 10.0;
     [super dealloc];
 }
 
-#pragma mark ***  accessors and convenience methods ***
+#pragma mark Accessors
 
 
 - (void) setCurrentElementClass: (Class )newClass {
@@ -106,33 +109,17 @@ static float ECNDefaultPasteCascadeDelta = 10.0;
 	[self setNeedsDisplay: true];
 }
 
-#pragma mark *** ECNSceneWindowController accessors and convenience methods
-/*- (void)setSceneWindowController:(ECNSceneWindowController *)theController {
-    controller = theController;
-}*/
-
-/*- (ECNSceneWindowController *)sceneWindowController {
-    return [[self window] windowController];
-}*/
-
-/*- (ECNScene *)scene {
-//	NSLog (@"ElementsView owner is of class kind: %@", [[self sceneWindowController] class]);
-	return [[[self window] windowController] scene];
-}*/
 
 - (void)setScene:(KCue *)newScene {
-	/*if (scene){
-		[self removeObserver: scene
-				  forKeyPath: @"elements"];
-
-	}
 	
-	[newScene addObserver: self
-		   forKeyPath: ECNSceneElementsListKey
-			  options: NSKeyValueObservingOptionNew
-			  context: nil
-	 ];*/
+	//[self unbind: @"backgroundImage"];
 	scene = newScene;
+
+	[self bind: @"backgroundImage"
+	  toObject: scene
+   withKeyPath: @"videoAsset.backgroundImage"
+	   options: nil];
+	[self setNeedsDisplay: YES];
 	
 }
 /*

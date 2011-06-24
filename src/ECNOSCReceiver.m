@@ -58,7 +58,7 @@ NSString *OSCReceiverLastMessageReceived = @"last_osc_message";
 - (void) initOSCIcon
 {
 	NSString *strOSCIconPath = [[[NSString alloc] initWithString: [[NSBundle mainBundle] pathForResource:@"osc_receiver" ofType:@"tif"]] autorelease];
-	NSImage *OSCIcon = [[NSImage allocWithZone:[[[super scene] document] zone]] initWithContentsOfFile:strOSCIconPath];
+	NSImage *OSCIcon = [[NSImage allocWithZone:[[[super cue] document] zone]] initWithContentsOfFile:strOSCIconPath];
 	if (OSCIcon) {
 		[self setBounds:NSMakeRect(0, 0, [OSCIcon size].width, [OSCIcon size].height)];
 		[self setImage: OSCIcon];

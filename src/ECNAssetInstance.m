@@ -148,7 +148,7 @@ NSString *AssetInstanceGenericIconDefaultValue = @"osc_receiver";
 	static NSImage *genIcon;
 	if (genIcon != nil) return genIcon; 
 	
-	genIcon = [[NSImage allocWithZone:[[[super scene] document] zone]] initWithContentsOfFile: strIconPath];
+	genIcon = [[NSImage allocWithZone:[[[super cue] document] zone]] initWithContentsOfFile: strIconPath];
 
 	// genIcon will be loaded with size: 15x15. Why?
 	// TODO: resolve this issue

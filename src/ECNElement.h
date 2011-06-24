@@ -77,8 +77,8 @@ extern NSString *ECNElementDidChangeNotification;
 + (Class) triggerClass;
 
 // ========================= Document accessors and conveniences =========================
-- (void)setScene:(KCue *)scene;
-- (KCue *)scene;
+- (void)setCue:(KCue *)scene;
+- (KCue *)cue;
 - (NSUndoManager *)undoManager;
 
 - (bool)isEnabled;

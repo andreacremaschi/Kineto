@@ -10,6 +10,9 @@
 #import "ECNShapeTrigger.h"
 #import "MaskSrcUsingChannelFilter.h"
 
+#import "ECNVideoInputAsset.h"
+#import "KLayer.h"
+#import "KCue.h"
 
 // +  + Elements specific properties   +
 NSString *ShapeMaskToObserveKey = @"mask_to_observe"; 
@@ -66,7 +69,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	[dict setValue: ShapeClassValue forKey: ECNObjectClassKey];
 
 	NSDictionary *propertiesDict = [NSDictionary dictionaryWithObjectsAndKeys:
-									[NSNull null], ShapeMaskToObserveKey,
+									@"", ShapeMaskToObserveKey,
 									nil];
 
 
@@ -196,6 +199,27 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 + (ECNElement *)elementWithDocument: (ECNProjectDocument *)document	{
 	//NB ELEMENT is an abstract class, that should never return an instance
 	return nil;
+	
+}
+
+#pragma mark Accessors
+- (KLayer *)observedMask {
+	NSString *layerKey = [self valueForPropertyKey: ShapeMaskToObserveKey];
+	return [[[self cue] videoAsset] layerWithKey: layerKey];
+}
+
+// override of ECNElement
+- (void)setCue:(KCue *)scene {
+	[super setCue: scene];
+	
+	//check if selected cue video asset contains element's observed mask
+	ECNVideoInputAsset *cueVideoAsset = [[self cue] videoAsset];
+	if (nil != cueVideoAsset) {
+		NSString *layerKey = [self valueForPropertyKey: ShapeMaskToObserveKey];
+		if (((layerKey == @"") || (nil==[cueVideoAsset layerWithKey: layerKey])) && (nil != [cueVideoAsset defaultMaskKey]))
+			//set cue's default mask key
+			[self setValue: [cueVideoAsset defaultMaskKey] forPropertyKey: ShapeMaskToObserveKey];
+	}
 	
 }
 
@@ -424,11 +448,11 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 
 #pragma mark Image ports calculation
 
-- (int) maskToObserve	{
+/*- (int) maskToObserve	{
 	NSNumber *nMaskToObserve = [self valueForPropertyKey: ShapeMaskToObserveKey];
 	if (!nMaskToObserve) return 0;	//default to diff_mask
 	return [nMaskToObserve intValue];
-}
+}*/
 
 - (CIImage *) calculateAreaAverageWithFilter: (CIFilter *)averageFilter 
 									withMask: (CIImage *)cimask	{
@@ -862,7 +886,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 
 //	_flags.mask_extension = (float)curPixel[0]/255.0;
 	_flags.shouldUpdateShapeMask = false;	
-	NSLog(@"Shape for element: %@ has just been refreshed.",[self valueForPropertyKey: ECNObjectNameKey]);
+	//NSLog(@"Shape for element: %@ has just been refreshed.",[self valueForPropertyKey: ECNObjectNameKey]);
   
 		/*  ,[self valueForPropertyKey: ECNObjectNameKey],
 		  _flags.mask_extension);*/
@@ -958,22 +982,22 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 - (id) valueForOutputPort:(NSString *)portKey	{
 	
 	CIImage *maskImage = [self valueForOutputKey: ShapeOutputMaskImage];
-	if (portKey == ShapeOutputMaskImage)	{
+	if ([portKey isEqualToString: ShapeOutputMaskImage])	{
 	
 		[self setValue:	[self calculateOutputMaskedImage]
 				forOutputKey: ShapeOutputImage ];
 	} else	
-	if (portKey == ShapeOutputExtension)	{
+	if ([portKey isEqualToString: ShapeOutputExtension])	{
 			[self calculateAreaAverageWithMask: maskImage];
 	} else
-	if ((portKey == ShapeOutputHighest) || 
-		(portKey == ShapeOutputLowest) ||
-		(portKey == ShapeOutputMiddleVertical))	{
+	if (([portKey isEqualToString: ShapeOutputHighest]) || 
+		([portKey isEqualToString: ShapeOutputLowest]) ||
+		([portKey isEqualToString: ShapeOutputMiddleVertical]))	{
 		[self calculateAreaRowAverageWithMask: maskImage];			
 	} 	else
-	if ((portKey == ShapeOutputRightmost) || 
-		(portKey == ShapeOutputLeftmost) ||
-		(portKey == ShapeOutputMiddleHorizontal))	{
+	if (([portKey isEqualToString: ShapeOutputRightmost]) || 
+		([portKey isEqualToString: ShapeOutputLeftmost]) ||
+		([portKey isEqualToString: ShapeOutputMiddleHorizontal]))	{
 		[self calculateAreaColumnAverageWithMask: maskImage];
 			
 	} 	

@@ -8,14 +8,18 @@
 
 #import "ECNOSCTxAssetInstance.h"
 #import "ECNOSCTargetAsset.h"
- 
+#import "KBNFWordObject.h"
+
 // +  + Elements specific properties   +
 
 NSString *OSCTxAssetInstanceAddressPatternKey = @"osc_addresspattern";
-NSString *OSCTxAssetInstanceBundleKey = @"osc_bundle";
-NSString *OSCTxAssetInstancePacketComposerScriptKey = @"packet_composer_script";
+NSString *OSCTxAssetInstanceArgumentsKey = @"osc_arguments";
+//NSString *OSCTxAssetInstancePacketComposerScriptKey = @"packet_composer_script";
+//NSString *OSCTxAssetInstanceBundleKey = @"osc_bundle";
 
-NSString *OSCTxAssetInstanceObservedPortsArrayKey = @"observed_ports";
+
+//NSString *OSCTxAssetInstanceMessagesArrayKey = @"osc_messages";
+//NSString *OSCTxAssetInstanceObservedPortsArrayKey = @"observed_ports";
 
 // an array of labels of ECN Elements output ports:
 // they will be used to create the bundle to send
@@ -55,10 +59,12 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 	[dict setValue: OSCtxAssetInstanceClassValue forKey: ECNObjectClassKey];
 	
 	NSDictionary *propertiesDict = [NSDictionary dictionaryWithObjectsAndKeys:
+									//[NSArray array], OSCTxAssetInstanceMessagesArrayKey,
 									AddressPatternDefaultValue, OSCTxAssetInstanceAddressPatternKey,
-									[NSNumber numberWithBool: [BundleDefaultValue boolValue]], OSCTxAssetInstanceBundleKey,
-									[NSMutableArray arrayWithCapacity: 0], OSCTxAssetInstanceObservedPortsArrayKey,
-									@"", OSCTxAssetInstancePacketComposerScriptKey,
+									[NSMutableArray array], OSCTxAssetInstanceArgumentsKey,
+//									@"", OSCTxAssetInstancePacketComposerScriptKey,
+									//[NSNumber numberWithBool: [BundleDefaultValue boolValue]], OSCTxAssetInstanceBundleKey,
+									//[NSMutableArray arrayWithCapacity: 0], OSCTxAssetInstanceObservedPortsArrayKey,
 									nil];
 	
 	
@@ -119,12 +125,38 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 	return (ECNOSCTargetAsset *)[self valueForPropertyKey: AssetKey];
 }
 
+- (void) setAddressPattern: (NSString*)pattern {
+	[self setValue: pattern forPropertyKey: OSCTxAssetInstanceAddressPatternKey];
 
-- (void) addPortToObserve: (ECNPort *)outputport	{
+}
+
+- (NSString *) addressPattern {
+	return [self valueForPropertyKey:OSCTxAssetInstanceAddressPatternKey];
+}
+
+- (NSMutableArray *)argumentsArray {
+	return [self valueForPropertyKey:OSCTxAssetInstanceArgumentsKey];
+}
+
+- (void)setArgumentsArray: (NSMutableArray*)array {
+	[self setValue: array forPropertyKey:OSCTxAssetInstanceArgumentsKey];
+}
+
+/*- (void) setScriptObject: (KBNFMessageObject*)scrObject {
+	[self setValue: scrObject forPropertyKey: OSCTxAssetInstancePacketComposerScriptKey];
+	
+}
+
+- (KBNFMessageObject *) scriptObject {
+	return [self valueForPropertyKey:OSCTxAssetInstancePacketComposerScriptKey];
+}*/
+
+
+/*- (void) addPortToObserve: (ECNPort *)outputport	{
 	if (!outputport) return;
 	[[self valueForPropertyKey: OSCTxAssetInstanceObservedPortsArrayKey] addObject: outputport];
 	NSLog (@"added %@ port to list of port to observe", outputport);
-}
+}*/
 
 
 #pragma mark -
@@ -152,43 +184,95 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 - (BOOL) executeAtTime:(NSTimeInterval)time {
 	
 	ECNOSCTargetAsset* asset = [self oscAsset];
-	NSMutableArray *valuesArray = [NSMutableArray arrayWithCapacity: 0];
-	 [valuesArray addObject: [self valueForPropertyKey: OSCTxAssetInstancePacketComposerScriptKey]];
+		
+	if (!asset) return false;
 	
-	
-	
-	NSArray *portkeysArray = [self valueForPropertyKey: OSCTxAssetInstanceObservedPortsArrayKey];
-	NSString *addressPattern = [self valueForPropertyKey: OSCTxAssetInstanceAddressPatternKey];
-	
-	
-	if ((!asset) || (!portkeysArray) || (!addressPattern) ) return false;
-	
-	/*int nPorts = [portkeysArray count];
-	if (nPorts <=0) return true; // no values to send, exit
-	
-	// create an array to store values to send
-	NSMutableArray *valuesArray = [NSMutableArray arrayWithCapacity: 0];
-	
-	// fill the array with output ports values
-	int c;
-	id portValue;
-	for (c=0; c < nPorts; c++)	{
-		portValue = [(ECNPort *)[portkeysArray objectAtIndex: c] value];
-		portValue = portValue == nil ? [NSNull null] : portValue;
-		//NSLog (@"%@", portValue);
-		[valuesArray addObject: portValue];
-	}*/
+	bool result = true;
+	NSMutableArray *lastValuesSent = [NSMutableArray array];
 
 	NSError *error;
-	bool result = [asset sendValues: valuesArray 
-						  toAddress: addressPattern
-							  error: &error];
+	NSString *addressPattern = [self valueForPropertyKey: OSCTxAssetInstanceAddressPatternKey];
+	NSArray *argumentsArray = [self valueForPropertyKey: OSCTxAssetInstanceArgumentsKey];
+	
+	if ((nil != addressPattern) && (nil!= argumentsArray) && [argumentsArray count] >0) {
+		
+		NSMutableArray *valuesArray = [NSMutableArray array];
+		
+		for (id argument in argumentsArray)
+			if ([argument isKindOfClass: [KBNFWordObject class]]) {
+				id value = [argument evaluateWordObjectValue];
+				if (nil!=value)
+				[valuesArray addObject: value];
+				
+			}
+		
+		if ([valuesArray count] > 0)
+		if (![asset sendValues: valuesArray
+					 toAddress: addressPattern
+						 error: &error])
+			result = false;
+		else 
+			[lastValuesSent addObject: [NSDictionary dictionaryWithObjectsAndKeys: 
+										valuesArray, @"message",
+										addressPattern, @"address",
+										nil]];
+		
+		
+	}
+	if (result)	{
+		
+		
+		NSDictionary *oldPacket = lastPacketSent;
+		lastPacketSent = [[NSDictionary dictionaryWithObjectsAndKeys:
+						   lastValuesSent,@"values",
+						   [NSNumber numberWithInt: time], @"timestamp",
+						   nil] retain];
+		
+		if (oldPacket != nil) 
+			[oldPacket release];
+		
+		return [super executeAtTime: time];
+	}
+	else {
+		NSLog (@"Error sending OSC packet:");// %@", [error description]);
+		return false;
+	}
+	
+}
+/*- (BOOL) executeAtTime:(NSTimeInterval)time {
+	
+	ECNOSCTargetAsset* asset = [self oscAsset];
+	
+	NSMutableArray *messagesArray = [self valueForKey: OSCTxAssetInstanceMessagesArrayKey];
+	
+	if (!asset) return false;
+
+	bool result = true;
+	NSMutableArray *lastValuesSent = [NSMutableArray array];
+	for (id message in messagesArray) {
+		NSError *error;
+		NSString *addressPattern = [message valueForKey: OSCTxAssetInstanceAddressPatternKey];
+		NSString *messagebundle = [message valueForKey: OSCTxAssetInstancePacketComposerScriptKey];
+		if ((nil != addressPattern) && (nil!= messagebundle))
+		if (![asset sendValues: [NSArray arrayWithObject: messagebundle ]
+				toAddress: addressPattern
+					error: &error])
+			result = false;
+		else 
+			[lastValuesSent addObject: [NSDictionary dictionaryWithObjectsAndKeys: 
+										messagebundle, @"message",
+										addressPattern, @"address",
+										nil]];
+		
+
+	}
+
 	if (result)	{
 
 		
 		NSDictionary *oldPacket = lastPacketSent;
 		lastPacketSent = [[NSDictionary dictionaryWithObjectsAndKeys:
-						  valuesArray,@"values",
+						  lastValuesSent,@"values",
 						  [NSNumber numberWithInt: time], @"timestamp",
 						  nil] retain];
 		
@@ -198,56 +282,16 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 		return [super executeAtTime: time];
 	}
 	else {
-		NSLog (@"Error sending OSC packet: %@", [error description]);
+		NSLog (@"Error sending OSC packet:");// %@", [error description]);
 		return false;
 	}
 	
 }
-
+*/
 - (void) drawInCGContext: (CGContextRef)context withRect: (CGRect) rect {
 	
 	
 }
 
-#pragma mark OSC methods
-
-/*- (void) sendObservedValues	{
-	
-	
-	//NSLog(@"%s",__func__);
-	
-	
-	OSCMessage		*msg = nil;
-	OSCBundle		*bundle = nil;
-	OSCPacket		*packet = nil;
-	
-
-	
-	//	make a message to the specified address
-	msg = [OSCMessage createWithAddress: host];
-	
-	[msg addFloat: value];
-	
-	
-	//	if i'm sending as a bundle...
-	if (_bBundle)	{
-		//	make a bundle
-		OSCBundle *bundle = [OSCBundle create];
-		//	add the message to the bundle
-		[bundle addElement:msg];
-		//	make the packet from the bundle
-		packet = [OSCPacket createWithContent:bundle];
-	}
-	//	else if i'm just sending the msg
-	else	{
-		//	make the packet from the msg
-		packet = [OSCPacket createWithContent:msg];
-	}	
-	
-	
-	[_OSCOutPort sendThisPacket: packet];
-	
-	_lastValueSent = value;
-}*/
 
 @end

@@ -34,7 +34,7 @@ extern NSString *ShapeOutputMiddleHorizontal ;
 extern NSString *ShapeOutputMiddleVertical;
 
 // +  +  +  +  +  +  +  +  +  +  +  +
-@class ECNShapeTrigger;
+@class ECNShapeTrigger, KLayer;
 @interface ECNShape : ECNElement {
 
 	struct __shapeFlags {
@@ -49,5 +49,7 @@ extern NSString *ShapeOutputMiddleVertical;
 	CIFilter *_areaAverageFilter;
 	CIFilter *_MaskSrcUsingChannelFilter;
 }
+
+- (KLayer *)observedMask;
 
 @end

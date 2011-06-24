@@ -7,19 +7,25 @@
 //
 
 #import "ECNAssetInstance.h"
-
-extern NSString *OSCTxAssetInstanceAddressPatternKey;
+/*
 extern NSString *OSCTxAssetInstanceBundleKey;
 extern NSString *OSCTxAssetInstanceObservedPortsArrayKey;
+*/
+extern NSString *OSCTxAssetInstanceAddressPatternKey;
 extern NSString *OSCTxAssetInstancePacketComposerScriptKey;
+extern NSString *OSCTxAssetInstanceMessagesArrayKey;
 
 @class ECNOSCTargetAsset;
+@class KBNFMessageObject;
+
 @interface ECNOSCTxAssetInstance : ECNAssetInstance {
 	NSDictionary *lastPacketSent;
 }
 @property (readonly) NSDictionary *lastPacketSent;
+@property (retain) NSString *addressPattern;
+@property (retain) NSMutableArray *argumentsArray;
 
-- (void) addPortToObserve: (ECNPort *)outputport;
+//- (void) addPortToObserve: (ECNPort *)outputport;
 
 - (ECNOSCTargetAsset *)oscAsset;
 + (ECNOSCTxAssetInstance *)oscTxAssetInstanceWithAsset: (ECNAsset *) asset;

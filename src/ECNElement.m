@@ -164,16 +164,16 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 #pragma mark -
 #pragma mark *** Document accessors and conveniences ***
 
-- (void)setScene:(KCue *)scene {
+- (void)setCue:(KCue *)scene {
     [self setValue: scene forPropertyKey: ECNElementSceneKey];
 }
 
-- (KCue *)scene {
+- (KCue *)cue {
     return [self valueForPropertyKey: ECNElementSceneKey];
 }
 
 - (NSString *)position	{
-	return [NSString stringWithFormat: @"%@:%@", [[self scene] name], [self valueForPropertyKey: ECNObjectNameKey]];
+	return [NSString stringWithFormat: @"%@:%@", [[self cue] name], [self valueForPropertyKey: ECNObjectNameKey]];
 }
 
 
@@ -190,7 +190,7 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 
 - (void) setVisible: (bool)isVisible	//{	_bIsVisible = isVisible;	}
 	{	[self setValue: [NSNumber numberWithBool: isVisible] forPropertyKey: ECNElementVisibleKey]; 
-		[[self scene] populateVisibleElementsSet]; // TODO: sostituire con una notifica???
+		[[self cue] populateVisibleElementsSet]; // TODO: sostituire con una notifica???
 	}
 
 
@@ -245,7 +245,7 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 #pragma mark *** Primitives ***
 
 - (void)didChange {
-    [[self scene]	invalidateElement:self];
+    [[self cue]	invalidateElement:self];
     [[NSNotificationCenter defaultCenter] postNotificationName:ECNElementDidChangeNotification object:self];
 }
 
@@ -890,7 +890,7 @@ NSString *ElementNameDefaultValue = @"Undefined element";
         point.y = floor((point.y / spacing) + 0.5) * spacing;
     }
 	
-	[self setScene: scene];
+	[self setCue: scene];
     [self setBounds: [self normalizeBounds: NSMakeRect(point.x, point.y, 0.0, 0.0) fromRect: [view bounds]]];
    /* if (echoToRulers) {
         [view beginEchoingMoveToRulers:[self bounds]];
@@ -980,7 +980,7 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 	//TODO: sistemare questa funzione: "element" è membro della classe Scene, a sua volta parte di un array "scenes" membro di ProjectDocument
 	
     NSArray *scenes = [[self document] cues];
-    long index1 = [scenes indexOfObjectIdenticalTo:[self scene]];
+    long index1 = [scenes indexOfObjectIdenticalTo:[self cue]];
     if (index1 != NSNotFound) {
 		NSArray *elements = [scenes objectAtIndex: index1];
 		unsigned index2 = [elements indexOfObjectIdenticalTo:self];

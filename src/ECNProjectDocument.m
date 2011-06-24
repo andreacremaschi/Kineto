@@ -351,13 +351,6 @@ static int ECNCurrentDocumentVersion = 1;
 #pragma mark *** window controller management
 
 
-- (void)invalidateScene:(KCue *)scene {
-/*    NSArray *windowControllers = [self windowControllers];
-	
-    [windowControllers makeObjectsPerformSelector:@selector(invalidateScene:) withObject:scene];
-*/
-}
-
 - (void)invalidateElement:(ECNElement *)element {
     NSArray *windowControllers = [self windowControllers];
 	

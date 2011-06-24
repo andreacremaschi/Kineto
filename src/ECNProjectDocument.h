@@ -44,9 +44,6 @@
 // === Data management
 - (KCue *)createNewCue;
 
-// === Representation management
-- (void)invalidateScene:(KCue *)scene;
-
 // === Object collection management
 - (void)addObject:(ECNObject *)object;
 - (void)removeObject:(ECNObject *)object;
