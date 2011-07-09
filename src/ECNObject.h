@@ -47,18 +47,22 @@ extern NSString *ECNOutputPortsKey ;
 // =================================== Accessors ===================================
 - (ECNProjectDocument *)document;
 
+	
 // =================================== Persistence ===================================
 - (NSMutableDictionary *)propertyListRepresentation;
-//- (void)loadPropertyListRepresentation:(NSDictionary *)dict;
 - (void) unpackObjectReferences;
 + (ECNObject *)objectWithDataDictionary:(NSDictionary *)dict withDocument: (ECNProjectDocument *)document ;
+- (bool) willReturnAfterLoadingWithError: (NSError **)error;
 
 // ================================ Unique identifier =================================
 /*- (void) setID: (int) objectID;*/
 - (NSNumber *) ID;
 - (NSString *)name;
 - (void)setName: (NSString *) name;
-
++ (NSString *) objectIncrementalNameWithRoot: (NSString *) string 
+									  ofType: (Class )type
+								  inDocument: (ECNProjectDocument *)document;
+- (void) setIncrementalNameWithRootName: (NSString *)rootName;
 
 
 // === properties and output ports ===

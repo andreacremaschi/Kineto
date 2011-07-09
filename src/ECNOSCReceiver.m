@@ -90,7 +90,8 @@ NSString *OSCReceiverLastMessageReceived = @"last_osc_message";
 	ECNOSCReceiver *newOscReceiver = [[[ECNOSCReceiver alloc] initWithProjectDocument: document] autorelease];
 	
 	if (newOscReceiver != nil)	{
-		[newOscReceiver setValue: OSCReceiverNameDefaultValue forPropertyKey: ECNObjectNameKey];
+		[newOscReceiver setIncrementalNameWithRootName: OSCReceiverNameDefaultValue];
+
 	}
 	return newOscReceiver;
 	

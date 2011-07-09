@@ -118,4 +118,12 @@ NSString *AssetNameDefaultValue = @"New asset";
 	
 }
 
+
+#pragma mark - ECNObject overrides
+
+- (bool) willReturnAfterLoadingWithError: (NSError **)error	{
+	//return [self loadAssetWithError: error];
+	return true;
+}
+
 @end

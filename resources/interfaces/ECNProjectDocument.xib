@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">10J869</string>
+		<string key="IBDocument.SystemVersion">10K540</string>
 		<string key="IBDocument.InterfaceBuilderVersion">851</string>
-		<string key="IBDocument.AppKitVersion">1038.35</string>
+		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="201"/>
+			<integer value="215"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -221,7 +221,7 @@
 																<object class="NSTabViewItem" id="212168093">
 																	<string key="NSIdentifier">1</string>
 																	<object class="NSView" key="NSView" id="205669187">
-																		<reference key="NSNextResponder" ref="689403342"/>
+																		<nil key="NSNextResponder"/>
 																		<int key="NSvFlags">258</int>
 																		<object class="NSMutableArray" key="NSSubviews">
 																			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -477,7 +477,6 @@
 																			</object>
 																		</object>
 																		<string key="NSFrame">{{10, 7}, {216, 626}}</string>
-																		<reference key="NSSuperview" ref="689403342"/>
 																	</object>
 																	<string key="NSLabel">Cues</string>
 																	<reference key="NSColor" ref="822415392"/>
@@ -486,7 +485,7 @@
 																<object class="NSTabViewItem" id="438323115">
 																	<string key="NSIdentifier">2</string>
 																	<object class="NSView" key="NSView" id="704499704">
-																		<nil key="NSNextResponder"/>
+																		<reference key="NSNextResponder" ref="689403342"/>
 																		<int key="NSvFlags">256</int>
 																		<object class="NSMutableArray" key="NSSubviews">
 																			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -687,6 +686,7 @@
 																			</object>
 																		</object>
 																		<string key="NSFrame">{{10, 7}, {216, 626}}</string>
+																		<reference key="NSSuperview" ref="689403342"/>
 																		<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																	</object>
 																	<string key="NSLabel">Assets</string>
@@ -694,7 +694,7 @@
 																	<reference key="NSTabView" ref="689403342"/>
 																</object>
 															</object>
-															<reference key="NSSelectedTabViewItem" ref="212168093"/>
+															<reference key="NSSelectedTabViewItem" ref="438323115"/>
 															<object class="NSFont" key="NSFont">
 																<string key="NSName">LucidaGrande</string>
 																<double key="NSSize">9</double>
@@ -704,7 +704,7 @@
 															<bool key="NSAllowTruncatedLabels">YES</bool>
 															<object class="NSMutableArray" key="NSSubviews">
 																<bool key="EncodedWithXMLCoder">YES</bool>
-																<reference ref="205669187"/>
+																<reference ref="704499704"/>
 															</object>
 														</object>
 													</object>
@@ -739,18 +739,26 @@
 										<object class="NSButton" id="469292808">
 											<reference key="NSNextResponder" ref="803733561"/>
 											<int key="NSvFlags">292</int>
-											<string key="NSFrame">{{-12, 500}, {63, 35}}</string>
+											<string key="NSFrame">{{2, 500}, {36, 31}}</string>
 											<reference key="NSSuperview" ref="803733561"/>
 											<int key="NSViewLayerContentsRedrawPolicy">2</int>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="361900804">
-												<int key="NSCellFlags">-2080244224</int>
+												<int key="NSCellFlags">67239424</int>
 												<int key="NSCellFlags2">134217728</int>
 												<string key="NSContents">New cue</string>
 												<reference key="NSSupport" ref="1068569674"/>
 												<reference key="NSControlView" ref="469292808"/>
-												<int key="NSButtonFlags">-2038152961</int>
+												<int key="NSButtonFlags">138690815</int>
 												<int key="NSButtonFlags2">134</int>
+												<object class="NSCustomResource" key="NSNormalImage">
+													<string key="NSClassName">NSImage</string>
+													<string key="NSResourceName">new_cue_inactive</string>
+												</object>
+												<object class="NSCustomResource" key="NSAlternateImage">
+													<string key="NSClassName">NSImage</string>
+													<string key="NSResourceName">new_cue_active</string>
+												</object>
 												<string key="NSAlternateContents"/>
 												<string key="NSKeyEquivalent"/>
 												<int key="NSPeriodicDelay">400</int>
@@ -1062,6 +1070,9 @@
 				<bool key="NSFilterRestrictsInsertion">YES</bool>
 				<bool key="NSClearsFilterPredicateOnInsertion">YES</bool>
 			</object>
+			<object class="NSCustomObject" id="595404535">
+				<string key="NSClassName">KFilterChainComposerWindowController</string>
+			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
@@ -1345,6 +1356,14 @@
 						</object>
 					</object>
 					<int key="connectionID">314</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">oFilterChainComposer</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="595404535"/>
+					</object>
+					<int key="connectionID">318</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1805,6 +1824,11 @@
 						<reference key="object" ref="677348054"/>
 						<reference key="parent" ref="78512141"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">317</int>
+						<reference key="object" ref="595404535"/>
+						<reference key="parent" ref="0"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1889,6 +1913,7 @@
 					<string>3.windowTemplate.hasMinSize</string>
 					<string>3.windowTemplate.maxSize</string>
 					<string>3.windowTemplate.minSize</string>
+					<string>317.IBPluginDependency</string>
 					<string>37.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>4.IBViewIntegration.shadowBlurRadius</string>
@@ -1909,7 +1934,7 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABB0AAAxAUAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAADAgAAAxAVAAA</bytes>
 					</object>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">InitialTabViewItem</string>
@@ -2025,6 +2050,7 @@
 					<string>{259, 236}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<real value="0.0"/>
 					<object class="NSColor">
 						<int key="NSColorSpace">2</int>
@@ -2051,11 +2077,154 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">316</int>
+			<int key="maxID">318</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">KFilterChainComposerWindowController</string>
+					<string key="superclassName">NSWindowController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>addAssetToProject:</string>
+							<string>applyChanges:</string>
+							<string>exportConfigurationFile:</string>
+							<string>showOrHideImageUnitsLibrary:</string>
+							<string>tvMasksSelectionChanged:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>addAssetToProject:</string>
+							<string>applyChanges:</string>
+							<string>exportConfigurationFile:</string>
+							<string>showOrHideImageUnitsLibrary:</string>
+							<string>tvMasksSelectionChanged:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">addAssetToProject:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">applyChanges:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">exportConfigurationFile:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">showOrHideImageUnitsLibrary:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">tvMasksSelectionChanged:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>oCameraPreviewView</string>
+							<string>oFilterChainController</string>
+							<string>oFilterChainTableView</string>
+							<string>oFilterPropertiesView</string>
+							<string>oImageUnitsLibrary</string>
+							<string>oMasksController</string>
+							<string>oMasksThumbnailsView</string>
+							<string>oSelectedFilterObjectController</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>KOpenGLView</string>
+							<string>NSArrayController</string>
+							<string>NSTableView</string>
+							<string>NSView</string>
+							<string>NSPanel</string>
+							<string>NSArrayController</string>
+							<string>NSView</string>
+							<string>NSObjectController</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>oCameraPreviewView</string>
+							<string>oFilterChainController</string>
+							<string>oFilterChainTableView</string>
+							<string>oFilterPropertiesView</string>
+							<string>oImageUnitsLibrary</string>
+							<string>oMasksController</string>
+							<string>oMasksThumbnailsView</string>
+							<string>oSelectedFilterObjectController</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">oCameraPreviewView</string>
+								<string key="candidateClassName">KOpenGLView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">oFilterChainController</string>
+								<string key="candidateClassName">NSArrayController</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">oFilterChainTableView</string>
+								<string key="candidateClassName">NSTableView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">oFilterPropertiesView</string>
+								<string key="candidateClassName">NSView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">oImageUnitsLibrary</string>
+								<string key="candidateClassName">NSPanel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">oMasksController</string>
+								<string key="candidateClassName">NSArrayController</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">oMasksThumbnailsView</string>
+								<string key="candidateClassName">NSView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">oSelectedFilterObjectController</string>
+								<string key="candidateClassName">NSObjectController</string>
+							</object>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">src/KFilterChainComposerWindowController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">KOpenGLView</string>
+					<string key="superclassName">NSOpenGLView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">src/KOpenGLView.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">KProjectWindowController</string>
 					<string key="superclassName">NSWindowController</string>
@@ -2064,12 +2233,14 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>createNewCue:</string>
+							<string>createNewVideoAsset:</string>
 							<string>importFile:</string>
 							<string>openThisCue:</string>
 							<string>selectTab:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2081,6 +2252,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>createNewCue:</string>
+							<string>createNewVideoAsset:</string>
 							<string>importFile:</string>
 							<string>openThisCue:</string>
 							<string>selectTab:</string>
@@ -2089,6 +2261,10 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
 								<string key="name">createNewCue:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">createNewVideoAsset:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -2117,6 +2293,7 @@
 							<string>cuesTableView</string>
 							<string>elementInspectorViewPane</string>
 							<string>liveViewPane</string>
+							<string>oFilterChainComposer</string>
 							<string>oMainTabView</string>
 							<string>oTabLabel</string>
 							<string>playbackViewPane</string>
@@ -2131,6 +2308,7 @@
 							<string>NSTableView</string>
 							<string>NSView</string>
 							<string>NSView</string>
+							<string>KFilterChainComposerWindowController</string>
 							<string>NSTabView</string>
 							<string>NSTextField</string>
 							<string>NSView</string>
@@ -2148,6 +2326,7 @@
 							<string>cuesTableView</string>
 							<string>elementInspectorViewPane</string>
 							<string>liveViewPane</string>
+							<string>oFilterChainComposer</string>
 							<string>oMainTabView</string>
 							<string>oTabLabel</string>
 							<string>playbackViewPane</string>
@@ -2187,6 +2366,10 @@
 								<string key="candidateClassName">NSView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">oFilterChainComposer</string>
+								<string key="candidateClassName">KFilterChainComposerWindowController</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">oMainTabView</string>
 								<string key="candidateClassName">NSTabView</string>
 							</object>
@@ -2217,6 +2400,13 @@
 					<string key="className">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">KOSCManager.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">src/ECNFoundationExtras.h</string>
 					</object>
 				</object>
@@ -2239,6 +2429,13 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">src/KPlaybackPipeline.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">src/KSyphonCapture.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -2769,6 +2966,22 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">NSOpenGLView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSOpenGLView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSPanel</string>
+					<string key="superclassName">NSWindow</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSPanel.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">NSResponder</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
@@ -2950,6 +3163,8 @@
 				<string>assets_inactive</string>
 				<string>curopened</string>
 				<string>first</string>
+				<string>new_cue_active</string>
+				<string>new_cue_inactive</string>
 				<string>openthis</string>
 				<string>que_active</string>
 				<string>que_inactive</string>
@@ -2960,6 +3175,8 @@
 				<string>{122.884, 122.884}</string>
 				<string>{15.3605, 15.3605}</string>
 				<string>{3.84, 3.12}</string>
+				<string>{122.884, 122.884}</string>
+				<string>{122.884, 122.884}</string>
 				<string>{15.3605, 15.3605}</string>
 				<string>{122.884, 122.884}</string>
 				<string>{122.884, 122.884}</string>

@@ -24,7 +24,7 @@ extern NSString *ElementsViewDoubleClicOnElementNotification;
 @interface ElementsView : NSView {
 @private
     //IBOutlet ECNSceneWindowController *controller;
-	KCue * scene;
+	KCue * cue;
 
     NSMutableSet *_selectedElements;
 	
@@ -64,7 +64,7 @@ extern NSString *ElementsViewDoubleClicOnElementNotification;
 	NSColor *currentColor;
 }
 
-@property (assign)KCue *scene;
+@property (assign)KCue *cue;
 @property (retain)NSNumber *bgOpacity;
 @property (retain)NSColor*currentColor;
 @property (retain)Class currentElementClass; 

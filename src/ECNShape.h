@@ -46,6 +46,14 @@ extern NSString *ShapeOutputMiddleVertical;
 	// CoreImage thingies for fast collision calculations
 	NSBitmapImageRep *_onePixelBitmap;
 	NSGraphicsContext *_onePixelContext;
+	
+	NSOpenGLContext *_calculationsOpenGLContext;
+	CIContext *_calculationsCIContext;
+	NSOpenGLPixelFormat *_calculationsPixelFormat;
+	NSOpenGLContext *_onePixeFBO;
+	GLuint					FBOid;
+	GLuint					FBOTextureId;
+
 	CIFilter *_areaAverageFilter;
 	CIFilter *_MaskSrcUsingChannelFilter;
 }

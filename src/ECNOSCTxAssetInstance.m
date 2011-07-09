@@ -8,7 +8,9 @@
 
 #import "ECNOSCTxAssetInstance.h"
 #import "ECNOSCTargetAsset.h"
-#import "KBNFWordObject.h"
+#import "KBNFOSCArgument.h"
+#import "KIncludes.h"
+
 
 // +  + Elements specific properties   +
 
@@ -47,6 +49,7 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 
 // +  +  +  +  +  +  +  +  +  +  +  +
 
+
 @implementation ECNOSCTxAssetInstance
 @synthesize lastPacketSent;
 
@@ -79,7 +82,8 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 {
 	self = [super initWithAsset: asset];
 	if (self) {
-		lastPacketSent= nil;	
+		lastPacketSent= nil;
+		oscArgumentsCache = [[NSMutableArray array] retain];
 	}
 	return self;	
 }
@@ -87,6 +91,7 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 - (void)dealloc {	
 	if (nil!= lastPacketSent) 
 		[lastPacketSent release];
+	[oscArgumentsCache release];
     [super dealloc];
 }
 
@@ -107,7 +112,7 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 + (ECNOSCTxAssetInstance *)oscTxAssetInstanceWithAsset: (ECNAsset *) asset	{
 	//	ECNProjectDocument *document = [asset document];
 	
-	ECNOSCTxAssetInstance *oscTxInstance = [[ECNOSCTxAssetInstance alloc] initWithAsset: asset ];
+	ECNOSCTxAssetInstance *oscTxInstance = [[[ECNOSCTxAssetInstance alloc] initWithAsset: asset ] autorelease];
 	
 	if (oscTxInstance != nil)	{
 		[oscTxInstance setValue: OSCtxAssetInstanceDefaultNameValue forPropertyKey: ECNObjectNameKey];
@@ -142,26 +147,44 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 	[self setValue: array forPropertyKey:OSCTxAssetInstanceArgumentsKey];
 }
 
-/*- (void) setScriptObject: (KBNFMessageObject*)scrObject {
-	[self setValue: scrObject forPropertyKey: OSCTxAssetInstancePacketComposerScriptKey];
-	
-}
-
-- (KBNFMessageObject *) scriptObject {
-	return [self valueForPropertyKey:OSCTxAssetInstancePacketComposerScriptKey];
-}*/
-
-
-/*- (void) addPortToObserve: (ECNPort *)outputport	{
-	if (!outputport) return;
-	[[self valueForPropertyKey: OSCTxAssetInstanceObservedPortsArrayKey] addObject: outputport];
-	NSLog (@"added %@ port to list of port to observe", outputport);
-}*/
-
 
 #pragma mark -
 #pragma mark Overrides
 #pragma mark - ECNObject overrides
+
+
+- (bool) willReturnAfterLoadingWithError: (NSError **)error	{
+	NSMutableArray *bnfArgumentsArray = [NSMutableArray array];
+
+	// convert strings loaded from file to [KBNFOSCArgument class]s
+	bool result=true;
+	for (id argument in [self argumentsArray])
+		if ([argument isKindOfClass: [NSString class]])	{
+			id bnfObject = [KBNFOSCArgument scriptWithString: argument  withDocument: [self document]];
+			if (nil != bnfObject) 
+				[bnfArgumentsArray addObject: bnfObject];
+			else  {
+				result=false;
+				*error = [NSError errorWithDomain:KErrorDomain
+											 code:KErrorOSCArgumentParsing
+										 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:
+												   KLocalizedString(@"KErrorFailedParsingOSCArgumentDesc", @"KErrorFailedParsingOSCArgumentDesc"),
+												   NSLocalizedDescriptionKey,
+												   KLocalizedString(@"KErrorFailedParsingOSCArgumentReason", @"KErrorFailedParsingOSCArgumentReason"),
+												   NSLocalizedFailureReasonErrorKey,
+												   KLocalizedString(@"KErrorFailedParsingOSCArgumentRecovery", @"KErrorFailedParsingOSCArgumentRecovery"),
+												   NSLocalizedRecoverySuggestionErrorKey,
+												   [NSNumber numberWithInteger:NSUTF8StringEncoding],
+												   NSStringEncodingErrorKey,
+												   nil]];
+				NSLocalizedString(@"Error: couldn't parse the osc argument: %@", bnfObject);
+
+			}
+		}
+	[self setArgumentsArray: bnfArgumentsArray];
+	return result;
+}
+
 
 #pragma mark - ECNElement overrides
 
@@ -239,55 +262,7 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 	}
 	
 }
-/*- (BOOL) executeAtTime:(NSTimeInterval)time {
-	
-	ECNOSCTargetAsset* asset = [self oscAsset];
-	
-	NSMutableArray *messagesArray = [self valueForKey: OSCTxAssetInstanceMessagesArrayKey];
-	
-	if (!asset) return false;
 
-	bool result = true;
-	NSMutableArray *lastValuesSent = [NSMutableArray array];
-	for (id message in messagesArray) {
-		NSError *error;
-		NSString *addressPattern = [message valueForKey: OSCTxAssetInstanceAddressPatternKey];
-		NSString *messagebundle = [message valueForKey: OSCTxAssetInstancePacketComposerScriptKey];
-		if ((nil != addressPattern) && (nil!= messagebundle))
-		if (![asset sendValues: [NSArray arrayWithObject: messagebundle ]
-				toAddress: addressPattern
-					error: &error])
-			result = false;
-		else 
-			[lastValuesSent addObject: [NSDictionary dictionaryWithObjectsAndKeys: 
-										messagebundle, @"message",
-										addressPattern, @"address",
-										nil]];
-		
-
-	}
-
-	if (result)	{
-
-		
-		NSDictionary *oldPacket = lastPacketSent;
-		lastPacketSent = [[NSDictionary dictionaryWithObjectsAndKeys:
-						  lastValuesSent,@"values",
-						  [NSNumber numberWithInt: time], @"timestamp",
-						  nil] retain];
-		
-		if (oldPacket != nil) 
-			[oldPacket release];
-		
-		return [super executeAtTime: time];
-	}
-	else {
-		NSLog (@"Error sending OSC packet:");// %@", [error description]);
-		return false;
-	}
-	
-}
-*/
 - (void) drawInCGContext: (CGContextRef)context withRect: (CGRect) rect {
 	
 	

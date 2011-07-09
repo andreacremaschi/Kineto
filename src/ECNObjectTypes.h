@@ -9,3 +9,4 @@
 
 #import "ECNPort.h"
 #import "ECNElements.h"
+#import "KBNFOSCArgument.h"

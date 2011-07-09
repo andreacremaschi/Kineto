@@ -8,11 +8,13 @@
 
 #import "ECNShape.h"
 #import "ECNShapeTrigger.h"
-#import "MaskSrcUsingChannelFilter.h"
 
 #import "ECNVideoInputAsset.h"
 #import "KLayer.h"
 #import "KCue.h"
+
+#import <OpenGL/OpenGL.h>
+#import <OpenGL/gl.h>
 
 // +  + Elements specific properties   +
 NSString *ShapeMaskToObserveKey = @"mask_to_observe"; 
@@ -91,7 +93,16 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	
 }
 
-
+- (id) init {
+	self = [super init];
+	if (nil != self)	{
+		_calculationsOpenGLContext = nil;
+		_calculationsPixelFormat=nil;
+	}
+	return self;
+	
+	
+}
 - (void) initPorts // WithProjectDocument: (ECNProjectDocument *)document
 {
 	/*self = [super init]; //initWithProjectDocument: document];
@@ -169,7 +180,6 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 		
 		// setup the "CIAreaAverage" filter
 		_areaAverageFilter   = [[CIFilter filterWithName: @"CIAreaAverage"] retain];
-		_MaskSrcUsingChannelFilter = [[[MaskSrcUsingChannelFilter alloc] init] retain];
 
 		_flags.shouldUpdateShapeMask = true;
 //		_flags.mask_extension = 1.0;		
@@ -184,6 +194,10 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	[_onePixelContext release];
 	[_areaAverageFilter release];
 	
+	if (nil != _calculationsOpenGLContext )
+		[_calculationsOpenGLContext release];
+	if (nil != _calculationsPixelFormat )
+		[_calculationsPixelFormat release];
     [super dealloc];
 }
 
@@ -283,6 +297,11 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	CGContextAddPath(context, objectPath);
 	CGContextStrokePath( context);	
 	
+	
+
+	
+	
+	
 }
 /*
 
@@ -379,6 +398,134 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 }
 
 #pragma mark -
+#pragma mark OpenGL primitives
+
+
+- (bool) initCalculationsOpenGLContextWithError: (NSError **)error	{
+	
+	// create pixel format once
+	if (nil == _calculationsPixelFormat) {
+		NSOpenGLPixelFormatAttribute attributes[] = 
+		{	//NSOpenGLPFADoubleBuffer, 
+			NSOpenGLPFAAccelerated,
+/*			NSOpenGLPFAColorSize, 24, 
+			NSOpenGLPFAAlphaSize, 8,*/
+			NSOpenGLPFADepthSize, 32, 
+			0};
+		
+		/*NSOpenGLPixelFormatAttribute	attributes[] = {
+			NSOpenGLPFAPixelBuffer,
+			NSOpenGLPFANoRecovery,
+			NSOpenGLPFAAccelerated,
+			NSOpenGLPFADepthSize, 24,
+			(NSOpenGLPixelFormatAttribute) 0
+		};*/
+		_calculationsPixelFormat = [[[NSOpenGLPixelFormat alloc] initWithAttributes:attributes] retain];
+	}
+	
+	// create newOpenGLContext NB SHARED with videoasset openGLContext!!!!!!
+	NSOpenGLContext *newOpenGLContext = [[NSOpenGLContext alloc] initWithFormat: _calculationsPixelFormat  
+																   shareContext: [[[self cue] videoAsset] openGLRenderContext]];
+		
+	//setup CI context
+	CIContext *newCIContext  = [CIContext contextWithCGLContext:[newOpenGLContext CGLContextObj] 
+													pixelFormat:[_calculationsPixelFormat CGLPixelFormatObj]
+													 colorSpace: nil
+														options: nil];
+	
+
+	NSOpenGLContext* oldContext = _calculationsOpenGLContext;
+	CIContext *oldCIContext = _calculationsCIContext;
+	_calculationsOpenGLContext = [newOpenGLContext retain];
+	_calculationsCIContext = [newCIContext retain];
+	if (nil!=oldContext) [oldContext release];
+	if (nil!=oldCIContext) [oldCIContext release];
+	
+	return true;
+}
+
+// Create or update the hardware accelerated offscreen area
+// Framebuffer object aka. FBO
+- (bool) initCalculationsFBOsWithError: (NSError **)error	{
+	
+	//CGLContextObj cgl_ctx = [ _calculationsOpenGLContext CGLContextObj];	
+	[_calculationsOpenGLContext makeCurrentContext];
+	// If not previously setup
+	// generate IDs for FBO and its associated texture
+	if (!FBOid)
+	{
+		// Make sure the framebuffer extenstion is supported
+		const GLubyte* strExt;
+		GLboolean isFBO;
+		// Get the extenstion name string.
+		// It is a space-delimited list of the OpenGL extenstions 
+		// that are supported by the current renderer
+		strExt = glGetString(GL_EXTENSIONS);
+		isFBO = gluCheckExtension((const GLubyte*)"GL_EXT_framebuffer_object", strExt);
+		if (!isFBO)
+		{
+			NSLog(@"Your system does not support framebuffer extension");
+			return false;
+		}
+		
+		// create FBO object
+		glGenFramebuffersEXT(1, &FBOid);
+		// the texture
+		glGenTextures(1, &FBOTextureId);
+	}
+	
+	// Bind to FBO
+	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, FBOid);
+	
+	// Initialize FBO Texture
+	glBindTexture(GL_TEXTURE_RECTANGLE_ARB, FBOTextureId);
+
+	glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+	
+	// the GPUs like the GL_BGRA / GL_UNSIGNED_INT_8_8_8_8_REV combination
+	// others are also valid, but might incur a costly software translation.
+	glTexImage2D(GL_TEXTURE_RECTANGLE_ARB, 0, GL_RGBA, 
+				 1, 
+				 1, 
+				 0, 
+				 GL_BGRA, 
+				 GL_UNSIGNED_INT_8_8_8_8_REV, 
+				 NULL);
+	
+	// and attach texture to the FBO as its color destination
+	glFramebufferTexture2DEXT(GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT, GL_TEXTURE_RECTANGLE_ARB, FBOTextureId, 0);
+	
+	
+	// NOTE: for this particular case we don't need a depth buffer when drawing to the FBO, 
+	// if you do need it, make sure you add the depth size in the pixel format, and
+	// you might want to do something along the lines of:
+#if 0
+	// Initialize Depth Render Buffer
+	GLuint depth_rb;
+	glGenRenderbuffersEXT(1, &depth_rb);
+	glBindRenderbufferEXT(GL_RENDERBUFFER_EXT, depth_rb);
+	glRenderbufferStorageEXT(GL_RENDERBUFFER_EXT, GL_DEPTH_COMPONENT, imageRect.size.width, imageRect.size.height);
+	// and attach it to the FBO
+	glFramebufferRenderbufferEXT(GL_FRAMEBUFFER_EXT, GL_DEPTH_ATTACHMENT_EXT, GL_RENDERBUFFER_EXT, depth_rb);
+#endif	
+	
+	// Make sure the FBO was created succesfully.
+	if (GL_FRAMEBUFFER_COMPLETE_EXT != glCheckFramebufferStatusEXT(GL_FRAMEBUFFER_EXT))
+	{
+		NSLog(@"Framebuffer Object creation or update failed!");
+		return false;
+	}
+	
+	// unbind FBO 
+	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+	
+	
+	return true;
+}
+
 #pragma mark Core Image primitives
 
 - (CIImage *)CIcropImage: (CIImage*)ciImage withRect: (NSRect) cropRect	{
@@ -448,12 +595,6 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 
 #pragma mark Image ports calculation
 
-/*- (int) maskToObserve	{
-	NSNumber *nMaskToObserve = [self valueForPropertyKey: ShapeMaskToObserveKey];
-	if (!nMaskToObserve) return 0;	//default to diff_mask
-	return [nMaskToObserve intValue];
-}*/
-
 - (CIImage *) calculateAreaAverageWithFilter: (CIFilter *)averageFilter 
 									withMask: (CIImage *)cimask	{
 
@@ -478,24 +619,52 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 
 
 - (void) calculateAreaAverageWithMask: (CIImage *) cimask	{
-	NSUInteger curPixel[4];
+	GLfloat curPixel[4];
 	
 	[_areaAverageFilter setDefaults];
 	
 	CIImage *result = [self calculateAreaAverageWithFilter: _areaAverageFilter 
 												  withMask: cimask];
-	
-	[[_onePixelContext CIContext] drawImage: result
-									atPoint: CGPointZero
-								   fromRect: CGRectMake (0,0,1,1) ];
-	
-	[_onePixelBitmap getPixel:curPixel atX:0 y:0];
-	
 
+//	CGLContextObj cgl_ctx = [ _calculationsOpenGLContext CGLContextObj];
+	@synchronized(self){
+		[_calculationsOpenGLContext makeCurrentContext];
+		
+		// Bind 1-pixel FBO 
+		glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, FBOid);
+		
+		{
+			glViewport(0, 0, 1, 1);
+			
+			glMatrixMode(GL_PROJECTION);
+			glLoadIdentity();
+			glOrtho(0, 1, 0, 1, -1, 1);
+			
+			glMatrixMode(GL_MODELVIEW);
+			glLoadIdentity();
+			
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+		}
+		
+		
+		/*[[_onePixelContext CIContext] drawImage: result
+										atPoint: CGPointZero
+									   fromRect: CGRectMake (0,0,1,1) ];*/
+
+		[_calculationsCIContext drawImage: result
+								  atPoint: CGPointZero
+								 fromRect: CGRectMake (0,0,1,1) ];
+		//[_calculationsOpenGLContext flushBuffer];		
+		glReadPixels(	0, 0, 1, 1, GL_RGBA, GL_FLOAT, &curPixel); 	
+		
+		// Bind to default framebuffer (unbind FBO)
+		glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+	}
+	//[_onePixelBitmap getPixel:curPixel atX:0 y:0];
+	
 	[self setValue:	
-	  [NSNumber numberWithFloat: (curPixel[0] / 255.0) ] // / _flags.mask_extension]
+	  [NSNumber numberWithFloat: curPixel[0]  ] // / _flags.mask_extension]
 	  forOutputKey: ShapeOutputExtension ];
-	//NSLog( @"%i, %i, %i, %i", curPixel[0],curPixel[1], curPixel[2], curPixel[3]);
 	
 }
 
@@ -503,7 +672,6 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 - (void) calculateAreaColumnAverageWithMask: (CIImage *) cimask	{
 
 	NSSize maskSize = NSMakeSize([cimask extent].size.width, [cimask extent].size.height);
-	//int bytesSize = 4 *  maskSize.width;
 	NSUInteger curPixel[4];
 	
 	
@@ -517,7 +685,6 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	int leftMost[nMasks];
 	int rightMost[nMasks];
 	int middleHorizontal[nMasks];
-	//int maskToObserve =[self maskToObserve];
 	
 	for (c=0;c<nMasks;c++)	{
 		 leftMost[c] = 0;
@@ -535,7 +702,6 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 			}
 		}
 	}
-	//NSLog(@"%.2f",leftMost[0]); 
 	for (c=0;c<nMasks;c++)
 		middleHorizontal[c] = rightMost[c] > 0 ? (rightMost[c] + leftMost[c]) / 2 : 0;
 	
@@ -553,29 +719,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	[self setValue:	
 	 [NSNumber numberWithFloat: (float)middleHorizontal[0] / maskSize.width]
 	  forOutputKey: ShapeOutputMiddleHorizontal ];
-	
-	/*
-	[self setValue:	
-	  [NSDictionary dictionaryWithObjectsAndKeys:
-	   [NSNumber numberWithFloat: (float)rightMost[0] / maskSize.width],	@"diff_mask",
-	   [NSNumber numberWithFloat: (float)rightMost[1] / maskSize.width],	@"motion_mask",
-	   nil]
-	  forOutputKey: ShapeOutputRightmost ];
-	
-	[self setValue:	
-	  [NSDictionary dictionaryWithObjectsAndKeys:
-	   [NSNumber numberWithFloat: (float)leftMost[0] / maskSize.width],	@"diff_mask",
-	   [NSNumber numberWithFloat: (float)leftMost[1] / maskSize.width],	@"motion_mask",
-	   nil]
-	  forOutputKey: ShapeOutputLeftmost ];
 
-	[self setValue:	
-	  [NSDictionary dictionaryWithObjectsAndKeys:
-	   [NSNumber numberWithFloat: (float)middleHorizontal[0] / maskSize.width],	@"diff_mask",
-	   [NSNumber numberWithFloat: (float)middleHorizontal[1] / maskSize.width],	@"motion_mask",
-	   nil]
-	  forOutputKey: ShapeOutputMiddleHorizontal ];
-*/							
 	return;	
 }
 
@@ -638,66 +782,8 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	  forOutputKey: ShapeOutputMiddleVertical ];
 
 	
-/*	[self setValue:	
-	 [NSDictionary dictionaryWithObjectsAndKeys:
-	  [NSNumber numberWithFloat: (float)highest[0] / maskSize.height],	@"diff_mask",
-	  [NSNumber numberWithFloat: (float)highest[1] / maskSize.height],	@"motion_mask",
-	  nil]
-	  forOutputKey: ShapeOutputHighest ];
-	
-	[self setValue:	
-	 [NSDictionary dictionaryWithObjectsAndKeys:
-	  [NSNumber numberWithFloat: (float)lowest[0] / maskSize.height],	@"diff_mask",
-	  [NSNumber numberWithFloat: (float)lowest[1] / maskSize.height],	@"motion_mask",
-	  nil]
-	  forOutputKey: ShapeOutputLowest ];
-	
-	[self setValue:	
-	 [NSDictionary dictionaryWithObjectsAndKeys:
-	  [NSNumber numberWithFloat: (float)middleVertical[0] / maskSize.height],	@"diff_mask",
-	  [NSNumber numberWithFloat: (float)middleVertical[1] / maskSize.height],	@"motion_mask",
-	  nil]
-	  forOutputKey: ShapeOutputMiddleVertical ];*/
-	
 	return;	
 }
-/*- (NSNumber *) calculateAreaRowAverageWithMask: (CIImage *) cimask	{
-	
-	NSSize maskSize = NSMakeSize([cimask extent].size.width, [cimask extent].size.height);
-	//int bytesSize = 4 *  maskSize.width;
-	NSUInteger curPixel[4];
-	
-	
-	CIFilter *columnAverageFilter   = [CIFilter filterWithName: @"CIRowAverage"] ;
-	CIImage *result = [self calculateAreaAverageWithFilter: columnAverageFilter withMask: cimask];
-	NSBitmapImageRep * resultBitmap = [[self drawCIImageInBitmap: result] retain];
-	
-	int i;
-	int highest = 0;
-	int lowest = 0;
-	int middleVertical = 0;
-	
-	for (i=0;i<maskSize.height;i++)	{
-		[resultBitmap getPixel:curPixel atX:0 y:i];
-		if (curPixel[0] > 0)	{
-			highest = (highest == 0) ? i : highest;
-			lowest = i; 
-		}
-	}
-	middleVertical = highest > 0 ? highest + lowest / 2 : 0;
-	//NSLog(@"highest: %.2f, lowest: %.2f, Middle vert: %.2f", (float)highest / maskSize.height, (float)lowest / maskSize.height, (float)middleVertical / maskSize.height);
-	[self setValue:	[NSNumber numberWithFloat: (float)highest / maskSize.height]
-	  forOutputKey: ShapeOutputHighest ];
-	[self setValue:	[NSNumber numberWithFloat: (float)lowest / maskSize.height]
-	  forOutputKey: ShapeOutputLowest ];
-	[self setValue:	[NSNumber numberWithFloat: (float)middleVertical / maskSize.height]
-	  forOutputKey: ShapeOutputMiddleVertical ];
-	
-	[resultBitmap release];
-	
-	return [NSNumber numberWithFloat: 0];
-	
-}*/
 
 - (CIImage*) calculateMaskImageWithMask: (CIImage *)cimask	{
 	
@@ -779,7 +865,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	
 	//use a custom CoreImage filter that multiplies source image with pixels from selected channel
 	//so that we can use diff_mask or motion_mask as masks for the input videoframe
-	CIFilter *ciCustomFilter = _MaskSrcUsingChannelFilter;
+/*	CIFilter *ciCustomFilter = _MaskSrcUsingChannelFilter;
 
 	
 
@@ -805,7 +891,8 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 	// 3. process Core image filter
 	CIImage * result = [ciCustomFilter valueForKey: @"outputImage"];
 
-	return result;
+	return result;*/
+	return nil;
 }
 
 
@@ -890,7 +977,14 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
   
 		/*  ,[self valueForPropertyKey: ECNObjectNameKey],
 		  _flags.mask_extension);*/
-	
+	NSError	*error;
+	if (![self initCalculationsOpenGLContextWithError: &error])	{
+		NSLog (@"%@", error);
+	}
+
+	if (![self initCalculationsFBOsWithError: &error])	{
+		NSLog (@"%@", error);
+	}
 	
 	// Housekeeping
 	CGColorSpaceRelease(colorSpace); 
@@ -982,6 +1076,7 @@ NSString *ShapeNameDefaultValue = @"Undefined shape";
 - (id) valueForOutputPort:(NSString *)portKey	{
 	
 	CIImage *maskImage = [self valueForOutputKey: ShapeOutputMaskImage];
+	if (nil == maskImage) return nil;
 	if ([portKey isEqualToString: ShapeOutputMaskImage])	{
 	
 		[self setValue:	[self calculateOutputMaskedImage]

@@ -102,7 +102,8 @@ NSString *AssetInstanceQCIconDefaultValue = @"assets_qcpatch";
 									   
 	if (qcInstance != nil)	{
 		[qcInstance setValue: QCAssetInstanceClassValue forPropertyKey: ECNObjectClassKey];
-		[qcInstance setValue: QCAssetInstanceDefaultNameValue forPropertyKey: ECNObjectNameKey];
+		[qcInstance setIncrementalNameWithRootName: QCAssetInstanceDefaultNameValue];
+
 	}
 	return qcInstance;
 	

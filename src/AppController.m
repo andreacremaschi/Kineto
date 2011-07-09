@@ -160,7 +160,8 @@
 }
 
 - (IBAction) showLicensingWindowController:(id)sender {
-	[[[LicensingWindowController alloc] init] loadWindow];	
+	LicensingWindowController * licensingWindow = [[[LicensingWindowController alloc] init] autorelease];
+	[licensingWindow loadWindow];	
 	
 }
 

@@ -44,9 +44,9 @@ NSString *LineNameDefaultValue = @"New line";
 	ECNLine *newLine = [[[ECNLine alloc] initWithProjectDocument: document] autorelease];
 	
 	if (newLine != nil)	{
-	
+		
 		[newLine setValue: LineClassValue forPropertyKey: ECNObjectClassKey];
-		[newLine setValue: LineNameDefaultValue forPropertyKey: ECNObjectNameKey];
+		[newLine setIncrementalNameWithRootName: LineNameDefaultValue];
 
 	}
 	return newLine;

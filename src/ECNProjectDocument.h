@@ -27,6 +27,7 @@
 	// Object ID generator
 	int _objectIDCounter;
 }
+@property (readonly, getter=objects) NSArray *_objects;
 
 // === ID counter for persistance purposes
 - (int) incIDCounter;

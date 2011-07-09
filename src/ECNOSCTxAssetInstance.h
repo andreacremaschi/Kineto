@@ -20,6 +20,7 @@ extern NSString *OSCTxAssetInstanceMessagesArrayKey;
 
 @interface ECNOSCTxAssetInstance : ECNAssetInstance {
 	NSDictionary *lastPacketSent;
+	NSMutableArray *oscArgumentsCache;
 }
 @property (readonly) NSDictionary *lastPacketSent;
 @property (retain) NSString *addressPattern;

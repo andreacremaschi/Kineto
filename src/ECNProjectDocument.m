@@ -21,7 +21,7 @@
 #import <VVOSC/VVOSC.h>
 
 
-NSString *strNewSceneDefaultName = @"New cue ";
+NSString *strNewSceneDefaultName = @"New cue";
 //NSString *ECNPlaybackIsOverNotification = @"ECNPlaybackIsOver";
 
 
@@ -35,7 +35,7 @@ NSString *ECNDocumentType = @"Kineto Format";
 
 
 @implementation ECNProjectDocument
-
+@synthesize _objects;
 
 - (id)init
 {
@@ -142,42 +142,21 @@ NSString *ECNDocumentType = @"Kineto Format";
 
 -(KCue *)createNewCue {
 
-	//cicla tra le scene e controlla
-	//- se esiste già una scena con quel nome
-	//- se esiste già una "first scene"
-	
-	int i=0; int n=0;
-	NSString *newSceneName;
-	bool nameIsNew =false;
-	bool nameExists = false;
-	bool firstSceneExists = false;
-	
-	newSceneName = [[[NSString alloc] initWithString: strNewSceneDefaultName] autorelease];
-
-	NSArray *scenes = [self cues]; 
-	if ([scenes count] > 0)
-	while (!nameIsNew)
-	{
-		if (i>0) newSceneName = [strNewSceneDefaultName stringByAppendingString: [NSString stringWithFormat:@"%i", i]];
-		
-		nameExists = false;
-		nameIsNew = true;
-
-		for (n=0;n<[scenes count]; n++)
-		{
-			if ([[scenes objectAtIndex:n] valueForPropertyKey: ECNObjectNameKey] == newSceneName) nameExists = true;
-			if ([[scenes objectAtIndex:n] valueForPropertyKey: ECNSceneActiveAtFirstKey]) firstSceneExists = true;
+	//check if a cue that active at first is already in the list of cues
+	bool firstCueExists = false;
+	for (KCue *cue in [self cues])
+		if ([[cue valueForPropertyKey: ECNSceneActiveAtFirstKey] boolValue])	{
+			firstCueExists = true;
+			break;
 		}
-		if (nameExists) nameIsNew =false;
-		i++;
-	}
-	// se esiste modifica il contatore
 	
 	[self willChangeValueForKey:@"cues"];
-	KCue *_creatingScene = [KCue sceneWithDocument: self]; //[[ECNScene allocWithZone:[self zone]] initWithProjectDocument: self];
+	
+	// create a new cue
+	KCue *_creatingScene = [KCue cueWithDocument: self];
+
 	if (_creatingScene)	{
-		[_creatingScene setValue: newSceneName forPropertyKey: ECNObjectNameKey];	
-		[_creatingScene setValue: [NSNumber numberWithBool: !firstSceneExists] forPropertyKey: ECNSceneActiveAtFirstKey];
+		[_creatingScene setValue: [NSNumber numberWithBool: !firstCueExists] forPropertyKey: ECNSceneActiveAtFirstKey];
 		//[self insertScene: _creatingScene atIndex:0];
 	}
 	else {
@@ -458,14 +437,14 @@ static int ECNCurrentDocumentVersion = 1;
 #pragma mark  *** Asset management
 - (void) importAsset: (NSString *)filePath	{
 
-	Class theClass;
+	Class theClass = nil;
 	if (!filePath) return;
 	
 	NSString *extension = [filePath pathExtension];
 	if ([extension isEqual: @"qtz"])
 		theClass = [ECNQCAsset class];
 	
-	if (!theClass) return;
+	if (nil == theClass) return;
 	
 	ECNAsset *qcAsset = [theClass assetWithDocument: self
 									 withQCFilePath: filePath];

@@ -176,8 +176,11 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 
 	if (curObject == nil) return [NSNull null];
 	
+		
 	id curObjectRepresentation;
-	if ([curObject isKindOfClass: [ECNObject class]] ||
+	if ([curObject respondsToSelector: @selector(representation)])
+		curObjectRepresentation = [curObject representation];
+	else if ([curObject isKindOfClass: [ECNObject class]] ||
 		[curObject isKindOfClass: [ECNPort class]] ||
 		[curObject isKindOfClass: [NSArray class]] ||
 		[curObject isKindOfClass: [NSDictionary class]])
@@ -185,10 +188,11 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 	else
 		if ([curObject isKindOfClass: [NSDate class]] || 
 			[curObject isKindOfClass: [NSNumber class]] ||
-			[curObject isKindOfClass: [NSString class]])
+			[curObject isKindOfClass: [NSString class]] || 
+			[curObject isKindOfClass: [NSData class]])
 			curObjectRepresentation = curObject ;
-		else					
-			// archive binary data
+		else
+			//archive binary data
 			curObjectRepresentation = [NSArchiver archivedDataWithRootObject:curObject];
 
 	return curObjectRepresentation;
@@ -206,7 +210,7 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 	// NSDictionary
 	if ([objectToSerialize isKindOfClass: [NSDictionary class]])	{
 
-		representation = [[NSMutableDictionary alloc] init];
+		representation = [[[NSMutableDictionary alloc] init] autorelease];
 		
 		// todo: check that [_attributes valueForKey: ECNPropertiesKey] is a NSDictionary
 		NSEnumerator *enumerator = [objectToSerialize keyEnumerator];
@@ -236,7 +240,7 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 		// ECNObject	
 		else if ([objectToSerialize isKindOfClass: [ECNObject class]])	{
 		
-		representation = [[NSMutableDictionary alloc] init];
+		representation = [[[NSMutableDictionary alloc] init] autorelease];
 	
 		[representation setObject: [[objectToSerialize ID] stringValue]
 				 forKey: ECNObjectUniqueIDKey];
@@ -247,7 +251,7 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 		// ECNPort
 		else if ([objectToSerialize isKindOfClass: [ECNPort class]])	{
 		
-		representation = [[NSMutableDictionary alloc] init];
+		representation = [[[NSMutableDictionary alloc] init] autorelease];
 		
 		[representation setObject: NSStringFromClass([objectToSerialize class])
 						   forKey: ECNObjectClassKey];
@@ -256,7 +260,7 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 		[representation setObject: [objectToSerialize name]
 						   forKey: ECNPortAttributeNameKey];
 	} // end ECNPort
-	else representation = [[NSMutableDictionary alloc] init]; // default to empty dictionary
+	else representation = [[[NSMutableDictionary alloc] init] autorelease]; // default to empty dictionary
 
 	return representation;
 
@@ -413,13 +417,16 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 	} else
 	{
 		//TODO: throw exception
+		convertedValue = nil;
 	}
 	return convertedValue;
 	
 	
 }
 
-
+- (bool) willReturnAfterLoadingWithError: (NSError **)error	{
+	return true;	
+}
 
 + (ECNObject *)objectWithDataDictionary:(NSDictionary *)dict	withDocument: (ECNProjectDocument *)document {
 
@@ -437,8 +444,8 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 	NSAssert (objectClass, errString);
 
 	NSNumber *objectID = [NSNumber numberWithInteger: [[dict valueForKey: ECNObjectUniqueIDKey] integerValue]];
-	id newObject = [[objectClass alloc] initWithProjectDocument: document 
-																 withID: objectID];
+	id newObject = [[[objectClass alloc] initWithProjectDocument: document 
+																 withID: objectID] autorelease];
 	NSLog(@"Creating object: %@ with ID: %@", [dict valueForKey: ECNObjectClassKey], [dict valueForKey: ECNObjectUniqueIDKey]);
 	NSAssert (newObject, errString);
 	
@@ -469,6 +476,11 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 	}
 	
 	//NSLog(@"Object loaded with data: %@", [newObject attributes]);
+	// this invokation is here for final data preparing
+	NSError *error = nil;
+	if (![newObject willReturnAfterLoadingWithError: &error])
+		NSLog( @"%@", [error description]);
+	
 	return newObject;
 };
 
@@ -523,9 +535,62 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 {	return [self valueForPropertyKey: ECNObjectNameKey] ;	}
 
 - (void) setName: (NSString *)name	
-{	[self setValue: name forPropertyKey: ECNObjectNameKey]; }
+{	[self willChangeValueForKey: ECNObjectNameKey];
+	[self setValue: name forPropertyKey: ECNObjectNameKey]; 
+	[self didChangeValueForKey: ECNObjectNameKey];
+}
 
 
++ (NSString *) objectIncrementalNameWithRoot: (NSString *) string 
+									  ofType: (Class )type
+								  inDocument: (ECNProjectDocument *)document	{
+		
+	NSString *root = string;
+	NSString *name;
+	bool nameExists;
+	if ((nil == root) || (root == @"")) 
+		root = ObjectNameDefaultValue;
+	
+	// get an array of objects of type "type"
+	NSArray *typedObjectsArray;
+	if (nil != type) {
+		NSAssert ([type isSubclassOfClass: [ECNObject class]], @"Error in ECNObject.m: Kineto objects must be of KObject class type.");
+		typedObjectsArray = [document objectsOfKind: type];
+	}
+	else 
+		typedObjectsArray = [document objects];
+
+	
+	//check if root name exists in objects of type "type"
+	NSString *suffix = @"";
+		int i = 0;
+	do 	{
+		
+		i++;
+		if (i>0) suffix = [NSString stringWithFormat: @" %i", i];
+		name = [root stringByAppendingString: suffix];
+		nameExists = false;
+		for (ECNObject *object in typedObjectsArray)
+		{
+			if ([[object name] isEqualToString: name]) {
+				nameExists = true;
+				break;
+			}
+		}
+	} while (nameExists);
+			  
+	return name;
+	
+	
+}
+
+
+- (void) setIncrementalNameWithRootName: (NSString *)rootName	{
+	NSString *objectName = [ECNObject objectIncrementalNameWithRoot: rootName
+															 ofType: [self class]
+														 inDocument: [self document]];
+	[self setName: objectName];
+}
 #pragma mark -
 #pragma mark Ports
 

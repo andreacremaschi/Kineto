@@ -45,7 +45,8 @@ NSString *RectangleNameDefaultValue = @"New rectangle";
 	ECNRectangle *newRectangle = [[[ECNRectangle alloc] initWithProjectDocument: document] autorelease];
 	if (newRectangle != nil)	{
 		[newRectangle setValue: RectangleClassValue forPropertyKey: ECNObjectClassKey];
-		[newRectangle setValue: RectangleNameDefaultValue forPropertyKey: ECNObjectNameKey];
+		[newRectangle setIncrementalNameWithRootName: RectangleNameDefaultValue];
+
 
 	}
 	return newRectangle;

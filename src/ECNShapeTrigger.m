@@ -7,7 +7,7 @@
 //
 
 #import "ECNShapeTrigger.h"
-
+#import "ECNShape.h"
 
 @implementation ECNShapeTrigger
 
@@ -123,12 +123,39 @@ NSString *ECNShapeTriggerClassValue = @"ECNShapeTrigger";
 
 
 #pragma mark Drawing methods
+
+
+
+- (void) drawLineFromPoint: (NSPoint) startPoint 
+				   toPoint: (NSPoint )endPoint	
+				 inContext: (CGContextRef) context	{
+	
+	CGMutablePathRef path = CGPathCreateMutable();
+	
+	CGPathMoveToPoint(path, 
+					  nil,
+					  startPoint.x,
+					  startPoint.y );
+	CGPathAddLineToPoint (path,
+						  nil,
+						  endPoint.x,
+						  endPoint.y );
+	
+	CGPathCloseSubpath ( path);
+	
+	CGContextBeginPath(context);
+	CGContextAddPath(context, path);
+	CGContextStrokePath( context);	
+	
+	
+}
 - (void) drawInCGContext: (CGContextRef)context
 				withRect: (CGRect) rect	
 {
+	ECNElement *elementToObserve = [self valueForPropertyKey: ECNTriggerElementToObserveKey];
+
 	if (_flags.isActive) {
 	
-		ECNElement *elementToObserve = [self valueForPropertyKey: ECNTriggerElementToObserveKey];
 		CGMutablePathRef elementPath = [elementToObserve quartzPathInRect: rect];
 		
 		
@@ -143,6 +170,51 @@ NSString *ECNShapeTriggerClassValue = @"ECNShapeTrigger";
 		CGContextBeginPath(context);
 		CGContextAddPath(context, elementPath);
 		CGContextStrokePath( context);	
+	}
+	
+	
+	//draw representation for observed port
+	
+	NSString *portToObserve = [self valueForPropertyKey: ECNTriggerPortToObserveKey];
+	id lastValue = _flags.lastValue;
+	
+	if ((nil == lastValue) || 
+		!([lastValue isKindOfClass: [NSNumber class]]))
+		return;
+	
+	// draw line for observed port
+	if (![portToObserve isEqualTo: ShapeOutputExtension])	{
+		
+		NSRect drawingBounds = [elementToObserve calcPixelBoundsInRect: NSRectToCGRect( rect )]; 
+		
+		// CG contexts are upside down in respect of NS graphics contexts!
+		drawingBounds.origin.y = rect.size.height - drawingBounds.origin.y - drawingBounds.size.height;
+
+		
+		if ( ([portToObserve isEqualTo: ShapeOutputHighest]) ||
+			([portToObserve isEqualTo: ShapeOutputLowest]) ||
+			([portToObserve isEqualTo: ShapeOutputMiddleVertical]) ) {
+
+			CGFloat lineYPos = drawingBounds.size.height * [lastValue floatValue];
+			[self drawLineFromPoint: NSMakePoint( NSMinX(drawingBounds), drawingBounds.origin.y + lineYPos)
+							toPoint: NSMakePoint( NSMaxX(drawingBounds), drawingBounds.origin.y + lineYPos)
+						  inContext: context];
+			
+			
+		}
+		else 
+			if ( ([portToObserve isEqualTo: ShapeOutputRightmost]) ||
+				([portToObserve isEqualTo: ShapeOutputLeftmost]) ||
+				([portToObserve isEqualTo: ShapeOutputMiddleHorizontal]) ) {
+
+				CGFloat lineXPos = drawingBounds.size.width * [lastValue floatValue];
+				[self drawLineFromPoint: NSMakePoint( NSMinX(drawingBounds) + lineXPos, NSMinY(drawingBounds) )
+								toPoint: NSMakePoint( NSMinX(drawingBounds) + lineXPos, NSMaxY(drawingBounds) ) 
+							  inContext: context];
+
+			}
+		
+		
 	}
 	
 	

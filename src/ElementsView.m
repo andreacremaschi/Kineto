@@ -18,7 +18,7 @@ NSString *ElementsViewSelectionDidChangeNotification = @"ElementsViewSelectionDi
 NSString *ElementsViewDoubleClicOnElementNotification = @"ElementsViewNewElementToEditNotification";
 
 @implementation ElementsView
-@synthesize scene;
+@synthesize cue;
 @synthesize bgOpacity;
 @synthesize currentElementClass;
 @synthesize currentColor;
@@ -53,6 +53,7 @@ static float ECNDefaultPasteCascadeDelta = 10.0;
         _gridColor = [[NSColor lightGrayColor] retain];
         _unhideKnobsTimer = nil;
 		_background = nil;
+		backgroundImage = nil;
 		useBackground = true;
     }
     return self;
@@ -110,13 +111,13 @@ static float ECNDefaultPasteCascadeDelta = 10.0;
 }
 
 
-- (void)setScene:(KCue *)newScene {
+- (void)setCue:(KCue *)newScene {
 	
 	//[self unbind: @"backgroundImage"];
-	scene = newScene;
+	cue = newScene;
 
 	[self bind: @"backgroundImage"
-	  toObject: scene
+	  toObject: cue
    withKeyPath: @"videoAsset.backgroundImage"
 	   options: nil];
 	[self setNeedsDisplay: YES];
@@ -133,11 +134,11 @@ static float ECNDefaultPasteCascadeDelta = 10.0;
 }*/
 
 - (ECNProjectDocument *)ecnProjectDocument {
-    return [[self scene] document];
+    return [[self cue] document];
 }
 
 - (NSArray *)elements {
-    return [[self scene] elements];
+    return [[self cue] elements];
 }
 
 
@@ -259,7 +260,7 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 #pragma mark *** Geometry calculations
 - (ECNElement *)elementUnderPoint:(NSPoint)point {
 
-    NSArray *elements = [[self scene] elements];
+    NSArray *elements = [[self cue] elements];
     ECNElement *curElement = nil;
 	
 	for (curElement in elements)
@@ -381,7 +382,8 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 	
 	[[NSColor whiteColor] set];
     NSRectFill(rect);
-	if ((nil != backgroundImage) && (useBackground))
+	if (nil != [cue videoAsset])
+	if ((backgroundImage) && (useBackground))
 	{	NSSize imgRectSize = [backgroundImage size];
 		
 	/*	NSRect srcRect;
@@ -407,14 +409,14 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 
 	// *** DRAW EVERY ELEMENT !!!***
 
-	if ([self scene] != nil) {
+	if ([self cue] != nil) {
 	
 		
 	/*elements = [[self scene] elements];
     i = [elements count];
 		
     while (i-- > 0) {*/
-	for (curElement in [[self scene] elements])	{
+	for (curElement in [[self cue] elements])	{
 //        curElement = [elements objectAtIndex:i];
 		
 		if ([curElement isVisible])
@@ -459,6 +461,10 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 	}
 }
 
+#pragma mark -
+#pragma mark Element creation, selection, move
+
+
 
 - (void)createElementOfClass:(Class)theClass withEvent:(NSEvent *)theEvent {
 
@@ -466,9 +472,9 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 //    _creatingElement = [[theClass allocWithZone:[document zone]] initWithProjectDocument: [[self scene] document] ];
 	_creatingElement = [theClass elementWithDocument: document];
 	
-    if ([_creatingElement createWithEvent:theEvent inScene:[self scene] inView:self]) {
+    if ([_creatingElement createWithEvent:theEvent inScene:[self cue] inView:self]) {
 		
-        [[self scene] insertElement:_creatingElement atIndex:0];
+        [[self cue] insertElement:_creatingElement atIndex:0];
 		
         [self selectElement:_creatingElement];
 
@@ -593,7 +599,7 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
  //   BOOL snapsToGrid = [self snapsToGrid];
 //    float spacing = [self gridSpacing];
 //    BOOL echoToRulers = [[self enclosingScrollView] rulersVisible];
-    NSRect selBounds = [[self scene] boundsForElements:selElements];
+    NSRect selBounds = [[self cue] boundsForElements:selElements];
 	
 	//convert selected bounds rect to view coordinates
 	selBounds.origin.x *= [self bounds].size.width;
@@ -758,7 +764,7 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 }
 
 - (IBAction)selectAll:(id)sender {
-    NSArray *elements = [[self scene] elements];
+    NSArray *elements = [[self cue] elements];
     [self performSelector:@selector(selectElement:) withEachObjectInArray:elements];
 }
 
@@ -768,9 +774,9 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 
 
 - (IBAction)delete:(id)sender {
-    NSArray *selCopy = [[NSArray allocWithZone:[self zone]] initWithArray:[self selectedElements]];
+    NSArray *selCopy = [[[NSArray allocWithZone:[self zone]] initWithArray:[self selectedElements]] autorelease];
     if ([selCopy count] > 0) {
-        [[self scene] performSelector:@selector(removeElement:) withEachObjectInArray:selCopy];
+        [[self cue] performSelector:@selector(removeElement:) withEachObjectInArray:selCopy];
         [selCopy release];
         [[[self ecnProjectDocument] undoManager] setActionName:NSLocalizedStringFromTable(@"Delete", @"UndoStrings", @"Action name for deletions.")];
 		[self setNeedsDisplay:true];

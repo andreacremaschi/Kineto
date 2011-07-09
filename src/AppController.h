@@ -15,6 +15,6 @@
 
 
 }
-
+- (IBAction) showLicensingWindowController:(id)sender;
 
 @end
