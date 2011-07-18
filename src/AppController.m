@@ -109,8 +109,6 @@
 	}
 
 	
-	
-	
 /*	[[oSplashWindow windowController] orderOut: self];
 
 	// show only some of them
@@ -135,6 +133,8 @@
 	} else {
 		[self _loadPipelineAsync];
 	}*/
+	
+	
 	
 	
 }

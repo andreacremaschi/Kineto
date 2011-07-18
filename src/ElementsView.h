@@ -62,6 +62,8 @@ extern NSString *ElementsViewDoubleClicOnElementNotification;
 	
 	Class currentElementClass;
 	NSColor *currentColor;
+
+	NSImageRep *backgroundImage;
 }
 
 @property (assign)KCue *cue;

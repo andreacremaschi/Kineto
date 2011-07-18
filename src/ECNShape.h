@@ -34,28 +34,22 @@ extern NSString *ShapeOutputMiddleHorizontal ;
 extern NSString *ShapeOutputMiddleVertical;
 
 // +  +  +  +  +  +  +  +  +  +  +  +
-@class ECNShapeTrigger, KLayer;
+@class ECNShapeTrigger, KLayer, KGPUCalculationObject;
 @interface ECNShape : ECNElement {
 
 	struct __shapeFlags {
 		bool shouldUpdateShapeMask;
+		NSRect cachedRect;
 //		float mask_extension;
     } _flags;
 	
 	
-	// CoreImage thingies for fast collision calculations
-	NSBitmapImageRep *_onePixelBitmap;
-	NSGraphicsContext *_onePixelContext;
+	KGPUCalculationObject *calcAreaAverage;
+	KGPUCalculationObject *calcRowAverage;
+	KGPUCalculationObject *calcColumnAverage;
 	
-	NSOpenGLContext *_calculationsOpenGLContext;
-	CIContext *_calculationsCIContext;
-	NSOpenGLPixelFormat *_calculationsPixelFormat;
-	NSOpenGLContext *_onePixeFBO;
-	GLuint					FBOid;
-	GLuint					FBOTextureId;
+	NSMutableArray *_gpuObjectsArray;
 
-	CIFilter *_areaAverageFilter;
-	CIFilter *_MaskSrcUsingChannelFilter;
 }
 
 - (KLayer *)observedMask;

@@ -148,6 +148,7 @@ NSString *ECNShapeTriggerClassValue = @"ECNShapeTrigger";
 	CGContextStrokePath( context);	
 	
 	
+	
 }
 - (void) drawInCGContext: (CGContextRef)context
 				withRect: (CGRect) rect	
@@ -185,7 +186,7 @@ NSString *ECNShapeTriggerClassValue = @"ECNShapeTrigger";
 	// draw line for observed port
 	if (![portToObserve isEqualTo: ShapeOutputExtension])	{
 		
-		NSRect drawingBounds = [elementToObserve calcPixelBoundsInRect: NSRectToCGRect( rect )]; 
+		NSRect drawingBounds = [elementToObserve calcPixelBoundsInRect: NSRectFromCGRect( rect )]; 
 		
 		// CG contexts are upside down in respect of NS graphics contexts!
 		drawingBounds.origin.y = rect.size.height - drawingBounds.origin.y - drawingBounds.size.height;

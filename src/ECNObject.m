@@ -390,7 +390,8 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 }
 
 
-+ (id) convertObject: (id)objectToConvert toType: (Class) dataType	{
++ (id) convertObject: (id)objectToConvert 
+			  toType: (Class) dataType	{
 
 	id convertedValue;
 
@@ -399,20 +400,26 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 	
 	NSLog(@"		Converting item of type: %@ to type: %@", originalType, readDataType);  
 
-	if (([originalType isEqual: readDataType]) || ([readDataType isEqual: @"NSNull"]))	{
+	if ([dataType isSubclassOfClass: [NSMutableArray class]])	{
+		if ([objectToConvert isKindOfClass: [NSArray class]])
+			convertedValue = [NSMutableArray arrayWithArray: objectToConvert];
+	} else if (([originalType isEqualToString: readDataType]) || ([readDataType isEqualToString: @"NSNull"]))	{
 		convertedValue = objectToConvert;
-	} else if ([readDataType isEqual: @"NSCFString"])	{
+	} else if ([readDataType isEqualToString: @"NSCFString"])	{
 		convertedValue = objectToConvert;
-	} else if ([readDataType isEqual: @"NSCFNumber"])	{
+	} else if ([readDataType isEqualToString: @"NSCFNumber"])	{
 		convertedValue = [NSNumber numberWithFloat: [objectToConvert floatValue]];
-	} else if ([readDataType isEqual: @"NSCFDate"])	{
+	} else if ([readDataType isEqualToString: @"NSCFDate"])	{
 		convertedValue = [NSDate dateWithString: objectToConvert];
-	} else if ([readDataType isEqual: @"NSCFBoolean"])	{
+	} else if ([readDataType isEqualToString: @"NSCFBoolean"])	{
 		convertedValue = [NSNumber numberWithBool: [objectToConvert boolValue] ];
-	} else if ([readDataType isEqual: @"NSCFColor"])	{
+	} else if ([readDataType isEqualToString: @"NSCFColor"])	{
 //		convertedValue = [NSValue valueWithBytes: cStringUsingEncoding char objCType:(const char *)type
-	} else if ([originalType isEqual: @"NSCFData"])	{
+	} else if ([originalType isEqualToString: @"NSCFData"])	{
 		convertedValue = [NSUnarchiver unarchiveObjectWithData: objectToConvert];
+		//		convertedValue = [NSValue valueWithBytes: cStringUsingEncoding char objCType:(const char *)
+		
+//		convertedValue = [NSUnarchiver unarchiveObjectWithData: objectToConvert];
 		//		convertedValue = [NSValue valueWithBytes: cStringUsingEncoding char objCType:(const char *)type
 	} else
 	{
@@ -428,7 +435,8 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 	return true;	
 }
 
-+ (ECNObject *)objectWithDataDictionary:(NSDictionary *)dict	withDocument: (ECNProjectDocument *)document {
++ (ECNObject *)objectWithDataDictionary:(NSDictionary *)dict	
+						   withDocument: (ECNProjectDocument *)document {
 
 
 	// check that dictionary data holds at least a ID and a Class keys
@@ -459,18 +467,18 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 		NSEnumerator *enumerator = [propertiesDict keyEnumerator];
 		id key;
 
-		// TODO: type conversion!
 		while ((key = [enumerator nextObject])) {
 			id curObject = [propertiesDict valueForKey: key];
+
 			NSString *errString = [NSString stringWithFormat: @"Error: object data inconsistency found loading object: %@. Object %@ doesn't contain '%@' key.", [dict description], NSStringFromClass([newObject class]), key];
-			
 			NSAssert ([[newObject propertyKeys] containsObject: key], 
 					  errString);
 
-			// convert string value to the right type
-			
+			// convert string value to the right type			
+			NSLog(@"%@", key);
 			id convertedProperty = [self convertObject: curObject
 												toType: [[newObject valueForPropertyKey: key] class]];
+
 			[newObject setValue: convertedProperty forPropertyKey: key];
 		}
 	}
@@ -524,9 +532,13 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 }
 
 - (id)valueForPropertyKey:(NSString *)key	{
-	if (![[self propertyKeys] containsObject:key])	
-		return nil;	
-
+	bool result;
+	
+	@synchronized (self) {
+		result = [[self propertyKeys] containsObject:key];
+	}
+	
+	if (!result )	return nil;	
 	return [[_attributes valueForKey: ECNPropertiesKey] valueForKey: key];
 }
 

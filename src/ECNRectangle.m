@@ -7,6 +7,7 @@
 //
 
 #import "ECNRectangle.h"
+#import	<OpenGL/CGLMacro.h>
 
 // +  + Default values  +  +  +  +  +
 NSString *RectangleClassValue = @"Rectangle";
@@ -71,7 +72,7 @@ NSString *RectangleNameDefaultValue = @"New rectangle";
 
 - (CGMutablePathRef)quartzPathInRect: (CGRect) rect {
 	
-	NSRect drawingBounds = [self calcPixelBoundsInRect: NSRectToCGRect( rect )]; 
+	NSRect drawingBounds = [self calcPixelBoundsInRect: NSRectFromCGRect( rect )]; 
 	CGRect cgDrawingBounds = NSRectToCGRect(drawingBounds);
 	
 	// CG contexts are upside down in respect of NS graphics contexts!
@@ -83,7 +84,7 @@ NSString *RectangleNameDefaultValue = @"New rectangle";
 				   nil,
 				   cgDrawingBounds );
 
-	CGPathCloseSubpath ( path);
+	CGPathCloseSubpath ( path );
 	return path;
 }
    

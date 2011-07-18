@@ -229,17 +229,18 @@ NSString *OSCIconDefaultValue = @"assets_osctx";
 				
 			}
 		
-		if ([valuesArray count] > 0)
-		if (![asset sendValues: valuesArray
-					 toAddress: addressPattern
-						 error: &error])
-			result = false;
-		else 
-			[lastValuesSent addObject: [NSDictionary dictionaryWithObjectsAndKeys: 
-										valuesArray, @"message",
-										addressPattern, @"address",
-										nil]];
-		
+		if ([valuesArray count] > 0) {
+			NSLog (@"%@", valuesArray);
+			if (![asset sendValues: valuesArray
+						 toAddress: addressPattern
+							 error: &error])
+				result = false;
+			else 
+				[lastValuesSent addObject: [NSDictionary dictionaryWithObjectsAndKeys: 
+											valuesArray, @"message",
+											addressPattern, @"address",
+											nil]];
+		}
 		
 	}
 	if (result)	{

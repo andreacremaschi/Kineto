@@ -12,7 +12,6 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="215"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -49,7 +48,7 @@
 				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<string key="NSWindowContentMinSize">{259, 236}</string>
 				<object class="NSView" key="NSWindowView" id="457070262">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1014,7 +1013,6 @@
 						</object>
 					</object>
 					<string key="NSFrameSize">{1092, 680}</string>
-					<reference key="NSSuperview"/>
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1366, 746}}</string>
@@ -1071,7 +1069,7 @@
 				<bool key="NSClearsFilterPredicateOnInsertion">YES</bool>
 			</object>
 			<object class="NSCustomObject" id="595404535">
-				<string key="NSClassName">KFilterChainComposerWindowController</string>
+				<string key="NSClassName">KFilterChainComposerPanel</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -2083,7 +2081,7 @@
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
-					<string key="className">KFilterChainComposerWindowController</string>
+					<string key="className">KFilterChainComposerPanel</string>
 					<string key="superclassName">NSWindowController</string>
 					<object class="NSMutableDictionary" key="actions">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -2213,8 +2211,8 @@
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">src/KFilterChainComposerWindowController.h</string>
+						<string key="majorKey">IBUserSource</string>
+						<string key="minorKey"/>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -2308,7 +2306,7 @@
 							<string>NSTableView</string>
 							<string>NSView</string>
 							<string>NSView</string>
-							<string>KFilterChainComposerWindowController</string>
+							<string>KFilterChainComposerPanel</string>
 							<string>NSTabView</string>
 							<string>NSTextField</string>
 							<string>NSView</string>
@@ -2367,7 +2365,7 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">oFilterChainComposer</string>
-								<string key="candidateClassName">KFilterChainComposerWindowController</string>
+								<string key="candidateClassName">KFilterChainComposerPanel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">oMainTabView</string>
