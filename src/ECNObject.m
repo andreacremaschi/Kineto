@@ -227,7 +227,7 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 		// NSArray
 		else if ([objectToSerialize isKindOfClass: [NSArray class]])	{
 
-		representation = [[NSMutableArray alloc] init];
+		representation = [[[NSMutableArray alloc] init] autorelease];
 
 		for (id curObject in objectToSerialize)	{
 			id curObjectRepresentation = [self representationForObject: curObject];
@@ -524,10 +524,13 @@ NSString *ObjectNameDefaultValue = @"Undefined object";
 - (BOOL)setValue:(id)value forPropertyKey:(NSString *)key	{
 	if (![[self propertyKeys] containsObject:key])	
 		return false;
+	[self willChangeValueForKey: key];
 	if (value != nil) 
 		[[_attributes valueForKey: ECNPropertiesKey] setObject: value forKey: key];
 	else
 		[[_attributes valueForKey: ECNPropertiesKey] setObject: [NSNull null] forKey: key];
+	[self didChangeValueForKey: key];
+	
 	return true;
 }
 

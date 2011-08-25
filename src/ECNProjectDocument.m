@@ -339,8 +339,9 @@ static int ECNCurrentDocumentVersion = 1;
 
 #pragma mark *** Objects management ***
 - (void)addObject:(ECNObject *)object	{
+
 	if ([object isKindOfClass: [KCue class]])
-		[self willChangeValueForKey: @"scenes"];
+		[self willChangeValueForKey: @"cues"];
 	else if ([object isKindOfClass: [ECNOSCTargetAsset class]])
 		[self willChangeValueForKey: @"oscTargetAssets"];
 	else if ([object isKindOfClass: [ECNVideoInputAsset class]])
@@ -352,7 +353,7 @@ static int ECNCurrentDocumentVersion = 1;
 	[_objects addObject: object];
 
 	if ([object isKindOfClass: [KCue class]])
-		[self didChangeValueForKey: @"scenes"];
+		[self didChangeValueForKey: @"cues"];
 	else if ([object isKindOfClass: [ECNOSCTargetAsset class]])
 		[self didChangeValueForKey: @"oscTargetAssets"];
 	else if ([object isKindOfClass: [ECNVideoInputAsset class]])
@@ -363,17 +364,33 @@ static int ECNCurrentDocumentVersion = 1;
 }
 
 - (void)removeObject:(ECNObject *)object	{
+	
+	id objectToRemove = [object retain];
+	
 	if ([object isKindOfClass: [KCue class]])
-		[self willChangeValueForKey: @"scenes"];
+		[self willChangeValueForKey: @"cues"];
+	else if ([object isKindOfClass: [ECNOSCTargetAsset class]])
+		[self willChangeValueForKey: @"oscTargetAssets"];
+	else if ([object isKindOfClass: [ECNVideoInputAsset class]])
+		[self willChangeValueForKey: @"videoAssets"];
 	else if ([object isKindOfClass: [ECNAsset class]])
 		[self willChangeValueForKey: @"assets"];
-	
+
 		[_objects removeObject:object];
 	
 	if ([object isKindOfClass: [KCue class]])
-		[self didChangeValueForKey: @"scenes"];
+		[self didChangeValueForKey: @"cues"];
+	else if ([object isKindOfClass: [ECNOSCTargetAsset class]])
+		[self didChangeValueForKey: @"oscTargetAssets"];
+	else if ([object isKindOfClass: [ECNVideoInputAsset class]])
+		[self didChangeValueForKey: @"videoAssets"];
 	else if ([object isKindOfClass: [ECNAsset class]])
 		[self didChangeValueForKey: @"assets"];
+
+	[[[self undoManager] prepareWithInvocationTarget:self] addObject: objectToRemove];
+	[objectToRemove release];
+
+	
 }
 
 - (NSArray*)objectsOfKind: (Class) objectClass	{
@@ -386,53 +403,6 @@ static int ECNCurrentDocumentVersion = 1;
 			[objectsArray addObject: object];
 	return objectsArray;
 }
-
-
-#pragma mark *** Playback management ***
-
-- (void) resetToInitialState
-{
-//	NSAssert( _curActiveScenes != nil);
-	
-	// reset "_curActiveScenes" to initial states
-	[_curActiveScenes removeAllObjects];
-	
-	NSArray *scenes = [self cues];
-	for (KCue *curScene in scenes)
-		if ([[curScene valueForPropertyKey: ECNSceneActiveAtFirstKey] boolValue]) 	{	
-			NSLog (@"adding scene: '%@' to active scenes array", [curScene valueForPropertyKey: ECNObjectNameKey]) ;
-			[curScene resetToInitialState];
-			[_curActiveScenes addObject: curScene];
-		}
-	
-} // resetToInitialState
-	
-- (void) setSceneActivationState: (KCue *)scene active: (bool) active	{
-
-	// check if target scene is owned by this document, else return
-	if (![[self cues] containsObject: scene]) return;
-	
-	if (active)
-	{
-		// add element to list of active elements
-		if ([_curActiveScenes containsObject: scene]) return;
-		[scene resetToInitialState];
-		[_curActiveScenes addObject: scene];		
-	}
-	else {
-		// remove scene from list of active elements
-		if (![_curActiveScenes containsObject: scene]) return;
-		[_curActiveScenes removeObject: scene];	
-		
-	}
-	
-} // setSceneActivationState
-
-
-- (bool) isSceneActive: (KCue *)scene	{
-	return [_curActiveScenes containsObject: scene];
-}
-
 
 #pragma mark  *** Asset management
 - (void) importAsset: (NSString *)filePath	{

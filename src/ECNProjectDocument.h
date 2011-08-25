@@ -55,12 +55,6 @@
 
 //- (void) invalidateWindowControllersForScene: (ECNScene *)scene;
 
-// === playback management
-- (void) resetToInitialState;
-- (NSSet *)activeScenes;
-- (void) setSceneActivationState: (KCue *)scene active: (bool) active;
-- (bool) isSceneActive: (KCue *)scene;
-
 // === Asset management
 - (void) importAsset: (NSString *)filePath;
 

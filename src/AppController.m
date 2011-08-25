@@ -11,7 +11,7 @@
 #import "KPlaybackViewController.h"
 
 #import "KElementInspectorViewController.h"
-//#import "ECNOSCManager.h"
+
 #import "MyExceptionAlertController.h"
 #import "LicensingWindowController.h"
 #import "AppResources.h"
@@ -160,10 +160,14 @@
 }
 
 - (IBAction) showLicensingWindowController:(id)sender {
-	LicensingWindowController * licensingWindow = [[[LicensingWindowController alloc] init] autorelease];
-	[licensingWindow loadWindow];	
-	
+	if (nil== _licensingWindow)  {
+		_licensingWindow = [[[LicensingWindowController alloc] init] autorelease];
+		[_licensingWindow loadWindow];	
+	}
+	[_licensingWindow showWindow: sender];
 }
+
+
 
 
 @end

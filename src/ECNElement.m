@@ -189,10 +189,9 @@ NSString *ElementNameDefaultValue = @"Undefined element";
 {	return [[self valueForPropertyKey: ECNElementVisibleKey] floatValue];	}
 
 - (void) setVisible: (bool)isVisible	//{	_bIsVisible = isVisible;	}
-	{	[self setValue: [NSNumber numberWithBool: isVisible] forPropertyKey: ECNElementVisibleKey]; 
-		[[self cue] populateVisibleElementsSet]; // TODO: sostituire con una notifica???
-	}
+{	[self setValue: [NSNumber numberWithBool: isVisible] forPropertyKey: ECNElementVisibleKey]; 
 
+}
 
 
 - (void)setStrokeColor:(NSColor *)strokeColor {    

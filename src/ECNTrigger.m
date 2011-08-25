@@ -136,6 +136,28 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 	[self didChangeValueForKey: @"isActive"];
 
 }
+
+- (NSNumber *) activation_threshold {
+	return [self valueForPropertyKey: ECNTriggerActivationThresholdKey];	
+}
+
+- (void) setActivation_threshold: (NSNumber *)newValue {	
+	[self setValue: newValue 
+	forPropertyKey: ECNTriggerActivationThresholdKey];	
+}
+
+- (NSNumber *) deactivation_threshold {
+	return [self valueForPropertyKey: ECNTriggerDeactivationThresholdKey];	
+}
+
+- (void) setDeactivation_threshold: (NSNumber *)newValue {	
+	[self setValue: newValue 
+	forPropertyKey: ECNTriggerDeactivationThresholdKey];	
+}
+
+
+
+
 /*
 - (void) setActivationState: (NSUInteger) activationState	{
 	if (activationState == NSOnState || NSOffState)
@@ -210,11 +232,16 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 - (id) lastValue	{
 	return _flags.lastValue;
 }
-- (void) setLastValue: (id) newValue	{
+- (NSTimeInterval) lastValueTime	{
+	return _flags.lastValueTime;
+}
+- (void) setLastValue: (id) newValue 
+			   atTime: (NSTimeInterval) time	{
 	@synchronized (self) {
 		[self willChangeValueForKey: @"lastValue"];
 		id oldValue = _flags.lastValue ;
 		_flags.lastValue = [newValue retain];
+		_flags.lastValueTime = time;
 		[oldValue release];
 		[self didChangeValueForKey: @"lastValue"];
 	}
@@ -256,7 +283,8 @@ NSString *ECNTriggerClassValue = @"ECNTrigger";
 	// 2. not in latency period:
 	// store current value as in latency period it will not be updated!
 	//if (!(_flags.isActive)) {
-	[self setLastValue: [[[self elementToObserve] valueForOutputPort: [self keyOfPortToObserve]] copy]] ;
+	[self setLastValue: [[[self elementToObserve] valueForOutputPort: [self keyOfPortToObserve]] copy]
+				atTime: time] ;
 	//}
 	
 	// 3. entering in latency period:

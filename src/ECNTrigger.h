@@ -37,6 +37,7 @@ extern NSString *ECNTriggerDeactivationActionsListKey;
 		bool shouldCommitActivationActions;
 		bool shouldCommitDeactivationActions;
 		id lastValue;
+		NSTimeInterval lastValueTime;
 		NSTimeInterval activationTime;
 	//	NSDate *triggerTime;
     } _flags;
@@ -45,6 +46,12 @@ extern NSString *ECNTriggerDeactivationActionsListKey;
 
 @property (retain) NSTimer * latencyTimer;
 @property (getter= isActive) bool active;
+
+@property (assign) NSNumber * activation_threshold;
+@property (assign) NSNumber * deactivation_threshold;
+
+@property (readonly) id lastValue;
+@property (readonly) NSTimeInterval lastValueTime;
 
 + (ECNTrigger *)triggerWithDocument: (ECNProjectDocument *)document;
 
@@ -66,9 +73,6 @@ extern NSString *ECNTriggerDeactivationActionsListKey;
 
 - (void) triggerElement;
 - (void) triggerOffElement;
-
-- (id) lastValue;
-
 
 - (bool) shouldCommitActions;	
 - (NSArray *)actionsToCommit;

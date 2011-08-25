@@ -38,13 +38,13 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0</string>
+	<string>0.5</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>0.5</string>
 	<key>SUFeedURL</key>
-	<string>http://www.kinetolive.com</string>
+	<string>http://www.kinetolive.com/appcasts/kineto_appcast.xml</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

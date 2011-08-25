@@ -9,12 +9,15 @@
 #import <Cocoa/Cocoa.h>
 #import <ElementsView.h>
 
-
+@class LicensingWindowController;
 @interface AppController : NSObject
 {
 
 
+	LicensingWindowController		* _licensingWindow;
+	
 }
 - (IBAction) showLicensingWindowController:(id)sender;
+
 
 @end

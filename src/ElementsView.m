@@ -199,34 +199,24 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 }
 
 - (void)deselectElement:(ECNElement *)element {
-    NSUInteger curIndex = [_selectedElements indexOfObjectIdenticalTo:element];
-    if (curIndex != NSNotFound) {
-        [[[self undoManager] prepareWithInvocationTarget:self] selectElement:element];
-        [[[self ecnProjectDocument] undoManager] setActionName:NSLocalizedStringFromTable(@"Selection Change", @"UndoStrings", @"Action name for selection changes.")];
-        [_selectedElements removeObjectAtIndex:curIndex];
+	
+    if ([_selectedElements containsObject: element]) {
+        [_selectedElements removeObject: element];
         [self invalidateElement:element];
-        _pasteCascadeDelta = NSMakePoint(ECNDefaultPasteCascadeDelta, ECNDefaultPasteCascadeDelta);
-        [[NSNotificationCenter defaultCenter] postNotificationName:ElementsViewSelectionDidChangeNotification object:self];
-        //[self updateRulers];
     }
 }
 
 
 - (void)clearSelection {
-    int i, c = [_selectedElements count];
-    id curElement;
     
-    if (c > 0) {
-        for (i=0; i<c; i++) {
-            curElement = [_selectedElements objectAtIndex:i];
-            [[[self undoManager] prepareWithInvocationTarget:self] selectElement:curElement];
-            [self invalidateElement:curElement];
+    if ([_selectedElements count] > 0) {
+		for (id curElement in _selectedElements) {
+			if ([[cue elements] containsObject: curElement])
+				[self invalidateElement:curElement];
         }
-        [[[self ecnProjectDocument] undoManager] setActionName:NSLocalizedStringFromTable(@"Selection Change", @"UndoStrings", @"Action name for selection changes.")];
         [_selectedElements removeAllObjects];
         _pasteCascadeDelta = NSMakePoint(ECNDefaultPasteCascadeDelta, ECNDefaultPasteCascadeDelta);
         [[NSNotificationCenter defaultCenter] postNotificationName:ElementsViewSelectionDidChangeNotification object:self];
-        //[self updateRulers];
     }
 }
 
@@ -776,10 +766,9 @@ static int ECN_orderElementsFrontToBack(id element1, id element2, void *gArray) 
 - (IBAction)delete:(id)sender {
     NSArray *selCopy = [[[NSArray allocWithZone:[self zone]] initWithArray:[self selectedElements]] autorelease];
     if ([selCopy count] > 0) {
-        [[self cue] performSelector:@selector(removeElement:) withEachObjectInArray:selCopy];
-        [selCopy release];
+        [cue performSelector: @selector(removeElement:) withEachObjectInArray:selCopy];
         [[[self ecnProjectDocument] undoManager] setActionName:NSLocalizedStringFromTable(@"Delete", @"UndoStrings", @"Action name for deletions.")];
-		[self setNeedsDisplay:true];
+		[self setNeedsDisplay: true];
 		[[NSNotificationCenter defaultCenter] postNotificationName:ElementsViewSelectionDidChangeNotification object:self];
 
     }
